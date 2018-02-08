@@ -153,8 +153,9 @@ import XSwitch from './src/components/x-switch/index.vue'
 import XTable from './src/components/x-table/index.vue'
 import XTextarea from './src/components/x-textarea/index.vue'
 
-import MScroll from './src/components/m-scroll/index.js'
-import MUpload from './src/components/m-upload/index.vue'
+import XScroll from './src/components/x-scroll/index.js'
+import XUpload from './src/components/m-upload/index.vue'
+
 
 export {
   Actionsheet,
@@ -307,6 +308,6 @@ export {
   XSwitch,
   XTable,
   XTextarea,
-  MScroll,
-  MUpload
+  XScroll,
+  XUpload
 }

@@ -147,5 +147,7 @@
   "XProgress": "src/components/x-progress/index.vue",
   "XSwitch": "src/components/x-switch/index.vue",
   "XTable": "src/components/x-table/index.vue",
-  "XTextarea": "src/components/x-textarea/index.vue"
+  "XTextarea": "src/components/x-textarea/index.vue",
+  "XUpload":  "src/components/x-upload/index.vue",
+  "XScroll":  "src/components/x-scroll/index.vue"
 }

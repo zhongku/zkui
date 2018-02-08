@@ -11,12 +11,14 @@
   />
 </template>
 <script>
+/* eslint-disable */ 
+// eslint-disable-next-line
 export default {
   methods: {
     change(e) {
       this.$destroy()
       this.$parent.addInputFile(e.target)
-      // eslint-disable-next-line
+   
       new this.constructor({
         parent: this.$parent,
         el: this.$el

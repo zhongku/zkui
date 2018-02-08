@@ -38,8 +38,8 @@
 /* eslint-disable */
 import ChunkUploadDefaultHandler from './chunk/ChunkUploadHandler'
 import InputFile from './InputFile.vue'
-import apiService from 'src/service/api/common.api.js'
-import helper from 'src/service/common/helper'
+//import apiService from 'src/service/api/common.api.js'
+//import helper from 'src/service/common/helper'
 
 
 const CHUNK_DEFAULT_OPTIONS = {
@@ -859,17 +859,17 @@ export default {
       form.append(this.name, file.file, file.file.filename || file.name)
      // console.dir(form)
       // console.dir(form)
-      var response = await apiService.upload(form)
-      if( response.data.status !== 1 ){
-        helper.alertError(response.data.message)
-      }else{
-        this.$zk.toast.text('上传成功', 'bottom')
-        if(this.serviceFiles === undefined || this.serviceFiles.length <=1){
-          this.serviceFiles = response.data.result.saveFileName
-        }else{
-          this.serviceFiles = this.serviceFiles + ',' + response.data.result.saveFileName
-        }
-      }
+      // var response = await apiService.upload(form)
+      // if( response.data.status !== 1 ){
+      //   helper.alertError(response.data.message)
+      // }else{
+      //   this.$zk.toast.text('上传成功', 'bottom')
+      //   if(this.serviceFiles === undefined || this.serviceFiles.length <=1){
+      //     this.serviceFiles = response.data.result.saveFileName
+      //   }else{
+      //     this.serviceFiles = this.serviceFiles + ',' + response.data.result.saveFileName
+      //   }
+      // }
     },
 
     uploadXhr(xhr, _file, body) {
