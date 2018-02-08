@@ -1,13 +1,13 @@
 <template>
   <div>
-    <msg :title="$t('Yeah! You make it')" :description="$t('MMsg description')" :buttons="buttons" :icon="icon"></msg>
+    <msg :title="$t('Yeah! You make it')" :description="$t('Msg description')" :buttons="buttons" :icon="icon"></msg>
   </div>
 </template>
 
 <i18n>
 Yeah! You make it:
   zh-CN: 操作成功
-MMsg description:
+Msg description:
   zh-CN: 内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a>
 Primary button:
   zh-CN: 推荐操作
@@ -16,13 +16,13 @@ Secondary button:
 </i18n>
 
 <script>
-import { MMsg, MDivider, MButton } from 'src/widgets'
+import { Msg, Divider, XButton } from 'vux'
 
 export default {
   components: {
-    MMsg,
-    MDivider,
-    MButton
+    Msg,
+    Divider,
+    XButton
   },
   methods: {
     changeIcon () {

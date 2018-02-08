@@ -1,27 +1,27 @@
 <template>
   <div>
-    <m-group>
-      <m-popup-radio title="options" :options="options1" v-model="option1"></m-popup-radio>
-    </m-group>
+    <group>
+      <popup-radio title="options" :options="options1" v-model="option1"></popup-radio>
+    </group>
 
-    <m-group>
-      <m-popup-radio title="options" :options="options2" v-model="option2" placeholder="placeholder"></m-popup-radio>
-    </m-group>
+    <group>
+      <popup-radio title="options" :options="options2" v-model="option2" placeholder="placeholder"></popup-radio>
+    </group>
 
-    <m-group>
-      <m-popup-radio title="options" :options="options3" v-model="option3">
+    <group>
+      <popup-radio title="options" :options="options3" v-model="option3">
         <p slot="popup-header" class="vux-1px-b demo3-slot">Please select</p>
-      </m-popup-radio>
-    </m-group>
+      </popup-radio>
+    </group>
 
-    <m-group>
-      <m-popup-radio title="readonly" readonly :options="options3" v-model="option4">
+    <group>
+      <popup-radio title="readonly" readonly :options="options3" v-model="option4">
         <p slot="popup-header" class="vux-1px-b demo3-slot">Please select</p>
-      </m-popup-radio>
-    </m-group>
+      </popup-radio>
+    </group>
 
-    <m-group>
-      <m-popup-radio title="slot:each-item" :options="options3" v-model="option5">
+    <group>
+      <popup-radio title="slot:each-item" :options="options3" v-model="option5">
         <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
           <p>
             custom item <img src="http://dn-placeholder.qbox.me/110x110/FF2D55/000" class="vux-radio-icon"> {{ props.label }}
@@ -29,19 +29,19 @@
             <span style="color:#666;">{{ props.index + 1 }} another line</span>
           </p>
         </template>
-      </m-popup-radio>
-    </m-group>
+      </popup-radio>
+    </group>
 
   </div>
 </template>
 
 <script>
-import { MGroup, MPopupradio } from 'src/widgets'
+import { Group, PopupRadio } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MPopupradio
+    Group,
+    PopupRadio
   },
   data () {
     return {

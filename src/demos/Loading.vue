@@ -1,16 +1,16 @@
 <template>
   <div>
-    <m-group>
-      <m-switch :title="$t('Toggle')" v-model="show1" @on-change="show1change"></m-switch>
-    </m-group>
+    <group>
+      <x-switch :title="$t('Toggle')" v-model="show1" @on-change="show1change"></x-switch>
+    </group>
     <div v-transfer-dom>
       <loading :show="show1" :text="text1"></loading>
     </div>
     <div style="padding: 15px;">
-      <m-button @click.native="showLoading" type="primary">{{ $t('Show loading') }}</m-button>
+      <x-button @click.native="showLoading" type="primary">{{ $t('Show loading') }}</x-button>
     </div>
     <div style="padding: 15px;">
-      <m-button @click.native="showDelayLoading" type="primary">{{ $t('Show delay loading') }}</m-button>
+      <x-button @click.native="showDelayLoading" type="primary">{{ $t('Show delay loading') }}</x-button>
     </div>
   </div>
 </template>
@@ -25,17 +25,17 @@ Show delay loading:
 </i18n>
 
 <script>
-import { MLoading, MGroup, MSwitch, MButton, TransferDomDirective as TransferDom } from 'src/widgets'
+import { Loading, Group, XSwitch, XButton, TransferDomDirective as TransferDom } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MLoading,
-    MGroup,
-    MSwitch,
-    MButton
+    Loading,
+    Group,
+    XSwitch,
+    XButton
   },
   data () {
     return {
@@ -45,20 +45,20 @@ export default {
   },
   methods: {
     showLoading () {
-      this.$zk.loading.show({
-        text: 'MLoading'
+      this.$vux.loading.show({
+        text: 'Loading'
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
       }, 2000)
     },
     showDelayLoading () {
-      this.$zk.loading.show({
-        text: 'MLoading',
+      this.$vux.loading.show({
+        text: 'Loading',
         delay: 1e3
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
       }, 2000)
     },
     show1change (val) {

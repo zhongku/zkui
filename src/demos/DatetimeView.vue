@@ -1,17 +1,17 @@
 <template>
   <div>
-    <m-datetime-view v-model="value1" ref="datetime" :format="format"></m-datetime-view>
+    <datetime-view v-model="value1" ref="datetime" :format="format"></datetime-view>
     <p class="info">{{ $t('Current value') }}: {{ value1 }}</p>
     <div style="padding:15px;">
-      <m-button @click.native="changeValue('2017-11-11')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2017-11-11') }} </m-button>
-      <m-button @click.native="changeValue('2016-08-08')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2016-08-08') }} </m-button>
-      <m-button @click.native="toggleFormat" type="primary"> {{ $t('Toggle format') }} </m-button>
-      <m-button @click.native="showPopup = true" type="primary"> {{ $t('Show popup with datetime-view') }} </m-button>
+      <x-button @click.native="changeValue('2017-11-11')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2017-11-11') }} </x-button>
+      <x-button @click.native="changeValue('2016-08-08')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2016-08-08') }} </x-button>
+      <x-button @click.native="toggleFormat" type="primary"> {{ $t('Toggle format') }} </x-button>
+      <x-button @click.native="showPopup = true" type="primary"> {{ $t('Show popup with datetime-view') }} </x-button>
     </div>
     <div v-transfer-dom>
-      <m-popup v-model="showPopup">
-        <m-datetime-view v-model="value2"></m-datetime-view>
-      </m-popup>
+      <popup v-model="showPopup">
+        <datetime-view v-model="value2"></datetime-view>
+      </popup>
     </div>
   </div>
 </template>
@@ -30,13 +30,13 @@ Show popup with datetime-view:
 </i18n>
 
 <script>
-import { MDatetimeview, MButton, MPopup, TransferDom } from 'src/widgets'
+import { DatetimeView, XButton, Popup, TransferDom } from 'vux'
 
 export default {
   components: {
-    MDatetimeview,
-    MButton,
-    MPopup
+    DatetimeView,
+    XButton,
+    Popup
   },
   directives: {
     TransferDom

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <m-divider>{{ $t('wechat emotions') }}</m-divider>
-    <div v-for="item in list" :key="item" class="vux-center-h">
-      <m-wechat-emotion>{{item}}</m-wechat-emotion>
-      <m-wechat-emotion is-gif>{{item}}</m-wechat-emotion>
+    <divider>{{ $t('wechat emotions') }}</divider>
+    <div v-for="item in list" class="vux-center-h">
+      <emotion>{{item}}</emotion>
+      <emotion is-gif>{{item}}</emotion>
     </div>
   </div>
 </template>
@@ -14,12 +14,12 @@ wechat emotions:
 </i18n>
 
 <script>
-import { MWechatemotion, MDivider } from 'src/widgets'
+import { WechatEmotion as Emotion, Divider } from 'vux'
 
 export default {
   components: {
-    MWechatemotion,
-    MDivider
+    Emotion,
+    Divider
   },
   data () {
     return {

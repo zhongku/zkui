@@ -1,36 +1,36 @@
 <template>
   <div>
-    <m-group-title>THX to: https://github.com/wechatui/swiper</m-group-title>
-    <m-group-title>list模式下，默认高度为180px, 如果设置aspect-ratio会根据宽度自动计算高度</m-group-title>
+    <group-title>THX to: https://github.com/wechatui/swiper</group-title>
+    <group-title>list模式下，默认高度为180px, 如果设置aspect-ratio会根据宽度自动计算高度</group-title>
     <swiper :list="demo01_list" v-model="demo01_index" @on-index-change="demo01_onIndexChange"></swiper>
     <p class="copyright">Image Source: http://www.gratisography.com/</p>
     <p>current index: {{demo01_index}}</p>
-    <m-button @click.native="demo01_index = 0">go to 0</m-button>
-    <m-button @click.native="demo01_index = 1">go to 1</m-button>
-    <m-button @click.native="demo01_index = 2">go to 2</m-button>
+    <x-button @click.native="demo01_index = 0">go to 0</x-button>
+    <x-button @click.native="demo01_index = 1">go to 1</x-button>
+    <x-button @click.native="demo01_index = 2">go to 2</x-button>
 
     <br/>
     <br/>
     <swiper :list="demo01_list" v-model="demo02_index" @on-index-change="demo01_onIndexChange"></swiper>
     <br>
     <br>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
 
-    <m-group-title>设置aspect-ratio, 将自动根据宽度计算高度</m-group-title>
+    <group-title>设置aspect-ratio, 将自动根据宽度计算高度</group-title>
     <swiper :list="demo02_list" style="width:85%;margin:0 auto;" :aspect-ratio="300/800" dots-position="center"></swiper>
 
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>自动轮播</m-group-title>
+    <group-title>自动轮播</group-title>
     <swiper :list="demo03_list" auto style="width:80%;margin:0 auto;" height="180px" dots-class="custom-bottom" dots-position="center"></swiper>
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>use swiper-item for image list</m-group-title>
+    <group-title>use swiper-item for image list</group-title>
     <swiper :aspect-ratio="300/800">
       <swiper-item class="swiper-demo-img" v-for="(item, index) in demo04_list" :key="index"><img :src="item"></swiper-item>
     </swiper>
@@ -38,7 +38,7 @@
     <br>
     <br>
 
-    <m-group-title>set index = 1 with swiper-item</m-group-title>
+    <group-title>set index = 1 with swiper-item</group-title>
     <swiper :aspect-ratio="300/800" @on-index-change="onSwiperItemIndexChange" v-model="swiperItemIndex">
       <swiper-item class="swiper-demo-img" v-for="(item, index) in demo04_list" :key="index">
         <img :src="item">
@@ -47,26 +47,26 @@
     <br>
     {{ swiperItemIndex }}
     <br>
-    <m-button @click.native="swiperItemIndex = 0">go to 0</m-button>
-    <m-button @click.native="swiperItemIndex = 1">go to 1</m-button>
-    <m-button @click.native="swiperItemIndex = 2">go to 2</m-button>
+    <x-button @click.native="swiperItemIndex = 0">go to 0</x-button>
+    <x-button @click.native="swiperItemIndex = 1">go to 1</x-button>
+    <x-button @click.native="swiperItemIndex = 2">go to 2</x-button>
 
 
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>Async setting list data</m-group-title>
+    <group-title>Async setting list data</group-title>
     <swiper :list="demo05_list" auto height="180px" @on-index-change="demo05_onIndexChange"></swiper>
     <p> current index: {{demo05_index}}</p>
-    <m-button @click.native="demo05_onLoad(1)" type="primary" style="margin: 10px 0;">Load list1</m-button>
-    <m-button @click.native="demo05_onLoad(2)" type="primary" style="margin: 10px 0;">Load list2</m-button>
+    <x-button @click.native="demo05_onLoad(1)" type="primary" style="margin: 10px 0;">Load list1</x-button>
+    <x-button @click.native="demo05_onLoad(2)" type="primary" style="margin: 10px 0;">Load list2</x-button>
 
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>引入swiper-item自定义item内容，用height定义高度</m-group-title>
+    <group-title>引入swiper-item自定义item内容，用height定义高度</group-title>
     <swiper auto height="100px">
       <swiper-item class="black"><h2 class="title fadeInUp animated">它无孔不入</h2></swiper-item>
       <swiper-item class="black"><h2 class="title fadeInUp animated">你无处可藏</h2></swiper-item>
@@ -78,9 +78,9 @@
 
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>垂直方向文字滚动</m-group-title>
+    <group-title>垂直方向文字滚动</group-title>
     <swiper auto height="30px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
       <swiper-item><p>义务爱了 完成传奇世界H5-王者归来任务 获得20金币</p></swiper-item>
       <swiper-item><p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p></swiper-item>
@@ -92,20 +92,20 @@
 
     <br/>
     <br/>
-    <m-divider>华丽的分割线</m-divider>
+    <divider>华丽的分割线</divider>
 
-    <m-group-title>循环模式</m-group-title>
+    <group-title>循环模式</group-title>
     <swiper loop auto :list="demo06_list" :index="demo06_index" @on-index-change="demo06_onIndexChange"></swiper>
     <p>current index: {{demo06_index}}</p>
 
-    <m-group-title>循环模式（只有两个且可点击）</m-group-title>
+    <group-title>循环模式（只有两个且可点击）</group-title>
     <swiper loop auto :list="demo07_list" :index="demo07_index" @on-index-change="demo07_onIndexChange"></swiper>
     <p>current index: {{demo07_index}}</p>
   </div>
 </template>
 
 <script>
-import { Swiper, MGrouptitle, SwiperItem, MButton, MDivider } from 'src/widgets'
+import { Swiper, GroupTitle, SwiperItem, XButton, Divider } from 'vux'
 
 const baseList = [{
   url: 'javascript:',
@@ -149,9 +149,9 @@ export default {
   components: {
     Swiper,
     SwiperItem,
-    MGrouptitle,
-    MButton,
-    MDivider
+    GroupTitle,
+    XButton,
+    Divider
   },
   ready () {
 

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { querystring } from 'src/widgets'
+import { querystring } from 'vux'
 console.log(querystring.parse())
 export default {
   filters: {

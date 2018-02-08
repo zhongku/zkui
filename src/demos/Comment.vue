@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 15px; background-color: #fff;">
     <ul class="discuss_list">
-      <li class="discuss_item" v-for="comment in list" :key="comment">
+      <li class="discuss_item" v-for="comment in list">
 
         <div class="discuss_opr">
           <span class="media_tool_meta tips_global meta_praise" :class="{'praised': comment.has_praised}">

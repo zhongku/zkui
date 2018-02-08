@@ -1,8 +1,8 @@
 <template>
   <div>
-    <m-group :title="$t('Switch the type')">
+    <group :title="$t('Switch the type')">
       <radio title="type" v-model="type" :options="['1', '2', '3', '4', '5']"></radio>
-    </m-group>
+    </group>
     <panel :header="$t('List of content with image')" :footer="footer" :list="list" :type="type" @on-img-error="onImgError"></panel>
   </div>
 </template>
@@ -17,13 +17,13 @@ More:
 </i18n>
 
 <script>
-import { MPanel, MGroup, MRadio } from 'src/widgets'
+import { Panel, Group, Radio } from 'vux'
 
 export default {
   components: {
-    MPanel,
-    MGroup,
-    MRadio
+    Panel,
+    Group,
+    Radio
   },
   methods: {
     onImgError (item, $event) {

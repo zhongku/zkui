@@ -1,23 +1,23 @@
 <template>
   <div>
-    <m-group :title="$t('value map')">
-      <m-switch :title="$t('default true')" :value-map="['0', '1']" v-model="stringValue"></m-switch>
-      <m-cell title="value" :value="typeof stringValue + ' ' + stringValue"></m-cell>
-    </m-group>
-    <m-group :title="$t('Basic Usage')">
-      <m-switch :title="$t('default false')"></m-switch>
-      <m-switch :title="$t('default true')" :inline-desc="value1 + ''" v-model="value1"></m-switch>
-    </m-group>
-    <m-group :title="$t('disabled')">
-      <m-switch :title="$t('default false')" disabled></m-switch>
-      <m-switch :title="$t('default true')" :value="true" disabled></m-switch>
-    </m-group>
-    <m-group :title="$t('prevent default')">
-      <m-switch :title="$t('default false')" prevent-default v-model="value2" @on-click="onClick"></m-switch>
-    </m-group>
-    <m-group :title="$t('html title')">
-      <m-switch disabled :title="$t('switch red')"></m-switch>
-    </m-group>
+    <group :title="$t('value map')">
+      <x-switch :title="$t('default true')" :value-map="['0', '1']" v-model="stringValue"></x-switch>
+      <cell title="value" :value="typeof stringValue + ' ' + stringValue"></cell>
+    </group>
+    <group :title="$t('Basic Usage')">
+      <x-switch :title="$t('default false')"></x-switch>
+      <x-switch :title="$t('default true')" :inline-desc="value1 + ''" v-model="value1"></x-switch>
+    </group>
+    <group :title="$t('disabled')">
+      <x-switch :title="$t('default false')" disabled></x-switch>
+      <x-switch :title="$t('default true')" :value="true" disabled></x-switch>
+    </group>
+    <group :title="$t('prevent default')">
+      <x-switch :title="$t('default false')" prevent-default v-model="value2" @on-click="onClick"></x-switch>
+    </group>
+    <group :title="$t('html title')">
+      <x-switch disabled :title="$t('switch red')"></x-switch>
+    </group>
   </div>
 </template>
 
@@ -38,22 +38,22 @@ switch red:
 </i18n>
 
 <script>
-import { MSwitch, MGroup, MCell } from 'src/widgets'
+import { XSwitch, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MSwitch,
-    MGroup,
-    MCell
+    XSwitch,
+    Group,
+    Cell
   },
   methods: {
     onClick (newVal, oldVal) {
       console.log(newVal, oldVal)
-      this.$zk.loading.show({
+      this.$vux.loading.show({
         text: 'in processing'
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
         this.value2 = newVal
       }, 1000)
     }

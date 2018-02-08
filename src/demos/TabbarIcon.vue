@@ -1,32 +1,32 @@
 <template>
   <div>
-    <m-group>
-      <m-cell is-link title="Tabbar" link="/component/tabbar"></m-cell>
-    </m-group>
-    <m-tabbar @on-index-change="onIndexChange">
-      <m-tabbar-item>
+    <group>
+      <cell is-link title="Tabbar" link="/component/tabbar"></cell>
+    </group>
+    <tabbar @on-index-change="onIndexChange">
+      <tabbar-item>
         <img slot="icon" src="../assets/demo/icon_nav_button.png">
         <img slot="icon-active" src="../assets/demo/icon_nav_msg.png">
         <span slot="label">one</span>
-      </m-tabbar-item>
-      <m-tabbar-item>
+      </tabbar-item>
+      <tabbar-item>
         <img slot="icon" src="../assets/demo/icon_nav_article.png">
         <img slot="icon-active" src="../assets/demo/icon_nav_cell.png">
         <span slot="label">two</span>
-      </m-tabbar-item>
-    </m-tabbar>
+      </tabbar-item>
+    </tabbar>
   </div>
 </template>
 
 <script>
-import { Tabbar, TabbarItem, MGroup, MCell } from 'src/widgets'
+import { Tabbar, TabbarItem, Group, Cell } from 'vux'
 
 export default {
   components: {
     Tabbar,
     TabbarItem,
-    MGroup,
-    MCell
+    Group,
+    Cell
   },
   methods: {
     onIndexChange (newIndex, oldIndex) {

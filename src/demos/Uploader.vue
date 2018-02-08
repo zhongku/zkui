@@ -1,6 +1,6 @@
 <template>
   <div>
-    <m-divider>没有封装组件，引入样式使用</m-divider>
+    <divider>没有封装组件，引入样式使用</divider>
     <div class="weui-uploader" style="padding:15px;">
       <div class="weui-uploader__hd">
           <p class="weui-uploader__title">图片上传</p>
@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import { MDivider } from 'src/widgets'
+import { Divider } from 'vux'
 
 export default {
   components: {
-    MDivider
+    Divider
   }
 }
 </script>

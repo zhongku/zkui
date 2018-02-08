@@ -1,10 +1,10 @@
 <template>
   <div style="text-align:center;margin-top:15px;">
-    <m-divider>{{ $t('default type = img') }}</m-divider>
+    <divider>{{ $t('default type = img') }}</divider>
     <qrcode value="https://vux.li?x-page=demo_qrcode" type="img"></qrcode>
     <br>
     <br>
-    <m-divider>{{ $t('type = canvas') }}</m-divider>
+    <divider>{{ $t('type = canvas') }}</divider>
     <qrcode value="https://vux.li?x-page=demo_qrcode"></qrcode>
     <br>
     <qrcode :value="value" :fg-color="fgColor"></qrcode>
@@ -27,7 +27,7 @@ current fgColor:
 </i18n>
 
 <script>
-import { MQrcode, MDivider } from 'src/widgets'
+import { Qrcode, Divider } from 'vux'
 
 export default {
   mounted () {
@@ -37,8 +37,8 @@ export default {
     }, 1000)
   },
   components: {
-    MQrcode,
-    MDivider
+    Qrcode,
+    Divider
   },
   data () {
     return {

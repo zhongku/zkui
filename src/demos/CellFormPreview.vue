@@ -1,9 +1,9 @@
 <template>
   <div>
-    <m-group>
-      <m-cell :title="$t('Total')" :value="$t('$1024')"></m-cell>
-      <m-cell-form-preview :list="list"></m-cell-form-preview>
-    </m-group>
+    <group>
+      <cell :title="$t('Total')" :value="$t('$1024')"></cell>
+      <cell-form-preview :list="list"></cell-form-preview>
+    </group>
   </div>
 </template>
 
@@ -21,13 +21,13 @@ Fish:
 </i18n>
 
 <script>
-import { MCellformpreview, MGroup, MCell } from 'src/widgets'
+import { CellFormPreview, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MCellformpreview,
-    MGroup,
-    MCell
+    CellFormPreview,
+    Group,
+    Cell
   },
   data () {
     return {

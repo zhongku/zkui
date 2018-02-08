@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import { MDivider } from 'src/widgets'
+import { Divider } from 'vux'
 
 export default {
   components: {
-    MDivider
+    Divider
   }
 }
 </script>

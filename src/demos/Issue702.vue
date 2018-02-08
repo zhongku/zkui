@@ -1,24 +1,24 @@
 <template>
   <div>
-    <m-popup v-model="show" height="100%">
-        <m-group title="更多">
-          <m-popup-picker title="活动类型："
+    <popup v-model="show" height="100%">
+        <group title="更多">
+          <popup-picker title="活动类型："
                :data="pickerList" v-model="pickerValue" :columns="1" show-name>
-          </m-popup-picker>        
-        </m-group>
-</m-popup>
+          </popup-picker>        
+        </group>
+</popup>
 <a @click="show=true">show</a>
   </div>
 </template>
 
 <script>
-import { MPopup, MPopuppicker, MGroup } from 'src/widgets'
+import { Popup, PopupPicker, Group } from 'vux'
 
 export default {
   components: {
-    MPopup,
-    MPopuppicker,
-    MGroup
+    Popup,
+    PopupPicker,
+    Group
   },
   data () {
     return {

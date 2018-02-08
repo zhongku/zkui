@@ -1,40 +1,40 @@
 <template>
   <div>
-    <m-group-title> {{ $t('Normal usage, the first one is selected without setting default value') }} {{year1}}</m-group-title>
+    <group-title> {{ $t('Normal usage, the first one is selected without setting default value') }} {{year1}}</group-title>
     <picker :data='years' v-model='year1' @on-change='change'></picker>
     <br>
-    <m-group-title> {{ $t('Asynchronous loading and dynamic change of data') }} </m-group-title>
+    <group-title> {{ $t('Asynchronous loading and dynamic change of data') }} </group-title>
     <picker :data='years001' v-model='year001' @on-change='change'></picker>
     <br>
-    <m-group>
-      <m-cell :title="$t('Current value')" :value="year001"></m-cell>
-    </m-group>
-    <m-button type="primary" @click.native="changeValue([['1','3','5','7','9','11'],['2','3','4','5'],['a','b','c']])"> {{ $t('Set Data 1') }} </m-button>
-    <m-button type="primary" @click.native="changeValue([['1','3','5','7','9','11'],['2','3','4','5']])">{{ $t('Set Data 2') }} </m-button>
-    <m-button type="primary" @click.native="changeValue([['2','4','6','8','10','11']])">{{ $t('Set Data 3') }} </m-button>
+    <group>
+      <cell :title="$t('Current value')" :value="year001"></cell>
+    </group>
+    <x-button type="primary" @click.native="changeValue([['1','3','5','7','9','11'],['2','3','4','5'],['a','b','c']])"> {{ $t('Set Data 1') }} </x-button>
+    <x-button type="primary" @click.native="changeValue([['1','3','5','7','9','11'],['2','3','4','5']])">{{ $t('Set Data 2') }} </x-button>
+    <x-button type="primary" @click.native="changeValue([['2','4','6','8','10','11']])">{{ $t('Set Data 3') }} </x-button>
     <br>
-    <m-group-title> {{ $t('With default value') }} </m-group-title>
+    <group-title> {{ $t('With default value') }} </group-title>
     <picker :data='years' v-model='year2' @on-change='change'></picker>
     <br>
-    <m-group-title> {{ $t('Two-way data binding') }} </m-group-title>
+    <group-title> {{ $t('Two-way data binding') }} </group-title>
     <picker :data='years' v-model='year3' @on-change='change3'></picker>
     <select v-model='year5'>
-      <option v-for='one in years[0]' :key="one" :value='one.value'>{{one.name}}</option>
+      <option v-for='one in years[0]' :value='one.value'>{{one.name}}</option>
     </select>
     <br>
-    <m-group-title> {{ $t('Multi cols in non chained-mode') }} </m-group-title>
+    <group-title> {{ $t('Multi cols in non chained-mode') }} </group-title>
     <picker :data='years1' v-model='year4' @on-change='change'></picker>
     <br>
-    <m-group-title> {{ $t('Five columns') }} </m-group-title>
+    <group-title> {{ $t('Five columns') }} </group-title>
     <picker :data='year6' v-model='year6Value' @on-change='change'></picker>
     <br>
-    <m-group-title>{{ $t('Locations in chained-mode') }}: {{ $t('Current value') }} {{year7Value}} <br> {{ $t('Text corresponding to the value') }}: {{$refs.picker1&&$refs.picker1.getNameValues()}}</m-group-title>
+    <group-title>{{ $t('Locations in chained-mode') }}: {{ $t('Current value') }} {{year7Value}} <br> {{ $t('Text corresponding to the value') }}: {{$refs.picker1&&$refs.picker1.getNameValues()}}</group-title>
     <picker :data='year7' :columns=3 v-model='year7Value' @on-change='change' ref="picker1"></picker>
-    <m-button @click.native="setData1" type="primary"> {{ $t('Set value to') }} ["USA", "usa002", "0005"]</m-button>
-    <m-button @click.native="setData2" type="primary"> {{ $t('Set value to') }} ["china", "china002", "gz"]</m-button>
-    <m-button @click.native="setList" type="primary">Set List</m-button>
+    <x-button @click.native="setData1" type="primary"> {{ $t('Set value to') }} ["USA", "usa002", "0005"]</x-button>
+    <x-button @click.native="setData2" type="primary"> {{ $t('Set value to') }} ["china", "china002", "gz"]</x-button>
+    <x-button @click.native="setList" type="primary">Set List</x-button>
     <br>
-    <m-group-title> {{ $t('3 cols data but only show 2 cols') }} </m-group-title>
+    <group-title> {{ $t('3 cols data but only show 2 cols') }} </group-title>
     <picker :data='year7' :fixed-columns="2" :columns=3 v-model='year8Value' @on-change='change'></picker>
   </div>
 </template>
@@ -67,7 +67,7 @@
 </i18n>
 
 <script>
-import { MCell, MGroup, MPicker, MGrouptitle, MButton } from 'src/widgets'
+import { Cell, Group, Picker, GroupTitle, XButton } from 'vux'
 
 let years = []
 for (var i = 2000; i <= 2030; i++) {
@@ -78,11 +78,11 @@ for (var i = 2000; i <= 2030; i++) {
 }
 export default {
   components: {
-    MPicker,
-    MGrouptitle,
-    MButton,
-    MCell,
-    MGroup
+    Picker,
+    GroupTitle,
+    XButton,
+    Cell,
+    Group
   },
   methods: {
     changeValue (value) {

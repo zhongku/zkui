@@ -1,20 +1,20 @@
 <template>
   <div>
     <div style="padding: 15px;">
-      <m-color-picker :colors="colors1" v-model="color1"></m-color-picker>
+      <color-picker :colors="colors1" v-model="color1"></color-picker>
       <br>
-      <m-color-picker :colors="colors1" v-model="color1" size="middle"></m-color-picker>
+      <color-picker :colors="colors1" v-model="color1" size="middle"></color-picker>
     </div>
-    <m-group :title=" $t('Use in cell') ">
-      <m-cell :title="'Color:' + color1">
-        <m-color-picker :colors="colors1" v-model="color1" size="small"></m-color-picker>
-      </m-cell>
-    </m-group>
-    <m-group :title=" $t('A cell without title') ">
-      <m-cell primary="content">
-        <m-color-picker :colors="colors1" v-model="color1" size="middle"></m-color-picker>
-      </m-cell>
-    </m-group>
+    <group :title=" $t('Use in cell') ">
+      <cell :title="'Color:' + color1">
+        <color-picker :colors="colors1" v-model="color1" size="small"></color-picker>
+      </cell>
+    </group>
+    <group :title=" $t('A cell without title') ">
+      <cell primary="content">
+        <color-picker :colors="colors1" v-model="color1" size="middle"></color-picker>
+      </cell>
+    </group>
   </div>
 </template>
 
@@ -26,13 +26,13 @@ A cell without title:
 </i18n>
 
 <script>
-import { MColorpicker, MGroup, MCell } from 'src/widgets'
+import { ColorPicker, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MColorpicker,
-    MGroup,
-    MCell
+    ColorPicker,
+    Group,
+    Cell
   },
   data () {
     return {

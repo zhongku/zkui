@@ -1,7 +1,7 @@
 <template>
   <div>
-    <m-divider>{{ $t('Simple card with header and content') }}</m-divider>
-	   <m-card :header="{title: $t('My wallet')}">
+    <divider>{{ $t('Simple card with header and content') }}</divider>
+	   <card :header="{title: $t('My wallet')}">
       <div slot="content" class="card-demo-flex card-demo-content01">
         <div class="vux-1px-r">
           <span>1130</span>
@@ -24,23 +24,23 @@
           {{ $t('Cash') }}
         </div>
       </div>
-    </m-card>
+    </card>
 
     <br>
-    <m-divider>{{ $t('With footer') }}</m-divider>
-     <m-card :header="{title: $t('Product details') }" :footer="{title: $t('More'),link:'/component/panel'}">
+    <divider>{{ $t('With footer') }}</divider>
+     <card :header="{title: $t('Product details') }" :footer="{title: $t('More'),link:'/component/panel'}">
       <p slot="content" class="card-padding">{{ $t('Custom content') }}</p>
-    </m-card>
+    </card>
 
     <br>
-    <m-divider>{{ $t('Use header slot and content slot') }}</m-divider>
-    <m-card>
+    <divider>{{ $t('Use header slot and content slot') }}</divider>
+    <card>
       <img slot="header" src="http://placeholder.qiniudn.com/640x300" style="width:100%;display:block;">
       <div slot="content" class="card-padding">
         <p style="color:#999;font-size:12px;">Posted on January 21, 2015</p>
         <p style="font-size:14px;line-height:1.2;">Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit..</p>
       </div>
-    </m-card>
+    </card>
   </div>
 </template>
 
@@ -70,12 +70,12 @@ Use header slot and content slot:
 </i18n>
 
 <script>
-import { MDivider, MCard } from 'src/widgets'
+import { Divider, Card } from 'vux'
 
 export default {
   components: {
-    MCard,
-    MDivider
+    Card,
+    Divider
   }
 }
 </script>

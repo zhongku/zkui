@@ -1,8 +1,8 @@
 <template>
   <div>
-    <m-group :title="value[0] + ' ' + value[1] + ':' + value[2]">
-      <m-datetime-range :title="$t('Choose')" start-date="2017-01-01" end-date="2017-02-02" :format="$t('daterange-format')" v-model="value" @on-change="onChange"></m-datetime-range>
-    </m-group>
+    <group :title="value[0] + ' ' + value[1] + ':' + value[2]">
+      <datetime-range :title="$t('Choose')" start-date="2017-01-01" end-date="2017-02-02" :format="$t('daterange-format')" v-model="value" @on-change="onChange"></datetime-range>
+    </group>
   </div>
 </template>
 
@@ -15,12 +15,12 @@ daterange-format:
 </i18n>
 
 <script>
-import { MGroup, MDatetimerange } from 'src/widgets'
+import { Group, DatetimeRange } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MDatetimerange
+    Group,
+    DatetimeRange
   },
   methods: {
     onChange (val) {

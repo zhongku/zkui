@@ -1,59 +1,59 @@
 <template>
   <div>
-    <m-group title="single column" label-width="5em">
-      <m-popup-picker :title="title1" :data="list1" v-model="value1" @on-show="onShow" @on-hide="onHide" @on-change="onChange" :placeholder="$t('please select')"></m-popup-picker>
-      <m-popup-picker :popup-title="$t('please select')" :title="title1" :data="list1" v-model="value1_1" @on-show="onShow" @on-hide="onHide" @on-change="onChange" :placeholder="$t('please select')">
+    <group title="single column" label-width="5em">
+      <popup-picker :title="title1" :data="list1" v-model="value1" @on-show="onShow" @on-hide="onHide" @on-change="onChange" :placeholder="$t('please select')"></popup-picker>
+      <popup-picker :popup-title="$t('please select')" :title="title1" :data="list1" v-model="value1_1" @on-show="onShow" @on-hide="onHide" @on-change="onChange" :placeholder="$t('please select')">
         <template slot="title" slot-scope="props"><!-- use scope="props" when vue < 2.5.0 -->
           <span :class="props.labelClass" :style="props.labelStyle" style="height:24px;">
             <span class="demo-icon demo-icon-big" style="font-size:20px;vertical-align:middle;"></span>
             <span style="vertical-align:middle;">手机</span>
           </span>
         </template>
-      </m-popup-picker>
-    </m-group>
+      </popup-picker>
+    </group>
     <br>
     <div class="picker-buttons">
-       <m-button type="primary" @click.native="value1=[]">将值置为空</m-button>
-       <m-button type="primary" @click.native="changeList10">重新赋值列表</m-button>
-       <m-button type="primary" @click.native="changeList11">push方式更改列表</m-button>
+       <x-button type="primary" @click.native="value1=[]">将值置为空</x-button>
+       <x-button type="primary" @click.native="changeList10">重新赋值列表</x-button>
+       <x-button type="primary" @click.native="changeList11">push方式更改列表</x-button>
      </div>
-     <m-group title="double columns">
-       <m-popup-picker :title="title2" :data="list2" v-model="value2"></m-popup-picker>
-     </m-group>
+     <group title="double columns">
+       <popup-picker :title="title2" :data="list2" v-model="value2"></popup-picker>
+     </group>
      <br>
 
-     <m-group title="chained columns">
-       <m-popup-picker :title="title3" :data="list3" :columns="3" v-model="value3" ref="picker3"></m-popup-picker>
-       <m-cell title="获取值对应的文字" :value="$refs.picker3&&$refs.picker3.getNameValues()"></m-cell>
-       <m-popup-picker :title="title4" :data="list3" :columns="3" v-model="value4" show-name></m-popup-picker>
-     </m-group>
+     <group title="chained columns">
+       <popup-picker :title="title3" :data="list3" :columns="3" v-model="value3" ref="picker3"></popup-picker>
+       <cell title="获取值对应的文字" :value="$refs.picker3&&$refs.picker3.getNameValues()"></cell>
+       <popup-picker :title="title4" :data="list3" :columns="3" v-model="value4" show-name></popup-picker>
+     </group>
 
      <br>
      <div class="picker-buttons">
-       <m-button type="primary" @click.native="changeList21">push方式更改列表</m-button>
+       <x-button type="primary" @click.native="changeList21">push方式更改列表</x-button>
      </div>
 
      <br>
-     <m-divider>Control the visibility of popup-picker</m-divider>
+     <divider>Control the visibility of popup-picker</divider>
      <div style="margin: 0 15px;">
-       <m-button @click.native="showPopupPicker = true" type="primary">Show MPopuppicker. value: {{value5 }}</m-button>
+       <x-button @click.native="showPopupPicker = true" type="primary">Show PopupPicker. value: {{value5 }}</x-button>
      </div>
-     <m-group>
-       <m-popup-picker :show.sync="showPopupPicker" :show-cell="false" title="TEST" :data="[['1', '2', '3', '4', '5']]" v-model="value5"></m-popup-picker>
-     </m-group>
+     <group>
+       <popup-picker :show.sync="showPopupPicker" :show-cell="false" title="TEST" :data="[['1', '2', '3', '4', '5']]" v-model="value5"></popup-picker>
+     </group>
 
      <br>
-     <m-group title="隐藏时不影响其他popup-picker的mask">
-       <m-switch title="ishide popup-picker" v-model="switch6"></m-switch>
-       <m-popup-picker v-if="!switch6" title="显示值" :data="['我不会影响遮罩层'.split('')]" v-model="value6"></m-popup-picker>
-     </m-group>
+     <group title="隐藏时不影响其他popup-picker的mask">
+       <x-switch title="ishide popup-picker" v-model="switch6"></x-switch>
+       <popup-picker v-if="!switch6" title="显示值" :data="['我不会影响遮罩层'.split('')]" v-model="value6"></popup-picker>
+     </group>
 
      <br>
      <br>
 
-     <m-group title="显示格式化">
-      <m-popup-picker title="时间" :inline-desc="`当前值[${formatDemoValue}]`"  v-model="formatDemoValue" :data="[['01','02','03'],['11','12','13']]" :display-format="format"></m-popup-picker>
-     </m-group>
+     <group title="显示格式化">
+      <popup-picker title="时间" :inline-desc="`当前值[${formatDemoValue}]`"v-model="formatDemoValue" :data="[['01','02','03'],['11','12','13']]" :display-format="format"></popup-picker>
+     </group>
   </div>
 </template>
 
@@ -63,17 +63,17 @@ please select:
 </i18n>
 
 <script>
-import { MPopuppicker, MGroup, MCell, MPicker, MButton, MDivider, MSwitch } from 'src/widgets'
+import { PopupPicker, Group, Cell, Picker, XButton, Divider, XSwitch } from 'vux'
 
 export default {
   components: {
-    MPopuppicker,
-    MGroup,
-    MPicker,
-    MButton,
-    MDivider,
-    MCell,
-    MSwitch
+    PopupPicker,
+    Group,
+    Picker,
+    XButton,
+    Divider,
+    Cell,
+    XSwitch
   },
   methods: {
     onChange (val) {

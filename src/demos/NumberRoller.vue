@@ -1,18 +1,18 @@
 <template>
   <div>
     <number-roller :number="number" :width="6"></number-roller>
-    <m-divider>set width dynamically</m-divider>
+    <divider>set width dynamically</divider>
     <number-roller :number="number2" :width="length"></number-roller>
   </div>
 </template>
 
 <script>
-import { MNumberroller, MDivider } from 'src/widgets'
+import { NumberRoller, Divider } from 'vux'
 
 export default {
   components: {
-    MNumberroller,
-    MDivider
+    NumberRoller,
+    Divider
   },
   created () {
     setInterval(() => {

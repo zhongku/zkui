@@ -1,24 +1,24 @@
 <template>
   <div>
-    <m-divider>Pull Down to Refresh</m-divider>
-    <m-scroller lock-x scrollbar-y use-pulldown height="200px" @on-pulldown-loading="load1" ref="demo1">
+    <divider>Pull Down to Refresh</divider>
+    <scroller lock-x scrollbar-y use-pulldown height="200px" @on-pulldown-loading="load1" ref="demo1">
       <div class="box2">
-        <p v-for="i in n1" :key="i">placeholder {{i}}</p>
+        <p v-for="i in n1">placeholder {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>Chinese: 下拉刷新</m-divider>
-    <m-scroller lock-x scrollbar-y use-pulldown :pulldown-config="{content:'下拉刷新',downContent:'下拉刷新',upContent:'释放刷新',loadingContent:'加载中'}" height="200px" @on-pulldown-loading="load2" v-model="status1">
+    <divider>Chinese: 下拉刷新</divider>
+    <scroller lock-x scrollbar-y use-pulldown :pulldown-config="{content:'下拉刷新',downContent:'下拉刷新',upContent:'释放刷新',loadingContent:'加载中'}" height="200px" @on-pulldown-loading="load2" v-model="status1">
       <div class="box2">
-        <p v-for="i in 80" :key="i">占位 {{i}}</p>
+        <p v-for="i in 80">占位 {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>custom pulldown html template</m-divider>
-    <m-scroller lock-x scrollbar-y use-pulldown height="200px" @on-pulldown-loading="load3" ref="demo3" v-model="status2">
+    <divider>custom pulldown html template</divider>
+    <scroller lock-x scrollbar-y use-pulldown height="200px" @on-pulldown-loading="load3" ref="demo3" v-model="status2">
       <!--content slot-->
       <div class="box2">
-        <p v-for="i in 80" :key="i">placeholder {{i}}</p>
+        <p v-for="i in 80">placeholder {{i}}</p>
       </div>
 
       <!--pulldown slot-->
@@ -27,20 +27,20 @@
         <span class="pulldown-arrow" v-show="status2.pulldownStatus === 'down' || status2.pulldownStatus === 'up'" :class="{'rotate': status2.pulldownStatus === 'up'}">↓</span>
         <span v-show="status2.pulldownStatus === 'loading'"><spinner type="ios-small"></spinner></span>
       </div>
-    </m-scroller>
+    </scroller>
 
 
   </div>
 </template>
 
 <script>
-import { MScroller, MDivider, MSpinner } from 'src/widgets'
+import { Scroller, Divider, Spinner } from 'vux'
 
 export default {
   components: {
-    MScroller,
-    MDivider,
-    MSpinner
+    Scroller,
+    Divider,
+    Spinner
   },
   methods: {
     load1 () {

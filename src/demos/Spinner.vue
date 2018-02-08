@@ -1,21 +1,21 @@
 <template>
   <div>
-    <m-group>
-      <m-cell v-for="(type, index) in types" :title="type" :key="type" :inline-desc="index === 3 ? 'size=40px' : ''">
+    <group>
+      <cell v-for="(type, index) in types" :title="type" :key="type" :inline-desc="index === 3 ? 'size=40px' : ''">
         <spinner :type="type" :size="index === 3 ? '40px' : ''"></spinner>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
   </div>
 </template>
 
 <script>
-import { MSpinner, MGroup, MCell } from 'src/widgets'
+import { Spinner, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MSpinner,
-    MCell,
-    MGroup
+    Spinner,
+    Cell,
+    Group
   },
   data () {
     return {

@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import { MShake } from 'src/widgets'
+import { Shake } from 'vux'
 
 export default {
   components: {
-    MShake
+    Shake
   },
   methods: {
     'on-shake' () {

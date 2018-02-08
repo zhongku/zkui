@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>匠芯云-系统管理后台</title>
-  <meta content="" name="description" />
-  <meta content="匠芯云" name="author" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-  <meta name="screen-orientation" content="portrait" />
-  <meta content="yes" name="apple-mobile-web-app-capable">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="full-screen" content="yes">
-  <meta name="x5-fullscreen" content="true">
-</head>
-<body ontouchstart>
-	<div id="zkcloud">
-    <router-view></router-view>
-    <!-- <symbols></symbols> -->
-  </div>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="./static/favicon.png" type="image/x-icon">
+    <title>vux-ui</title>
+  </head>
+  <body ontouchstart>
+    <div id="app"></div>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89859411-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <%=htmlWebpackPlugin.files.webpackManifest%>
+  </body>
 </html>

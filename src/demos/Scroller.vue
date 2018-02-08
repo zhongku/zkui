@@ -1,74 +1,74 @@
 <template>
   <div>
-    <m-group>
-      <m-cell is-link title="pullup" link="/component/pullup">Pullup</m-cell>
-      <m-cell is-link title="pulldown" link="/component/pulldown">Pulldown</m-cell>
-      <m-cell is-link title="pulldownpullup" link="/component/pulldown-pullup">PulldownPullup</m-cell>
-    </m-group>
+    <group>
+      <cell is-link title="pullup" link="/component/pullup">Pullup</cell>
+      <cell is-link title="pulldown" link="/component/pulldown">Pulldown</cell>
+      <cell is-link title="pulldownpullup" link="/component/pulldown-pullup">PulldownPullup</cell>
+    </group>
 
-    <m-divider>{{ $t('A Horizontal MScroller without Scrollbar') }}</m-divider>
-    <m-scroller lock-y :scrollbar-x=false>
+    <divider>{{ $t('A Horizontal Scroller without Scrollbar') }}</divider>
+    <scroller lock-y :scrollbar-x=false>
       <div class="box1">
-        <div class="box1-item" v-for="i in 7" :key="i"><span>{{' ' + i + ' '}}</span></div>
+        <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>{{ $t('A Horizontal MScroller with Scrollbar') }}</m-divider>
-    <m-scroller lock-y scrollbar-x>
+    <divider>{{ $t('A Horizontal Scroller with Scrollbar') }}</divider>
+    <scroller lock-y scrollbar-x>
       <div class="box1">
-        <div class="box1-item" v-for="i in 7" :key="i"><span>{{' ' + i + ' '}}</span></div>
+        <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>{{ $t('A Horizontal MScroller without bounce effect') }}</m-divider>
-    <m-scroller lock-y scrollbar-x :bounce=false>
+    <divider>{{ $t('A Horizontal Scroller without bounce effect') }}</divider>
+    <scroller lock-y scrollbar-x :bounce=false>
       <div class="box1">
-        <div class="box1-item" v-for="i in 7" :key="i"><span>{{' ' + i + ' '}}</span></div>
+        <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>{{ $t('A Vertical MScroller') }} scrollTop: {{scrollTop}}</m-divider>
-    <m-scroller lock-x height="200px" @on-scroll="onScroll" ref="scrollerEvent">
+    <divider>{{ $t('A Vertical Scroller') }} scrollTop: {{scrollTop}}</divider>
+    <scroller lock-x height="200px" @on-scroll="onScroll" ref="scrollerEvent">
       <div class="box2">
-        <p v-for="i in 80" :key="i">placeholder {{i}}</p>
+        <p v-for="i in 80">placeholder {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-button type="primary" @click.native="$refs.scrollerEvent.reset({top:0})">reset</m-button>
+    <x-button type="primary" @click.native="$refs.scrollerEvent.reset({top:0})">reset</x-button>
 
-    <m-divider>{{ $t('event:on-scroll-bottom') }} </m-divider>
-    <m-scroller lock-x height="200px" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="200">
+    <divider>{{ $t('event:on-scroll-bottom') }} </divider>
+    <scroller lock-x height="200px" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="200">
       <div class="box2">
-        <p v-for="i in bottomCount" :key="i">placeholder {{i}}</p>
+        <p v-for="i in bottomCount">placeholder {{i}}</p>
         <load-more tip="loading"></load-more>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>{{ $t('A Vertical MScroller with scrollbar') }}</m-divider>
-    <m-scroller lock-x scrollbar-y height="200px" ref="scroller">
+    <divider>{{ $t('A Vertical Scroller with scrollbar') }}</divider>
+    <scroller lock-x scrollbar-y height="200px" ref="scroller">
       <div class="box2">
-        <p v-for="i in 20" v-if="showList1" :key="i">placeholder {{ i + '' + i }}</p>
-        <p v-for="i in 10" v-if="!showList1" :key="i">placeholder {{ i }}</p>
-        <m-button style="margin:10px 0;" type="primary" @click.native="onClickButton">{{ $t('Button') }}</m-button>
-        <m-group>
-          <m-cell @click.native="onCellClick" title="Title" value="Value"></m-cell>
-        </m-group>
+        <p v-for="i in 20" v-if="showList1">placeholder {{ i + '' + i }}</p>
+        <p v-for="i in 10" v-if="!showList1">placeholder {{ i }}</p>
+        <x-button style="margin:10px 0;" type="primary" @click.native="onClickButton">{{ $t('Button') }}</x-button>
+        <group>
+          <cell @click.native="onCellClick" title="Title" value="Value"></cell>
+        </group>
       </div>
-    </m-scroller>
-    <m-button @click.native="changeList" type="primary">{{ $t('show another list') }}</m-button>
+    </scroller>
+    <x-button @click.native="changeList" type="primary">{{ $t('show another list') }}</x-button>
   </div>
 </template>
 
 <i18n>
-A Horizontal MScroller without Scrollbar:
+A Horizontal Scroller without Scrollbar:
   zh-CN: 不带滚动条的水平 scroller
-A Horizontal MScroller with Scrollbar:
+A Horizontal Scroller with Scrollbar:
   zh-CN: 显示滚动条的水平 scroller
-A Horizontal MScroller without bounce effect:
+A Horizontal Scroller without bounce effect:
   zh-CN: 没有边缘回滚效果的水平 scroller
-A Vertical MScroller:
+A Vertical Scroller:
   zh-CN: 竖向 scroller
-A Vertical MScroller with scrollbar:
+A Vertical Scroller with scrollbar:
   zh-CN: 显示滚动条的竖向 scroller
 show another list:
   zh-CN: 改变显示的内容
@@ -79,17 +79,17 @@ event:on-scroll-bottom:
 </i18n>
 
 <script>
-import { MScroller, MDivider, MSpinner, MButton, MGroup, MCell, MLoadmore } from 'src/widgets'
+import { Scroller, Divider, Spinner, XButton, Group, Cell, LoadMore } from 'vux'
 
 export default {
   components: {
-    MScroller,
-    MDivider,
-    MSpinner,
-    MButton,
-    MGroup,
-    MCell,
-    MLoadmore
+    Scroller,
+    Divider,
+    Spinner,
+    XButton,
+    Group,
+    Cell,
+    LoadMore
   },
   data () {
     return {

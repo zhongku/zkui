@@ -1,35 +1,35 @@
 <template>
   <div>
-    <m-badge text="1"></m-badge>
+    <badge text="1"></badge>
     <br>
-    <m-badge text="123"></m-badge>
+    <badge text="123"></badge>
     <br>
-    <m-group :title="$t('Used in a MCell')">
-      <m-cell :title="$t('Red dot')" is-link>
-        <div class="m-badge-value">
+    <group :title="$t('Used in a Cell')">
+      <cell :title="$t('Red dot')" is-link>
+        <div class="badge-value">
           <span class="vertical-middle">{{ $t('New Messages') }} &nbsp;</span>
-          <m-badge></m-badge>
+          <badge></badge>
         </div>
-      </m-cell>
-      <m-cell :title="$t('Single digit')" is-link>
-        <div class="m-badge-value">
+      </cell>
+      <cell :title="$t('Single digit')" is-link>
+        <div class="badge-value">
           <span class="vertical-middle">{{ $t('New Messages') }} &nbsp;</span>
-          <m-badge text="8"></m-badge>
+          <badge text="8"></badge>
         </div>
-      </m-cell>
-      <m-cell :title="$t('Big Number')" is-link>
-        <div class="m-badge-value">
+      </cell>
+      <cell :title="$t('Big Number')" is-link>
+        <div class="badge-value">
           <span class="vertical-middle">{{ $t('New Messages') }} &nbsp;</span>
-          <m-badge text="888"></m-badge>
+          <badge text="888"></badge>
         </div>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
   </div>
 </template>
 
 <i18n>
-Used in a MCell:
-  zh-CN: 在 MCell 组件里使用
+Used in a Cell:
+  zh-CN: 在 Cell 组件里使用
 New Messages:
   zh-CN: 新消息
 Single digit:
@@ -41,19 +41,19 @@ Red dot:
 </i18n>
 
 <script>
-import { MBadge, MGroup, MCell } from 'src/widgets'
+import { Badge, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MBadge,
-    MGroup,
-    MCell
+    Badge,
+    Group,
+    Cell
   }
 }
 </script>
 
 <style lang="less">
-.m-badge-value {
+.badge-value {
   display: inline-block!important;
 }
 .vertical-middle {

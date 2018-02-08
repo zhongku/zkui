@@ -1,22 +1,22 @@
 <template>
   <div>
-    <m-scroller lock-x scrollbar-y height="600px" ref="scroller" style="border-bottom:1px solid green">
+    <scroller lock-x scrollbar-y height="600px" ref="scroller" style="border-bottom:1px solid green">
       <div>
-        <div v-for="src in list" :key="src" style="background-color:yellow;text-align:center;">
-          <span style="font-size:20px;">MLoading</span>
-          <m-img style="min-height:100px;" :src="src" v-if="render" :scroller="$refs.scroller" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="300"></m-img>
+        <div v-for="src in list" style="background-color:yellow;text-align:center;">
+          <span style="font-size:20px;">Loading</span>
+          <x-img style="min-height:100px;" :src="src" v-if="render" :scroller="$refs.scroller" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="300"></x-img>
         </div>
       </div>
-    </m-scroller>
+    </scroller>
   </div>
 </template>
 
 <script>
-import { MImg, MScroller } from 'src/widgets'
+import { XImg, Scroller } from 'vux'
 export default {
   components: {
-    MImg,
-    MScroller
+    XImg,
+    Scroller
   },
   mounted () {
     this.$nextTick(() => {

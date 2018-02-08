@@ -1,59 +1,59 @@
 <template>
   <div>
-    <m-flow>
-      <m-flow-state state="1" :title="$t('Paid')" is-done></m-flow-state>
-      <m-flow-line is-done></m-flow-line>
+    <flow>
+      <flow-state state="1" :title="$t('Paid')" is-done></flow-state>
+      <flow-line is-done></flow-line>
 
-      <m-flow-state state="2" is-done>
+      <flow-state state="2" is-done>
         <span slot="title">{{ $t('Shipped') }}</span>
-      </m-flow-state>
-      <m-flow-line :tip="$t('In progress')"></m-flow-line>
+      </flow-state>
+      <flow-line :tip="$t('In progress')"></flow-line>
 
-      <m-flow-state state="3" :title="$t('Delivered')"></m-flow-state>
-      <m-flow-line></m-flow-line>
+      <flow-state state="3" :title="$t('Delivered')"></flow-state>
+      <flow-line></flow-line>
 
-      <m-flow-state state="4" :title="$t('Done')"></m-flow-state>
-    </m-flow>
+      <flow-state state="4" :title="$t('Done')"></flow-state>
+    </flow>
 
 
-    <m-flow>
-      <m-flow-state :title="$t('Paid')" is-done></m-flow-state>
-      <m-flow-line is-done :line-span="15"></m-flow-line>
+    <flow>
+      <flow-state :title="$t('Paid')" is-done></flow-state>
+      <flow-line is-done :line-span="15"></flow-line>
 
-      <m-flow-state :title="$t('Shipped')" is-done></m-flow-state>
-      <m-flow-line is-done :line-span="30"></m-flow-line>
+      <flow-state :title="$t('Shipped')" is-done></flow-state>
+      <flow-line is-done :line-span="30"></flow-line>
 
-      <m-flow-state :title="$t('Delivered')" is-done></m-flow-state>
-      <m-flow-line :tip="$t('In progress')" tip-direction="bottom" :line-span="45" :process-span="60"></m-flow-line>
+      <flow-state :title="$t('Delivered')" is-done></flow-state>
+      <flow-line :tip="$t('In progress')" tip-direction="bottom" :line-span="45" :process-span="60"></flow-line>
 
-      <m-flow-state :title="$t('Done')"></m-flow-state>
-    </m-flow>
+      <flow-state :title="$t('Done')"></flow-state>
+    </flow>
 
-    <m-flow orientation="vertical" style="height:250px;">
-      <m-flow-state state="1" :title="$t('Paid')" is-done></m-flow-state>
-      <m-flow-line is-done></m-flow-line>
+    <flow orientation="vertical" style="height:250px;">
+      <flow-state state="1" :title="$t('Paid')" is-done></flow-state>
+      <flow-line is-done></flow-line>
 
-      <m-flow-state state="2" :title="$t('Shipped')" is-done></m-flow-state>
-      <m-flow-line :tip="$t('In progress')"></m-flow-line>
+      <flow-state state="2" :title="$t('Shipped')" is-done></flow-state>
+      <flow-line :tip="$t('In progress')"></flow-line>
 
-      <m-flow-state state="3" :title="$t('Delivered')"></m-flow-state>
-      <m-flow-line></m-flow-line>
+      <flow-state state="3" :title="$t('Delivered')"></flow-state>
+      <flow-line></flow-line>
 
-      <m-flow-state state="4" :title="$t('Done')"></m-flow-state>
-    </m-flow>
+      <flow-state state="4" :title="$t('Done')"></flow-state>
+    </flow>
 
-    <m-flow orientation="vertical" style="height:200px;">
-      <m-flow-state state="1" :title="$t('Paid')" is-done></m-flow-state>
-      <m-flow-line is-done :line-span="15"></m-flow-line>
+    <flow orientation="vertical" style="height:200px;">
+      <flow-state state="1" :title="$t('Paid')" is-done></flow-state>
+      <flow-line is-done :line-span="15"></flow-line>
 
-      <m-flow-state state="2" :title="$t('Shipped')" is-done></m-flow-state>
-      <m-flow-line :line-span="30"></m-flow-line>
+      <flow-state state="2" :title="$t('Shipped')" is-done></flow-state>
+      <flow-line :line-span="30"></flow-line>
 
-      <m-flow-state state="3" :title="$t('Delivered')"></m-flow-state>
-      <m-flow-line :line-span="45"></m-flow-line>
+      <flow-state state="3" :title="$t('Delivered')"></flow-state>
+      <flow-line :line-span="45"></flow-line>
 
-      <m-flow-state state="4" :title="$t('Done')"></m-flow-state>
-    </m-flow>
+      <flow-state state="4" :title="$t('Done')"></flow-state>
+    </flow>
 
   </div>
 </template>
@@ -72,11 +72,11 @@ Done:
 </i18n>
 
 <script>
-import { MFlow, FlowState, FlowLine } from 'src/widgets'
+import { Flow, FlowState, FlowLine } from 'vux'
 
 export default {
   components: {
-    MFlow,
+    Flow,
     FlowState,
     FlowLine
   }

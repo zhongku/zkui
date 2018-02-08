@@ -7,7 +7,7 @@
         <button-tab-item>{{ $t('This Month') }}</button-tab-item>
       </button-tab>
       <br>
-      <m-divider>{{ $t('Use v-model to set selected item') }}</m-divider>
+      <divider>{{ $t('Use v-model to set selected item') }}</divider>
       <br>
       <button-tab v-model="demo01">
         <button-tab-item @on-item-click="consoleIndex()">{{ $t('Articles') }}</button-tab-item>
@@ -19,7 +19,7 @@
         <button-tab-item>{{ $t('Products sync') }}</button-tab-item>
       </button-tab>
       <br>
-      <m-divider>{{ $t('Red Dot') }}</m-divider>
+      <divider>{{ $t('Red Dot') }}</divider>
       <br>
       <button-tab>
         <button-tab-item selected>{{ $t('All Messages') }}</button-tab-item>
@@ -55,13 +55,13 @@ Use v-model to set selected item:
 </i18n>
 
 <script>
-import { MButtontab, ButtonTabItem, MDivider } from 'src/widgets'
+import { ButtonTab, ButtonTabItem, Divider } from 'vux'
 
 export default {
   components: {
-    MButtontab,
+    ButtonTab,
     ButtonTabItem,
-    MDivider
+    Divider
   },
   methods: {
     consoleIndex () {

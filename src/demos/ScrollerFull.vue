@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="menu vux-1px-r">
-       <m-scroller lock-x>
+       <scroller lock-x>
           <div class="box1">
             <ul>
               <li class="vux-1px-b"><span>热搜推荐</span></li>
@@ -26,12 +26,12 @@
               <li class="vux-1px-b"><span>全球购</span></li>
             </ul>
           </div>
-        </m-scroller>
+        </scroller>
     </div>
     <div class="content">
-      <m-scroller lock-x scrollbar-y>
+      <scroller lock-x scrollbar-y>
         <div>
-          <div style="margin: 10px;overflow: hidden;" v-for="item in list" :key="item">
+          <div style="margin: 10px;overflow: hidden;" v-for="item in list">
             <masker style="border-radius: 2px;">
               <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
               <div slot="content" class="m-title">
@@ -42,18 +42,18 @@
             </masker>
           </div>
         </div>
-      </m-scroller>
+      </scroller>
     </div>
   </div>
 </template>
 
 <script>
-import { MScroller, MMasker } from 'src/widgets'
+import { Scroller, Masker } from 'vux'
 
 export default {
   components: {
-    MScroller,
-    MMasker
+    Scroller,
+    Masker
   },
   data () {
     return {

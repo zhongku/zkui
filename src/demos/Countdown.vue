@@ -1,16 +1,16 @@
 <template>
   <div>
-    <m-group :title=" $t('Automatic countdown') ">
-      <m-cell title="15s" v-model="value">
-        <m-countdown v-model="time1" @on-finish="finish" v-show="show"></m-countdown>
-      </m-cell>
-    </m-group>
-    <m-group :title=" $t('Manually') ">
-      <m-switch :title=" $t('Start') " v-model="start"></m-switch>
-      <m-cell title="15s">
-        <m-countdown v-model="time2" :start="start" @on-finish="finish2"></m-countdown>
-      </m-cell>
-    </m-group>
+    <group :title=" $t('Automatic countdown') ">
+      <cell title="15s" v-model="value">
+        <countdown v-model="time1" @on-finish="finish" v-show="show"></countdown>
+      </cell>
+    </group>
+    <group :title=" $t('Manually') ">
+      <x-switch :title=" $t('Start') " v-model="start"></x-switch>
+      <cell title="15s">
+        <countdown v-model="time2" :start="start" @on-finish="finish2"></countdown>
+      </cell>
+    </group>
   </div>
 </template>
 
@@ -24,14 +24,14 @@ Start:
 </i18n>
 
 <script>
-import { MGroup, MCell, MCountdown, MSwitch } from 'src/widgets'
+import { Group, Cell, Countdown, XSwitch } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell,
-    MCountdown,
-    MSwitch
+    Group,
+    Cell,
+    Countdown,
+    XSwitch
   },
   methods: {
     finish (index) {

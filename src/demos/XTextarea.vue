@@ -1,22 +1,22 @@
 <template>
   <div>
-    <m-group>
-      <m-textarea :max="20" :placeholder="$t('placeholder')" @on-focus="onEvent('focus')" @on-blur="onEvent('blur')"></m-textarea>
-    </m-group>
-    <m-group :title="$t('used with input')">
-      <m-input :placeholder="$t('title')"></m-input>
-      <m-textarea :max="200" name="description" :placeholder="$t('placeholder')"></m-textarea>
-    </m-group>
-    <m-group :title="$t('hide counter')">
-      <m-textarea :max="200" name="detail" :placeholder="$t('placeholder')" :show-counter="false"></m-textarea>
-    </m-group>
-    <m-group :title="$t('autosize')">
-      <m-textarea :placeholder="$t('Type something')" :show-counter="false" :rows="1" autosize></m-textarea>
-      <m-textarea :title="$t('title')" :placeholder="$t('Type something')" :show-counter="false" :rows="1" autosize></m-textarea>
-    </m-group>
-    <m-group :title="$t('set height=200')">
-      <m-textarea :title="$t('title')" :max="200" :placeholder="$t('placeholder')" :show-counter="false" :height="200" :rows="8" :cols="30"></m-textarea>
-    </m-group>
+    <group>
+      <x-textarea :max="20" :placeholder="$t('placeholder')" @on-focus="onEvent('focus')" @on-blur="onEvent('blur')"></x-textarea>
+    </group>
+    <group :title="$t('used with input')">
+      <x-input :placeholder="$t('title')"></x-input>
+      <x-textarea :max="200" name="description" :placeholder="$t('placeholder')"></x-textarea>
+    </group>
+    <group :title="$t('hide counter')">
+      <x-textarea :max="200" name="detail" :placeholder="$t('placeholder')" :show-counter="false"></x-textarea>
+    </group>
+    <group :title="$t('autosize')">
+      <x-textarea :placeholder="$t('Type something')" :show-counter="false" :rows="1" autosize></x-textarea>
+      <x-textarea :title="$t('title')" :placeholder="$t('Type something')" :show-counter="false" :rows="1" autosize></x-textarea>
+    </group>
+    <group :title="$t('set height=200')">
+      <x-textarea :title="$t('title')" :max="200" :placeholder="$t('placeholder')" :show-counter="false" :height="200" :rows="8" :cols="30"></x-textarea>
+    </group>
   </div>
 </template>
 
@@ -38,13 +38,13 @@ set height=200:
 </i18n>
 
 <script>
-import { MTextarea, MGroup, MInput } from 'src/widgets'
+import { XTextarea, Group, XInput } from 'vux'
 
 export default {
   components: {
-    MTextarea,
-    MGroup,
-    MInput
+    XTextarea,
+    Group,
+    XInput
   },
   methods: {
     onEvent (event) {

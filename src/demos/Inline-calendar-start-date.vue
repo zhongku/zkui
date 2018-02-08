@@ -1,20 +1,20 @@
 <template>
 <div>
-  <m-divider>set start-date as TODAY</m-divider>
-  <m-inline-calendar
+  <divider>set start-date as TODAY</divider>
+  <inline-calendar
   start-date="TODAY"
   end-date="2017-06-18">
-  </m-inline-calendar>
-   <m-divider>set end-date as TODAY</m-divider>
-  <m-inline-calendar
+  </inline-calendar>
+   <divider>set end-date as TODAY</divider>
+  <inline-calendar
   end-date="TODAY">
-  </m-inline-calendar>
+  </inline-calendar>
   
 </div>
 </template>
 
 <script>
-import { MInlinecalendar, MDivider } from 'src/widgets'
+import { InlineCalendar, Divider } from 'vux'
 
 export default {
   data () {
@@ -22,8 +22,8 @@ export default {
     }
   },
   components: {
-    MInlinecalendar,
-    MDivider
+    InlineCalendar,
+    Divider
   }
 }
 </script>

@@ -9,8 +9,8 @@
         </ul>
       </section>
       <section class='menu_right' ref='menuFoodList'>
-        <m-checklist :check-disabled="false" :title='ctitle' :options='objectList' v-model='objectListValue' @on-change='change'>
-        </m-checklist>
+        <checklist :check-disabled="false" :title='ctitle' :options='objectList' v-model='objectListValue' @on-change='change'>
+        </checklist>
 
       </section>
     </section>
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-  import { MChecklist } from 'src/widgets'
+  import { Checklist } from 'vux'
 
   export default {
     components: {
-      MChecklist
+      Checklist
     },
     data () {
       return {

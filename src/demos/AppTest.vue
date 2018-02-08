@@ -1,24 +1,24 @@
 <template>
   <div>
-    <m-group>
-      <m-cell title="device id" :value="deviceId"></m-cell>
-      <m-cell title="device model" :value="deviceModel"></m-cell>
-    </m-group>
+    <group>
+      <cell title="device id" :value="deviceId"></cell>
+      <cell title="device model" :value="deviceModel"></cell>
+    </group>
     <div style="padding:15px;">
-      <m-button @click.native="alert" type="primary">Native MAlert</m-button>
-      <m-button @click.native="toast" type="primary">Native MToast</m-button>
+      <x-button @click.native="alert" type="primary">Native Alert</x-button>
+      <x-button @click.native="toast" type="primary">Native Toast</x-button>
     </div>
   </div>
 </template>
 
 <script>
-import { MGroup, MCell, MButton } from 'src/widgets'
+import { Group, Cell, XButton } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell,
-    MButton
+    Group,
+    Cell,
+    XButton
   },
   methods: {
     alert () {
@@ -30,7 +30,7 @@ export default {
     },
     toast () {
       this.$api.toast({
-        msg: 'Native MToast',
+        msg: 'Native Toast',
         duration: 6000,
         location: 'bottom'
       })
@@ -38,8 +38,8 @@ export default {
   },
   mounted () {
     this.$deviceready(() => {
-    /*  this.deviceId = api.deviceId
-      this.deviceModel = api.deviceModel*/
+      this.deviceId = api.deviceId
+      this.deviceModel = api.deviceModel
       this.$api.setFullScreen({
         fullScreen: true
       })

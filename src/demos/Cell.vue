@@ -1,91 +1,91 @@
 <template>
   <div>
-    <m-group>
-      <m-cell :title="$t('My Account')" :value="$t('Protected')" @click.native="onClick"></m-cell>
-      <m-cell :title="$t('Money')" @click.native="onClick" :is-loading="!money" :value="money"></m-cell>
-      <m-cell :title="$t('Withdraw')" disabled is-link></m-cell>
-    </m-group>
+    <group>
+      <cell :title="$t('My Account')" :value="$t('Protected')" @click.native="onClick"></cell>
+      <cell :title="$t('Money')" @click.native="onClick" :is-loading="!money" :value="money"></cell>
+      <cell :title="$t('Withdraw')" disabled is-link></cell>
+    </group>
 
-    <m-group :title="$t('Use is-link to show arrow')">
-      <m-cell is-link>
-        <span slot="title" style="color:green;"><span style="vertical-align:middle;">{{ $t('Messages') }}</span> <m-badge text="1"></m-badge></span>
-      </m-cell>
-      <m-cell :title="$t('Notifications')" is-link></m-cell>
-      <m-cell :title="$t('Privacy')" is-link></m-cell>
-      <m-cell :title="$t('General')" is-link>
+    <group :title="$t('Use is-link to show arrow')">
+      <cell is-link>
+        <span slot="title" style="color:green;"><span style="vertical-align:middle;">{{ $t('Messages') }}</span> <badge text="1"></badge></span>
+      </cell>
+      <cell :title="$t('Notifications')" is-link></cell>
+      <cell :title="$t('Privacy')" is-link></cell>
+      <cell :title="$t('General')" is-link>
         <img slot="icon" width="20" style="display:block;margin-right:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=">
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
-    <m-group label-width="5em" title="Align-items">
-      <m-cell primary="content" title="default" value="long long long longlong longlong longlong longlong longlong longlong longlong longlong long"></m-cell>
-      <m-cell title="flex-start" align-items="flex-start" value="long long long longlong longlong longlong longlong longlong longlong longlong longlong long"></m-cell>
-    </m-group>
+    <group label-width="5em" title="Align-items">
+      <cell primary="content" title="default" value="long long long longlong longlong longlong longlong longlong longlong longlong longlong long"></cell>
+      <cell title="flex-start" align-items="flex-start" value="long long long longlong longlong longlong longlong longlong longlong longlong longlong long"></cell>
+    </group>
 
-    <m-group :title="$t('Collapse')">
-      <m-cell
+    <group :title="$t('Collapse')">
+      <cell
       :title="$t('Title 001')"
       is-link
       :border-intent="false"
       :arrow-direction="showContent001 ? 'up' : 'down'"
-      @click.native="showContent001 = !showContent001"></m-cell>
+      @click.native="showContent001 = !showContent001"></cell>
 
       <template v-if="showContent001">
-        <m-cell-box :border-intent="false" class="sub-item" is-link>content 001</m-cell-box>
-        <m-cell-box class="sub-item" is-link>content 001</m-cell-box>
-        <m-cell-box class="sub-item" is-link>content 001</m-cell-box>
+        <cell-box :border-intent="false" class="sub-item" is-link>content 001</cell-box>
+        <cell-box class="sub-item" is-link>content 001</cell-box>
+        <cell-box class="sub-item" is-link>content 001</cell-box>
       </template>
 
-      <m-cell
+      <cell
       :title="$t('Title 002')"
       is-link
       :border-intent="false"
       :arrow-direction="showContent002 ? 'up' : 'down'"
-      @click.native="showContent002 = !showContent002"></m-cell>
+      @click.native="showContent002 = !showContent002"></cell>
 
       <template v-if="showContent002">
-        <m-cell-form-preview :border-intent="false" :list="list"></m-cell-form-preview>
+        <cell-form-preview :border-intent="false" :list="list"></cell-form-preview>
       </template>
 
-      <m-cell
+      <cell
       :title="$t('Title 003')"
       is-link
       :border-intent="false"
       :arrow-direction="showContent003 ? 'up' : 'down'"
-      @click.native="showContent003 = !showContent003"></m-cell>
+      @click.native="showContent003 = !showContent003"></cell>
 
       <template v-if="showContent003">
-        <m-cell-box :border-intent="false" class="sub-item">I'm content 003</m-cell-box>
+        <cell-box :border-intent="false" class="sub-item">I'm content 003</cell-box>
       </template>
 
-      <m-cell
+      <cell
       :title="$t('Animated')"
       is-link
       :border-intent="false"
       :arrow-direction="showContent004 ? 'up' : 'down'"
-      @click.native="showContent004 = !showContent004"></m-cell>
+      @click.native="showContent004 = !showContent004"></cell>
 
       <p class="slide" :class="showContent004?'animate':''">blablabla...<br/>blablabla...<br/>blablabla...<br/>blablabla...</p>
 
-    </m-group>
+    </group>
 
-    <m-group>
-      <m-cell :title="$t('Notifications')" :value="$t('Enabled')"></m-cell>
-    </m-group>
+    <group>
+      <cell :title="$t('Notifications')" :value="$t('Enabled')"></cell>
+    </group>
 
-    <m-group :title="$t('Use slot for complicated content')">
-      <m-cell :title="$t('Slot content')">
+    <group :title="$t('Use slot for complicated content')">
+      <cell :title="$t('Slot content')">
         <div>
           <span style="color: green">{{$t('Hi, I\'m Vux.')}}</span>
         </div>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
-    <m-group :title="$t('is-link is set to true automatically when link exists')">
-      <m-cell :title="$t('Go to MRadio Demo')" link="/component/radio" inline-desc='link="/component/radio"'></m-cell>
-      <m-cell :title="$t('Go to Demo')" :link="{path:'/demo'}" inline-desc=':link={path:"/demo"}'></m-cell>
-      <m-cell :title="$t('Http link')" link="https://vux.li" inline-desc='link="https://vux.li"'></m-cell>
-    </m-group>
+    <group :title="$t('is-link is set to true automatically when link exists')">
+      <cell :title="$t('Go to Radio Demo')" link="/component/radio" inline-desc='link="/component/radio"'></cell>
+      <cell :title="$t('Go to Demo')" :link="{path:'/demo'}" inline-desc=':link={path:"/demo"}'></cell>
+      <cell :title="$t('Http link')" link="https://vux.li" inline-desc='link="https://vux.li"'></cell>
+    </group>
   </div>
 </template>
 
@@ -112,7 +112,7 @@ Hi, I'm Vux.:
   zh-CN: 你好哇，感谢关注 Vux
 is-link is set to true automatically when link exists:
   zh-CN: 当设有 link 属性时，会自动产生箭头效果，无需再设置 is-link
-Go to MRadio Demo:
+Go to Radio Demo:
   zh-CN: 前往Radio页面
 Go to Demo:
   zh-CN: 前往Demo页面
@@ -137,7 +137,7 @@ Messages:
 </i18n>
 
 <script>
-import { MCell, MCellbox, MCellformpreview, MGroup, MBadge } from 'src/widgets'
+import { Cell, CellBox, CellFormPreview, Group, Badge } from 'vux'
 
 export default {
   mounted () {
@@ -146,11 +146,11 @@ export default {
     }, 2000)
   },
   components: {
-    MGroup,
-    MCell,
-    MCellformpreview,
-    MCellbox,
-    MBadge
+    Group,
+    Cell,
+    CellFormPreview,
+    CellBox,
+    Badge
   },
   methods: {
     onClick () {

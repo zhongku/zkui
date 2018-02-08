@@ -1,10 +1,10 @@
 <template>
   <div>
-    <m-form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons1"></m-form-preview>
+    <form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons1"></form-preview>
     <br>
-    <m-form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons2" name="demo"></m-form-preview>
+    <form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons2" name="demo"></form-preview>
     <br>
-    <m-form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list"></m-form-preview>
+    <form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list"></form-preview>
   </div>
 </template>
 
@@ -32,11 +32,11 @@
 </i18n>
 
 <script>
-import { MFormpreview } from 'src/widgets'
+import { FormPreview } from 'vux'
 
 export default {
   components: {
-    MFormpreview
+    FormPreview
   },
   data () {
     return {

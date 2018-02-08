@@ -1,65 +1,65 @@
 <template>
   <div>
 
-    <m-group :title="'no placeholder, the current value is : ' + defaultValue">
+    <group :title="'no placeholder, the current value is : ' + defaultValue">
       <selector ref="defaultValueRef" title="省份" :options="list" v-model="defaultValue"></selector>
-    </m-group>
+    </group>
 
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="getValue('defaultValueRef')">get full value</m-button>
+      <x-button type="primary" @click.native="getValue('defaultValueRef')">get full value</x-button>
     </div>
 
-    <m-group title="with placeholder">
+    <group title="with placeholder">
       <selector placeholder="请选择省份" v-model="demo01" title="省份" name="district" :options="list" @on-change="onChange"></selector>
-    </m-group>
+    </group>
 
-    <m-group title="without title">
+    <group title="without title">
       <selector placeholder="请选择省份" v-model="demo02" :options="list"></selector>
-    </m-group>
+    </group>
 
-    <m-group title="set value=广西">
+    <group title="set value=广西">
       <selector v-model="value1" title="省份" :options="plainList" @on-change="onChange"></selector>
-    </m-group>
+    </group>
 
-    <m-group title="readonly, displays just like a cell">
+    <group title="readonly, displays just like a cell">
       <selector value="gd" readonly title="省份" :options="list"></selector>
-    </m-group>
+    </group>
 
-    <m-group title="use plain options">
-      <selector ref="plainValueRef" value="C" title="MSelector" :options="list1" @on-change="onChange"></selector>
-    </m-group>
+    <group title="use plain options">
+      <selector ref="plainValueRef" value="C" title="Selector" :options="list1" @on-change="onChange"></selector>
+    </group>
 
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="getValue('plainValueRef')">get full value</m-button>
+      <x-button type="primary" @click.native="getValue('plainValueRef')">get full value</x-button>
     </div>
 
-    <m-group :title="'boolean selector: ' + value3">
+    <group :title="'boolean selector: ' + value3">
       <selector v-model="value3" title="Vux Is Cool" :options="list2"></selector>
-    </m-group>
+    </group>
 
-    <m-group :title="$t('set valueMap for directly using API data')" label-width="5em">
-      <selector ref="valueMapRef" v-model="valueMapValue" :value-map="['idValue', 'idLabel']" title="MSelector" :options="valueMapList" @on-change="onChange"></selector>
-      <m-cell-box align-items="flex-start"><pre>{{ valueMapList }}</pre></m-cell-box>
-      <m-cell title="value" :value="valueMapValue"></m-cell>
-    </m-group>
+    <group :title="$t('set valueMap for directly using API data')" label-width="5em">
+      <selector ref="valueMapRef" v-model="valueMapValue" :value-map="['idValue', 'idLabel']" title="Selector" :options="valueMapList" @on-change="onChange"></selector>
+      <cell-box align-items="flex-start"><pre>{{ valueMapList }}</pre></cell-box>
+      <cell title="value" :value="valueMapValue"></cell>
+    </group>
     
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="getValue('valueMapRef')">get full value</m-button>
+      <x-button type="primary" @click.native="getValue('valueMapRef')">get full value</x-button>
     </div>
 
   </div>
 </template>
 
 <script>
-import { MSelector, MGroup, MCell, MCellbox, MButton } from 'src/widgets'
+import { Selector, Group, Cell, CellBox, XButton } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MSelector,
-    MCell,
-    MCellbox,
-    MButton
+    Group,
+    Selector,
+    Cell,
+    CellBox,
+    XButton
   },
   data () {
     return {
@@ -89,7 +89,7 @@ export default {
       console.log(val)
     },
     getValue (ref) {
-      this.$zk.alert.show({
+      this.$vux.alert.show({
         title: 'getFullValue',
         content: this.$refs[ref].getFullValue()
       })

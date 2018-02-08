@@ -1,42 +1,42 @@
 <template>
   <div>
     <div style="padding:15px;">
-      <m-button @click.native="showPosition('top')" type="primary">Top</m-button>
-      <m-button @click.native="showPosition('middle')" type="primary">Middle</m-button>
-      <m-button @click.native="showPosition('bottom')" type="primary">Bottom</m-button>
-      <m-button @click.native="showPosition('')" type="primary">Default</m-button>
+      <x-button @click.native="showPosition('top')" type="primary">Top</x-button>
+      <x-button @click.native="showPosition('middle')" type="primary">Middle</x-button>
+      <x-button @click.native="showPosition('bottom')" type="primary">Bottom</x-button>
+      <x-button @click.native="showPosition('')" type="primary">Default</x-button>  
     </div>
 
-    <m-toast v-model="showPositionValue" type="text" :time="800" is-show-mask text="Hello World" :position="position">{{ $t('Basic Usage') }}</m-toast>
-    <m-group>
-      <m-switch :title="$t('Basic Usage')" v-model="show1"></m-switch>
-      <m-switch :title="$t('type:text')" v-model="show2"></m-switch>
-      <m-switch :title="$t('type:cancel')" v-model="show3"></m-switch>
-      <m-switch :title="$t('type:warn')" v-model="show4"></m-switch>
-      <m-switch :title="$t('time:1s')" v-model="show5"></m-switch>
-      <m-switch :title="$t('long text')" v-model="show6"></m-switch>
-    </m-group>
+    <toast v-model="showPositionValue" type="text" :time="800" is-show-mask text="Hello World" :position="position">{{ $t('Basic Usage') }}</toast>
+    <group>
+      <x-switch :title="$t('Basic Usage')" v-model="show1"></x-switch>
+      <x-switch :title="$t('type:text')" v-model="show2"></x-switch>
+      <x-switch :title="$t('type:cancel')" v-model="show3"></x-switch>
+      <x-switch :title="$t('type:warn')" v-model="show4"></x-switch>
+      <x-switch :title="$t('time:1s')" v-model="show5"></x-switch>
+      <x-switch :title="$t('long text')" v-model="show6"></x-switch>
+    </group>
 
-    <m-toast v-model="show1" @on-hide="onHide">{{ $t('Basic Usage') }}</m-toast>
-    <m-toast v-model="show2" type="text">{{$t('success')}}</m-toast>
-    <m-toast v-model="show3" type="cancel">{{$t('type:cancel')}}</m-toast>
-    <m-toast v-model="show4" type="warn">{{$t('type:warn')}}</m-toast>
-    <m-toast v-model="show5" :time="1000">{{$t('time:1s')}}</m-toast>
-    <m-toast v-model="show6" type="text" width="20em">{{$t('show me code')}}</m-toast>
+    <toast v-model="show1" @on-hide="onHide">{{ $t('Basic Usage') }}</toast>
+    <toast v-model="show2" type="text">{{$t('success')}}</toast>
+    <toast v-model="show3" type="cancel">{{$t('type:cancel')}}</toast>
+    <toast v-model="show4" type="warn">{{$t('type:warn')}}</toast>
+    <toast v-model="show5" :time="1000">{{$t('time:1s')}}</toast>
+    <toast v-model="show6" type="text" width="20em">{{$t('show me code')}}</toast>
 
-    <m-group :title="$t('prop:text')">
-      <m-switch :title="$t('type:success')" v-model="show7"></m-switch>
-      <m-switch :title="$t('type:text')" v-model="show8"></m-switch>
-    </m-group>
+    <group :title="$t('prop:text')">
+      <x-switch :title="$t('type:success')" v-model="show7"></x-switch>
+      <x-switch :title="$t('type:text')" v-model="show8"></x-switch>
+    </group>
 
-    <m-toast v-model="show7" text="Hello World"></m-toast>
-    <m-toast v-model="show8" type="text" text="Hello World"></m-toast>
+    <toast v-model="show7" text="Hello World"></toast>
+    <toast v-model="show8" type="text" text="Hello World"></toast>
 
-    <m-group :title="$t('As a plugin(>=v0.1.3)')">
-      <m-switch :title="$t('default')" v-model="show9" @on-change="onChange"></m-switch>
-    </m-group>
+    <group :title="$t('As a plugin(>=v0.1.3)')">
+      <x-switch :title="$t('default')" v-model="show9" @on-change="onChange"></x-switch>
+    </group>
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="$zk.toast.text('How are you~', 'top')">use text function</m-button>
+      <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'top')">use text function</x-button> 
     </div>
   </div>
 </template>
@@ -69,14 +69,13 @@ position:
 </i18n>
 
 <script>
-import { MToast, MGroup, MSwitch, MButton } from 'widgets'
-
+import { Toast, Group, XSwitch, XButton } from 'vux'
 export default {
   components: {
-    MToast,
-    MGroup,
-    MSwitch,
-    MButton
+    Toast,
+    Group,
+    XSwitch,
+    XButton
   },
   methods: {
     showPosition (position) {
@@ -89,8 +88,7 @@ export default {
     onChange (val) {
       const _this = this
       if (val) {
-        console.dir(this.$widgets)
-        this.$zk.toast.show({
+        this.$vux.toast.show({
           text: 'Hello World',
           onShow () {
             console.log('Plugin: I\'m showing')
@@ -101,7 +99,7 @@ export default {
           }
         })
       } else {
-        this.$zk.toast.hide()
+        this.$vux.toast.hide()
       }
     }
   },

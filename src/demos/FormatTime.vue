@@ -1,25 +1,25 @@
 <template>
   <div>
-    <m-divider>默认</m-divider>
+    <divider>默认</divider>
     <div class="center">{{ new Date() | FormatTimeFilter }}</div>
-    <m-divider>YYYY-MM-DD</m-divider>
+    <divider>YYYY-MM-DD</divider>
     <div class="center">{{ new Date() | FormatTimeFilter('YYYY-MM-DD') }}</div>
-    <m-divider>YYYY-MM-DD E</m-divider>
+    <divider>YYYY-MM-DD E</divider>
     <div class="center">{{ new Date() | FormatTimeFilter('YYYY-MM-DD E') }}</div>
-    <m-divider>YYYY-MM-DD EE</m-divider>
+    <divider>YYYY-MM-DD EE</divider>
     <div class="center">{{ new Date() | FormatTimeFilter('YYYY-MM-DD EE') }}</div>
   </div>
 </template>
 
 <script>
-import { FormatTimeFilter, MDivider } from 'src/widgets'
+import { FormatTimeFilter, Divider } from 'vux'
 
 export default {
   filters: {
     FormatTimeFilter
   },
   components: {
-    MDivider
+    Divider
   }
 }
 </script>

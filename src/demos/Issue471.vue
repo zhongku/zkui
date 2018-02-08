@@ -1,34 +1,34 @@
 <template>
   <div>
-    <m-group>
-      <m-popup-picker title="选择班级" :inline-desc="selectClass" :data="classList" v-model="selectClass" show-name></m-popup-picker>
-    </m-group>
+    <group>
+      <popup-picker title="选择班级" :inline-desc="selectClass" :data="classList" v-model="selectClass" show-name></popup-picker>
+    </group>
 
     <div style="padding:15px">
-      <m-button @click.native="selectClass=['1']" type="primary">设置值为['1']</m-button>
-      <m-button @click.native="selectClass=['2']" type="primary">设置值为['2']</m-button>
+      <x-button @click.native="selectClass=['1']" type="primary">设置值为['1']</x-button>
+      <x-button @click.native="selectClass=['2']" type="primary">设置值为['2']</x-button>
     </div>
 
-    <m-group>
-      <m-popup-picker title="选择班级" :inline-desc="selectClass2" :data="classList2" v-model="selectClass2" show-name></m-popup-picker>
-    </m-group>
+    <group>
+      <popup-picker title="选择班级" :inline-desc="selectClass2" :data="classList2" v-model="selectClass2" show-name></popup-picker>
+    </group>
 
     <div style="padding:15px">
-      <m-button @click.native="selectClass2=['1', '2']" type="primary">设置值为['1', '2']</m-button>
-      <m-button @click.native="selectClass2=['2', '1']" type="primary">设置值为['2', '1']</m-button>
+      <x-button @click.native="selectClass2=['1', '2']" type="primary">设置值为['1', '2']</x-button>
+      <x-button @click.native="selectClass2=['2', '1']" type="primary">设置值为['2', '1']</x-button>
     </div>
 
   </div>
 </template>
 
 <script>
-import { MGroup, MPopuppicker, MButton } from 'src/widgets'
+import { Group, PopupPicker, XButton } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MPopuppicker,
-    MButton
+    Group,
+    PopupPicker,
+    XButton
   },
   data () {
     return {

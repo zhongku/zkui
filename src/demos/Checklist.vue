@@ -1,37 +1,37 @@
 <template>
   <div>
-    <m-checklist :title="$t('Basic Usage')" :label-position="labelPosition" required :options="commonList" v-model="checklist001" @on-change="change"></m-checklist>
+    <checklist :title="$t('Basic Usage')" :label-position="labelPosition" required :options="commonList" v-model="checklist001" @on-change="change"></checklist>
     <div style="padding:15px;">
-      <m-button @click.native="labelPosition = labelPosition === 'left' ? '' : 'left'" type="primary"> {{ $t('Switch the position of labels') }} </m-button>
-      <m-button @click.native="selectFirst" type="primary"> {{ $t('Select first option') }} </m-button>
-      <m-button @click.native="selectFirstTwo" type="primary"> {{ $t('Select first two') }} </m-button>
-      <m-button @click.native="selectLeft" type="primary"> {{ $t('Select the remaining values') }}</m-button>
+      <x-button @click.native="labelPosition = labelPosition === 'left' ? '' : 'left'" type="primary"> {{ $t('Switch the position of labels') }} </x-button>
+      <x-button @click.native="selectFirst" type="primary"> {{ $t('Select first option') }} </x-button>
+      <x-button @click.native="selectFirstTwo" type="primary"> {{ $t('Select first two') }} </x-button>
+      <x-button @click.native="selectLeft" type="primary"> {{ $t('Select the remaining values') }}</x-button>
     </div>
 
-    <m-checklist :title="$t('Preselect China and Japan (disabled)')" disabled label-position="left" :options="commonList" v-model="checklist002" @on-change="change"></m-checklist>
+    <checklist :title="$t('Preselect China and Japan (disabled)')" disabled label-position="left" :options="commonList" v-model="checklist002" @on-change="change"></checklist>
 
-    <m-checklist :title="$t('Set max=2')" :options="commonList" v-model="checklist003" :max=2 @on-change="change"></m-checklist>
+    <checklist :title="$t('Set max=2')" :options="commonList" v-model="checklist003" :max=2 @on-change="change"></checklist>
 
-    <m-checklist :title="$t('Set max=1 (radio mode)')" :options="commonList" v-model="radioValue" :max="1" @on-change="change"></m-checklist>
+    <checklist :title="$t('Set max=1 (radio mode)')" :options="commonList" v-model="radioValue" :max="1" @on-change="change"></checklist>
 
-    <m-checklist :title="$t('Set random order')" random-order :options="checklist005" v-model="checklist005Value" @on-change="change"></m-checklist>
+    <checklist :title="$t('Set random order')" random-order :options="checklist005" v-model="checklist005Value" @on-change="change"></checklist>
 
-    <m-checklist ref="demoObject" :title="$t('Option Array with key and value (key must be string)')" :options="objectList" v-model="objectListValue" @on-change="change"></m-checklist>
-    <m-group>
-      <m-cell-box>{{ fullValues }}</m-cell-box>
-    </m-group>
+    <checklist ref="demoObject" :title="$t('Option Array with key and value (key must be string)')" :options="objectList" v-model="objectListValue" @on-change="change"></checklist>
+    <group>
+      <cell-box>{{ fullValues }}</cell-box>
+    </group>
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="fullValues = $refs.demoObject.getFullValue()">getFullValue()</m-button>
+      <x-button type="primary" @click.native="fullValues = $refs.demoObject.getFullValue()">getFullValue()</x-button>
     </div>
 
-    <m-checklist :title="$t('Option is Object with InlineDesc')" :options="inlineDescList" v-model="inlineDescListValue" @on-change="change"></m-checklist>
+    <checklist :title="$t('Option is Object with InlineDesc')" :options="inlineDescList" v-model="inlineDescListValue" @on-change="change"></checklist>
 
-    <m-checklist :title="$t('Async list')" :max="3" :options="asyncList" v-model="asyncListValue" @on-change="change"></m-checklist>
+    <checklist :title="$t('Async list')" :max="3" :options="asyncList" v-model="asyncListValue" @on-change="change"></checklist>
 
-    <m-divider> {{ $t('Reference')}} </m-divider>
-    <m-group :title="$t('See also')">
-      <m-cell title="MChecker" is-link link="/component/checker"></m-cell>
-    </m-group>
+    <divider> {{ $t('Reference')}} </divider>
+    <group :title="$t('See also')">
+      <cell title="Checker" is-link link="/component/checker"></cell>
+    </group>
   </div>
 </template>
 
@@ -65,7 +65,7 @@ See also:
 </i18n>
 
 <script>
-import { MGroup, MCellbox, MChecklist, MCell, MDivider, MButton } from 'src/widgets'
+import { Group, CellBox, Checklist, Cell, Divider, XButton } from 'vux'
 import _ from 'lodash'
 
 export default {
@@ -75,12 +75,12 @@ export default {
     }, 3000)
   },
   components: {
-    MGroup,
-    MChecklist,
-    MCell,
-    MDivider,
-    MButton,
-    MCellbox
+    Group,
+    Checklist,
+    Cell,
+    Divider,
+    XButton,
+    CellBox
   },
   methods: {
     change (val, label) {

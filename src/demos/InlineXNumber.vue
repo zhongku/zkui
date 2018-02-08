@@ -2,17 +2,17 @@
   <div>
     <br>
     <div style="text-align:center;">
-      <m-inline-x-number width="50px"></m-inline-x-number>
+      <inline-x-number width="50px"></inline-x-number>
     </div>
     <br>
     <div style="text-align:center;">
-      <m-inline-x-number width="50px" button-style="round"></m-inline-x-number>
+      <inline-x-number width="50px" button-style="round"></inline-x-number>
     </div>
-    <m-group>
-      <m-cell :title="$t('Used within cell')">
-        <m-inline-x-number style="display:block;" :min="0" width="50px" button-style="round"></m-inline-x-number>
-      </m-cell>
-    </m-group>
+    <group>
+      <cell :title="$t('Used within cell')">
+        <inline-x-number style="display:block;" :min="0" width="50px" button-style="round"></inline-x-number>
+      </cell>
+    </group>
   </div>
 </template>
 
@@ -22,13 +22,13 @@ Used within cell:
 </i18n>
 
 <script>
-import { MGroup, MCell, MInlinexnumber } from 'src/widgets'
+import { Group, Cell, InlineXNumber } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell,
-    MInlinexnumber
+    Group,
+    Cell,
+    InlineXNumber
   }
 }
 </script>

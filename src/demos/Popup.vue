@@ -1,182 +1,182 @@
 <template>
   <div>
-    <m-group>
-      <m-switch title="Default popup" v-model="show" ></m-switch>
-      <m-switch title="Full popup" v-model="show1"></m-switch>
-      <m-switch title="Multi popup (first)" v-model="show3"></m-switch>
-      <m-switch title="Mask disable" v-model="show5"></m-switch>
-      <m-switch title="MPopup address" v-model="show6"></m-switch>
-      <m-switch title="default max-height=100%" v-model="show12"></m-switch>
-      <m-switch title="set max-height=50%" v-model="show13"></m-switch>
-    </m-group>
-
+    <group>
+      <x-switch title="Default popup" v-model="show"></x-switch>
+      <x-switch title="Full popup" v-model="show1"></x-switch>
+      <x-switch title="Multi popup (first)" v-model="show3"></x-switch>
+      <x-switch title="Mask disable" v-model="show5"></x-switch>
+      <x-switch title="Popup address" v-model="show6"></x-switch>
+      <x-switch title="default max-height=100%" v-model="show12"></x-switch>
+      <x-switch title="set max-height=50%" v-model="show13"></x-switch>
+    </group>
+    
     <div v-transfer-dom>
-      <m-popup v-model="show" @on-hide="log('hide')" @on-show="log('show')">
+      <popup v-model="show" @on-hide="log('hide')" @on-show="log('show')">
         <div class="popup0">
-          <m-group>
-            <m-switch title="Another XSwitcher" v-model="show"></m-switch>
-            <m-switch title="Show MToast" v-model="showToast"></m-switch>
-          </m-group>
+          <group>
+            <x-switch title="Another XSwitcher" v-model="show"></x-switch>
+            <x-switch title="Show Toast" v-model="showToast"></x-switch>
+          </group>
         </div>
-      </m-popup>
+      </popup>
     </div>
 
-    <m-toast v-model="showToast">You did it!</m-toast>
-
+    <toast v-model="showToast">You did it!</toast>
+    
     <div v-transfer-dom>
-      <m-popup v-model="show1" height="100%">
+      <popup v-model="show1" height="100%">
         <div class="popup1">
-          <m-group>
-            <m-switch title="Another XSwitcher" v-model="show1"></m-switch>
-          </m-group>
+          <group>
+            <x-switch title="Another XSwitcher" v-model="show1"></x-switch>
+          </group>
         </div>
-      </m-popup>
+      </popup>
     </div>
-
+    
     <div v-transfer-dom>
-      <m-popup v-model="show3">
+      <popup v-model="show3">
         <div class="popup2">
-          <m-group>
-            <m-switch title="Multi MPopup (first)" v-model="show3"></m-switch>
-            <m-switch title="Multi MPopup (second)" v-model="show4"></m-switch>
-          </m-group>
+          <group>
+            <x-switch title="Multi Popup (first)" v-model="show3"></x-switch>
+            <x-switch title="Multi Popup (second)" v-model="show4"></x-switch>
+          </group>
           this is the first popup
         </div>
-      </m-popup>
+      </popup>
     </div>
-
+    
     <div v-transfer-dom>
-      <m-popup v-model="show4">
+      <popup v-model="show4">
         <div class="popup2">
-          <m-group>
-            <m-switch title="Multi MPopup (second)" v-model="show4"></m-switch>
-          </m-group>
+          <group>
+            <x-switch title="Multi Popup (second)" v-model="show4"></x-switch>
+          </group>
           this is the second popup
         </div>
-      </m-popup>
+      </popup>
     </div>
-
+    
     <div v-transfer-dom>
-      <m-popup v-model="show5" :hide-on-blur=false>
+      <popup v-model="show5" :hide-on-blur=false>
         <div class="popup2">
-          <m-group>
-            <m-switch title="Mask disable" v-model="show5"></m-switch>
-          </m-group>
+          <group>
+            <x-switch title="Mask disable" v-model="show5"></x-switch>
+          </group>
           The mask cannot be clicked!
         </div>
-      </m-popup>
+      </popup>
     </div>
-
+    
     <div v-transfer-dom>
-      <m-popup v-model="show6">
+      <popup v-model="show6">
         <div class="popup1">
-          <m-group>
-            <m-switch title="MPopup address" v-model="show6"></m-switch>
-          </m-group>
-          <m-group>
-            <m-address :title="title6" v-model="value6" :list="addressData" placeholder="请选择地址" inline-desc="可以设置placeholder" :popup-style="{zIndex: 502}"></m-address>
-          </m-group>
+          <group>
+            <x-switch title="Popup address" v-model="show6"></x-switch>
+          </group>
+          <group>
+            <x-address :title="title6" v-model="value6" :list="addressData" placeholder="请选择地址" inline-desc="可以设置placeholder" :popup-style="{zIndex: 502}"></x-address>
+          </group>
         </div>
-      </m-popup>
+      </popup>
     </div>
 
-    <m-group>
-      <m-switch title="transparent background" v-model="show7"></m-switch>
-    </m-group>
-
+    <group>
+      <x-switch title="transparent background" v-model="show7"></x-switch>
+    </group>
+    
     <div v-transfer-dom>
-      <m-popup v-model="show7" height="270px" is-transparent>
+      <popup v-model="show7" height="270px" is-transparent>
         <div style="width: 95%;background-color:#fff;height:250px;margin:0 auto;border-radius:5px;padding-top:10px;">
-         <m-group>
-          <m-cell title="Product" value="Donate"></m-cell>
-          <m-cell title="Total" value="$10.24"></m-cell>
-         </m-group>
+         <group>
+          <cell title="Product" value="Donate"></cell>
+          <cell title="Total" value="$10.24"></cell>
+         </group>
          <div style="padding:20px 15px;">
-          <m-button type="primary">Pay</m-button>
-          <m-button @click.native="show7 = false">Cancel</m-button>
+          <x-button type="primary">Pay</x-button>
+          <x-button @click.native="show7 = false">Cancel</x-button>
          </div>
         </div>
-      </m-popup>
+      </popup>
     </div>
 
-    <m-group title="set position">
-      <m-switch title="left(100% width)" v-model="show8"></m-switch>
-      <m-switch title="right" v-model="show9"></m-switch>
-      <m-switch title="top(no mask)" v-model="show10"></m-switch>
-      <m-switch title="bottom" v-model="show11"></m-switch>
-    </m-group>
+    <group title="set position">
+      <x-switch title="left(100% width)" v-model="show8"></x-switch>
+      <x-switch title="right" v-model="show9"></x-switch>
+      <x-switch title="top(no mask)" v-model="show10"></x-switch>
+      <x-switch title="bottom" v-model="show11"></x-switch>
+    </group>
 
     <div v-transfer-dom>
-      <m-popup v-model="show8" position="left" width="100%">
+      <popup v-model="show8" position="left" width="100%">
         <div class="position-horizontal-demo">
           <span class="vux-close" @click="show8 = false"></span>
         </div>
-      </m-popup>
+      </popup>
     </div>
-
+    
     <div v-transfer-dom>
-      <m-popup v-model="show9" position="right">
+      <popup v-model="show9" position="right">
         <div style="width:200px;">
         </div>
-      </m-popup>
+      </popup>
     </div>
 
     <div v-transfer-dom>
-      <m-popup v-model="show10" position="top" :show-mask="false">
+      <popup v-model="show10" position="top" :show-mask="false">
         <div class="position-vertical-demo">
         I'm on top. Hide in 1s.
         </div>
-      </m-popup>
+      </popup>
     </div>
 
     <div v-transfer-dom>
-      <m-popup v-model="show11" position="bottom">
+      <popup v-model="show11" position="bottom">
         <div class="position-vertical-demo">
         I'm on bottom.
         </div>
-      </m-popup>
+      </popup>
     </div>
 
     <div v-transfer-dom>
-      <m-popup v-model="show12" position="bottom">
-        <m-group>
-          <m-cell v-for="i in 20" :key="i" :title="i"></m-cell>
-        </m-group>
+      <popup v-model="show12" position="bottom">
+        <group>
+          <cell v-for="i in 20" :key="i" :title="i"></cell>
+        </group>
         <div style="padding: 15px;">
-          <m-button @click.native="show12 = false" plain type="primary"> Close Me </m-button>
+          <x-button @click.native="show12 = false" plain type="primary"> Close Me </x-button>
         </div>
-      </m-popup>
+      </popup>
     </div>
 
     <div v-transfer-dom>
-      <m-popup v-model="show13" position="bottom" max-height="50%">
-        <m-group>
-          <m-cell v-for="i in 20" :key="i" :title="i"></m-cell>
-        </m-group>
+      <popup v-model="show13" position="bottom" max-height="50%">
+        <group>
+          <cell v-for="i in 20" :key="i" :title="i"></cell>
+        </group>
         <div style="padding: 15px;">
-          <m-button @click.native="show13 = false" plain type="primary"> Close Me </m-button>
+          <x-button @click.native="show13 = false" plain type="primary"> Close Me </x-button>
         </div>
-      </m-popup>
+      </popup>
     </div>
 
   </div>
 </template>
 
 <script>
-import { TransferDom, MPopup, MGroup, MCell, MButton, MSwitch, MToast, MAddress, ChinaAddressData } from 'src/widgets'
+import { TransferDom, Popup, Group, Cell, XButton, XSwitch, Toast, XAddress, ChinaAddressData } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MPopup,
-    MGroup,
-    MCell,
-    MSwitch,
-    MToast,
-    MAddress,
-    MButton
+    Popup,
+    Group,
+    Cell,
+    XSwitch,
+    Toast,
+    XAddress,
+    XButton
   },
   data () {
     return {

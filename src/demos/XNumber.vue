@@ -1,32 +1,32 @@
 <template>
   <div>
-    <m-group :title="$t('Default')">
-      <m-number :name="$t('Quantity')" :title="$t('Quantity')"></m-number>
-    </m-group>
+    <group :title="$t('Default')">
+      <x-number :name="$t('Quantity')" :title="$t('Quantity')"></x-number>
+    </group>
 
-    <m-group :title="$t('listen')">
-      <m-number :title="$t('Quantity')" :value="0" :min="0" @on-change="change"></m-number>
-    </m-group>
+    <group :title="$t('listen')">
+      <x-number :title="$t('Quantity')" :value="0" :min="0" @on-change="change"></x-number>
+    </group>
 
-    <m-group :title="$t('set width=100px')">
-      <m-number :title="$t('Quantity')" width="100px"></m-number>
-    </m-group>
+    <group :title="$t('set width=100px')">
+      <x-number :title="$t('Quantity')" width="100px"></x-number>
+    </group>
 
-    <m-group :title="$t('round style')">
-      <m-number :title="$t('Quantity')" v-model="roundValue" button-style="round" :min="0" :max="5"></m-number>
-    </m-group>
+    <group :title="$t('round style')">
+      <x-number :title="$t('Quantity')" v-model="roundValue" button-style="round" :min="0" :max="5"></x-number>
+    </group>
 
-    <m-group :title="$t('set step=0.5')">
-      <m-number :title="$t('Quantity')" :step="0.5"></m-number>
-    </m-group>
+    <group :title="$t('set step=0.5')">
+      <x-number :title="$t('Quantity')" :step="0.5"></x-number>
+    </group>
 
-    <m-group :title="$t('set value=1, min=-5 and max=8')">
-      <m-number :title="$t('Quantity')" :min="-5" :max="8" :value="1"></m-number>
-    </m-group>
+    <group :title="$t('set value=1, min=-5 and max=8')">
+      <x-number :title="$t('Quantity')" :min="-5" :max="8" :value="1"></x-number>
+    </group>
 
-    <m-group :title="$t('fillable = true')">
-      <m-number :value="10" :title="$t('Quantity')" fillable></m-number>
-    </m-group>
+    <group :title="$t('fillable = true')">
+      <x-number :value="10" :title="$t('Quantity')" fillable></x-number>
+    </group>
 
   </div>
 </template>
@@ -56,14 +56,14 @@ round style:
 </i18n>
 
 <script>
-import { MGroup, MNumber, MSwitch, MDivider } from 'src/widgets'
+import { Group, XNumber, XSwitch, Divider } from 'vux'
 
 export default {
   components: {
-    MNumber,
-    MGroup,
-    MSwitch,
-    MDivider
+    XNumber,
+    Group,
+    XSwitch,
+    Divider
   },
   data () {
     return {

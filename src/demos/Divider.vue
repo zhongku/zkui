@@ -1,6 +1,6 @@
 <template>
 <div>
-  <m-divider>{{ $t('I have bottom line') }}</m-divider>
+  <divider>{{ $t('I have bottom line') }}</divider>
 </div>
 </template>
 
@@ -10,11 +10,11 @@ I have bottom line:
 </i18n>
 
 <script>
-import { MDivider } from 'src/widgets'
+import { Divider } from 'vux'
 
 export default {
   components: {
-    MDivider
+    Divider
   }
 }
 </script>

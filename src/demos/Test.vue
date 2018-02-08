@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import { MGroup, MCell } from 'src/widgets'
+import { Group, Cell } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell
+    Group,
+    Cell
   },
   data () {
     return {

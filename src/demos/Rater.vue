@@ -1,74 +1,74 @@
 <template>
   <div>
-    <m-group title="Normal Usage">
-      <m-cell title="set default score = 5" inline-desc="total 5 stars if not specified">
+    <group title="Normal Usage">
+      <cell title="set default score = 5" inline-desc="total 5 stars if not specified">
         <rater v-model="data3"></rater>
-      </m-cell>
-      <m-cell title="change color">
+      </cell>
+      <cell title="change color">
         <rater v-model="data3" :max="6" active-color="#04BE02"></rater>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
-    <m-group title="disabled = true">
-      <m-cell title="Your history score">
+    <group title="disabled = true">
+      <cell title="Your history score">
         <rater v-model="data4" disabled></rater>
-      </m-cell>
-      <m-cell :title="'Decimal score ' + data41 ">
+      </cell>
+      <cell :title="'Decimal score ' + data41 ">
         <rater v-model="data41" active-color="#04BE02" disabled></rater>
-      </m-cell>
-      <m-cell title="custom font-size(15px)">
+      </cell>
+      <cell title="custom font-size(15px)">
         <rater v-model="data42" active-color="#04BE02" :font-size="15" disabled></rater>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
-    <m-group title="custom star, some symbols like ♥ ❤ are not proper.">
-      <m-cell title="loving">
+    <group title="custom star, some symbols like ♥ ❤ are not proper.">
+      <cell title="loving">
         <rater v-model="data4" star="♡" active-color="red" :margin="15"></rater>
-      </m-cell>
-      <m-cell title="Use html">
+      </cell>
+      <cell title="Use html">
         <rater v-model="data41" star="<span>X</span>" active-color="red" :margin="15"></rater>
-      </m-cell>
-      <m-cell title="Sunshine">
+      </cell>
+      <cell title="Sunshine">
         <rater v-model="data5" star="☼" active-color="#FF9900" :margin="4"></rater>
-      </m-cell>
-      <m-cell title="Smilies">
+      </cell>
+      <cell title="Smilies">
         <rater v-model="data5" star="☻" active-color="#FF9900" :margin="4"></rater>
-      </m-cell>
-      <m-cell title="Different stars">
+      </cell>
+      <cell title="Different stars">
         <rater v-model="data5" star="✩" active-color="#FF9900" :margin="4"></rater>
-      </m-cell>
-      <m-cell title="How embarrass">
+      </cell>
+      <cell title="How embarrass">
         <rater v-model="data5" star="囧" active-color="#FF9900" :margin="4"></rater>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
-    <m-group title="two way binding">
-      <m-cell title="Your history score">
+    <group title="two way binding">
+      <cell title="Your history score">
         <rater v-model="data6" active-color="#04BE02"></rater>
-      </m-cell>
-      <m-cell title="range" primary="content" :inline-desc="data6 + ''">
-        <m-range v-model="data6" :step="1" :min="0" :max="5"></m-range>
-      </m-cell>
-    </m-group>
+      </cell>
+      <cell title="range" primary="content" :inline-desc="data6 + ''">
+        <range v-model="data6" :step="1" :min="0" :max="5"></range>
+      </cell>
+    </group>
 
-    <m-group title="set min">
-      <m-cell title="min = 3">
+    <group title="set min">
+      <cell title="min = 3">
         <rater v-model="data7" :min="3"></rater>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
 
   </div>
 </template>
 
 <script>
-import { MRater, MGroup, MCell, MRange } from 'src/widgets'
+import { Rater, Group, Cell, Range } from 'vux'
 
 export default {
   components: {
-    MRater,
-    MGroup,
-    MCell,
-    MRange
+    Rater,
+    Group,
+    Cell,
+    Range
   },
   data () {
     return {

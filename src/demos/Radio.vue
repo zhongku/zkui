@@ -1,26 +1,26 @@
 <template>
   <div>
-    <m-group title="default">
+    <group title="default">
       <radio :options="radio001" @on-change="change"></radio>
-    </m-group>
+    </group>
 
-    <m-group :title="$t('pre-select China(disabled)')">
+    <group :title="$t('pre-select China(disabled)')">
       <radio :options="radio001" value="China" disabled></radio>
-    </m-group>
+    </group>
 
-    <m-group :title="'fill mode value is '+radio001Value">
+    <group :title="'fill mode value is '+radio001Value">
       <radio :selected-label-style="{color: '#FF9900'}" fill-mode :options="radio001" v-model="radio001Value" @on-change="change"></radio>
-    </m-group>
+    </group>
 
-    <m-group title="fill mode with custom placeholder and label">
+    <group title="fill mode with custom placeholder and label">
       <radio fill-mode fill-label="Other" fill-placeholder="填写其他的哦" :options="radio001" @on-change="change"></radio>
-    </m-group>
+    </group>
 
-    <m-group title="object options">
+    <group title="object options">
       <radio fill-mode fill-label="Other" fill-placeholder="other" :options="radio003" @on-change="change"></radio>
-    </m-group>
+    </group>
 
-    <m-group title="slot:each-item">
+    <group title="slot:each-item">
       <radio :options="radio001">
         <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
           <p>
@@ -28,7 +28,7 @@
           </p>
         </template>
       </radio>
-    </m-group>
+    </group>
   </div>
 </template>
 
@@ -38,12 +38,12 @@
 </i18n>
 
 <script>
-import { MRadio, MGroup } from 'src/widgets'
+import { Radio, Group } from 'vux'
 
 export default {
   components: {
-    MRadio,
-    MGroup
+    Radio,
+    Group
   },
   data () {
     return {

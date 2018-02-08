@@ -1,34 +1,34 @@
 <template>
   <div>
-    <m-group>
-      <m-cell is-link title="Tabbar" link="/component/tabbar"></m-cell>
-    </m-group>
-    <m-tabbar>
-      <m-tabbar-item>
+    <group>
+      <cell is-link title="Tabbar" link="/component/tabbar"></cell>
+    </group>
+    <tabbar>
+      <tabbar-item>
         <span slot="label">Wechat</span>
-      </m-tabbar-item>
-      <m-tabbar-item show-dot>
+      </tabbar-item>
+      <tabbar-item show-dot>
         <span slot="label">Message</span>
-      </m-tabbar-item>
-      <m-tabbar-item selected link="/component/demo">
+      </tabbar-item>
+      <tabbar-item selected link="/component/demo">
         <span slot="label">Explore</span>
-      </m-tabbar-item>
-      <m-tabbar-item m-badge="2">
+      </tabbar-item>
+      <tabbar-item badge="2">
         <span slot="label">News</span>
-      </m-tabbar-item>
-    </m-tabbar>
+      </tabbar-item>
+    </tabbar>
   </div>
 </template>
 
 <script>
-import { Tabbar, TabbarItem, MGroup, MCell } from 'src/widgets'
+import { Tabbar, TabbarItem, Group, Cell } from 'vux'
 
 export default {
   components: {
     Tabbar,
     TabbarItem,
-    MGroup,
-    MCell
+    Group,
+    Cell
   }
 }
 </script>

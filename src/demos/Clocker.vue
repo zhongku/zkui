@@ -2,25 +2,25 @@
   <div>
     <p style="padding:15px;">
       <span> {{ $t('Basic Usage') }}: </span>
-      <m-clocker :time="time1"></m-clocker>
+      <clocker :time="time1"></clocker>
     </p>
 
-    <m-group :title=" $t('Use in cell') ">
-      <m-cell :title=" $t('Date: 2018-08-01') ">
-        <m-clocker time="2018-08-01"></m-clocker>
-      </m-cell>
-    </m-group>
+    <group :title=" $t('Use in cell') ">
+      <cell :title=" $t('Date: 2018-08-01') ">
+        <clocker time="2018-08-01"></clocker>
+      </cell>
+    </group>
 
-    <m-group :title=" $t('Custom template') ">
-      <m-cell :title=" $t('Date: 2018-08-01') ">
-        <m-clocker time="2018-08-01">
+    <group :title=" $t('Custom template') ">
+      <cell :title=" $t('Date: 2018-08-01') ">
+        <clocker time="2018-08-01">
           <span style="color:red">%D 天</span>
           <span style="color:green">%H 小时</span>
           <span style="color:blue">%M 分 %S 秒</span>
-        </m-clocker>
-      </m-cell>
-      <m-cell title="2018-08-08">
-        <m-clocker time="2018-08-08">
+        </clocker>
+      </cell>
+      <cell title="2018-08-08">
+        <clocker time="2018-08-08">
           <span class="day">%_D1</span>
           <span class="day">%_D2</span>
           <span class="day">%_D3</span>天
@@ -30,9 +30,9 @@
           <span class="day">%_M2</span>分
           <span class="day">%_S1</span>
           <span class="day">%_S2</span>秒
-        </m-clocker>
-      </m-cell>
-    </m-group>
+        </clocker>
+      </cell>
+    </group>
 
   </div>
 </template>
@@ -47,13 +47,13 @@ Custom template:
 </i18n>
 
 <script>
-import { MClocker, MCell, MGroup } from 'src/widgets'
+import { Clocker, Cell, Group } from 'vux'
 
 export default {
   components: {
-    MClocker,
-    MCell,
-    MGroup
+    Clocker,
+    Cell,
+    Group
   },
   created () {
     setTimeout(() => {

@@ -1,15 +1,15 @@
 <template>
   <div>
-    <m-hr></m-hr>
+    <x-hr></x-hr>
   </div>
 </template>
 
 <script>
-import { MHr } from 'src/widgets'
+import { XHr } from 'vux'
 
 export default {
   components: {
-    MHr
+    XHr
   }
 }
 </script>

@@ -1,84 +1,84 @@
 <template>
   <div>
-    <m-divider>iOS Gradients(v2.7.4)</m-divider>
+    <divider>iOS Gradients(v2.7.4)</divider>
     <box gap="10px 10px">
-      <m-button :gradients="['#1D62F0', '#19D5FD']">iOS Gradients</m-button>
-      <m-button :gradients="['#A644FF', '#FC5BC4']">iOS Gradients</m-button>
-      <m-button :gradients="['#FF2719', '#FF61AD']">iOS Gradients</m-button>
-      <m-button :gradients="['#6F1BFE', '#9479DF']">iOS Gradients</m-button>
-      <m-button :gradients="['#FF5E3A', '#FF9500']">iOS Gradients</m-button>
+      <x-button :gradients="['#1D62F0', '#19D5FD']">iOS Gradients</x-button>
+      <x-button :gradients="['#A644FF', '#FC5BC4']">iOS Gradients</x-button>
+      <x-button :gradients="['#FF2719', '#FF61AD']">iOS Gradients</x-button>
+      <x-button :gradients="['#6F1BFE', '#9479DF']">iOS Gradients</x-button>
+      <x-button :gradients="['#FF5E3A', '#FF9500']">iOS Gradients</x-button>
     </box>
-    <m-divider>default</m-divider>
+    <divider>default</divider>
     <box gap="10px 10px">
-      <m-button>submit</m-button>
-      <m-button type="primary">primary</m-button>
-      <m-button type="warn">Delete</m-button>
+      <x-button>submit</x-button>
+      <x-button type="primary">primary</x-button>
+      <x-button type="warn">Delete</x-button>
 
-      <m-divider>link</m-divider>
-      <m-button type="primary" link="/demo">Go to demo list</m-button>
-      <m-button type="default" link="BACK">Back</m-button>
+      <divider>link</divider>
+      <x-button type="primary" link="/demo">Go to demo list</x-button>
+      <x-button type="default" link="BACK">Back</x-button>
 
-      <m-divider>action type</m-divider>
-      <m-button type="primary" action-type="button">submit</m-button>
-      <m-button type="warn" action-type="reset">reset</m-button>
+      <divider>action type</divider>
+      <x-button type="primary" action-type="button">submit</x-button>
+      <x-button type="warn" action-type="reset">reset</x-button>
 
-      <m-divider>loading</m-divider>
-      <m-button type="default" show-loading>submit</m-button>
-      <m-button type="primary" show-loading>submit</m-button>
-      <m-button type="warn" show-loading>submit</m-button>
+      <divider>loading</divider>
+      <x-button type="default" show-loading>submit</x-button>
+      <x-button type="primary" show-loading>submit</x-button>
+      <x-button type="warn" show-loading>submit</x-button>
 
-      <m-divider>mini</m-divider>
-      <m-button mini>submit</m-button>
-      <m-button mini type="primary">primary</m-button>
-      <m-button mini type="warn">Delete</m-button>
+      <divider>mini</divider>
+      <x-button mini>submit</x-button>
+      <x-button mini type="primary">primary</x-button>
+      <x-button mini type="warn">Delete</x-button>
       <br>
-      <m-button mini plain>submit</m-button>
-      <m-button mini plain type="primary">primary</m-button>
+      <x-button mini plain>submit</x-button>
+      <x-button mini plain type="primary">primary</x-button>
 
-      <m-divider>plain</m-divider>
-      <m-button plain>submit</m-button>
-      <m-button plain type="primary">primary</m-button>
+      <divider>plain</divider>
+      <x-button plain>submit</x-button>
+      <x-button plain type="primary">primary</x-button>
 
-      <m-divider>you can custom styles</m-divider>
-      <m-button plain type="primary" style="border-radius:99px;">primary</m-button>
-      <m-button plain type="primary" class="custom-primary-red">primary</m-button>
+      <divider>you can custom styles</divider>
+      <x-button plain type="primary" style="border-radius:99px;">primary</x-button>
+      <x-button plain type="primary" class="custom-primary-red">primary</x-button>
 
-      <m-divider>disabled</m-divider>
-      <m-button disabled>disable submit</m-button>
-      <m-button type="primary" disabled>disable primary</m-button>
-      <m-button type="warn" disabled>disable Delete</m-button>
+      <divider>disabled</divider>
+      <x-button disabled>disable submit</x-button>
+      <x-button type="primary" disabled>disable primary</x-button>
+      <x-button type="warn" disabled>disable Delete</x-button>
 
-      <m-button mini disabled>disable mini submit</m-button>
-      <m-button mini type="primary" disabled>disable mini primary</m-button>
-      <m-button mini type="warn" disabled>disable mini Delete</m-button>
+      <x-button mini disabled>disable mini submit</x-button>
+      <x-button mini type="primary" disabled>disable mini primary</x-button>
+      <x-button mini type="warn" disabled>disable mini Delete</x-button>
 
-      <m-button plain disabled>disable plain</m-button>
-      <m-button plain type="primary" disabled>disable plain primary</m-button>
+      <x-button plain disabled>disable plain</x-button>
+      <x-button plain type="primary" disabled>disable plain primary</x-button>
 
-      <m-divider>use :text and :disabled</m-divider>
-      <m-button :text="submit001" :disabled="disable001" @click.native="processButton001" type="primary"></m-button>
+      <divider>use :text and :disabled</divider>
+      <x-button :text="submit001" :disabled="disable001" @click.native="processButton001" type="primary"></x-button>
 
-      <m-divider>combined with flexbox</m-divider>
-      <m-flexbox>
-        <m-flexbox-item>
-          <m-button type="primary">primary</m-button>
-        </m-flexbox-item>
-        <m-flexbox-item>
-          <m-button type="warn">Delete</m-button>
-        </m-flexbox-item>
-      </m-flexbox>
-      <m-divider>combined with flexbox</m-divider>
-      <m-flexbox>
-        <m-flexbox-item>
-          <m-button type="default">default</m-button>
-        </m-flexbox-item>
-        <m-flexbox-item>
-          <m-button type="primary">primary</m-button>
-        </m-flexbox-item>
-        <m-flexbox-item>
-          <m-button type="warn">Delete</m-button>
-        </m-flexbox-item>
-      </m-flexbox>
+      <divider>combined with flexbox</divider>
+      <flexbox>
+        <flexbox-item>
+          <x-button type="primary">primary</x-button>
+        </flexbox-item>
+        <flexbox-item>
+          <x-button type="warn">Delete</x-button>
+        </flexbox-item>
+      </flexbox>
+      <divider>combined with flexbox</divider>
+      <flexbox>
+        <flexbox-item>
+          <x-button type="default">default</x-button>
+        </flexbox-item>
+        <flexbox-item>
+          <x-button type="primary">primary</x-button>
+        </flexbox-item>
+        <flexbox-item>
+          <x-button type="warn">Delete</x-button>
+        </flexbox-item>
+      </flexbox>
 
     </box>
 
@@ -86,17 +86,17 @@
 </template>
 
 <script>
-import { MButton, MBox, MGrouptitle, MGroup, MFlexbox, FlexboxItem, MDivider } from 'src/widgets'
+import { XButton, Box, GroupTitle, Group, Flexbox, FlexboxItem, Divider } from 'vux'
 
 export default {
   components: {
-    MButton,
-    MBox,
-    MGrouptitle,
-    MGroup,
-    MFlexbox,
+    XButton,
+    Box,
+    GroupTitle,
+    Group,
+    Flexbox,
     FlexboxItem,
-    MDivider
+    Divider
   },
   methods: {
     change (value) {

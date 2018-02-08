@@ -1,44 +1,44 @@
 <template>
   <div>
-    <m-group>
-      <m-switch :title="$t('Basic Usage')" v-model="show1"></m-switch>
-      <m-switch :title="$t('Android Theme')" v-model="show7"></m-switch>
-      <m-switch :title="$t('Show cancel menu')" v-model="show2"></m-switch>
-      <m-switch :title="$t('Array menu')" v-model="show5"></m-switch>
-    </m-group>
+    <group>
+      <x-switch :title="$t('Basic Usage')" v-model="show1"></x-switch>
+      <x-switch :title="$t('Android Theme')" v-model="show7"></x-switch>
+      <x-switch :title="$t('Show cancel menu')" v-model="show2"></x-switch>
+      <x-switch :title="$t('Array menu')" v-model="show5"></x-switch>
+    </group>
 
-    <m-group :title="$t('Prevent closing when clicking mask')">
-      <m-switch :title="$t('Basic Usage')" v-model="show4"></m-switch>
-    </m-group>
+    <group :title="$t('Prevent closing when clicking mask')">
+      <x-switch :title="$t('Basic Usage')" v-model="show4"></x-switch>
+    </group>
 
-    <m-group>
-      <m-switch :title="$t('Menu as tips')" v-model="show3"></m-switch>
-      <m-switch :title="$t('Slot: header')" v-model="show6"></m-switch>
-      <m-switch :title="$t('Prevent auto closing')" v-model="show8"></m-switch>
-    </m-group>
+    <group>
+      <x-switch :title="$t('Menu as tips')" v-model="show3"></x-switch>
+      <x-switch :title="$t('Slot: header')" v-model="show6"></x-switch>
+      <x-switch :title="$t('Prevent auto closing')" v-model="show8"></x-switch>
+    </group>
 
-    <m-actionsheet v-model="show4" :menus="menus1" :close-on-clicking-mask="false" show-cancel @on-click-mask="console('on click mask')"></m-actionsheet>
+    <actionsheet v-model="show4" :menus="menus1" :close-on-clicking-mask="false" show-cancel @on-click-mask="console('on click mask')"></actionsheet>
 
-    <m-actionsheet v-model="show1" :menus="menus1" @on-click-menu="click"></m-actionsheet>
+    <actionsheet v-model="show1" :menus="menus1" @on-click-menu="click"></actionsheet>
 
-    <m-actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel></m-actionsheet>
+    <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel></actionsheet>
 
-    <m-actionsheet v-model="show3" :menus="menus3" @on-click-menu="click" @on-click-menu-delete="onDelete" show-cancel></m-actionsheet>
+    <actionsheet v-model="show3" :menus="menus3" @on-click-menu="click" @on-click-menu-delete="onDelete" show-cancel></actionsheet>
 
-    <m-actionsheet v-model="show5" :menus="menus5" show-cancel @on-click-menu="click5"></m-actionsheet>
+    <actionsheet v-model="show5" :menus="menus5" show-cancel @on-click-menu="click5"></actionsheet>
 
-    <m-actionsheet v-model="show6" :menus="menus1">
-      <p slot="header" v-html="$t('MActionsheet header')"></p>
-    </m-actionsheet>
+    <actionsheet v-model="show6" :menus="menus1">
+      <p slot="header" v-html="$t('Actionsheet header')"></p>
+    </actionsheet>
 
-    <m-actionsheet v-model="show7" :menus="menu7" theme="android" @on-click-menu="click">
-    </m-actionsheet>
+    <actionsheet v-model="show7" :menus="menu7" theme="android" @on-click-menu="click">
+    </actionsheet>
 
-    <m-toast v-model="showSuccess">{{ $t('Deleted~') }}</m-toast>
+    <toast v-model="showSuccess">{{ $t('Deleted~') }}</toast>
 
     <div v-transfer-dom>
-      <m-actionsheet v-model="show8" :menus="menus8" @on-click-menu="demo8doClose" :close-on-clicking-mask="false" :close-on-clicking-menu="false">
-      </m-actionsheet>
+      <actionsheet v-model="show8" :menus="menus8" @on-click-menu="demo8doClose" :close-on-clicking-mask="false" :close-on-clicking-menu="false">
+      </actionsheet>
     </div>
   </div>
 </template>
@@ -70,7 +70,7 @@ Take Photo:
   zh-CN: 拍照
 Choose from photos:
   zh-CN: 从相册选择
-MActionsheet header:
+Actionsheet header:
   en: 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>'
   zh-CN: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
 '<span style="color:red">Delete</span>':
@@ -80,17 +80,17 @@ Array menu:
 </i18n>
 
 <script>
-import { TransferDom, MActionsheet, MActionsheetMGroup, MSwitch, MToast } from 'src/widgets'
+import { TransferDom, Actionsheet, Group, XSwitch, Toast } from 'vux'
 
 export default {
   components: {
-    MActionsheet,
-    MActionsheetMGroup,
-    MSwitch,
-    MToast
+    Actionsheet,
+    Group,
+    XSwitch,
+    Toast
   },
   directives: {
-    TransferDomz
+    TransferDom
   },
   data () {
     return {
@@ -111,7 +111,7 @@ export default {
       show7: false,
       show8: false,
       menus5: [{
-        label: this.$t('MActionsheet header'),
+        label: this.$t('Actionsheet header'),
         type: 'info'
       }, {
         label: 'Primary',
@@ -134,7 +134,7 @@ export default {
       },
       showSuccess: false,
       menus3: {
-        'title.noop': this.$t('MActionsheet header'),
+        'title.noop': this.$t('Actionsheet header'),
         delete: '<span style="color:red">Delete</span>'
       },
       menus8: {
@@ -145,11 +145,11 @@ export default {
   },
   methods: {
     demo8doClose () {
-      this.$zk.loading.show({
+      this.$vux.loading.show({
         text: 'processing'
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
         this.show8 = false
       }, 1000)
     },

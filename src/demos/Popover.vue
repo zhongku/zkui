@@ -4,49 +4,49 @@
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
-      <button class="btn btn-default">{{ $t('MPopover on top') }}</button>
+      <button class="btn btn-default">{{ $t('Popover on top') }}</button>
     </popover>
 
     <popover placement="bottom" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
-      <button class="btn btn-default">{{ $t('MPopover on bottom') }}</button>
+      <button class="btn btn-default">{{ $t('Popover on bottom') }}</button>
     </popover>
 
     <popover placement="left" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
-      <button class="btn btn-default">{{ $t('MPopover on left') }}</button>
+      <button class="btn btn-default">{{ $t('Popover on left') }}</button>
     </popover>
 
     <popover placement="right" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
-      <button class="btn btn-default">{{ $t('MPopover on right') }}</button>
+      <button class="btn btn-default">{{ $t('Popover on right') }}</button>
     </popover>
   </div>
 </template>
 
 <i18n>
-MPopover on top:
+Popover on top:
   zh-CN: 上方出现
-MPopover on bottom:
+Popover on bottom:
   zh-CN: 下方出现
-MPopover on left:
+Popover on left:
   zh-CN: 左边出现
-MPopover on right:
+Popover on right:
   zh-CN: 右边出现
 </i18n>
 
 <script>
-import { MPopover } from 'src/widgets'
+import { Popover } from 'vux'
 
 export default {
   components: {
-    MPopover
+    Popover
   },
   methods: {
     onShow () {

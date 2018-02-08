@@ -1,22 +1,22 @@
 <template>
   <div>
-    <m-group>
-      <m-popup-picker title="Select" :inline-desc="value" :data="list" v-model="value" show-name ref="picker"></m-popup-picker>
-    </m-group>
+    <group>
+      <popup-picker title="Select" :inline-desc="value" :data="list" v-model="value" show-name ref="picker"></popup-picker>
+    </group>
     <div style="padding:15px;">
-      <m-button @click.native="getValue" type="primary">Get names</m-button>
+      <x-button @click.native="getValue" type="primary">Get names</x-button>
     </div>
   </div>
 </template>
 
 <script>
-import { MGroup, MPopuppicker, MButton } from 'src/widgets'
+import { Group, PopupPicker, XButton } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MPopuppicker,
-    MButton
+    Group,
+    PopupPicker,
+    XButton
   },
   methods: {
     getValue () {

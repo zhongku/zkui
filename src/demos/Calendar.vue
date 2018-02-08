@@ -1,40 +1,40 @@
 <template>
   <div>
-    <m-group>
-      <m-calendar :readonly="readonly" v-model="demo1" :title="$t('Basic Usage')" disable-past placeholder="placeholder" @on-show="log('show')" @on-hide="log('hide')"></m-calendar>
-    </m-group>
+    <group>
+      <calendar :readonly="readonly" v-model="demo1" :title="$t('Basic Usage')" disable-past placeholder="placeholder" @on-show="log('show')" @on-hide="log('hide')"></calendar>
+    </group>
 
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="readonly = !readonly">{{ $t('Toggle readonly') }}</m-button>
+      <x-button type="primary" @click.native="readonly = !readonly">{{ $t('Toggle readonly') }}</x-button>
     </div>
 
-    <m-group>
-      <m-calendar v-model="demo2" :title="$t('Set value as TODAY')" disable-past></m-calendar>
-    </m-group>
+    <group>
+      <calendar v-model="demo2" :title="$t('Set value as TODAY')" disable-past></calendar>
+    </group>
 
-    <m-group>
-      <m-calendar @on-change="onChange" v-model="demo3" :title="$t('Disable future')" disable-future></m-calendar>
-    </m-group>
+    <group>
+      <calendar @on-change="onChange" v-model="demo3" :title="$t('Disable future')" disable-future></calendar>
+    </group>
 
-    <m-group>
-      <m-calendar @on-change="onChange" v-model="demo4" :title="$t('Show popup header')" show-popup-header :popup-header-title="$t('Please select')" disable-future></m-calendar>
-    </m-group>
+    <group>
+      <calendar @on-change="onChange" v-model="demo4" :title="$t('Show popup header')" show-popup-header :popup-header-title="$t('Please select')" disable-future></calendar>
+    </group>
 
-    <m-group>
-      <m-calendar placeholder="placeholder" @on-change="onChange" v-model="demo5" :title="$t('Multiple dates')" :popup-header-title="$t('Please select')" disable-future></m-calendar>
-    </m-group>
+    <group>
+      <calendar placeholder="placeholder" @on-change="onChange" v-model="demo5" :title="$t('Multiple dates')" :popup-header-title="$t('Please select')" disable-future></calendar>
+    </group>
 
-     <m-group>
-      <m-calendar disable-weekend :display-format="displayFormat" :placeholder="$t('Please select')" @on-change="onChange" v-model="demo6" :title="$t('Format multiple dates')" :popup-header-title="$t('please select')"></m-calendar>
-      <m-cell-box align-items="flex-start">
+     <group>
+      <calendar disable-weekend :display-format="displayFormat" :placeholder="$t('Please select')" @on-change="onChange" v-model="demo6" :title="$t('Format multiple dates')" :popup-header-title="$t('please select')"></calendar>
+      <cell-box align-items="flex-start">
         <span class="selected-days">value:</span>
         <div>
           <badge v-for="day in demo6" :text="day" :key="day" style="margin-right:10px;"></badge>
         </div>
-      </m-cell-box>
-    </m-group>
+      </cell-box>
+    </group>
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="demo6 = []">{{ $t('Empty value') }}</m-button>
+      <x-button type="primary" @click.native="demo6 = []">{{ $t('Empty value') }}</x-button>
     </div>
   </div>
 </template>
@@ -61,16 +61,16 @@ Toggle readonly:
 </i18n>
 
 <script>
-import { MGroup, MCalendar, MCell, MBadge, MCellbox, MButton } from 'src/widgets'
+import { Group, Calendar, Cell, Badge, CellBox, XButton } from 'vux'
 
 export default {
   components: {
-    MCalendar,
-    MGroup,
-    MCell,
-    MBadge,
-    MCellbox,
-    MButton
+    Calendar,
+    Group,
+    Cell,
+    Badge,
+    CellBox,
+    XButton
   },
   data () {
     return {

@@ -1,21 +1,21 @@
 <template>
   <div style="">
-    <m-blur :m-blur-amount=40 :url="url">
+    <blur :blur-amount=40 :url="url">
       <p class="center"><img :src="url"></p>
-    </m-blur>
-    <m-flexbox :gutter="0">
-      <m-flexbox-item v-for="(img, index) in images" :key="index"><img :src="img" style="width:100%" @click="url = img"/></m-flexbox-item>
-    </m-flexbox>
+    </blur>
+    <flexbox :gutter="0">
+      <flexbox-item v-for="(img, index) in images" :key="index"><img :src="img" style="width:100%" @click="url = img"/></flexbox-item>
+    </flexbox>
   </div>
 </template>
 
 <script>
-import { MFlexbox, FlexboxItem, MBlur } from 'src/widgets'
+import { Flexbox, FlexboxItem, Blur } from 'vux'
 
 export default {
   components: {
-    MBlur,
-    MFlexbox,
+    Blur,
+    Flexbox,
     FlexboxItem
   },
   data () {

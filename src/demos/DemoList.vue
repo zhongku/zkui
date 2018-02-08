@@ -1,19 +1,19 @@
 <template>
   <div class="demo-list-box" id="demo_list_box" :style="{height: `${height}px`}">
-      <m-flexbox :gutter="0" v-for="(list, index) in components" :key="index">
-        <m-flexbox-item :span="1/3" v-for="component in list" :key="component.name" class="cbox vux-1px-t vux-tap-active" @click.native="go(component.name.toLowerCase())">
+      <flexbox :gutter="0" v-for="(list, index) in components" :key="index">
+        <flexbox-item :span="1/3" v-for="component in list" :key="component.name" class="cbox vux-1px-t vux-tap-active" @click.native="go(component.name.toLowerCase())">
           <div class="vux-1px-r cbox-inner">
             <span class="demo-icon demo-icon-big" v-html="component.icon" :style="{color: component.color}"></span>
             <br>
             <span :style="{fontSize: component.name.length > 12 ? '12px' : ''}">{{component.name | camelCase}}</span>
           </div>
-        </m-flexbox-item>
-      </m-flexbox>
+        </flexbox-item>
+      </flexbox>
     </div>
 </template>
 
 <script>
-import { MFlexbox, FlexboxItem, VuxComponentListData as components } from 'src/widgets'
+import { Flexbox, FlexboxItem, VuxComponentListData as components } from 'vux'
 import { mapState } from 'vuex'
 import DemoList from './DemoList'
 
@@ -32,7 +32,7 @@ export default {
   name: 'demoList',
   components: {
     DemoList,
-    MFlexbox,
+    Flexbox,
     FlexboxItem
   },
   filters: {

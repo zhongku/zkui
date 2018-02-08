@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div v-for="src in list" :key="src" style="background-color:yellow;text-align:center;">
-      <span style="font-size:20px;">MLoading</span>
-      <m-img :src="src" :webp-src="`${src}?type=webp`" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="-100" container="#vux_view_box_body"></m-img>
+    <div v-for="src in list" style="background-color:yellow;text-align:center;">
+      <span style="font-size:20px;">Loading</span>
+      <x-img :src="src" :webp-src="`${src}?type=webp`" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="-100" container="#vux_view_box_body"></x-img>
     </div>
   </div>
 </template>
 
 <script>
-import { MImg } from 'src/widgets'
+import { XImg } from 'vux'
 export default {
   components: {
-    MImg
+    XImg
   },
   methods: {
     success (src, ele) {

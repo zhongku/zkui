@@ -1,10 +1,10 @@
 <template>
   <div>
     <div style="padding:15px;">
-      <m-check-icon :value.sync="demo1"> {{ $t('Do you agree?') }} ({{ demo1 }})</m-check-icon>
+      <check-icon :value.sync="demo1"> {{ $t('Do you agree?') }} ({{ demo1 }})</check-icon>
       <br>
       <br>
-      <m-check-icon :value.sync="demo2" type="plain"> {{ $t('Do you agree?') }} ({{ demo2 }})</m-check-icon>
+      <check-icon :value.sync="demo2" type="plain"> {{ $t('Do you agree?') }} ({{ demo2 }})</check-icon>
     </div>
   </div>
 </template>
@@ -15,11 +15,11 @@
 </i18n>
 
 <script>
-import { MCheckicon } from 'src/widgets'
+import { CheckIcon } from 'vux'
 
 export default {
   components: {
-    MCheckicon
+    CheckIcon
   },
   data () {
     return {

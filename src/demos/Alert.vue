@@ -1,28 +1,28 @@
 <template>
   <div>
-    <m-group>
-      <m-switch :title="$t('Show Me')" v-model="show"></m-switch>
-    </m-group>
+    <group>
+      <x-switch :title="$t('Show Me')" v-model="show"></x-switch>
+    </group>
     <div v-transfer-dom>
-      <m-alert v-model="show" :title="$t('Congratulations')" @on-show="onShow" @on-hide="onHide"> {{ $t('Your Message is sent successfully~') }}</m-alert>
+      <alert v-model="show" :title="$t('Congratulations')" @on-show="onShow" @on-hide="onHide"> {{ $t('Your Message is sent successfully~') }}</alert>
     </div>
 
-    <m-group title="Prop: content">
-      <m-switch :title="$t('Show Me')" v-model="show2"></m-switch>
-    </m-group>
+    <group title="Prop: content">
+      <x-switch :title="$t('Show Me')" v-model="show2"></x-switch>
+    </group>
     <div v-transfer-dom>
-      <m-alert v-model="show2" :title="$t('Congratulations')" :content="$t('Your Message is sent successfully~')"></m-alert>
+      <alert v-model="show2" :title="$t('Congratulations')" :content="$t('Your Message is sent successfully~')"></alert>
     </div>
 
-    <m-group :title="$t('Use as a plugin')">
-      <m-cell :title="$t('Show Me')" @click.native="showPlugin" is-link></m-cell>
-      <m-cell :title="$t('Will auto close in 3s')" @click.native="showPluginAuto" is-link></m-cell>
-    </m-group>
+    <group :title="$t('Use as a plugin')">
+      <cell :title="$t('Show Me')" @click.native="showPlugin" is-link></cell>
+      <cell :title="$t('Will auto close in 3s')" @click.native="showPluginAuto" is-link></cell>
+    </group>
 
-    <m-group :title="$t('Use as a module')">
-      <m-cell :title="$t('Show Me')" @click.native="showModule" is-link></m-cell>
-      <m-cell :title="$t('Will auto close in 3s')" @click.native="showModuleAuto" is-link></m-cell>
-    </m-group>
+    <group :title="$t('Use as a module')">
+      <cell :title="$t('Show Me')" @click.native="showModule" is-link></cell>
+      <cell :title="$t('Will auto close in 3s')" @click.native="showModuleAuto" is-link></cell>
+    </group>
   </div>
 </template>
 
@@ -35,24 +35,24 @@ Congratulations:
   zh-CN: 恭喜
 Your Message is sent successfully~:
   zh-CN: 消息已成功发送
-Do you m-agree?:
+Do you agree?:
   zh-CN: 同意不?
 Will auto close in 3s:
   zh-CN: 3秒后关闭
 </i18n>
 
 <script>
-import { AlertModule, MAlert, MGroup, MSwitch, MCell, TransferDomDirective as TransferDom } from 'src/widgets'
+import { AlertModule, Alert, Group, XSwitch, Cell, TransferDomDirective as TransferDom } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MAlert,
-    MGroup,
-    MSwitch,
-    MCell
+    Alert,
+    Group,
+    XSwitch,
+    Cell
   },
   data () {
     return {
@@ -69,9 +69,9 @@ export default {
       console.log('on show')
     },
     showPlugin () {
-      this.$zk.alert.show({
+      this.$vux.alert.show({
         title: 'VUX is Cool',
-        content: this.$t('Do you m-agree?'),
+        content: this.$t('Do you agree?'),
         onShow () {
           console.log('Plugin: I\'m showing')
         },
@@ -83,7 +83,7 @@ export default {
     showModule () {
       AlertModule.show({
         title: 'VUX is Cool',
-        content: this.$t('Do you m-agree?'),
+        content: this.$t('Do you agree?'),
         onShow () {
           console.log('Module: I\'m showing')
         },
@@ -101,7 +101,7 @@ export default {
     showPluginAuto () {
       this.showPlugin()
       setTimeout(() => {
-        this.$zk.alert.hide()
+        this.$vux.alert.hide()
       }, 3000)
     }
   }

@@ -8,21 +8,21 @@
       </h1>
       <p class="vux-notice">v{{version}}</p>
     </div>
-    <m-group>
-      <m-cell title="Live Demo" link="/demo">
+    <group>
+      <cell title="Live Demo" link="/demo">
         <span class="demo-icon" slot="icon" style="color:#F70968">&#xe633;</span>
-      </m-cell>
-      <m-cell title="Github" link="http://github.com/airyland/vux" value="Star me">
+      </cell>
+      <cell title="Github" link="http://github.com/airyland/vux" value="Star me">
         <span class="demo-icon" slot="icon" style="color:#35495e;">&#xe62f;</span>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
     <br>
     <p class="vue-version">current vue version: {{ vueVersion }}</p>
   </div>
 </template>
 
 <script>
-import { MCell, MGroup, MBadge, MDivider } from 'src/widgets'
+import { Cell, Group, Badge, Divider } from 'vux'
 
 const pkg = require('../../package.json')
 const version = pkg.version
@@ -30,10 +30,10 @@ const vueVersion = pkg.devDependencies.vue
 
 export default {
   components: {
-    MCell,
-    MGroup,
-    MBadge,
-    MDivider
+    Cell,
+    Group,
+    Badge,
+    Divider
   },
   data () {
     return {

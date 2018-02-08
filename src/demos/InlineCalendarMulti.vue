@@ -1,24 +1,24 @@
 <template>
   <div>
-    <m-inline-calendar v-model="value" @on-change="onChange"></m-inline-calendar>
+    <inline-calendar v-model="value" @on-change="onChange"></inline-calendar>
     <br>
     {{ value }}
     <div style="padding:15px;">
-      <m-button type="primary" @click.native="updateValue">update value</m-button>
+      <x-button type="primary" @click.native="updateValue">update value</x-button>
     </div>
   </div>
 </template>
 
 <script>
-import { MInlinecalendar, dateFormat, MButton } from 'src/widgets'
+import { InlineCalendar, dateFormat, XButton } from 'vux'
 
 const today = dateFormat(new Date(), 'YYYY-MM-DD')
 const yesterday = dateFormat(new Date().getTime() - 24 * 3600 * 1000, 'YYYY-MM-DD')
 
 export default {
   components: {
-    MInlinecalendar,
-    MButton
+    InlineCalendar,
+    XButton
   },
   data () {
     return {

@@ -1,39 +1,39 @@
 <template>
   <div>
     <box gap="10px 10px">
-      <m-icon type="success"></m-icon>
-      <m-icon type="info"></m-icon>
-      <m-icon type="info-circle"></m-icon>
-      <m-icon type="warn"></m-icon>
-      <m-icon type="waiting"></m-icon>
-      <m-icon type="waiting-circle"></m-icon>
-      <m-icon type="safe-success"></m-icon>
-      <m-icon type="safe_warn"></m-icon>
-      <m-icon type="success-circle"></m-icon>
-      <m-icon type="success-no-circle"></m-icon>
-      <m-icon type="circle"></m-icon>
-      <m-icon type="download"></m-icon>
-      <m-icon type="cancel"></m-icon>
-      <m-icon type="search"></m-icon>
-      <m-icon type="clear"></m-icon>
+      <icon type="success"></icon>
+      <icon type="info"></icon>
+      <icon type="info-circle"></icon>
+      <icon type="warn"></icon>
+      <icon type="waiting"></icon>
+      <icon type="waiting-circle"></icon>
+      <icon type="safe-success"></icon>
+      <icon type="safe_warn"></icon>
+      <icon type="success-circle"></icon>
+      <icon type="success-no-circle"></icon>
+      <icon type="circle"></icon>
+      <icon type="download"></icon>
+      <icon type="cancel"></icon>
+      <icon type="search"></icon>
+      <icon type="clear"></icon>
       <br/>
-      <m-icon type="success" is-msg></m-icon>
-      <m-icon type="info" is-msg></m-icon>
-      <m-icon type="warn" is-msg></m-icon>
-      <m-icon type="waiting" is-msg></m-icon>
-      <m-icon type="safe_success" is-msg></m-icon>
-      <m-icon type="safe_warn" is-msg></m-icon>
+      <icon type="success" is-msg></icon>
+      <icon type="info" is-msg></icon>
+      <icon type="warn" is-msg></icon>
+      <icon type="waiting" is-msg></icon>
+      <icon type="safe_success" is-msg></icon>
+      <icon type="safe_warn" is-msg></icon>
     </box>
   </div>
 </template>
 
 <script>
-import { MBox, MIcon } from 'src/widgets'
+import { Box, Icon } from 'vux'
 
 export default {
   components: {
-    MBox,
-    MIcon
+    Box,
+    Icon
   }
 }
 </script>

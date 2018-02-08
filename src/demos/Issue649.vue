@@ -1,12 +1,12 @@
 <template>
     <div class="record-component">
         <div>{{number}}</div>
-        <m-range class="value-range" v-model="number" :min="min" :max="max" :step="step" :range-bar-height="rangeBarHeight" decimal></m-range>
+        <range class="value-range" v-model="number" :min="min" :max="max" :step="step" :range-bar-height="rangeBarHeight" decimal></range>
     </div>
 </template>
 
 <script>
-import { MRange } from 'src/widgets'
+import { Range } from 'vux'
 
 export default {
   data () {
@@ -20,7 +20,7 @@ export default {
     }
   },
   components: {
-    MRange
+    Range
   }
 }
 </script>

@@ -1,22 +1,22 @@
 <template>
   <div>
-    <m-scroller height="-98" style="border:1px solid red;" @on-pullup-loading="pullupHandle" @on-pulldown-loading="pulldownHandle" :value="scrollStatus" lock-x scrollbar-y  ref="scroller" use-pulldown use-pullup :pulldown-config="pulldownConfig" :pullup-config="pullupConfig">
-      <m-group title="cell demo" style="padding-bottom:15px;">
-        <m-cell v-for="i in datas" :key="i" title="item" :value="i"></m-cell>
-      </m-group>
-    </m-scroller>
+    <scroller height="-98" style="border:1px solid red;" @on-pullup-loading="pullupHandle" @on-pulldown-loading="pulldownHandle" :value="scrollStatus" lock-x scrollbar-y  ref="scroller" use-pulldown use-pullup :pulldown-config="pulldownConfig" :pullup-config="pullupConfig">
+      <group title="cell demo" style="padding-bottom:15px;">
+        <cell v-for="i in datas" :key="item" title="item" :value="i"></cell>
+      </group>
+    </scroller>
   </div>
 </template>
 
 <script>
-import { MGroup, MCell, MScroller } from 'src/widgets'
+import { Group, Cell, Scroller } from 'vux'
 
 export default {
   name: 'scroll',
   components: {
-    MGroup,
-    MCell,
-    MScroller
+    Group,
+    Cell,
+    Scroller
   },
   data () {
     return {

@@ -12,28 +12,28 @@
     @on-cancel="onCancel"
     @on-submit="onSubmit"
     ref="search"></search>
-    <m-group>
-      <m-cell title="keyword">{{value}}</m-cell>
-    </m-group>
+    <group>
+      <cell title="keyword">{{value}}</cell>
+    </group>
 
     <div style="padding:15px;">
-      <m-button @click.native="setFocus" type="primary">set focus</m-button>
+      <x-button @click.native="setFocus" type="primary">set focus</x-button>
     </div>
-    <m-group>
-      <m-cell title="static position demo" is-link link="/component/search-static"></m-cell>
-    </m-group>
+    <group>
+      <cell title="static position demo" is-link link="/component/search-static"></cell>
+    </group>
   </div>
 </template>
 
 <script>
-import { MSearch, MGroup, MCell, MButton } from 'src/widgets'
+import { Search, Group, Cell, XButton } from 'vux'
 
 export default {
   components: {
-    MSearch,
-    MGroup,
-    MCell,
-    MButton
+    Search,
+    Group,
+    Cell,
+    XButton
   },
   methods: {
     setFocus () {
@@ -48,7 +48,7 @@ export default {
     },
     onSubmit () {
       this.$refs.search.setBlur()
-      this.$zk.toast.show({
+      this.$vux.toast.show({
         type: 'text',
         position: 'top',
         text: 'on submit'

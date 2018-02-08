@@ -16,23 +16,23 @@
 		</timeline>
 		<timeline>
 			<timeline-item v-for="(i, index) in count" :key="index">
-				<h4 :class="[i === 0 ? 'recent' : '']">MTimeline Node {{i + 1}}</h4>
+				<h4 :class="[i === 0 ? 'recent' : '']">Timeline Node {{i + 1}}</h4>
 				<p :class="[i === 0 ? 'recent' : '']">index {{i + 1}}</p>
 			</timeline-item>
 		</timeline>
-    <m-button type="primary" @click.native="count = 6"> Set to 6 nodes</m-button>
-    <m-button type="primary" @click.native="count = 3"> Set to 3 nodes</m-button>
+    <x-button type="primary" @click.native="count = 6"> Set to 6 nodes</x-button>
+    <x-button type="primary" @click.native="count = 3"> Set to 3 nodes</x-button>
 	</div>
 </template>
 
 <script>
-import { MTimeline, TimelineItem, MButton } from 'src/widgets'
+import { Timeline, TimelineItem, XButton } from 'vux'
 
 export default {
   components: {
-    MTimeline,
+    Timeline,
     TimelineItem,
-    MButton
+    XButton
   },
   data () {
     return {

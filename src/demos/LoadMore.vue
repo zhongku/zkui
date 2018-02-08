@@ -8,17 +8,17 @@
 
 <i18n>
 正在加载:
-  en: MLoading
+  en: Loading
 暂无数据:
   en: The End
 </i18n>
 
 <script>
-import { MLoadmore } from 'src/widgets'
+import { LoadMore } from 'vux'
 
 export default {
   components: {
-    MLoadmore
+    LoadMore
   }
 }
 </script>

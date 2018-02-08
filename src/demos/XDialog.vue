@@ -1,83 +1,83 @@
 <template>
   <div style="height: 1000px">
 
-    <m-group>
-      <m-switch v-model="show" :title="$t('Toggle')"></m-switch>
-      <m-switch v-model="show2" :title="$t('use .sync')"></m-switch>
-      <m-switch v-model="showToast" :title="$t('show toast')"></m-switch>
-      <m-switch v-model="showHideOnBlur" :title="$t('hide on clicking mask')"></m-switch>
-      <m-switch v-model="showDialogStyle" :title="$t('Toggle')" :inline-desc="$t('custom dialog style')"></m-switch>
-    </m-group>
+    <group>
+      <x-switch v-model="show" :title="$t('Toggle')"></x-switch>
+      <x-switch v-model="show2" :title="$t('use .sync')"></x-switch>
+      <x-switch v-model="showToast" :title="$t('show toast')"></x-switch>
+      <x-switch v-model="showHideOnBlur" :title="$t('hide on clicking mask')"></x-switch>
+      <x-switch v-model="showDialogStyle" :title="$t('Toggle')" :inline-desc="$t('custom dialog style')"></x-switch>
+    </group>
 
     <div v-transfer-dom>
-      <m-dialog v-model="showToast" class="dialog-demo">
+      <x-dialog v-model="showToast" class="dialog-demo">
         <div style="padding:15px;">
-          <m-button @click.native="doShowToast" type="primary">show toast</m-button>
+          <x-button @click.native="doShowToast" type="primary">show toast</x-button>
         </div>
         <div @click="showToast=false">
           <span class="vux-close"></span>
         </div>
-      </m-dialog>
+      </x-dialog>
     </div>
 
     <div v-transfer-dom>
-      <m-dialog v-model="show" class="dialog-demo">
+      <x-dialog v-model="show" class="dialog-demo">
         <div class="img-box">
           <img src="../assets/demo/dialog/01.jpg" style="max-width:100%">
         </div>
         <div @click="show=false">
           <span class="vux-close"></span>
         </div>
-      </m-dialog>
+      </x-dialog>
     </div>
 
     <div v-transfer-dom>
-      <m-dialog :show.sync="show2" class="dialog-demo">
+      <x-dialog :show.sync="show2" class="dialog-demo">
         <div class="img-box">
           <img src="../assets/demo/dialog/01.jpg" style="max-width:100%">
         </div>
         <div @click="show2=false">
           <span class="vux-close"></span>
         </div>
-      </m-dialog>
+      </x-dialog>
     </div>
 
     <div v-transfer-dom>
-      <m-dialog v-model="showHideOnBlur" class="dialog-demo" hide-on-blur>
+      <x-dialog v-model="showHideOnBlur" class="dialog-demo" hide-on-blur>
         <div class="img-box">
           <img src="../assets/demo/dialog/01.jpg" style="max-width:100%">
         </div>
         <div @click="showHideOnBlur=false">
           <span class="vux-close"></span>
         </div>
-      </m-dialog>
+      </x-dialog>
     </div>
 
     <div v-transfer-dom>
-      <m-dialog v-model="showDialogStyle" hide-on-blur :dialog-style="{'max-width': '100%', width: '100%', height: '50%', 'background-color': 'transparent'}">
+      <x-dialog v-model="showDialogStyle" hide-on-blur :dialog-style="{'max-width': '100%', width: '100%', height: '50%', 'background-color': 'transparent'}">
         <p style="color:#fff;text-align:center;" @click="showDialogStyle = false">
           <span style="font-size:30px;">HELLO WORLD</span>
           <br>
           <br>
-          <m-icon type="ios-close-outline" style="fill:#fff;"></m-icon>
+          <x-icon type="ios-close-outline" style="fill:#fff;"></x-icon>
         </p>
-      </m-dialog>
+      </x-dialog>
     </div>
 
-    <m-group style="padding-top: 300px">
-      <m-switch v-model="showScrollBox" :title="$t('long long content')"></m-switch>
-    </m-group>
+    <group style="padding-top: 300px">
+      <x-switch v-model="showScrollBox" :title="$t('long long content')"></x-switch>
+    </group>
 
     <div v-transfer-dom>
-      <m-dialog v-model="showScrollBox" class="dialog-demo">
+      <x-dialog v-model="showScrollBox" class="dialog-demo">
         <p class="dialog-title">Long content</p>
         <div class="img-box" style="height:100px;padding:15px 0;overflow:scroll;-webkit-overflow-scrolling:touch;">
-          <p v-for="i in 20" :key="i">{{i}}</p>
+          <p v-for="i in 20">{{i}}</p>
         </div>
         <div @click="showScrollBox=false">
           <span class="vux-close"></span>
         </div>
-      </m-dialog>
+      </x-dialog>
     </div>
 
   </div>
@@ -101,21 +101,21 @@ show toast:
 </i18n>
 
 <script>
-import { MDialog, MButton, MGroup, MSwitch, TransferDomDirective as TransferDom } from 'src/widgets'
+import { XDialog, XButton, Group, XSwitch, TransferDomDirective as TransferDom } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MDialog,
-    MButton,
-    MGroup,
-    MSwitch
+    XDialog,
+    XButton,
+    Group,
+    XSwitch
   },
   methods: {
     doShowToast () {
-      this.$zk.toast.show({
+      this.$vux.toast.show({
         text: 'toast'
       })
     }

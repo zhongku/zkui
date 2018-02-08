@@ -1,21 +1,21 @@
 <template>
   <div>
     <br>
-    <m-progress :percent="percent1"></m-progress>
+    <x-progress :percent="percent1"></x-progress>
     <br>
     <box gap="10px">
-      <m-progress :percent="percent2" :show-cancel="false"></m-progress>
+      <x-progress :percent="percent2" :show-cancel="false"></x-progress>
     </box>
   </div>
 </template>
 
 <script>
-import { MProgress, MBox } from 'src/widgets'
+import { XProgress, Box } from 'vux'
 
 export default {
   components: {
-    MProgress,
-    MBox
+    XProgress,
+    Box
   },
   data () {
     return {

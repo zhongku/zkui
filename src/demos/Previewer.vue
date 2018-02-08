@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="previewer-demo-img" v-for="(item, index) in list" :key="item" :src="item.src" width="100" @click="show(index)">
+    <img class="previewer-demo-img" v-for="(item, index) in list" :src="item.src" width="100" @click="show(index)">
     <div v-transfer-dom>
       <previewer :list="list" ref="previewer" :options="options"></previewer>
     </div>
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import { MPreviewer, TransferDom } from 'src/widgets'
+import { Previewer, TransferDom } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MPreviewer
+    Previewer
   },
   methods: {
     show (index) {

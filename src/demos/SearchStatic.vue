@@ -3,18 +3,18 @@
     <img src="../assets/demo/filter_bg.jpg" style="width: 100%">
     <br>
     <search @on-submit="onSubmit" :auto-fixed="autoFixed" @on-focus="onFocus" @on-cancel="onCancel"></search>
-    <m-divider>set value</m-divider>
+    <divider>set value</divider>
     <search @on-submit="onSubmit" :auto-fixed="false" v-model="value2" @on-focus="onFocus" @on-cancel="onCancel"></search>
   </div>
 </template>
 
 <script>
-import { MSearch, MDivider } from 'src/widgets'
+import { Search, Divider } from 'vux'
 
 export default {
   components: {
-    MSearch,
-    MDivider
+    Search,
+    Divider
   },
   methods: {
     resultClick (item) {

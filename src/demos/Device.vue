@@ -1,18 +1,18 @@
 <template>
   <div>
-    <m-group>
-      <m-cell v-for="(item, key) in $device" :key="key" :title="key">{{item}}</m-cell>
-    </m-group>
+    <group>
+      <cell v-for="(item, key) in $device" :key="key" :title="key">{{item}}</cell>
+    </group>
   </div>
 </template>
 
 <script>
-import { MGroup, MCell } from 'src/widgets'
+import { Group, Cell } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell
+    Group,
+    Cell
   }
 }
 </script>

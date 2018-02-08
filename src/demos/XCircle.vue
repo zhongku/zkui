@@ -2,52 +2,52 @@
   <div class="vux-circle-demo">
     <br>
     <div style='width:150px;height:150px;'>
-      <m-circle :percent="percent1" :stroke-width="10" stroke-color="#04BE02">
+      <x-circle :percent="percent1" :stroke-width="10" stroke-color="#04BE02">
         <span>{{percent1}}</span>
-      </m-circle>
+      </x-circle>
     </div>
     <br>
     <div style='width:100px;height:100px;'>
-      <m-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
+      <x-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
         <span>{{percent1}}</span>
-      </m-circle>
+      </x-circle>
     </div>
     <br>
     <div style='width:50px;height:50px;'>
-      <m-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
+      <x-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
         <span>{{percent1}}</span>
-      </m-circle>
+      </x-circle>
     </div>
     <br>
     <div style="width:180px;">
-      <m-range v-model="percent1" :min="0" :max="100"></m-range>
+      <range v-model="percent1" :min="0" :max="100"></range>
     </div>
     <br>
     <div style='width:100px;height:100px;'>
-      <m-circle :percent="100" :stroke-width="3" stroke-color="#04BE02">
-        <m-icon type="success"></m-icon>
-      </m-circle>
+      <x-circle :percent="100" :stroke-width="3" stroke-color="#04BE02">
+        <icon type="success"></icon>
+      </x-circle>
     </div>
     <br>
     <div style='width:100px;height:100px;'>
-      <m-circle :percent="percent2" :stroke-width="6" :trail-width="6" :stroke-color="strokeColor2" trail-color="#ececec">
+      <x-circle :percent="percent2" :stroke-width="6" :trail-width="6" :stroke-color="strokeColor2" trail-color="#ececec">
         <span :style="{color: strokeColor2}">{{percent2}}%</span>
-      </m-circle>
+      </x-circle>
     </div>
   </div>
 </template>
 
 <script>
-import { MCircle, MRange, MIcon } from 'src/widgets'
+import { XCircle, Range, Icon } from 'vux'
 
 export default {
   ready () {
     setInterval(this.update2, 2000)
   },
   components: {
-    MCircle,
-    MRange,
-    MIcon
+    XCircle,
+    Range,
+    Icon
   },
   data () {
     return {

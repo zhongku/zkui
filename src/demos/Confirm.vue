@@ -1,85 +1,85 @@
 <template>
   <div>
-    <m-group>
-      <m-switch :title="$t('Toggle')" v-model="show"></m-switch>
-    </m-group>
-    <m-group>
-      <m-switch :title="$t('Toggle show-input')" v-model="show3"></m-switch>
-    </m-group>
-    <m-group>
-      <m-switch :title="$t('Set default input value')" v-model="show5"></m-switch>
-    </m-group>
-    <m-group>
-      <m-switch :title="$t('Toggle_android')" v-model="show2"></m-switch>
-    </m-group>
-    <m-group>
-      <m-switch :title="$t('closeOnConfirm=false')" v-model="show4"></m-switch>
-    </m-group>
+    <group>
+      <x-switch :title="$t('Toggle')" v-model="show"></x-switch>
+    </group>
+    <group>
+      <x-switch :title="$t('Toggle show-input')" v-model="show3"></x-switch>
+    </group>
+    <group>
+      <x-switch :title="$t('Set default input value')" v-model="show5"></x-switch>
+    </group>
+    <group>
+      <x-switch :title="$t('Toggle_android')" v-model="show2"></x-switch>
+    </group>
+    <group>
+      <x-switch :title="$t('closeOnConfirm=false')" v-model="show4"></x-switch>
+    </group>
     <div v-transfer-dom>
-      <m-confirm v-model="show"
-      :title="$t('MConfirm deleting the item')"
+      <confirm v-model="show"
+      :title="$t('Confirm deleting the item')"
       @on-cancel="onCancel"
       @on-confirm="onConfirm"
       @on-show="onShow"
       @on-hide="onHide">
         <p style="text-align:center;">{{ $t('Are you sure?') }}</p>
-      </m-confirm>
+      </confirm>
     </div>
     <br>
     <div v-transfer-dom>
-      <m-confirm v-model="show3"
+      <confirm v-model="show3"
       show-input
-      :title="$t('MConfirm deleting the item')"
+      :title="$t('Confirm deleting the item')"
       :input-attrs="{type: 'number'}"
       @on-cancel="onCancel"
       @on-confirm="onConfirm"
       @on-show="onShow"
       @on-hide="onHide">
-      </m-confirm>
+      </confirm>
     </div>
     <br>
     <div v-transfer-dom>
-      <m-confirm v-model="show5"
+      <confirm v-model="show5"
       show-input
       ref="confirm5"
-      :title="$t('MConfirm deleting the item')"
+      :title="$t('Confirm deleting the item')"
       @on-cancel="onCancel"
       @on-confirm="onConfirm5"
       @on-show="onShow5"
       @on-hide="onHide">
-      </m-confirm>
+      </confirm>
     </div>
     <br>
     <div v-transfer-dom>
-      <m-confirm v-model="show2"
-      :title="$t('MConfirm deleting the item')"
+      <confirm v-model="show2"
+      :title="$t('Confirm deleting the item')"
       theme="android"
       @on-cancel="onCancel"
       @on-confirm="onConfirm"
       @on-show="onShow"
       @on-hide="onHide">
         <p style="text-align:center;">{{ $t('I miss u sunyi') }}</p>
-      </m-confirm>
+      </confirm>
     </div>
     <br>
     <div v-transfer-dom>
-      <m-confirm
+      <confirm
       v-model="show4"
       :close-on-confirm="false"
-      :title="$t('MConfirm deleting the item')"
+      :title="$t('Confirm deleting the item')"
       @on-confirm="onConfirm4">
         <p style="text-align:center;">{{ $t('Are you sure?') }}</p>
-      </m-confirm>
+      </confirm>
     </div>
     <br>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin" type="primary">{{ $t('Show') }}</m-button>
+      <x-button @click.native="showPlugin" type="primary">{{ $t('Show') }}</x-button>
     </div>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin2" type="primary">{{ $t('Plugin usage') }}</m-button>
+      <x-button @click.native="showPlugin2" type="primary">{{ $t('Plugin usage') }}</x-button>
     </div>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin3" type="primary"> {{ $t('Call prompt by using plugin') }} </m-button>
+      <x-button @click.native="showPlugin3" type="primary"> {{ $t('Call prompt by using plugin') }} </x-button>
     </div>
   </div>
 </template>
@@ -93,7 +93,7 @@ Toggle_android:
   zh-CN: 安卓风格
 Are you sure?:
   zh-CN: 确定咩？
-MConfirm deleting the item:
+Confirm deleting the item:
   zh-CN: 操作提示
 Please input something:
   zh-CN: 请输入些什么
@@ -110,16 +110,16 @@ Call prompt by using plugin:
 </i18n>
 
 <script>
-import { MConfirm, MGroup, MSwitch, MButton, TransferDomDirective as TransferDom } from 'src/widgets'
+import { Confirm, Group, XSwitch, XButton, TransferDomDirective as TransferDom } from 'vux'
 export default {
   directives: {
     TransferDom
   },
   components: {
-    MConfirm,
-    MGroup,
-    MSwitch,
-    MButton
+    Confirm,
+    Group,
+    XSwitch,
+    XButton
   },
   data () {
     return {
@@ -142,12 +142,12 @@ export default {
     },
     onConfirm4 () {
       console.log('on confirm')
-      this.$zk.loading.show({
+      this.$vux.loading.show({
         transition: '',
         text: 'processing'
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
         this.show4 = false
       }, 1000)
     },
@@ -162,10 +162,10 @@ export default {
     },
     onConfirm5 (value) {
       this.$refs.confirm5.setInputValue('')
-      this.$zk.toast.text('input value: ' + value)
+      this.$vux.toast.text('input value: ' + value)
     },
     showPlugin () {
-      this.$zk.confirm.show({
+      this.$vux.confirm.show({
         title: 'Title',
         content: 'Content',
         onShow () {
@@ -187,11 +187,11 @@ export default {
     },
     showPlugin3 () {
       const _this = this
-      this.$zk.confirm.prompt('123', {
+      this.$vux.confirm.prompt('123', {
         title: 'Title',
         onShow () {
           console.log('promt show')
-          _this.$zk.confirm.setInputValue('set input value')
+          _this.$vux.confirm.setInputValue('set input value')
         },
         onHide () {
           console.log('prompt hide')

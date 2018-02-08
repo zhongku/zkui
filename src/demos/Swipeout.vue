@@ -46,14 +46,14 @@
     
 
     <div style="padding:15px;">
-      <m-button @click.native="disabled = false" type="primary" :disabled="!disabled">{{ $t('set Enabled') }}</m-button>
-      <m-button @click.native="disabled = true" type="warn" :disabled="disabled">{{ $t('set Disabled') }}</m-button>
-      <m-button @click.native="$refs.swipeoutItem.open('left')" type="primary">{{ $t('open left menu') }}</m-button>
-      <m-button @click.native="$refs.swipeoutItem.open('right')" type="primary">{{ $t('open right menu') }}</m-button>
-      <m-button @click.native="$refs.swipeoutItem.close()" type="warn">{{ $t('close menu') }}</m-button>
+      <x-button @click.native="disabled = false" type="primary" :disabled="!disabled">{{ $t('set Enabled') }}</x-button>
+      <x-button @click.native="disabled = true" type="warn" :disabled="disabled">{{ $t('set Disabled') }}</x-button>
+      <x-button @click.native="$refs.swipeoutItem.open('left')" type="primary">{{ $t('open left menu') }}</x-button>
+      <x-button @click.native="$refs.swipeoutItem.open('right')" type="primary">{{ $t('open right menu') }}</x-button>
+      <x-button @click.native="$refs.swipeoutItem.close()" type="warn">{{ $t('close menu') }}</x-button>
     </div>
     <br>
-    <m-group-title>use vux-1px to style items</m-group-title>
+    <group-title>use vux-1px to style items</group-title>
     <swipeout class="vux-1px-tb">
       <swipeout-item transition-mode="follow" v-for="i in 3" :key="i">
         <div slot="right-menu">
@@ -100,15 +100,15 @@ Ignore:
 </i18n>
 
 <script>
-import { MGrouptitle, MSwipeout, SwipeoutItem, SwipeoutButton, MButton } from 'src/widgets'
+import { GroupTitle, Swipeout, SwipeoutItem, SwipeoutButton, XButton } from 'vux'
 
 export default {
   components: {
-    MGrouptitle,
-    MSwipeout,
+    GroupTitle,
+    Swipeout,
     SwipeoutItem,
     SwipeoutButton,
-    MButton
+    XButton
   },
   methods: {
     onButtonClick (type) {

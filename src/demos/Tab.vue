@@ -1,90 +1,90 @@
 <template>
   <div>
-    <m-tab>
-      <m-tab-item selected @on-item-click="onItemClick">已发货</m-tab-item>
-      <m-tab-item @on-item-click="onItemClick">未发货</m-tab-item>
-      <m-tab-item @on-item-click="onItemClick">全部订单</m-tab-item>
-    </m-tab>
+    <tab>
+      <tab-item selected @on-item-click="onItemClick">已发货</tab-item>
+      <tab-item @on-item-click="onItemClick">未发货</tab-item>
+      <tab-item @on-item-click="onItemClick">全部订单</tab-item>
+    </tab>
     <br/>
     <br/>
-    <m-divider>手动切换</m-divider>
-    <m-tab v-model="index01" prevent-default @on-before-index-change="switchTabItem">
-      <m-tab-item selected>已发货</m-tab-item>
-      <m-tab-item>未发货</m-tab-item>
-      <m-tab-item>全部订单</m-tab-item>
-    </m-tab>
+    <divider>手动切换</divider>
+    <tab v-model="index01" prevent-default @on-before-index-change="switchTabItem">
+      <tab-item selected>已发货</tab-item>
+      <tab-item>未发货</tab-item>
+      <tab-item>全部订单</tab-item>
+    </tab>
     <br/>
     <br/>
-    <m-divider>定义bar固定宽度</m-divider>
-    <m-tab :line-width="1" custom-bar-width="60px">
-      <m-tab-item selected>已发货</m-tab-item>
-      <m-tab-item>未发货</m-tab-item>
-      <m-tab-item>全部订单</m-tab-item>
-    </m-tab>
+    <divider>定义bar固定宽度</divider>
+    <tab :line-width="1" custom-bar-width="60px">
+      <tab-item selected>已发货</tab-item>
+      <tab-item>未发货</tab-item>
+      <tab-item>全部订单</tab-item>
+    </tab>
     <br/>
     <br/>
-    <m-divider>使用函数定义bar宽度</m-divider>
-    <m-tab :line-width="1" :custom-bar-width="getBarWidth">
-      <m-tab-item selected>AA</m-tab-item>
-      <m-tab-item>AAAA</m-tab-item>
-      <m-tab-item>AAAAAAA</m-tab-item>
-    </m-tab>
+    <divider>使用函数定义bar宽度</divider>
+    <tab :line-width="1" :custom-bar-width="getBarWidth">
+      <tab-item selected>AA</tab-item>
+      <tab-item>AAAA</tab-item>
+      <tab-item>AAAAAAA</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
-    <m-divider>{{ $t('set bar-active-color')}}</m-divider>
+    <divider>{{ $t('set bar-active-color')}}</divider>
     <div style="width: 100%;overflow:scroll;-webkit-overflow-scrolling:touch;">
-      <m-tab style="width:500px;" bar-active-color="#668599" :line-width="1">
-        <m-tab-item>已发货</m-tab-item>
-        <m-tab-item selected>未发货</m-tab-item>
-        <m-tab-item>全部订单</m-tab-item>
-        <m-tab-item>全部订单</m-tab-item>
-        <m-tab-item>全部订单</m-tab-item>
-      </m-tab>
+      <tab style="width:500px;" bar-active-color="#668599" :line-width="1">
+        <tab-item>已发货</tab-item>
+        <tab-item selected>未发货</tab-item>
+        <tab-item>全部订单</tab-item>
+        <tab-item>全部订单</tab-item>
+        <tab-item>全部订单</tab-item>
+      </tab>
     </div>
 
     <br/>
     <br/>
     <br/>
-    <m-divider>different active class</m-divider>
-    <m-tab :animate="false">
-      <m-tab-item active-class="active-6-1">已发货</m-tab-item>
-      <m-tab-item active-class="active-6-2" selected>未发货</m-tab-item>
-      <m-tab-item active-class="active-6-3">全部订单</m-tab-item>
-    </m-tab>
+    <divider>different active class</divider>
+    <tab :animate="false">
+      <tab-item active-class="active-6-1">已发货</tab-item>
+      <tab-item active-class="active-6-2" selected>未发货</tab-item>
+      <tab-item active-class="active-6-3">全部订单</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
-    <m-divider>no animation</m-divider>
-    <m-tab :animate="false">
-      <m-tab-item>已发货</m-tab-item>
-      <m-tab-item selected>未发货</m-tab-item>
-      <m-tab-item>全部订单</m-tab-item>
-    </m-tab>
+    <divider>no animation</divider>
+    <tab :animate="false">
+      <tab-item>已发货</tab-item>
+      <tab-item selected>未发货</tab-item>
+      <tab-item>全部订单</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
-    <m-divider>disabled</m-divider>
-    <m-tab>
-      <m-tab-item selected>A</m-tab-item>
-      <m-tab-item>B</m-tab-item>
-      <m-tab-item disabled>Disabled</m-tab-item>
-    </m-tab>
+    <divider>disabled</divider>
+    <tab>
+      <tab-item selected>A</tab-item>
+      <tab-item>B</tab-item>
+      <tab-item disabled>Disabled</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
-    <m-divider>tab-item m-badge</m-divider>
-    <m-tab>
-      <m-tab-item selected m-badge-label="1">收到的消息</m-tab-item>
-      <m-tab-item m-badge-background="#38C972" m-badge-color="#fff" m-badge-label="2">发出的消息</m-tab-item>
-    </m-tab>
+    <divider>tab-item badge</divider>
+    <tab>
+      <tab-item selected badge-label="1">收到的消息</tab-item>
+      <tab-item badge-background="#38C972" badge-color="#fff" badge-label="2">发出的消息</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
     <div>
-       <m-tab :line-width=2 active-color='#fc378c' v-model="index">
-        <m-tab-item class="vux-center" :selected="demo2 === item" v-for="(item, index) in list2" @click="demo2 = item" :key="index">{{item}}</m-tab-item>
-      </m-tab>
+       <tab :line-width=2 active-color='#fc378c' v-model="index">
+        <tab-item class="vux-center" :selected="demo2 === item" v-for="(item, index) in list2" @click="demo2 = item" :key="index">{{item}}</tab-item>
+      </tab>
       <swiper v-model="index" height="100px" :show-dots="false">
         <swiper-item v-for="(item, index) in list2" :key="index">
           <div class="tab-swiper vux-center">{{item}} Container</div>
@@ -94,29 +94,29 @@
 
     <br/>
     <div class="box">
-      <m-button @click.native="index=0" :disabled="index === 0" type="primary">go to 0</m-button>
-      <m-button @click.native="index=1" :disabled="index === 1" type="primary">go to 1</m-button>
+      <x-button @click.native="index=0" :disabled="index === 0" type="primary">go to 0</x-button>
+      <x-button @click.native="index=1" :disabled="index === 1" type="primary">go to 1</x-button>
 
-      <m-button @click.native="addTab" :disabled="list2.length === 5" type="primary">Add tab item</m-button>
-      <m-button @click.native="removeTab" :disabled="list2.length <= 2" type="primary">Remove tab item</m-button>
-      <m-button @click.native="next" type="primary">Active next current: {{index}}</m-button>
-      <m-button @click.native="prev" type="primary">Active prev current: {{index}}</m-button>
+      <x-button @click.native="addTab" :disabled="list2.length === 5" type="primary">Add tab item</x-button>
+      <x-button @click.native="removeTab" :disabled="list2.length <= 2" type="primary">Remove tab item</x-button>
+      <x-button @click.native="next" type="primary">Active next current: {{index}}</x-button>
+      <x-button @click.native="prev" type="primary">Active prev current: {{index}}</x-button>
     </div>
 
     <br/>
     <br/>
-    <m-tab :line-width="2">
-      <m-tab-item :selected="demo3 === item" v-for="(item, index) in list3" :class="{'vux-1px-r': index===0}" @click="demo3 = item" :key="index">{{item}}</m-tab-item>
-    </m-tab>
+    <tab :line-width="2">
+      <tab-item :selected="demo3 === item" v-for="(item, index) in list3" :class="{'vux-1px-r': index===0}" @click="demo3 = item" :key="index">{{item}}</tab-item>
+    </tab>
     <br/>
     <br/>
     <br/>
-    <m-sticky scrollBox="vux_view_box_body" :check-sticky-support="false" :offset="46">
-      <m-tab :line-width=1>
-        <m-tab-item :selected="demo4 === item" v-for="(item, index) in list4" @click="demo4 = item" :key="index">{{item}}</m-tab-item>
-      </m-tab>
-    </m-sticky>
-    <br v-for="i in 40" :key="i">
+    <sticky scrollBox="vux_view_box_body" :check-sticky-support="false" :offset="46">
+      <tab :line-width=1>
+        <tab-item :selected="demo4 === item" v-for="(item, index) in list4" @click="demo4 = item" :key="index">{{item}}</tab-item>
+      </tab>
+    </sticky>
+    <br v-for="i in 40">
   </div>
 </template>
 
@@ -126,16 +126,16 @@ set bar-active-color:
 </i18n>
 
 <script>
-import { Tab, TabItem, MSticky, MDivider, MButton, Swiper, SwiperItem } from 'src/widgets'
+import { Tab, TabItem, Sticky, Divider, XButton, Swiper, SwiperItem } from 'vux'
 const list = () => ['精选', '美食', '电影', '酒店', '外卖']
 
 export default {
   components: {
     Tab,
     TabItem,
-    MSticky,
-    MDivider,
-    MButton,
+    Sticky,
+    Divider,
+    XButton,
     Swiper,
     SwiperItem
   },
@@ -158,11 +158,11 @@ export default {
   methods: {
     switchTabItem (index) {
       console.log('on-before-index-change', index)
-      this.$zk.loading.show({
+      this.$vux.loading.show({
         text: 'loading'
       })
       setTimeout(() => {
-        this.$zk.loading.hide()
+        this.$vux.loading.hide()
         this.index01 = index
       }, 1000)
     },

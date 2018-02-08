@@ -1,34 +1,34 @@
 <template>
   <div>
-    <m-divider>{{ $t('Pull Up to Refresh') }}</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup height="200px" @on-pullup-loading="load1" ref="demo1"
-    :pullup-config="{loadingContent: $t('MLoading...')}">
+    <divider>{{ $t('Pull Up to Refresh') }}</divider>
+    <scroller lock-x scrollbar-y use-pullup height="200px" @on-pullup-loading="load1" ref="demo1"
+    :pullup-config="{loadingContent: $t('Loading...')}">
       <div class="box2">
-        <p v-for="i in n1" :key="i">{{ $t('placeholder') }} {{i}}</p>
+        <p v-for="i in n1">{{ $t('placeholder') }} {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>Chinese: 上拉刷新</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup :pullup-config="pullupConfig2" height="200px" ref="demo2" @on-pullup-loading="load2">
+    <divider>Chinese: 上拉刷新</divider>
+    <scroller lock-x scrollbar-y use-pullup :pullup-config="pullupConfig2" height="200px" ref="demo2" @on-pullup-loading="load2">
       <div class="box2">
-        <p v-for="i in n2" :key="i">占位 {{i}}</p>
+        <p v-for="i in n2">占位 {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
-    <m-divider>使用v-model改变pullup状态</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup :pullup-config="pullupConfig2" height="200px" ref="demo3" @on-pullup-loading="load3" v-model="demo3Value">
+    <divider>使用v-model改变pullup状态</divider>
+    <scroller lock-x scrollbar-y use-pullup :pullup-config="pullupConfig2" height="200px" ref="demo3" @on-pullup-loading="load3" v-model="demo3Value">
       <div class="box2">
-        <p v-for="i in n3" :key="i">占位 {{i}}</p>
+        <p v-for="i in n3">占位 {{i}}</p>
       </div>
-    </m-scroller>
+    </scroller>
 
     <p @click="demo3Value.pullupStatus='enabled'" v-show="n3 === 30">重新启用pullup</p>
 
-    <m-divider>custom pullup html template</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup height="200px" v-model="demo4Value" @on-pullup-loading="load4">
+    <divider>custom pullup html template</divider>
+    <scroller lock-x scrollbar-y use-pullup height="200px" v-model="demo4Value" @on-pullup-loading="load4">
       <!--content slot-->
       <div class="box2">
-        <p v-for="i in n4" :key="i">placeholder {{i}}</p>
+        <p v-for="i in n4">placeholder {{i}}</p>
       </div>
 
       <!--pullup slot-->
@@ -37,7 +37,7 @@
         <span class="pullup-arrow" v-show="demo4Value.pullupStatus === 'default' || demo4Value.pullupStatus === 'up' || demo4Value.pullupStatus === 'down'" :class="{'rotate': demo4Value.pullupStatus === 'down'}">↑</span>
         <span v-show="demo4Value.pullupStatus === 'loading'"><spinner type="ios-small"></spinner></span>
       </div>
-    </m-scroller>
+    </scroller>
 
   </div>
 </template>
@@ -47,18 +47,18 @@ Pull Up to Refresh:
   zh-CN: 上拉刷新
 placeholder:
   zh-CN: 占位
-'MLoading...':
+'Loading...':
   zh-CN: 努力加载中
 </i18n>
 
 <script>
-import { MScroller, MDivider, MSpinner } from 'src/widgets'
+import { Scroller, Divider, Spinner } from 'vux'
 
 export default {
   components: {
-    MScroller,
-    MDivider,
-    MSpinner
+    Scroller,
+    Divider,
+    Spinner
   },
   methods: {
     load1 () {

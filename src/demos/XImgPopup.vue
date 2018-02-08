@@ -1,39 +1,39 @@
 <template>
   <div>
     <div style="padding:15px;">
-      <m-button @click.native="show=true" plain type="primary">show popup</m-button>
+      <x-button @click.native="show=true" plain type="primary">show popup</x-button>
     </div>
 
     <div v-transfer-dom>
-      <m-popup v-model="show" @on-first-show="onFirstShow">
+      <popup v-model="show" @on-first-show="onFirstShow">
         <div id="js_ximg_popup" style="max-height:500px;overflow-y:scroll;">
           <div style="padding:15px;">
-            <m-button @click.native="show=false" plain type="primary">close popup</m-button>
+            <x-button @click.native="show=false" plain type="primary">close popup</x-button>
           </div>
-          <div v-for="src in list" :key="src" class="x-img-popup">
-            <m-img :src="src" :webp-src="`${src}?type=webp`" container="#js_ximg_popup"></m-img>
+          <div v-for="src in list" class="x-img-popup">
+            <x-img :src="src" :webp-src="`${src}?type=webp`" container="#js_ximg_popup"></x-img>
           </div>
         </div>
-      </m-popup>
+      </popup>
     </div>
   </div>
 </template>
 
 <script>
-import { MImg, MPopup, TransferDom, MButton } from 'src/widgets'
+import { XImg, Popup, TransferDom, XButton } from 'vux'
 
 export default {
   components: {
-    MImg,
-    MPopup,
-    MButton
+    XImg,
+    Popup,
+    XButton
   },
   directives: {
     TransferDom
   },
   methods: {
     onFirstShow () {
-      this.$zk.bus && this.$zk.bus.$emit('vux:after-view-enter')
+      this.$vux.bus && this.$vux.bus.$emit('vux:after-view-enter')
     }
   },
   data () {

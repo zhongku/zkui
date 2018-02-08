@@ -1,25 +1,25 @@
 <template>
 <div>
-  <m-divider>default usage</m-divider>
+  <divider>default usage</divider>
   <span class="vux-loading"></span>
-  <m-group>
-    <m-cell title="MCell MLoading"><span class="vux-loading"></span></m-cell>
-    <m-input title="MInput loading" :required="false" :show-clear="false">
+  <group>
+    <cell title="Cell Loading"><span class="vux-loading"></span></cell>
+    <x-input title="XInput loading" :required="false" :show-clear="false">
       <span class="vux-loading" slot="right"></span>
-    </m-input>
-  </m-group>
+    </x-input>
+  </group>
 </div>
 </template>
 
 <script>
-import { MGroup, MCell, MDivider, MInput } from 'src/widgets'
+import { Group, Cell, Divider, XInput } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell,
-    MDivider,
-    MInput
+    Group,
+    Cell,
+    Divider,
+    XInput
   }
 }
 </script>

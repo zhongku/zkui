@@ -1,9 +1,9 @@
 <template>
   <div>
-    <m-divider>下拉刷新和上拉加载更多组合</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup use-pulldown height="200px" @on-pullup-loading="loadMore" @on-pulldown-loading="refresh" v-model="status" ref="scroller">
+    <divider>下拉刷新和上拉加载更多组合</divider>
+    <scroller lock-x scrollbar-y use-pullup use-pulldown height="200px" @on-pullup-loading="loadMore" @on-pulldown-loading="refresh" v-model="status" ref="scroller">
       <div class="box2">
-        <p v-for="i in n" :key="i">placeholder {{i}}</p>
+        <p v-for="i in n">placeholder {{i}}</p>
       </div>
       <!--pullup slot-->
       <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40px; bottom: -40px; text-align: center;">
@@ -11,30 +11,30 @@
         <span class="pullup-arrow" v-show="status.pullupStatus === 'down' || status.pullupStatus === 'up'" :class="{'rotate': status.pullupStatus === 'up'}">↑</span>
         <span v-show="status.pullupStatus === 'loading'"><spinner type="ios-small"></spinner></span>
       </div>
-    </m-scroller>
-    <m-group>
-      <m-switch :title="pullupEnabled ? '禁用Pullup' : '启用Pullup'" :value="true" @on-change="changePullupStatus"></m-switch>
-    </m-group>
+    </scroller>
+    <group>
+      <x-switch :title="pullupEnabled ? '禁用Pullup' : '启用Pullup'" :value="true" @on-change="changePullupStatus"></x-switch>
+    </group>
 
-    <m-divider>上拉加载重置</m-divider>
-    <m-scroller lock-x scrollbar-y use-pullup height="200px" @on-pullup-loading="loadMore1" ref="scroller1">
+    <divider>上拉加载重置</divider>
+    <scroller lock-x scrollbar-y use-pullup height="200px" @on-pullup-loading="loadMore1" ref="scroller1">
       <div class="box2">
-        <p v-for="j in n1" :key="j">placeholder {{j}}</p>
+        <p v-for="j in n1">placeholder {{j}}</p>
       </div>
-    </m-scroller>
+    </scroller>
   </div>
 </template>
 
 <script>
-import { MScroller, MDivider, MSwitch, MGroup, MSpinner } from 'src/widgets'
+import { Scroller, Divider, XSwitch, Group, Spinner } from 'vux'
 
 export default {
   components: {
-    MScroller,
-    MDivider,
-    MSwitch,
-    MGroup,
-    MSpinner
+    Scroller,
+    Divider,
+    XSwitch,
+    Group,
+    Spinner
   },
   methods: {
     loadMore () {

@@ -7,14 +7,14 @@
     @on-view-change="onWeekViewChange"
     @on-year-month-change="onYearMonthChange">
       <template slot="header" slot-scope="props"><!-- use scope="props" when vue < 2.5.0 -->
-        <m-divider>{{ props.currentMonth }}</m-divider>
+        <divider>{{ props.currentMonth }}</divider>
       </template>
       <div></div>
     </week-calendar>
 
-    <m-group>
-      <m-cell title="value" :value="value"></m-cell>
-    </m-group>
+    <group>
+      <cell title="value" :value="value"></cell>
+    </group>
     <button class="demo-week-calendar-btn" @click="value='2017-10-03'"> change value 2017-10-03</button>
     <button class="demo-week-calendar-btn" @click="value='2017-11-03'"> change value 2017-11-03</button>
     <button class="demo-week-calendar-btn" @click="$refs.calendar.switchViewToCurrentValue()">switchViewToCurrentValue</button>
@@ -24,25 +24,25 @@
     <button class="demo-week-calendar-btn" @click="showMarks">show marks demo</button>
     <br>
 
-    <m-inline-calendar
+    <inline-calendar
     v-model="value"
     :marks="marks"
     ref="inlineCalendar"
-    @on-view-change="onViewChange"></m-inline-calendar>
+    @on-view-change="onViewChange"></inline-calendar>
 
   </div>
 </template>
 
 <script>
-import { MWeekcalendar, MInlinecalendar, MDivider, MGroup, MCell } from 'src/widgets'
+import { WeekCalendar, InlineCalendar, Divider, Group, Cell } from 'vux'
 
 export default {
   components: {
-    MGroup,
-    MCell,
-    MWeekcalendar,
-    MInlinecalendar,
-    MDivider
+    Group,
+    Cell,
+    WeekCalendar,
+    InlineCalendar,
+    Divider
   },
   data () {
     return {

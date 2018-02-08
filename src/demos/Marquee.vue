@@ -1,20 +1,20 @@
 <template>
   <div>
-    <m-divider>{{ $t('Default usage') }}</m-divider>
+    <divider>{{ $t('Default usage') }}</divider>
     <marquee>
       <marquee-item v-for="i in 5" :key="i" @click.native="onClick(i)" class="align-middle">hello world {{i}}</marquee-item>
     </marquee>
     <br>
-    <m-divider>{{ $t('Used in a cell')}}</m-divider>
-    <m-group>
-      <m-cell :title="$t('News')">
+    <divider>{{ $t('Used in a cell')}}</divider>
+    <group>
+      <cell :title="$t('News')">
         <marquee>
           <marquee-item v-for="i in 5" :key="i" @click.native="onClick(i)">{{ $t('JavaScript is the best language')}} {{i}}</marquee-item>
         </marquee>
-      </m-cell>
-    </m-group>
+      </cell>
+    </group>
     <br>
-    <m-divider>{{ $t('Async data')}}</m-divider>
+    <divider>{{ $t('Async data')}}</divider>
     <marquee>
       <marquee-item v-for="i in asyncCount" :key="i" @click.native="onClick(i)" class="align-middle">hello world {{i}}</marquee-item>
     </marquee>
@@ -33,15 +33,15 @@ Async data:
 </i18n>
 
 <script>
-import { MGroup, MCell, MMarquee, MarqueeItem, MDivider } from 'src/widgets'
+import { Group, Cell, Marquee, MarqueeItem, Divider } from 'vux'
 
 export default {
   components: {
-    MMarquee,
+    Marquee,
     MarqueeItem,
-    MGroup,
-    MCell,
-    MDivider
+    Group,
+    Cell,
+    Divider
   },
   mounted () {
     setTimeout(() => {

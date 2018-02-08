@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin: 10px;overflow: hidden;" v-for="item in list" :key="item">
+    <div style="margin: 10px;overflow: hidden;" v-for="item in list">
       <masker style="border-radius: 2px;">
         <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
         <div slot="content" class="m-title">
@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import { MMasker } from 'src/widgets'
+import { Masker } from 'vux'
 
 export default {
   components: {
-    MMasker
+    Masker
   },
   data () {
     return {

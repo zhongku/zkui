@@ -11,77 +11,77 @@
       <div style="height:10px;border:1px solid #e0e0e0"></div>
       <br>
     </div>
-    <m-flexbox class="vux-1px-tb" :gutter="0">
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('北京') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('上海') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('广州') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('深圳') }}</div></m-flexbox-item>
-    </m-flexbox>
-    <m-flexbox class="vux-1px-b" :gutter="0">
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('天津') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('西安') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('重庆') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('杭州') }}</div></m-flexbox-item>
-    </m-flexbox>
-    <m-flexbox class="vux-1px-b" :gutter="0">
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('南京') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('武汉') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div>{{ $t('成都') }}</div></m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r test"><div></div></m-flexbox-item>
-    </m-flexbox>
+    <flexbox class="vux-1px-tb" :gutter="0">
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('北京') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('上海') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('广州') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('深圳') }}</div></flexbox-item>
+    </flexbox>
+    <flexbox class="vux-1px-b" :gutter="0">
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('天津') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('西安') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('重庆') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('杭州') }}</div></flexbox-item>
+    </flexbox>
+    <flexbox class="vux-1px-b" :gutter="0">
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('南京') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('武汉') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div>{{ $t('成都') }}</div></flexbox-item>
+      <flexbox-item class="vux-1px-r test"><div></div></flexbox-item>
+    </flexbox>
     <br/>
-    <m-flexbox class="vux-1px-tb" :gutter="0">
-      <m-flexbox-item class="vux-1px-r">
+    <flexbox class="vux-1px-tb" :gutter="0">
+      <flexbox-item class="vux-1px-r">
         <a class="item item1">
           <div class="img meishi"></div>
           <div class="text">{{ $t('美食') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r">
+      </flexbox-item>
+      <flexbox-item class="vux-1px-r">
         <a class="item item2">
           <div class="img dianying"></div>
           <div class="text">{{ $t('电影') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r">
+      </flexbox-item>
+      <flexbox-item class="vux-1px-r">
         <a class="item item3">
           <div class="img jiudian"></div>
           <div class="text">{{ $t('酒店') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item>
+      </flexbox-item>
+      <flexbox-item>
         <a class="item item4">
           <div class="img yule"></div>
           <div class="text">{{ $t('休闲娱乐') }}</div>
         </a>
-      </m-flexbox-item>
-    </m-flexbox>
-    <m-flexbox class="vux-1px-b" :gutter="0">
-      <m-flexbox-item class="vux-1px-r">
+      </flexbox-item>
+    </flexbox>
+    <flexbox class="vux-1px-b" :gutter="0">
+      <flexbox-item class="vux-1px-r">
         <a class="item item5">
           <div class="img huoguo"></div>
           <div class="text">{{ $t('火锅') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r">
+      </flexbox-item>
+      <flexbox-item class="vux-1px-r">
         <a class="item item6">
           <div class="img lvyou"></div>
           <div class="text">{{ $t('旅游') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item class="vux-1px-r">
+      </flexbox-item>
+      <flexbox-item class="vux-1px-r">
         <a class="item item7">
           <div class="img daijinquan"></div>
           <div class="text">{{ $t('代金券') }}</div>
         </a>
-      </m-flexbox-item>
-      <m-flexbox-item>
+      </flexbox-item>
+      <flexbox-item>
         <a class="item item8">
           <div class="img ktv"></div>
           <div class="text">{{ $t('KTV') }}</div>
         </a>
-      </m-flexbox-item>
-    </m-flexbox>
+      </flexbox-item>
+    </flexbox>
     <br>
   </div>
 </template>
@@ -130,10 +130,10 @@ KTV:
 </i18n>
 
 <script>
-import { MFlexbox, FlexboxItem } from 'src/widgets'
+import { Flexbox, FlexboxItem } from 'vux'
 export default {
   components: {
-    MFlexbox,
+    Flexbox,
     FlexboxItem
   }
 }

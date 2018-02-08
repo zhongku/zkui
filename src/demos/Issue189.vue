@@ -1,23 +1,23 @@
 <template>
   <div>
-    <m-divider>issue 189</m-divider>
-    <m-group>
-      <m-popup-picker title="test" :data="list3" :columns="3" :value.sync="value3" @on-shadow-change="onShadowChange" placeholder="Please select"></m-popup-picker>
-    </m-group>
+    <divider>issue 189</divider>
+    <group>
+      <popup-picker title="test" :data="list3" :columns="3" :value.sync="value3" @on-shadow-change="onShadowChange" placeholder="Please select"></popup-picker>
+    </group>
     <picker v-if="fuck" :data="list3" :columns="3" :value.sync="value3"></picker>
-    <m-group>
-      <m-cell title="value" :value="value3 | json"></m-cell>
-    </m-group>
+    <group>
+      <cell title="value" :value="value3 | json"></cell>
+    </group>
     <br>
     <div style="margin: 0 10px;">
-      <m-button @click="update" type="primary">list 2</m-button>
-      <m-button @click="update2" type="primary">list 1</m-button>
+      <x-button @click="update" type="primary">list 2</x-button>
+      <x-button @click="update2" type="primary">list 1</x-button>
     </div>
   </div>
 </template>
 
 <script>
-import { MCell, MGroup, MPicker, MPopuppicker, MButton, MDivider } from 'src/widgets'
+import { Cell, Group, Picker, PopupPicker, XButton, Divider } from 'vux'
 const list = [{
   name: '中国',
   value: 'china',
@@ -78,12 +78,12 @@ const list = [{
 
 export default {
   components: {
-    MCell,
-    MPopuppicker,
-    MGroup,
-    MButton,
-    MDivider,
-    MPicker
+    Cell,
+    PopupPicker,
+    Group,
+    XButton,
+    Divider,
+    Picker
   },
   methods: {
     onShadowChange (val) {

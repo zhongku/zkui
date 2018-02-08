@@ -2,7 +2,7 @@
   <div>
     <load-more tip="default" :show-loading="false" background-color="#fbf9fe"></load-more>
     <div style="padding:0 15px;">
-      <m-table>
+      <x-table>
         <thead>
           <tr>
             <th>Product</th>
@@ -19,11 +19,11 @@
             <td>$1.20</td>
           </tr>
         </tbody>
-      </m-table>
+      </x-table>
     </div>
     <div>
       <load-more tip="cell-bordered=false" :show-loading="false" background-color="#fbf9fe"></load-more>
-      <m-table :cell-bordered="false" style="background-color:#fff;">
+      <x-table :cell-bordered="false" style="background-color:#fff;">
         <thead>
           <tr>
             <th>Product</th>
@@ -43,11 +43,11 @@
             <td> x 2</td>
           </tr>
         </tbody>
-      </m-table>
+      </x-table>
 
       <load-more tip="content-bordered=false" :show-loading="false" background-color="#fbf9fe"></load-more>
 
-      <m-table :cell-bordered="false" :content-bordered="false" style="background-color:#fff;">
+      <x-table :cell-bordered="false" :content-bordered="false" style="background-color:#fff;">
         <thead>
           <tr style="background-color: #F7F7F7">
             <th>Product</th>
@@ -67,11 +67,11 @@
             <td> x 2</td>
           </tr>
         </tbody>
-      </m-table>
+      </x-table>
       </div>
       <div style="padding:15px;">
         <load-more tip="full-bordered" :show-loading="false" background-color="#fbf9fe"></load-more>
-        <m-table full-bordered style="background-color:#fff;">
+        <x-table full-bordered style="background-color:#fff;">
           <thead>
             <tr>
               <th>Product</th>
@@ -90,18 +90,18 @@
               <td>x 08</td>
             </tr>
           </tbody>
-        </m-table>
+        </x-table>
     </div>
   </div>
 </template>
 
 <script>
-import { MTable, MLoadmore } from 'src/widgets'
+import { XTable, LoadMore } from 'vux'
 
 export default {
   components: {
-    MTable,
-    MLoadmore
+    XTable,
+    LoadMore
   }
 }
 </script>
