@@ -1,0 +1,16 @@
+// <i class="iconfont secondary " style="font-size:1.6rem;" >&#xe61f;</i>
+@font-face {
+  font-family: 'iconfont';  /* project id 562964 */
+  src: url('/src/assets/iconfont.ttf');
+
+}
+
+
+
+.zkui-success:before { content: "\e640"; }
+
+.zkui-info1:before { content: "\e8a2"; }
+
+.weui-icon-checked:before { content: "\e62a"; }
+
+.weui-icon-checked{ content: "\e8a2"; }

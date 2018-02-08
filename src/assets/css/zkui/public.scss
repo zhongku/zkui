@@ -1,0 +1,540 @@
+// 全局变量
+
+// 引入全局公共CSS
+@import "./variable/color.scss"; // 全局颜色
+@import "./variable/icon.scss"; // 阿里巴巴图标库
+
+
+// 引入页面CSS
+
+
+//字体大小 （一共五种字体大小，一般情况下使用这五种字体大小就足够，禁止添加其他字体大小，除非特殊情况)
+$H1Size:0.808rem; //H1 标题字体大小：头部标题，主标题
+$H2Size:0.708rem; //H2 标题字体大小：
+$H3Size:0.65rem; //比正常字体大一号
+$H4Size:0.58rem; //比正常字体大一号
+$NomarlSize:0.512rem;//网页上面的正常字体大小
+$SmallSize:0.508rem; //
+
+
+//定位上下左右居中
+@mixin center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//上下居中
+@mixin topcenter{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+//左右居中
+@mixin leftcenter{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+//flex布局
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterReverse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justify($value:space-between){
+    display: flex;
+    justify-content: $value;
+}
+
+//上下居中
+@mixin align($type:center){
+    display: flex;
+    align-items: center;
+}
+
+//字体大小，颜色
+@mixin sizeColor($size, $color){
+    font-size: $size;
+    color: $color;
+}
+//字体大小、行高、字体
+@mixin fontStyle($size, $line-height, $family: 'Microsoft YaHei'){
+    font:#{$size}/#{$line-height} $family;
+}
+//宽高
+@mixin widthHeight($width,$height){
+    width: $width;
+    height: $height;
+}
+
+@mixin bg($url){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+body, div, span, zkhead, zkfoot, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, em,i, b, textarea, button, input, select, figure, figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-weight: lighter;
+    font-style: normal;
+    //font-family: Arial,'Hiragino Sans GB',Microsoft Yahei,Helvetica Neue,Helvetica,sans-serif !important;
+  font-family: SimHei !important;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+    &:focus {
+        outline: none;
+    }
+    font-size: 0.4693333333rem;
+    color:#979797;
+    font-size: $NomarlSize;
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+}
+
+.svg-wrap-big{
+    width:2.5rem;
+    height:2.5rem;
+}
+.svg-wrap-mid{
+    width:1.5rem;
+    height:1.5rem;
+}
+.svg-wrap-sm{
+    width:1rem;
+    height:1rem;
+}
+.svg-wrap-xs{
+    width:.7rem;
+    height:.7rem;
+}
+.icon-with-tag{
+    display: block;
+    @include flexCenterReverse();
+    width:2.2rem;
+    div{
+        width:2.2rem;
+        height:2.2rem;
+    };
+    span{
+        font-size: $H3Size;
+        margin-top:.2rem;
+
+    }
+}
+
+$boxW :2.5rem;
+$boxH :1.3rem;
+// <div class="pwd-toggle" :class="showPwd?'pwd-toggle-active':''" @click="showPwd=!showPwd">
+//     <div class="ball"></div>
+// </div>
+.pwd-toggle {
+    @include topcenter;
+    box-sizing: content-box;
+    right: .5rem;
+    @include widthHeight($boxW, $boxH);
+    border: 2px solid #ccc;
+    background: #ccc;
+    border-radius: $boxH;
+    &::before {
+        content: '…';
+        @include sizeColor(.5rem,#fff);
+        @include topcenter;
+        right: .3rem;
+    }
+    .ball {
+        @include widthHeight($boxH, $boxH);
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
+        transition: all 200ms;
+    }
+}
+.pwd-toggle-active {
+    background: $green;
+    border-color: $green;
+    &::before {
+        content: 'abc';
+        left: .3rem;
+    }
+    .ball {
+
+        transform: translateX($boxW - $boxH);
+    }
+}
+
+.router-fade-enter-active, .router-fade-leave-active {
+	  	transition: opacity .2s;
+}
+.router-fade-enter, .router-fade-leave-active {
+          opacity: 0;
+}
+H1{
+    font-size: $H1Size;
+    font-weight: 500;
+}
+H2{
+    font-size: $H2Size;
+    font-weight: 500;
+}
+H3{
+    font-size: $H3Size;
+}
+H4{
+    font-size: $H4Size;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear{
+    zoom:1;
+}
+
+.back_img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.margin{
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.scroll{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+
+
+
+
+//按钮样式
+
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 1.92rem;
+  height: 1.024rem;
+  position: relative;
+  cursor: pointer;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+.tgl-light + .tgl-btn {
+  background: #f8f8f8;
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #f8f8f8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: #1aad16;
+}
+
+.icon-wrap{
+    @include widthHeight(1rem, 1rem);
+    img{
+        @include widthHeight(100%,100%);
+    }
+}
+
+@mixin setArrow($direction, $arrowsize, $borderColor, $borderWidth) {
+    display: inline-block;
+    height: $arrowsize;
+    width: $arrowsize;
+    border-width: $borderWidth $borderWidth 0 0;
+    border-color: $borderColor;
+    border-style: solid;
+    @if $direction==top {
+      transform: rotate(-45deg)
+    }
+    @if $direction==right {
+
+      transform: rotate(45deg);
+      position: relative;
+      top: -2px;
+    }
+
+    @if ($direction==down) {
+
+      transform: rotate(135deg);
+      position: relative;
+      top: -3px;
+    }
+
+    @if ($direction==left) {
+
+      transform: rotate(-135deg);
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  @mixin setTopLine($color: $BorderColor) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $color;
+    color: $color;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+
+@mixin setBottomLine($color: $BorderColor) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid $color;
+    color: $color;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+@mixin setLeftLine($color: $BorderColor) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid $color;
+    color: $color;
+    transform-origin: 0 0;
+    transform: scaleX(0.5);
+}
+
+@mixin setRightLine($color: $BorderColor) {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid $color;
+    color: $color;
+    transform-origin: 100% 0;
+    transform: scaleX(0.5);
+}
+
+
+
+//商品模块
+.zkui-default-product-items{
+  background: $white;
+  li{
+    display: block;
+    width: 47%;
+    margin:2% 0 0 2%;
+    background: $white;
+    padding-bottom:.3rem;
+    border:1px solid rgba(229,229,229,.4);
+    .zkui-product-item{
+      dt{
+        a{
+          display: block;
+          width: 100%;
+          min-height: 5rem;
+          img{
+            width: 100%;
+            display: block;
+          }
+        }
+
+      }
+      .itemTitle{
+        a{
+          display: block;
+          margin:.3rem .3rem .1rem .3rem;
+          height:1.5rem;
+          line-height: .8rem;
+          @include sizeColor($H4Size,$sc);
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+      }
+      .itemPrice{
+
+        padding-left:10px;
+        em{
+          color:$brand;
+          font-weight: bold;
+          margin-left:-0.2rem;
+          @include sizeColor($H2Size,$brand);
+        }
+        span{
+          text-decoration: line-through;
+          padding-top: .3rem;
+        }
+      }
+    }
+  }
+}
+
+
+.zkui-product-show-title{
+  background: #fff;
+  padding:.5rem 10px 0 10px;
+  .zkui-product-show-title-left{
+
+    .zkui-product-show-title-price_symbol{
+      color:$brand;
+      height:1.3rem;
+      padding-top:10px;
+    }
+    .zkui-product-show-title-price_now{
+      @include sizeColor(1rem,$brand)
+    }
+    .zkui-product-show-title-price_old{
+      margin-left:5px;
+      text-decoration: line-through;
+      @include sizeColor($H4Size,$metal)
+    }
+  }
+  .zkui-product-show-title-right{
+    margin-top:.2rem;
+  }
+}
+.zkui-product-show-title-content{
+  background: #fff;
+  padding:0 10px 0.2rem 10px;
+  border-bottom:1px solid #e5e5e5;
+  @include sizeColor($H1Size,$sc);
+}
+.zkui-product-show-serve{
+  background: #fff;
+  height:2rem;
+  padding:0 10px;
+  .zkui-product-show-serve-box{
+
+    .zkui-product-show-serve-item,.zkui-product-show-serve-item-more{
+      font-size:$H4Size;
+      padding-left:10px;
+      height:2rem;
+      line-height: 2rem;
+      margin-right:10px;
+      position: relative;
+    }
+    .zkui-product-show-serve-item:before{
+      @include widthHeight(.25rem,.25rem);
+      content: '';
+      position: absolute;
+      top:50%;
+      left:0;
+      background: pink;
+      border-radius: 50%;
+      -ms-transform: translateX(-.25rem);
+      -moz-transform: translateX(-.25rem);
+      -webkit-transform: translateX(-.25rem);
+      -o-transform: translateX(-.25rem);
+      transform:translateY(-.25rem);
+    }
+    .zkui-product-show-serve-item-more_icon{
+      display: inline-block;
+      font-size:1rem;
+      line-height: 0.5rem;
+    }
+  }
+}

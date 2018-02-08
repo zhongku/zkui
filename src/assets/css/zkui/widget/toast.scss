@@ -1,0 +1,18 @@
+.toast-bottom {
+  border: 1px solid red;
+  .weui-toast {
+    top: 88%;
+    left: 55%;
+    padding: 0px;
+    min-height: 0.8rem;
+    width: 2rem;
+  }
+  .weui-icon_toast {
+    display: none;
+  }
+  .weui-toast__content {
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0px;
+  }
+}

@@ -1,0 +1,57 @@
+<template>
+  <div>
+    <br/>
+    <br/>
+    <div class="space-btn" @click="spaceChange">显示间隔</div>
+    <div class="space" v-if="showSpace">间隔</div>
+    <div style="height:44px;">
+      <m-sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
+        <m-tab :line-width="1">
+          <m-tab-item selected>正在正映</m-tab-item>
+          <m-tab-item>即将上映</m-tab-item>
+        </m-tab>
+      </m-sticky>
+    </div>
+    <p v-for="i in 100" :key="i">{{i}}<br></p>
+  </div>
+</template>
+
+<script>
+import { Tab, TabItem, MSticky } from 'src/widgets'
+
+export default {
+  components: {
+    Tab,
+    TabItem,
+    MSticky
+  },
+  data () {
+    return {
+      showSpace: false
+    }
+  },
+  methods: {
+    spaceChange () {
+      this.showSpace = !this.showSpace
+      this.$nextTick(() => {
+        this.$refs.sticky.bindSticky()
+      })
+    }
+  }
+}
+</script>
+<style scoped>
+  .space-btn {
+    padding: 5px 0;
+    margin: 10px;
+    text-align: center;
+    border: 1px red solid;
+  }
+
+  .space {
+    padding: 30px 0;
+    margin: 10px;
+    text-align: center;
+    border: 1px green solid;
+  }
+</style>
