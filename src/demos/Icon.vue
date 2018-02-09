@@ -24,7 +24,8 @@
       <icon type="safe_success" is-msg></icon>
       <icon type="safe_warn" is-msg></icon> -->
 
-       <m-icon name="safe_warn" is-msg></m-icon>
+      <m-icon name="zk-seek" class="brand" ></m-icon>
+      <m-icon name="zk-add" class="brand" ></m-icon>
     </box>
   </div>
 </template>
