@@ -1,7 +1,7 @@
 <template>
   <div>
     <box gap="10px 10px">
-      <icon type="success"></icon>
+      <!-- <icon type="success"></icon>
       <icon type="info"></icon>
       <icon type="info-circle"></icon>
       <icon type="warn"></icon>
@@ -22,18 +22,20 @@
       <icon type="warn" is-msg></icon>
       <icon type="waiting" is-msg></icon>
       <icon type="safe_success" is-msg></icon>
-      <icon type="safe_warn" is-msg></icon>
+      <icon type="safe_warn" is-msg></icon> -->
+
+       <m-icon name="safe_warn" is-msg></m-icon>
     </box>
   </div>
 </template>
 
 <script>
-import { Box, Icon } from 'vux'
+import { Box, MIcon } from 'vux'
 
 export default {
   components: {
     Box,
-    Icon
+    MIcon
   }
 }
 </script>

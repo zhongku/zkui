@@ -25,7 +25,7 @@
     <br>
     <div style='width:100px;height:100px;'>
       <x-circle :percent="100" :stroke-width="3" stroke-color="#04BE02">
-        <icon type="success"></icon>
+        <!-- <icon name="test"></icon> -->
       </x-circle>
     </div>
     <br>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { XCircle, Range, Icon } from 'vux'
+import { XCircle, Range } from 'vux'
 
 export default {
   ready () {
@@ -46,8 +46,7 @@ export default {
   },
   components: {
     XCircle,
-    Range,
-    Icon
+    Range
   },
   data () {
     return {

@@ -66,7 +66,6 @@
   "GridItem": "src/components/grid/grid-item.vue",
   "Group": "src/components/group/index.vue",
   "GroupTitle": "src/components/group-title/index.vue",
-  "Icon": "src/components/icon/index.vue",
   "InlineCalendar": "src/components/inline-calendar/index.vue",
   "InlineDesc": "src/components/inline-desc/index.vue",
   "InlineLoading": "src/components/inline-loading/index.vue",
@@ -149,5 +148,6 @@
   "XTable": "src/components/x-table/index.vue",
   "XTextarea": "src/components/x-textarea/index.vue",
   "XUpload":  "src/components/x-upload/index.vue",
-  "XScroll":  "src/components/x-scroll/index.vue"
+  "XScroll":  "src/components/x-scroll/index.vue",
+  "MIcon":  "src/components/m-icon/index.js"
 }
