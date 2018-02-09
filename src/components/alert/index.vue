@@ -19,7 +19,7 @@
       <div class="weui-dialog__ft">
         <a href="javascript:;"
         class="weui-dialog__btn weui-dialog__btn_primary"
-        @click="_onHide">{{buttonText || $t('button_text')}}</a>
+        @click="_onHide">{{buttonText}}</a>
       </div>
     </x-dialog>
   </div>
