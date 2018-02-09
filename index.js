@@ -145,7 +145,6 @@ import XHeader from './src/components/x-header/index.vue'
 import XHr from './src/components/x-hr/index.vue'
 import XImg from './src/components/x-img/index.vue'
 import XInput from './src/components/x-input/index.vue'
-import MInput from './src/components/m-input/index.vue'
 import MIcon from './src/components/m-icon/index.js'
 import XNumber from './src/components/x-number/index.vue'
 import XProgress from './src/components/x-progress/index.vue'
@@ -154,7 +153,7 @@ import XTable from './src/components/x-table/index.vue'
 import XTextarea from './src/components/x-textarea/index.vue'
 
 import XScroll from './src/components/x-scroll/index.js'
-import XUpload from './src/components/m-upload/index.vue'
+import XUpload from './src/components/x-upload/index.vue'
 
 
 export {
@@ -295,7 +294,6 @@ export {
   WepayInput,
   XAddress,
   XButton,
-  MInput,
   MIcon,
   XCircle,
   XDialog,
