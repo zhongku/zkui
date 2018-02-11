@@ -1,5 +1,17 @@
 <template>
   <div>
+      <group-title>use icon</group-title>
+      <grid class="brand">
+      <grid-item link="/component/cell" label="提现" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="充值" svg="zk-add">
+      </grid-item>
+      <grid-item :link="{ path: '/component/cell'}" label="会员中心" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="首页"  svg="zk-seek">
+      </grid-item>
+  </grid>
+
     <group-title>2 columns</group-title>
     <grid>
       <grid-item :label="$t('Grid')" v-for="i in 2" :key="i">
@@ -52,13 +64,14 @@ Custom col:
 </i18n>
 
 <script>
-import { Grid, GridItem, GroupTitle } from 'vux'
+import { Grid, GridItem, GroupTitle, MIcon } from 'vux'
 
 export default {
   components: {
     Grid,
     GridItem,
-    GroupTitle
+    GroupTitle,
+    MIcon
   },
   methods: {
     onItemClick () {

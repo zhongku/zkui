@@ -1,5 +1,8 @@
 <template>
   <a href="javascript:;" class="weui-grid" @click="onClick" :style="style">
+    <div class="weui-grid__icon" v-if="hasSvgSlot || svg">
+      <slot name="svg"><m-icon :name="svg" class="brand" ></m-icon></slot>
+    </div>
     <div class="weui-grid__icon" v-if="hasIconSlot || icon">
       <slot name="icon"><img :src="icon" alt=""></slot>
     </div>
@@ -14,15 +17,20 @@
 
 <script>
 import { go } from '../../libs/router'
+import  MIcon  from '../m-icon/index.js'
 
 export default {
   name: 'grid-item',
-  props: ['icon', 'label', 'link'],
+  props: ['icon', 'label', 'link','svg'],
+   components: {
+    MIcon
+  },
   created () {
     this.$parent.countColumn()
   },
   mounted () {
     this.$slots.icon && (this.hasIconSlot = true)
+    this.$slots.svg && (this.hasSvgSlot = true)
     this.$slots.label && (this.hasLabelSlot = true)
   },
   destroyed () {
@@ -48,8 +56,15 @@ export default {
   data () {
     return {
       hasIconSlot: false,
-      hasLabelSlot: false
+      hasLabelSlot: false,
+      hasSvgSlot: false
     }
   }
 }
 </script>
+<style>
+ .weui-grids .svg-icon {
+    width: 1.86rem;
+    height:1.86rem;
+}
+</style>

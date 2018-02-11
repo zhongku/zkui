@@ -6,6 +6,7 @@
 </template>
 
 <style>
+
   .svg-icon {
     display: inline-block;
     fill: currentColor;
@@ -105,6 +106,4 @@ import parse from './parse'
     }
   
   }
-  
-  
 </script>
