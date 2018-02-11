@@ -1,7 +1,7 @@
 <template>
   <div>
-      <group-title>use icon  class:icon-brand zkui-grid</group-title>
-      <grid class="icon-brand zkui-grid zkui-grid-border__none">
+   <group-title>使用图标,通过css来控制颜色，和间距</group-title>
+  <grid class="icon-brand zkui-grid">
       <grid-item link="/component/cell" label="提现" svg="zk-grid">
       </grid-item>
       <grid-item link="/component/cell" label="充值" svg="zk-add">
@@ -11,6 +11,29 @@
       <grid-item link="/component/cell" label="首页"  svg="zk-seek">
       </grid-item>
   </grid>
+
+<group-title>会员中心首页示列</group-title>
+  <grid class="icon-brand zkui-grid zkui-grid-border__none">
+      <grid-item link="/user/qrcode" label="二维码" svg="zk-qrcode"></grid-item>
+      <grid-item link="/user/account/index" label="我的钱包" svg="zk-finance"></grid-item>
+      <grid-item link="/user/reward/list" label="我的分润" svg="zk-fenrun"></grid-item>
+      <grid-item link="/user/product/footprint" label="我的足迹" svg="zk-finance"></grid-item>
+  </grid>
+
+
+
+     <group-title>使用.zkui-grid-border__none 平滑线条颜色</group-title>
+      <grid class="icon-metal zkui-grid-border__none">
+      <grid-item link="/component/cell" label="提现" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="充值" svg="zk-add">
+      </grid-item>
+      <grid-item :link="{ path: '/component/cell'}" label="会员中心" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="首页"  svg="zk-seek">
+      </grid-item>
+  </grid>
+
 
     <group-title>2 columns</group-title>
     <grid>

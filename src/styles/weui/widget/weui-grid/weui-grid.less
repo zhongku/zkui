@@ -1,5 +1,13 @@
 @import "../../base/fn";
 
+// 图标颜色
+.icon-brand svg{
+    color:@brand
+}
+.icon-metal svg{
+    color:@metal
+}
+
 .weui-grids {
     position: relative;
     overflow: hidden;
@@ -63,8 +71,12 @@
     overflow: hidden;
 }
 
-.zkui-grid .weui-grid{
-    padding: 8px 10px;
+.zkui-grid {
+    background:#ffffff;
+
+    .weui-grid{
+        padding: 8px 10px;
+    }
 }
 
 .zkui-grid-border__none{
