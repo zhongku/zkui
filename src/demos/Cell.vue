@@ -1,6 +1,10 @@
 <template>
   <div>
     <group>
+      <cell title="使用图标" isLink svg="zk-grid"></cell>
+       <cell title="二维码名片" isLink svg="zk-qrcode"></cell>
+    </group>
+    <group>
       <cell :title="$t('My Account')" :value="$t('Protected')" @click.native="onClick"></cell>
       <cell :title="$t('Money')" @click.native="onClick" :is-loading="!money" :value="money"></cell>
       <cell :title="$t('Withdraw')" disabled is-link></cell>

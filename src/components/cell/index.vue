@@ -11,6 +11,9 @@
     @click="onClick">
       <div class="weui-cell__hd">
       <slot name="icon"></slot>
+      <div class="weui-grid__icon" v-if="hasSvgSlot || svg">
+       <slot name="svg"><m-icon :name="svg"></m-icon></slot>
+      </div>
     </div>
     <div class="vux-cell-bd" :class="{'vux-cell-primary': primary === 'title' && valueAlign !== 'left'}">
       <p>
@@ -40,11 +43,13 @@ import { go } from '../../libs/router'
 import props from './props'
 import cleanStyle from '../../libs/clean-style'
 import getParentProp from '../../libs/get-parent-prop'
+import  MIcon  from '../m-icon/index.vue'
 
 export default {
   name: 'cell',
   components: {
-    InlineDesc
+    InlineDesc,
+    MIcon
   },
   props: props(),
   created () {
@@ -120,6 +125,12 @@ export default {
   display: block;
   word-wrap: break-word;
   word-break: break-all;
+}
+.weui-cell .weui-cell__hd svg{
+  width: 0.65rem;
+  height: 0.65rem;
+  display:block;
+  margin-right: 0.3rem;
 }
 .weui-cell__ft .weui-loading {
   display: block;

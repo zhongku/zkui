@@ -17,7 +17,7 @@
 
 <script>
 import { go } from '../../libs/router'
-import  MIcon  from '../m-icon/index'
+import  MIcon  from '../m-icon/index.vue'
 
 export default {
   name: 'grid-item',
