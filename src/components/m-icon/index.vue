@@ -37,6 +37,7 @@
 <script>
 import parse from './parse'
   export default {
+    name:"m-icon",
     props: {
       name: {
         type: String,

@@ -13,6 +13,7 @@
   //import  weui from "weui.js"
   //创建vue对象
   export default {
+    name: "x-scroll",
     props: {
       upCallback: {
         type: Function,
