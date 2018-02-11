@@ -1,7 +1,7 @@
 <template>
   <a href="javascript:;" class="weui-grid" @click="onClick" :style="style">
     <div class="weui-grid__icon" v-if="hasSvgSlot || svg">
-      <slot name="svg"><m-icon :name="svg" class="brand" ></m-icon></slot>
+      <slot name="svg"><m-icon :name="svg"></m-icon></slot>
     </div>
     <div class="weui-grid__icon" v-if="hasIconSlot || icon">
       <slot name="icon"><img :src="icon" alt=""></slot>
