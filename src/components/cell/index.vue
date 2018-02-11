@@ -9,7 +9,7 @@
     }"
     :style="style"
     @click="onClick">
-    <div class="weui-cell__hd">
+      <div class="weui-cell__hd">
       <slot name="icon"></slot>
     </div>
     <div class="vux-cell-bd" :class="{'vux-cell-primary': primary === 'title' && valueAlign !== 'left'}">
@@ -99,6 +99,7 @@ export default {
   data () {
     return {
       hasTitleSlot: true,
+      hasSvgSlot: false,
       hasMounted: false
     }
   }
