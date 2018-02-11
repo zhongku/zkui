@@ -220,9 +220,9 @@ export default {
 </script>
 
 <style lang="less">
-@import '~vux/src/styles/reset.less';
-@import '~vux/src/styles/1px.less';
-@import '~vux/src/styles/tap.less';
+@import '~vux/src/styles/base/reset.less';
+@import '~vux/src/styles/base/1px.less';
+@import '~vux/src/styles/base/tap.less';
 
 body {
   background-color: #fbf9fe;

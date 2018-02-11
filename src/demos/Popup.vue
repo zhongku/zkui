@@ -217,7 +217,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '~vux/src/styles/close.less';
+@import '~vux/src/styles/base/close.less';
 
 .popup0 {
   padding-bottom:15px;

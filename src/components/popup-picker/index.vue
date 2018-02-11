@@ -240,7 +240,7 @@ export default {
 
 <style lang="less">
 @import '../../styles/variable.less';
-@import '../../styles/1px.less';
+@import '../../styles/base/1px.less';
 
 .vux-cell-primary {
   flex: 1;

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { Divider,XUpload } from 'vux'
+import { Divider, XUpload } from 'vux'
 
 export default {
   components: {
@@ -15,7 +15,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import '~vux/src/styles/weui/widget/weui-uploader/index.less';
-</style>

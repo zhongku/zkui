@@ -85,7 +85,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/transition.less';
+@import '../../styles/base/transition.less';
 @import '../../styles/weui/widget/weui_tips/weui_mask';
 @import '../../styles/weui/widget/weui_tips/weui_dialog';
 </style>

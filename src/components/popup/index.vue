@@ -165,7 +165,7 @@ export default {
 
 <style lang="less">
 @import '../../styles/variable.less';
-@import '../../styles/vux-modal.css';
+@import '../../styles/base/vux-modal.css';
 
 .vux-popup-dialog {
   position: fixed;

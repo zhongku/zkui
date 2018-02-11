@@ -228,7 +228,7 @@ Vue.use(ToastPlugin)
 
   ``` html
   <style lang="less">
-  @import '~vux/src/styles/reset.less';
+  @import '~vux/src/styles/base/reset.less';
   </style>
   ```
 
@@ -407,7 +407,7 @@ console.log(Vue.wechat) // 可以直接访问 wx 对象。
 ```
 那么之后任何组件中都可以通过 `this.$wechat` 访问到 `wx` 对象。
 
-考虑到你需要在引入插件后调用`wx.config`方法进行配置，你可以通过 `Vue.wechat` 在组件外部访问`wx`对象。 
+考虑到你需要在引入插件后调用`wx.config`方法进行配置，你可以通过 `Vue.wechat` 在组件外部访问`wx`对象。
 
 `jssdk`需要请求签名配置，你可以直接使用下面的`ajaxPlugin`。
 
@@ -644,7 +644,7 @@ preLoaders: [
   对于有相关需求的开发者来说，不用自己写或者花时间去寻求合适的第三方库了，开箱即用。
 </p>
 
-### debounce 
+### debounce
 
 <p class="warning">
   请注意了解 `debounce` 和 `throttle` 的区别。如果尚不清楚，请`google`之。
@@ -824,7 +824,7 @@ querystring.stringify({a:'b',c:'d'}) // 'a=b&c=d'，注意不支持复杂嵌套�
   }
   ```
 - 初始化时eslint选择 airbnb 报import extension
-  
+
   项目目录下的.eslintrc.js 修改：
 
   ``` js

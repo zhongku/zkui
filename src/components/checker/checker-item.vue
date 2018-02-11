@@ -116,5 +116,5 @@ function isEqual (obj1, obj2) {
 </script>
 
 <style lang="less">
-@import '../../styles/tap.less';
+@import '../../styles/base/tap.less';
 </style>

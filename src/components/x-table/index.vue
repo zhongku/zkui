@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/1px.less';
+@import '../../styles/base/1px.less';
 
 .vux-table {
   line-height: 40px;

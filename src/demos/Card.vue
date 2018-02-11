@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import '~vux/src/styles/1px.less';
+@import '~vux/src/styles/base/1px.less';
 
 .card-demo-flex {
   display: flex;

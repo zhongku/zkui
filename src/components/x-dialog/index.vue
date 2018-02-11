@@ -108,10 +108,10 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/transition.less';
+@import '../../styles/base/transition.less';
 @import '../../styles/weui/widget/weui_tips/weui_mask';
 @import '../../styles/weui/widget/weui_tips/weui_dialog';
-@import '../../styles/vux-modal.css';
+@import '../../styles/base/vux-modal.css';
 
 .vux-x-dialog-absolute .weui-dialog {
   position: absolute

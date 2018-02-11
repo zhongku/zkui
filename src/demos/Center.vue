@@ -10,5 +10,5 @@
 </template>
 
 <style lang="less">
-@import '~vux/src/styles/center';
+@import '~vux/src/styles/base/center';
 </style>

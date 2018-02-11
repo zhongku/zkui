@@ -37,7 +37,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import '~vux/src/styles/weui/widget/weui-uploader/index.less';
-</style>

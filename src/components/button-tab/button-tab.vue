@@ -18,8 +18,8 @@ export default {
 
 <style lang="less">
 @import '../../styles/variable.less';
-@import '../../styles/reddot.less';
-@import '../../styles/1px.less';
+@import '../../styles/base/reddot.less';
+@import '../../styles/base/1px.less';
 
 .setLineWithoutRight(@c: #C7C7C7) {
   content: " ";

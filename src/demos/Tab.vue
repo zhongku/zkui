@@ -198,8 +198,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '~vux/src/styles/1px.less';
-@import '~vux/src/styles/center.less';
+@import '~vux/src/styles/base/1px.less';
+@import '~vux/src/styles/base/center.less';
 
 .box {
   padding: 15px;
