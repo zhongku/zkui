@@ -82,7 +82,7 @@
   "MarqueeItem": "src/components/marquee/marquee-item.vue",
   "Masker": "src/components/masker/index.vue",
   "md5": "src/tools/md5/index.js",
-  "MIcon": "src/components/m-icon/index.vue.vue",
+  "MIcon": "src/components/m-icon/index.vue",
   "Msg": "src/components/msg/index.vue",
   "Name2valueFilter": "src/filters/name2value.js",
   "numberComma": "src/tools/number/comma.js",

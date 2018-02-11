@@ -1,5 +1,6 @@
 <template>
   <div>
+    <group-title>zk-grid是对grid进行了封装</group-title>
    <group-title>使用图标,通过css来控制颜色，和间距</group-title>
   <grid class="icon-brand zkui-grid">
       <grid-item link="/component/cell" label="提现" svg="zk-grid">
