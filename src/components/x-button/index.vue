@@ -69,8 +69,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui-button/weui-button.less';
-@import '../../styles/weui/widget/weui-loading/weui-loading.less';
+@import '../../styles/widget/weui-button/weui-button.less';
+@import '../../styles/widget/weui-loading/weui-loading.less';
 
 .weui-btn.vux-x-button-no-border:after {
   display: none;

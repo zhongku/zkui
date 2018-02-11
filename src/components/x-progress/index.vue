@@ -34,5 +34,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_progress/weui_progress';
+@import '../../styles/widget/weui_progress/weui_progress';
 </style>

@@ -135,8 +135,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_tips/weui_mask';
-@import '../../styles/weui/widget/weui_tips/weui_actionsheet';
+@import '../../styles/widget/weui_tips/weui_mask';
+@import '../../styles/widget/weui_tips/weui_actionsheet';
 
 .vux-actionsheet-menu-primary {
   color: @actionsheet-label-primary-color;

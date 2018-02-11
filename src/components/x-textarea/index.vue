@@ -10,23 +10,7 @@
       </slot>
     </div>
     <div class="weui-cell__bd">
-      <textarea
-        class="weui-textarea"
-        :autocomplete="autocomplete"
-        :autocapitalize="autocapitalize"
-        :autocorrect="autocorrect"
-        :spellcheck="spellcheck"
-        :placeholder="placeholder"
-        :readonly="readonly"
-        :name="name"
-        :rows="rows"
-        :cols="cols"
-        v-model="currentValue"
-        @focus="$emit('on-focus')"
-        @blur="$emit('on-blur')"
-        :style="textareaStyle"
-        :maxlength="max"
-        ref="textarea"></textarea>
+      <textarea class="weui-textarea" :autocomplete="autocomplete" :autocapitalize="autocapitalize" :autocorrect="autocorrect" :spellcheck="spellcheck" :placeholder="placeholder" :readonly="readonly" :name="name" :rows="rows" :cols="cols" v-model="currentValue" @focus="$emit('on-focus')" @blur="$emit('on-blur')" :style="textareaStyle" :maxlength="max" ref="textarea"></textarea>
       <div class="weui-textarea-counter" v-show="showCounter && max" @click="focus">
         <span>{{count}}</span>/{{max}}
       </div>
@@ -42,7 +26,7 @@ import Autosize from 'autosize' // prop.autosize
 export default {
   name: 'x-textarea',
   minxins: [Base],
-  mounted () {
+  mounted() {
     if (this.$slots && this.$slots['restricted-label']) {
       this.hasRestrictedLabel = true
     }
@@ -97,22 +81,22 @@ export default {
     },
     autosize: Boolean // prop.autosize
   },
-  created () {
+  created() {
     this.currentValue = this.value
   },
   watch: {
     // prop.autosize
-    autosize (val) {
+    autosize(val) {
       this.unbindAutosize()
       if (val) {
         this.bindAutosize()
       }
     },
     // prop.autosize
-    value (val) {
+    value(val) {
       this.currentValue = val
     },
-    currentValue (newVal) {
+    currentValue(newVal) {
       if (this.max && newVal && newVal.length > this.max) {
         this.currentValue = newVal.slice(0, this.max)
       }
@@ -120,61 +104,61 @@ export default {
       this.$emit('on-change', this.currentValue)
     }
   },
-  data () {
+  data() {
     return {
       hasRestrictedLabel: false,
       currentValue: ''
     }
   },
   computed: {
-    count () {
+    count() {
       let len = 0
       if (this.currentValue) {
         len = this.currentValue.replace(/\n/g, 'aa').length
       }
       return len > this.max ? this.max : len
     },
-    textareaStyle () {
+    textareaStyle() {
       if (this.height) {
         return {
           height: `${this.height}px`
         }
       }
     },
-    labelStyles () {
+    labelStyles() {
       return {
         width: this.$parent.labelWidth || (this.labelWidth + 'em'),
         textAlign: this.$parent.labelAlign,
         marginRight: this.$parent.labelMarginRight
       }
     },
-    labelWidth () {
+    labelWidth() {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
     },
-    labelClass () {
+    labelClass() {
       return {
         'vux-cell-justify': this.$parent.labelAlign === 'justify' || this.$parent.$parent.labelAlign === 'justify'
       }
     }
   },
   methods: {
-    updateAutosize () {
+    updateAutosize() {
       Autosize.update(this.$refs.textarea)
     },
     // prop.autosize
-    bindAutosize () {
+    bindAutosize() {
       Autosize(this.$refs.textarea)
     },
-    unbindAutosize () {
+    unbindAutosize() {
       Autosize.destroy(this.$refs.textarea)
     },
     // prop.autosize
-    focus () {
+    focus() {
       this.$refs.textarea.focus()
     }
   },
   // prop.autosize
-  beforeDestroy () {
+  beforeDestroy() {
     this.unbindAutosize()
   }
   // prop.autosize
@@ -182,10 +166,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/weui/widget/weui_cell/weui_form/weui_form_common';
-
-.vux-x-textarea.weui-cell  {
+.vux-x-textarea .weui-cell {
   align-items: flex-start;
 }
 </style>

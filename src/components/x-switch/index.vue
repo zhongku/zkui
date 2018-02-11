@@ -92,8 +92,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_form/weui_form_common';
-@import '../../styles/weui/widget/weui_cell/weui_switch';
+@import '../../styles/widget/weui_cell/weui_form/weui_form_common';
+@import '../../styles/widget/weui_cell/weui_switch';
 
 .weui-cell_switch .weui-cell__ft {
   font-size: 0;

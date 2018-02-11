@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/icon/weui_icon_font';
+@import '../../styles/widget/weui-icon/weui_icon_font';
 
 .vux-color-box {
   text-align: center;

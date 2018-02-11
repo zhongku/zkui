@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_form/weui-form-preview.less';
+@import '../../styles/widget/weui_cell/weui_form/weui-form-preview.less';
 .vux-form-preview {
   overflow: hidden;
 }

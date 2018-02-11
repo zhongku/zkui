@@ -86,6 +86,6 @@ export default {
 
 <style lang="less">
 @import '../../styles/vux/transition.less';
-@import '../../styles/weui/widget/weui_tips/weui_mask';
-@import '../../styles/weui/widget/weui_tips/weui_dialog';
+@import '../../styles/widget/weui_tips/weui_mask';
+@import '../../styles/widget/weui_tips/weui_dialog';
 </style>

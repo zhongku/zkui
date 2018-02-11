@@ -23,8 +23,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/weui/widget/weui_cell/weui_form/weui-form-preview.less';
+@import '../../styles/widget/weui_cell/weui_cell_global';
+@import '../../styles/widget/weui_cell/weui_form/weui-form-preview.less';
 
 .vux-cell-form-preview .weui-form-preview__bd {
   width: 100%;

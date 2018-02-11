@@ -89,9 +89,9 @@ function contains (a, obj) {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_check';
-@import '../../styles/weui/widget/weui_cell/weui_form/weui_form_common';
-@import '../../styles/weui/icon/weui_icon_font';
+@import '../../styles/widget/weui_cell/weui_check';
+@import '../../styles/widget/weui_cell/weui_form/weui_form_common';
+@import '../../styles/widget/weui-icon/weui_icon_font';
 
 .weui-cell_radio > * {
   pointer-events: none;

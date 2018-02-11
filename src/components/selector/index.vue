@@ -168,10 +168,10 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_access';
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/weui/widget/weui_cell/weui_form/weui_form_common';
-@import '../../styles/weui/widget/weui_cell/weui_form/weui_select';
+@import '../../styles/widget/weui_cell/weui_access';
+@import '../../styles/widget/weui_cell/weui_cell_global';
+@import '../../styles/widget/weui_cell/weui_form/weui_form_common';
+@import '../../styles/widget/weui_cell/weui_form/weui_select';
 
 .vux-selector-no-padding {
   padding-left: 0;

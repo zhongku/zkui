@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui-agree/weui-agree.less';
+@import '../../styles/widget/weui-agree/weui-agree.less';
 </style>

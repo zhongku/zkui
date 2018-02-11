@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_tab/vux-tabbar.less';
+@import '../../styles/widget/weui_tab/vux-tabbar.less';
 @import '../../styles/vux/reddot.less';
 
 .weui-tabbar__icon {

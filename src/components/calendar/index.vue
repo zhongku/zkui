@@ -209,8 +209,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/base/fn';
-@import '../../styles/weui/base/mixin/setOnepx.less';
+@import '../../styles/base/fn';
+@import '../../styles/base/mixin/setOnepx.less';
 
 .vux-calendar {
   position: relative;

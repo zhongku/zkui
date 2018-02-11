@@ -27,5 +27,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_tab/vux-tabbar';
+@import '../../styles/widget/weui_tab/vux-tabbar';
 </style>

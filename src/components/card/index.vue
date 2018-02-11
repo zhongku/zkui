@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/weui/widget/weui_cell/weui_access';
-@import '../../styles/weui/widget/weui_panel/weui_panel';
+@import '../../styles/widget/weui_cell/weui_cell_global';
+@import '../../styles/widget/weui_cell/weui_access';
+@import '../../styles/widget/weui_panel/weui_panel';
 </style>

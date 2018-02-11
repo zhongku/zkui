@@ -114,9 +114,9 @@ export default {
 <style lang="less">
 @import '../../styles/variable.less';
 @import '../../styles/vux/tap.less';
-@import '../../styles/weui/base/mixin/setArrow.less';
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/weui/widget/weui-loading/weui-loading.less';
+@import '../../styles/base/mixin/setArrow.less';
+@import '../../styles/widget/weui_cell/weui_cell_global';
+@import '../../styles/widget/weui-loading/weui-loading.less';
 
 .vux-cell-primary {
   flex: 1;

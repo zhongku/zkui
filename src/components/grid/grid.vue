@@ -39,6 +39,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import '../../styles/weui/widget/weui-grid/weui-grid.less';
-</style>

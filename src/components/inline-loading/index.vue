@@ -9,5 +9,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui-loading/weui-loading.less';
+@import '../../styles/widget/weui-loading/weui-loading.less';
 </style>

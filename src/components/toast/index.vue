@@ -106,9 +106,9 @@ export default {
 
 <style lang="less">
 @import '../../styles/vux/transition.less';
-@import '../../styles/weui/widget/weui_tips/weui_mask';
-@import '../../styles/weui/icon/weui_icon_font';
-@import '../../styles/weui/widget/weui_tips/weui_toast';
+@import '../../styles/widget/weui_tips/weui_mask';
+@import '../../styles/widget/weui-icon/weui_icon_font';
+@import '../../styles/widget/weui_tips/weui_toast';
 
 .weui-toast.vux-toast-top {
   top: @toast-position-top-offset;

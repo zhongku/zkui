@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/base/mixin/setOnepx.less';
+@import '../../styles/base/mixin/setOnepx.less';
 
 .vux-x-hr {
   padding-top: 15px;

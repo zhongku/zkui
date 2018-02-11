@@ -42,8 +42,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_cell/weui_access';
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
+@import '../../styles/widget/weui_cell/weui_access';
+@import '../../styles/widget/weui_cell/weui_cell_global';
 @import '../../styles/vux/blank.less';
 
 .vux-no-group-title {

@@ -41,9 +41,9 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_tips/weui_mask';
-@import '../../styles/weui/widget/weui_tips/weui_toast';
-@import '../../styles/weui/widget/weui-loading/weui-loading.less';
+@import '../../styles/widget/weui_tips/weui_mask';
+@import '../../styles/widget/weui_tips/weui_toast';
+@import '../../styles/widget/weui-loading/weui-loading.less';
 
 .vux-loading .weui-toast {
   z-index: 5001;

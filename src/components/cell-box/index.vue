@@ -50,8 +50,8 @@ export default {
 <style lang="less">
 @import '../../styles/variable.less';
 @import '../../styles/vux/tap.less';
-@import '../../styles/weui/base/mixin/setArrow.less';
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
+@import '../../styles/base/mixin/setArrow.less';
+@import '../../styles/widget/weui_cell/weui_cell_global';
 
 .vux-cell-primary {
   flex: 1;
