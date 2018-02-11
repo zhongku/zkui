@@ -17,7 +17,7 @@
 
 <script>
 import { go } from '../../libs/router'
-import  MIcon  from '../m-icon/index.js'
+import  MIcon  from '../m-icon/index'
 
 export default {
   name: 'grid-item',
