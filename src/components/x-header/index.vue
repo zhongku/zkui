@@ -135,14 +135,14 @@ export default {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: -5px;
+  top: -2px;
   left: -5px;
 
   &:before {
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     border: 1px solid @header-arrow-color;
     border-width: 1px 0 0 1px;
     transform: rotate(315deg);
