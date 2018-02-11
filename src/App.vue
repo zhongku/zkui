@@ -12,7 +12,7 @@
     :show.sync="drawerVisibility"
     :show-mode="showModeValue"
     :placement="showPlacementValue"
-    :drawer-style="{'background-color':'#35495e', width: '200px'}">
+    :drawer-style="{'background-color':'#e60044', width: '200px'}">
 
       <!-- drawer content -->
       <div slot="drawer">
