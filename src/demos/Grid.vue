@@ -1,7 +1,7 @@
 <template>
   <div>
-      <group-title>use icon</group-title>
-      <grid class="icon-metal">
+      <group-title>use icon  class:icon-brand zkui-grid</group-title>
+      <grid class="icon-brand zkui-grid zkui-grid-border__none">
       <grid-item link="/component/cell" label="提现" svg="zk-grid">
       </grid-item>
       <grid-item link="/component/cell" label="充值" svg="zk-add">

@@ -42,6 +42,12 @@
         height: 100%;
     }
 
+    svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     & + .weui-grid__label{
         margin-top: 5px;
     }
@@ -55,4 +61,27 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.zkui-grid .weui-grid{
+    padding: 8px 10px;
+}
+
+.zkui-grid-border__none{
+    &:before {
+        .setTopLine(@zkuiGridBorderColor);
+    }
+    &:after {
+        .setLeftLine(@zkuiGridBorderColor);
+    }
+
+    .weui-grid {
+       
+        &:before {
+            .setRightLine(@zkuiGridBorderColor);
+        }
+        &:after {
+            .setBottomLine(@zkuiGridBorderColor);
+        }
+    }
 }

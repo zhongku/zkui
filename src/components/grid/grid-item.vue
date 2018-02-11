@@ -62,9 +62,4 @@ export default {
   }
 }
 </script>
-<style>
- .weui-grids .svg-icon {
-    width: 1.86rem;
-    height:1.86rem;
-}
-</style>
+
