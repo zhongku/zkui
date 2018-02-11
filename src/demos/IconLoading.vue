@@ -24,4 +24,4 @@ export default {
 }
 </script>
 
-<style lang="less" src="vux/src/styles/base/loading.less"></style>
+<style lang="less" src="vux/src/styles/vux/loading.less"></style>

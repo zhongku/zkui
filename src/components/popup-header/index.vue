@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/base/1px.less';
+@import '../../styles/vux/1px.less';
 @import '../../styles/variable.less';
 
 .vux-popup-header {

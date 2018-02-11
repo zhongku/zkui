@@ -49,7 +49,7 @@ export default {
 
 <style lang="less">
 @import '../../styles/variable.less';
-@import '../../styles/base/tap.less';
+@import '../../styles/vux/tap.less';
 @import '../../styles/weui/base/mixin/setArrow.less';
 @import '../../styles/weui/widget/weui_cell/weui_cell_global';
 

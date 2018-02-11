@@ -228,7 +228,7 @@ Vue.use(ToastPlugin)
 
   ``` html
   <style lang="less">
-  @import '~vux/src/styles/base/reset.less';
+  @import '~vux/src/styles/vux/reset.less';
   </style>
   ```
 

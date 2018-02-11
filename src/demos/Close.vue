@@ -8,7 +8,7 @@
 </template>
 
 <style lang="less">
-@import '~vux/src/styles/base/close.less';
+@import '~vux/src/styles/vux/close.less';
 
 .vux-close-2px{
   &::before,

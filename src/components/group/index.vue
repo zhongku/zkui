@@ -44,7 +44,7 @@ export default {
 <style lang="less">
 @import '../../styles/weui/widget/weui_cell/weui_access';
 @import '../../styles/weui/widget/weui_cell/weui_cell_global';
-@import '../../styles/base/blank.less';
+@import '../../styles/vux/blank.less';
 
 .vux-no-group-title {
   margin-top: @group-title-margin-top;

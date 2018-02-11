@@ -14,7 +14,7 @@ doc: |
 
   ``` html
   <style lang="less">
-  @import '~vux/src/styles/base/1px.less';
+  @import '~vux/src/styles/vux/1px.less';
   </style>
   ```
 

@@ -134,7 +134,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '~vux/src/styles/base/close';
+@import '~vux/src/styles/vux/close';
 
 .dialog-demo {
   .weui-dialog{
