@@ -1,5 +1,6 @@
 <template>
-  <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :width="width" :height="height" :viewBox="box" :style="style">
+  <svg version="1.1" :class="clazz"
+  :width="width" :height="height" :viewBox="box" :style="style">
     <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d" />
   </svg>
 </template>
@@ -8,14 +9,6 @@
   .svg-icon {
     display: inline-block;
     fill: currentColor;
-  }
-
-  .svg-icon.flip-horizontal {
-    transform: scale(-1, 1);
-  }
-
-  .svg-icon.flip-vertical {
-    transform: scale(1, -1);
   }
 
   .svg-icon.spin {
@@ -41,16 +34,11 @@
         type: String,
         required: true
       },
-      scale: [Number, String],
       spin: Boolean,
-      flip: {
-        validator: function (val) {
-          return val === 'horizontal' || val === 'vertical'
-        }
-      },
-      label: String,
-      index: String,
-      currentIndex: String
+      size :{
+        type: String,
+        default:'1rem'
+      }
     },
     computed: {
       normalizedScale () {

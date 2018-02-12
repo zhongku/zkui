@@ -4,7 +4,7 @@ export default function () {
     value: [String, Number, Array],
     isLink: Boolean,
     isLoading: Boolean,
-    svg:String,
+    svg: String,
     inlineDesc: [String, Number],
     primary: {
       type: String,

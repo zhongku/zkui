@@ -1,5 +1,10 @@
 <template>
   <div>
+    <group-title>m-icon svg图标</group-title>
+    <box gap="10px">
+      <m-icon name="zk-grid" spin class="icon-brand"></m-icon>
+    </box>
+    <group-title>weui 字体图标列子</group-title>
     <box gap="10px 10px">
       <icon type="success"></icon>
       <icon type="info"></icon>
@@ -33,11 +38,12 @@
 </template>
 
 <script>
-  import { Box, MIcon, Icon } from 'vux'
+  import { Box, MIcon, Icon, GroupTitle } from 'vux'
 
   export default {
     components: {
       Box,
+      GroupTitle,
       Icon,
       MIcon
     }
