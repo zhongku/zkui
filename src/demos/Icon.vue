@@ -12,21 +12,8 @@
        <m-icon name="zk-grid"  class="icon-danger" size="3rem"></m-icon>
        <m-icon name="zk-grid"  class="icon-warning" size="3rem"></m-icon>
        <m-icon name="zk-fenrun"  class="icon-info" size="3rem"></m-icon>
-
-<pre><code> &lt;m-icon name=&quot;zk-grid&quot; spin class=&quot;icon-brand&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-metal&quot; size=&quot;1.5rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-light&quot; size=&quot;2rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-accent&quot; size=&quot;2.5rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-focus&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-primary&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot; spin class=&quot;icon-success&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-danger&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-grid&quot;  class=&quot;icon-warning&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-       &lt;m-icon name=&quot;zk-fenrun&quot;  class=&quot;icon-info&quot; size=&quot;3rem&quot;&gt;&lt;/m-icon&gt;
-</code></pre>
-
-
     </box>
+
     <group-title>weui 字体图标列子</group-title>
     <box gap="10px 10px">
       <icon type="success"></icon>

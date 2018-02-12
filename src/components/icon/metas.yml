@@ -20,6 +20,17 @@ after_extra: |
   <icon type="info" is-msg></icon>
   <icon type="safe-success" is-msg></icon>
   <icon type="safe-warn" is-msg></icon>
+
+  <m-icon name="zk-grid" spin class="icon-brand"></m-icon>
+       <m-icon name="zk-grid"  class="icon-metal" size="1.5rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-light" size="2rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-accent" size="2.5rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-focus" size="3rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-primary" size="3rem"></m-icon>
+       <m-icon name="zk-grid" spin class="icon-success" size="3rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-danger" size="3rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-warning" size="3rem"></m-icon>
+       <m-icon name="zk-fenrun"  class="icon-info" size="3rem"></m-icon>
   ```
 tags:
   en:
