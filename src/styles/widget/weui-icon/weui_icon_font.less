@@ -1,19 +1,22 @@
-@import "weui_font";
-@import "../../base/fn";
+@import 'weui_font';
+@import '../../base/fn';
 
 // 图标颜色
-.icon-brand svg {
+.icon-brand svg,
+.icon-metal {
   color: @brand;
 }
-.icon-metal svg {
+.icon-metal svg,
+.icon-metal {
   color: @metal;
 }
-.icon-light svg {
+.icon-light svg,
+.icon-light {
   color: @light;
 }
 
-[class^="weui-icon_"]:before,
-[class*=" weui-icon_"]:before {
+[class^='weui-icon_']:before,
+[class*=' weui-icon_']:before {
   margin: 0;
 }
 .weui-icon-success {
