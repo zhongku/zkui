@@ -23,9 +23,11 @@
       <icon type="waiting" is-msg></icon>
       <icon type="safe_success" is-msg></icon>
       <icon type="safe_warn" is-msg></icon> -->
-
-      <m-icon name="zk-seek" class="brand" ></m-icon>
-      <m-icon name="zk-add" class="brand" ></m-icon>
+      <div class="alert alert-primary" role="alert">
+        This is a primary alert—check it out!
+      </div>
+      <m-icon name="zk-seek" class="brand"></m-icon>
+      <m-icon name="zk-add" class="brand"></m-icon>
     </box>
   </div>
 </template>

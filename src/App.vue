@@ -7,12 +7,7 @@
       <actionsheet :menus="menus" v-model="showMenu" @on-click-menu="changeLocale"></actionsheet>
     </div>
 
-    <drawer
-    width="200px;"
-    :show.sync="drawerVisibility"
-    :show-mode="showModeValue"
-    :placement="showPlacementValue"
-    :drawer-style="{'background-color':'#e60044', width: '200px'}">
+    <drawer width="200px;" :show.sync="drawerVisibility" :show-mode="showModeValue" :placement="showPlacementValue" :drawer-style="{'background-color':'#e60044', width: '200px'}">
 
       <!-- drawer content -->
       <div slot="drawer">
@@ -21,6 +16,7 @@
           </cell>
           <cell title="Buy me a coffee" link="project/donate" @click.native="drawerVisibility = false">
           </cell>
+
           <cell title="Github" link="http://github.com/airyland/vux" value="Star me" @click.native="drawerVisibility = false">
           </cell>
         </group>
@@ -35,22 +31,14 @@
       <!-- main content -->
       <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
 
-        <x-header slot="header"
-        style="width:100%;position:absolute;left:0;top:0;z-index:100;"
-        :left-options="leftOptions"
-        :right-options="rightOptions"
-        :title="title"
-        :transition="headerTransition"
-        @on-click-more="onClickMore">
+        <x-header slot="header" style="width:100%;position:absolute;left:0;top:0;z-index:100;" :left-options="leftOptions" :right-options="rightOptions" :title="title" :transition="headerTransition" @on-click-more="onClickMore">
           <span v-if="route.path === '/' || route.path === '/component/drawer'" slot="overwrite-left" @click="drawerVisibility = !drawerVisibility">
             <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
           </span>
         </x-header>
 
         <!-- remember to import BusPlugin in main.js if you use components: x-img and sticky -->
-        <transition
-        @after-enter="$vux.bus && $vux.bus.$emit('vux:after-view-enter')"
-        :name="viewTransition" :css="!!direction">
+        <transition @after-enter="$vux.bus && $vux.bus.$emit('vux:after-view-enter')" :name="viewTransition" :css="!!direction">
           <router-view class="router-view"></router-view>
         </transition>
 
@@ -61,7 +49,10 @@
           </tabbar-item>
           <tabbar-item :link="{path:'/demo'}" :selected="isDemo" badge="9">
             <span class="demo-icon-22" slot="icon">&#xe633;</span>
-            <span slot="label"><span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span><span v-else>Demos</span></span>
+            <span slot="label">
+              <span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span>
+              <span v-else>演示</span>
+            </span>
           </tabbar-item>
         </tabbar>
 
@@ -94,24 +85,24 @@ export default {
     Actionsheet
   },
   methods: {
-    onShowModeChange (val) {
+    onShowModeChange(val) {
       /** hide drawer before changing showMode **/
       this.drawerVisibility = false
       setTimeout(one => {
         this.showModeValue = val
       }, 400)
     },
-    onPlacementChange (val) {
+    onPlacementChange(val) {
       /** hide drawer before changing position **/
       this.drawerVisibility = false
       setTimeout(one => {
         this.showPlacementValue = val
       }, 400)
     },
-    onClickMore () {
+    onClickMore() {
       this.showMenu = true
     },
-    changeLocale (locale) {
+    changeLocale(locale) {
       this.$i18n.set(locale)
       this.$locale.set(locale)
     },
@@ -119,7 +110,7 @@ export default {
       'updateDemoPosition'
     ])
   },
-  mounted () {
+  mounted() {
     this.handler = () => {
       if (this.path === '/demo') {
         this.box = document.querySelector('#demo_list_box')
@@ -127,11 +118,11 @@ export default {
       }
     }
   },
-  beforeDestroy () {
+  beforeDestroy() {
     this.box && this.box.removeEventListener('scroll', this.handler, false)
   },
   watch: {
-    path (path) {
+    path(path) {
       if (path === '/component/demo') {
         this.$router.replace('/demo')
         return
@@ -158,50 +149,50 @@ export default {
       isLoading: state => state.vux.isLoading,
       direction: state => state.vux.direction
     }),
-    isShowBar () {
+    isShowBar() {
       if (/component/.test(this.path)) {
         return true
       }
       return false
     },
-    leftOptions () {
+    leftOptions() {
       return {
         showBack: this.route.path !== '/'
       }
     },
-    rightOptions () {
+    rightOptions() {
       return {
         showMore: true
       }
     },
-    headerTransition () {
+    headerTransition() {
       if (!this.direction) return ''
       return this.direction === 'forward' ? 'vux-header-fade-in-right' : 'vux-header-fade-in-left'
     },
-    componentName () {
+    componentName() {
       if (this.route.path) {
         const parts = this.route.path.split('/')
         if (/component/.test(this.route.path) && parts[2]) return parts[2]
       }
     },
-    isDemo () {
+    isDemo() {
       return /component|demo/.test(this.route.path)
     },
-    isTabbarDemo () {
+    isTabbarDemo() {
       return /tabbar/.test(this.route.path)
     },
-    title () {
+    title() {
       if (this.route.path === '/') return 'Home'
       if (this.route.path === '/project/donate') return 'Donate'
       if (this.route.path === '/demo') return 'Demo list'
       return this.componentName ? `Demo/${this.componentName}` : 'Demo/~~'
     },
-    viewTransition () {
+    viewTransition() {
       if (!this.direction) return ''
       return 'vux-pop-' + (this.direction === 'forward' ? 'in' : 'out')
     }
   },
-  data () {
+  data() {
     return {
       showMenu: false,
       menus: {
@@ -218,16 +209,17 @@ export default {
   }
 }
 </script>
-
+<style lang="sass">
+  @import "./styles/bootstrap/bootstrap";
+</style>
 <style lang="less">
-@import '~vux/src/styles/vux/reset.less';
-@import '~vux/src/styles/vux/1px.less';
-@import '~vux/src/styles/vux/tap.less';
+@import './styles/zkui';
 
 body {
   background-color: #fbf9fe;
 }
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -244,23 +236,25 @@ html, body {
   background: rgba(247, 247, 250, 0.5);**/
 }
 .vux-demo-tabbar .weui-bar__item_on .demo-icon-22 {
-  color: #F70968;
+  color: #f70968;
 }
-.vux-demo-tabbar .weui-tabbar_item.weui-bar__item_on .vux-demo-tabbar-icon-home {
+.vux-demo-tabbar
+  .weui-tabbar_item.weui-bar__item_on
+  .vux-demo-tabbar-icon-home {
   color: rgb(53, 73, 94);
 }
 .demo-icon-22:before {
   content: attr(icon);
 }
 .vux-demo-tabbar-component {
-  background-color: #F70968;
+  background-color: #f70968;
   color: #fff;
   border-radius: 7px;
   padding: 0 4px;
   line-height: 14px;
 }
 .weui-tabbar__icon + .weui-tabbar__label {
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
 .vux-demo-header-box {
   z-index: 100;
@@ -271,18 +265,20 @@ html, body {
 }
 
 @font-face {
-  font-family: 'vux-demo';  /* project id 70323 */
+  font-family: 'vux-demo'; /* project id 70323 */
   src: url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.eot');
-  src: url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.svg#iconfont')
+      format('svg');
 }
 
 .demo-icon {
   font-family: 'vux-demo';
   font-size: 20px;
-  color: #04BE02;
+  color: #04be02;
 }
 
 .demo-icon-big {

@@ -1,6 +1,6 @@
 {
   "name": "zkui",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Mobile web UI based on Vue and WeUI zkui vue-ui vue-upload vue-icon vue-grid vue-cell weiui vux mobileui",
   "main": "index.js",
   "scripts": {
@@ -52,8 +52,10 @@
     "fastclick": "^1.0.6",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "node-sass": "^4.7.2",
     "object-assign": "^4.1.0",
     "qr.js": "0.0.0",
+    "sass-loader": "^6.0.6",
     "shake.js": "^1.2.2",
     "validator": "^9.3.0",
     "vanilla-masker": "^1.2.0",
