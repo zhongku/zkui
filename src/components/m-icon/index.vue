@@ -1,9 +1,57 @@
 <template>
   <svg version="1.1" :class="clazz"
-  :width="width" :height="height" :viewBox="box" :style="style">
+  :width="fontSize" :height="fontSize" :viewBox="box">
     <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d" />
   </svg>
 </template>
+
+
+
+<script>
+  import parse from './parse'
+  export default {
+    name: "m-icon",
+    props: {
+      name: {
+        type: String,
+        required: true
+      },
+      spin: Boolean,
+      size :{
+        type: String,
+        default:'1rem'
+      }
+    },
+    data () {
+      return {
+        fontSize: this.size
+      }
+    },
+    computed: {
+
+      clazz () {
+        return {
+          'svg-icon': true,
+           spin: this.spin
+        }
+      },
+      icon () {
+        let xml = require(`!xml-loader!src/assets/svg/${this.name}.svg`)
+        const t = xml.svg.$.viewBox.split(' ')
+        // console.info(`src/assets/svg/${this.name}.svg has been loaded`)
+        return {
+          width: t[2],
+          height: t[3],
+          paths: parse.SVGtoArray(xml.svg)
+        }
+      },
+      box () {
+        return `0 0 ${this.icon.width} ${this.icon.height}`
+      }
+    }
+  }
+</script>
+
 
 <style>
   .svg-icon {
@@ -24,73 +72,3 @@
     }
   }
 </style>
-
-<script>
-  import parse from './parse'
-  export default {
-    name: "m-icon",
-    props: {
-      name: {
-        type: String,
-        required: true
-      },
-      spin: Boolean,
-      size :{
-        type: String,
-        default:'1rem'
-      }
-    },
-    computed: {
-      normalizedScale () {
-        let scale = this.scale
-        scale = typeof scale === 'undefined' ? 1 : Number(scale)
-        if (isNaN(scale) || scale <= 0) {
-          console.warn(`Invalid prop: prop "scale" should be a number over 0.`, this)
-          return 1
-        }
-        return scale
-      },
-      clazz () {
-        return {
-          'svg-icon': true,
-          spin: this.spin,
-          'flip-horizontal': this.flip === 'horizontal',
-          'flip-vertical': this.flip === 'vertical',
-          active: this.index === this.currentIndex
-        }
-      },
-      icon () {
-        let xml = require(`!xml-loader!src/assets/svg/${this.name}.svg`)
-        //console.dir(xml)
-        const t = xml.svg.$.viewBox.split(' ')
-        // console.info(`src/assets/svg/${this.name}.svg has been loaded`)
-        return {
-          width: t[2],
-          height: t[3],
-          paths: parse.SVGtoArray(xml.svg)
-        }
-      },
-      box () {
-        return `0 0 ${this.icon.width} ${this.icon.height}`
-      },
-      width () {
-        return this.icon.width / 112 * this.normalizedScale
-      },
-      height () {
-        return this.icon.height / 112 * this.normalizedScale
-      },
-      style () {
-        if (this.normalizedScale === 1) {
-          return false
-        }
-        return {
-          fontSize: this.normalizedScale + 'em'
-        }
-      }
-    },
-    register: function () {
-      console.warn("inject deprecated since v1.2.0, SVG files can be loaded directly, so just delete the inject line.")
-    }
-
-  }
-</script>

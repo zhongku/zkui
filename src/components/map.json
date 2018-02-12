@@ -152,5 +152,6 @@
   "XSwitch": "src/components/x-switch/index.vue",
   "XTable": "src/components/x-table/index.vue",
   "XTextarea": "src/components/x-textarea/index.vue",
-  "XUpload": "src/components/x-upload/index.vue"
+  "XUpload": "src/components/x-upload/index.vue",
+  "Code": "src/components/code/index.vue"
 }
