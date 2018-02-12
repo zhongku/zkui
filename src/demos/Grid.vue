@@ -33,6 +33,18 @@
       </grid-item>
     </grid>
 
+    <group-title>使用.grid-icon-middle 中等图标</group-title>
+    <grid class="icon-metal zkui-grid-border__none grid-icon-middle ">
+      <grid-item link="/component/cell" label="提现" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="充值" svg="zk-add">
+      </grid-item>
+      <grid-item :link="{ path: '/component/cell'}" label="会员中心" svg="zk-grid">
+      </grid-item>
+      <grid-item link="/component/cell" label="首页" svg="zk-seek">
+      </grid-item>
+    </grid>
+
     <group-title>2 columns</group-title>
     <grid>
       <grid-item :label="$t('Grid')" v-for="i in 2" :key="i">
@@ -85,27 +97,27 @@ Custom col:
 </i18n>
 
 <script>
-import { Grid, GridItem, GroupTitle, MIcon } from 'vux'
+  import { Grid, GridItem, GroupTitle, MIcon } from 'vux'
 
-export default {
-  components: {
-    Grid,
-    GridItem,
-    GroupTitle,
-    MIcon
-  },
-  methods: {
-    onItemClick() {
-      console.log('on item click')
+  export default {
+    components: {
+      Grid,
+      GridItem,
+      GroupTitle,
+      MIcon
+    },
+    methods: {
+      onItemClick () {
+        console.log('on item click')
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.grid-center {
-  display: block;
-  text-align: center;
-  color: #666;
-}
+  .grid-center {
+    display: block;
+    text-align: center;
+    color: #666;
+  }
 </style>
