@@ -1,7 +1,7 @@
 // THIS FILE IS ONLY FOR IDE ENTRY CHECKING NOT FOR REAL USAGE
 
-import zkui from './src/styles/zkui'
-import bootstrap from './src/styles/bootstrap/bootstrap'
+import zkui from './src/styles/zkui.less'
+import bootstrap from './src/styles/bootstrap/bootstrap.scss'
 import Actionsheet from './src/components/actionsheet/index.vue'
 import Agree from './src/components/agree/index.vue'
 import AjaxPlugin from './src/plugins/ajax/index.js'
@@ -151,7 +151,7 @@ import XSwitch from './src/components/x-switch/index.vue'
 import XTable from './src/components/x-table/index.vue'
 import XTextarea from './src/components/x-textarea/index.vue'
 
-import XScroll from './src/components/x-scroll/index.js'
+import XScroll from './src/components/x-scroll/index.vue'
 import XUpload from './src/components/x-upload/index.vue'
 
 console.warn(
