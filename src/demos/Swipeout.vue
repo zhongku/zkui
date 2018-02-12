@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="vux-1px-t">
+  <div class="border-top">
     
     <swipeout>
 
@@ -9,7 +9,7 @@
           <swipeout-button @click.native="onButtonClick('fav')" type="primary">{{$t('Yes')}}</swipeout-button>
           <swipeout-button @click.native="onButtonClick('delete')" type="warn">{{$t('Right')}}</swipeout-button>
         </div>
-        <div slot="content" class="demo-content vux-1px-t">
+        <div slot="content" class="demo-content border-top">
         {{$t('JavaScript is the best language')}}
         </div>
       </swipeout-item>
@@ -19,7 +19,7 @@
           <swipeout-button @click.native="onButtonClick('fav')" background-color="#336DD6">{{$t('Fav')}}</swipeout-button>
           <swipeout-button @click.native="onButtonClick('delete')" background-color="#D23934">{{$t('Delete')}}</swipeout-button>
         </div>
-        <div slot="content" class="demo-content vux-1px-tb">
+        <div slot="content" class="demo-content border-top">
         {{$t('threshold = 0.5')}}
         </div>
       </swipeout-item>
@@ -36,7 +36,7 @@
           <swipeout-button @click.native="onButtonClick('delete')" type="warn">{{$t('Delete')}}</swipeout-button>
         </div>
 
-        <div slot="content" class="demo-content vux-1px-b">
+        <div slot="content" class="demo-content border-bottom">
         {{$t('now ' + (disabled ? 'disabled' : 'enabled'))}}
         </div>
       </swipeout-item>
@@ -53,14 +53,14 @@
       <x-button @click.native="$refs.swipeoutItem.close()" type="warn">{{ $t('close menu') }}</x-button>
     </div>
     <br>
-    <group-title>use vux-1px to style items</group-title>
-    <swipeout class="vux-1px-tb">
+    <group-title>use border to style items</group-title>
+    <swipeout class="border-top">
       <swipeout-item transition-mode="follow" v-for="i in 3" :key="i">
         <div slot="right-menu">
           <swipeout-button type="primary">{{$t('Yes')}}</swipeout-button>
           <swipeout-button type="warn">{{$t('Right')}}</swipeout-button>
         </div>
-        <div slot="content" :class="{'vux-1px-b': i !== 3, 'vux-1px-t': i === 1}" style="padding:12px;">{{ $t('JavaScript is the best language') }}</div>
+        <div slot="content" :class="{'border-bottom': i !== 3, 'border-top': i === 1}" style="padding:12px;">{{ $t('JavaScript is the best language') }}</div>
       </swipeout-item>
     </swipeout>
     <br>

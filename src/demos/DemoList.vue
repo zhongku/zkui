@@ -1,8 +1,8 @@
 <template>
   <div class="demo-list-box" id="demo_list_box" :style="{height: `${height}px`}">
       <flexbox :gutter="0" v-for="(list, index) in components" :key="index">
-        <flexbox-item :span="1/3" v-for="component in list" :key="component.name" class="cbox vux-1px-t vux-tap-active" @click.native="go(component.name.toLowerCase())">
-          <div class="vux-1px-r cbox-inner">
+        <flexbox-item :span="1/3" v-for="component in list" :key="component.name" class="cbox border-top vux-tap-active" @click.native="go(component.name.toLowerCase())">
+          <div class="border-right cbox-inner">
             <span class="demo-icon demo-icon-big" v-html="component.icon" :style="{color: component.color}"></span>
             <br>
             <span :style="{fontSize: component.name.length > 12 ? '12px' : ''}">{{component.name | camelCase}}</span>

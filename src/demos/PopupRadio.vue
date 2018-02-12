@@ -10,13 +10,13 @@
 
     <group>
       <popup-radio title="options" :options="options3" v-model="option3">
-        <p slot="popup-header" class="vux-1px-b demo3-slot">Please select</p>
+        <p slot="popup-header" class="border-bottom demo3-slot">Please select</p>
       </popup-radio>
     </group>
 
     <group>
       <popup-radio title="readonly" readonly :options="options3" v-model="option4">
-        <p slot="popup-header" class="vux-1px-b demo3-slot">Please select</p>
+        <p slot="popup-header" class="border-bottom demo3-slot">Please select</p>
       </popup-radio>
     </group>
 

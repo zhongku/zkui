@@ -3,17 +3,17 @@
     <divider>{{ $t('Simple card with header and content') }}</divider>
 	   <card :header="{title: $t('My wallet')}">
       <div slot="content" class="card-demo-flex card-demo-content01">
-        <div class="vux-1px-r">
+        <div class="border-right">
           <span>1130</span>
           <br/>
           {{ $t('Point') }}
         </div>
-        <div class="vux-1px-r">
+        <div class="border-right">
           <span>15</span>
           <br/>
           {{ $t('Coupon') }}
         </div>
-        <div class="vux-1px-r">
+        <div class="border-right">
           <span>0</span>
           <br/>
           {{ $t('Gift card') }}
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import '~vux/src/styles/vux/1px.less';
+@import '~vux/src/styles/base/utilities/border.less';
 
 .card-demo-flex {
   display: flex;

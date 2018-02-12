@@ -19,7 +19,7 @@ export default {
 <style lang="less">
 @import '../../styles/variable.less';
 @import '../../styles/vux/reddot.less';
-@import '../../styles/vux/1px.less';
+@import '../../styles/base/utilities/border.less';
 
 .setLineWithoutRight(@c: #C7C7C7) {
   content: " ";

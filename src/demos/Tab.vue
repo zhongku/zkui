@@ -106,7 +106,7 @@
     <br/>
     <br/>
     <tab :line-width="2">
-      <tab-item :selected="demo3 === item" v-for="(item, index) in list3" :class="{'vux-1px-r': index===0}" @click="demo3 = item" :key="index">{{item}}</tab-item>
+      <tab-item :selected="demo3 === item" v-for="(item, index) in list3" :class="{'border-right': index===0}" @click="demo3 = item" :key="index">{{item}}</tab-item>
     </tab>
     <br/>
     <br/>
@@ -198,7 +198,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '~vux/src/styles/vux/1px.less';
+@import '~vux/src/styles/base/utilities/border.less';
 @import '~vux/src/styles/vux/center.less';
 
 .box {

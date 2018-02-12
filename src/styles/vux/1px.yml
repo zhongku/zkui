@@ -2,7 +2,7 @@ name:
   en: 1px
   zh-CN: 1px 解决方案
 doc: |
-  
+
   <p class="tip">
   1px 方案在 VUX 组件内应用广泛，包括 Grid, ButtonTab, XTable, XButton, Cell 等等。
   <br>
@@ -14,15 +14,15 @@ doc: |
 
   ``` html
   <style lang="less">
-  @import '~vux/src/styles/vux/1px.less';
+  @import '~vux/src/styles/base/utilities/border.less';
   </style>
   ```
 
   可用类名：
 
-  - `vux-1px-l` 左边框
-  - `vux-1px-r` 右边框
-  - `vux-1px-t` 上边框
-  - `vux-1px-b` 下边框
-  - `vux-1px-tb` 上下边框
-  - `vux-1px` 全边框
+  - `border-left` 左边框
+  - `border-right` 右边框
+  - `border-top` 上边框
+  - `border-bottom` 下边框
+  - `border-top` 上下边框
+  - `border` 全边框

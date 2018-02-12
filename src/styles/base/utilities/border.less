@@ -1,7 +1,7 @@
-@import "../base/mixin/setOnepx.less";
+@import '../../base/mixin/setOnepx.less';
 
 .setLine(@c: #C7C7C7) {
-  content: " ";
+  content: ' ';
   position: absolute;
   left: 0;
   top: 0;
@@ -14,34 +14,52 @@
   transform: scale(0.5);
 }
 
-.vux-1px,
-.vux-1px-t,
-.vux-1px-b,
-.vux-1px-tb,
-.vux-1px-l,
-.vux-1px-r {
+.border-0 {
+  border: 0 !important;
+}
+.border-top-0 {
+  border-top: 0 !important;
+}
+.border-right-0 {
+  border-right: 0 !important;
+}
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+
+
+.border,
+.border-top,
+.border-bottom,
+.border-top,
+.border-left,
+.border-right {
   position: relative;
 }
 
-.vux-1px {
+.border {
   &:before {
     .setLine();
   }
 }
 
-.vux-1px-t {
+.border-top {
   &:before {
     .setTopLine();
   }
 }
 
-.vux-1px-b {
+.border-bottom {
   &:after {
     .setBottomLine();
   }
 }
 
-.vux-1px-tb {
+.border-top {
   &:before {
     .setTopLine();
   }
@@ -50,13 +68,13 @@
   }
 }
 
-.vux-1px-l {
+.border-left {
   &:before {
     .setLeftLine();
   }
 }
 
-.vux-1px-r {
+.border-right {
   &:after {
     .setRightLine();
   }

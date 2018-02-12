@@ -2,48 +2,48 @@
   <div class="vux-demo">
     <div style="padding: 10px;">
       <br>
-      <div style="height:10px;" class="vux-1px-tb"></div>
+      <div style="height:10px;" class="border-top"></div>
       <br>
-      <div style="height:10px;" class="vux-1px"></div>
+      <div style="height:10px;" class="border"></div>
       <br>
       <p>{{ $t('对比不做处理的1px边框') }}</p>
       <br/>
       <div style="height:10px;border:1px solid #e0e0e0"></div>
       <br>
     </div>
-    <flexbox class="vux-1px-tb" :gutter="0">
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('北京') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('上海') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('广州') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('深圳') }}</div></flexbox-item>
+    <flexbox class="border-top" :gutter="0">
+      <flexbox-item class="border-right test"><div>{{ $t('北京') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('上海') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('广州') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('深圳') }}</div></flexbox-item>
     </flexbox>
-    <flexbox class="vux-1px-b" :gutter="0">
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('天津') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('西安') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('重庆') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('杭州') }}</div></flexbox-item>
+    <flexbox class="border-bottom" :gutter="0">
+      <flexbox-item class="border-right test"><div>{{ $t('天津') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('西安') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('重庆') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('杭州') }}</div></flexbox-item>
     </flexbox>
-    <flexbox class="vux-1px-b" :gutter="0">
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('南京') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('武汉') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div>{{ $t('成都') }}</div></flexbox-item>
-      <flexbox-item class="vux-1px-r test"><div></div></flexbox-item>
+    <flexbox class="border-bottom" :gutter="0">
+      <flexbox-item class="border-right test"><div>{{ $t('南京') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('武汉') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div>{{ $t('成都') }}</div></flexbox-item>
+      <flexbox-item class="border-right test"><div></div></flexbox-item>
     </flexbox>
     <br/>
-    <flexbox class="vux-1px-tb" :gutter="0">
-      <flexbox-item class="vux-1px-r">
+    <flexbox class="border-top" :gutter="0">
+      <flexbox-item class="border-right">
         <a class="item item1">
           <div class="img meishi"></div>
           <div class="text">{{ $t('美食') }}</div>
         </a>
       </flexbox-item>
-      <flexbox-item class="vux-1px-r">
+      <flexbox-item class="border-right">
         <a class="item item2">
           <div class="img dianying"></div>
           <div class="text">{{ $t('电影') }}</div>
         </a>
       </flexbox-item>
-      <flexbox-item class="vux-1px-r">
+      <flexbox-item class="border-right">
         <a class="item item3">
           <div class="img jiudian"></div>
           <div class="text">{{ $t('酒店') }}</div>
@@ -56,20 +56,20 @@
         </a>
       </flexbox-item>
     </flexbox>
-    <flexbox class="vux-1px-b" :gutter="0">
-      <flexbox-item class="vux-1px-r">
+    <flexbox class="border-bottom" :gutter="0">
+      <flexbox-item class="border-right">
         <a class="item item5">
           <div class="img huoguo"></div>
           <div class="text">{{ $t('火锅') }}</div>
         </a>
       </flexbox-item>
-      <flexbox-item class="vux-1px-r">
+      <flexbox-item class="border-right">
         <a class="item item6">
           <div class="img lvyou"></div>
           <div class="text">{{ $t('旅游') }}</div>
         </a>
       </flexbox-item>
-      <flexbox-item class="vux-1px-r">
+      <flexbox-item class="border-right">
         <a class="item item7">
           <div class="img daijinquan"></div>
           <div class="text">{{ $t('代金券') }}</div>
@@ -140,7 +140,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import '~vux/src/styles/vux/1px.less';
+@import '~vux/src/styles/base/utilities/border.less';
 
 .vux-demo .test{
   height:50px;

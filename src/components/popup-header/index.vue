@@ -1,5 +1,5 @@
 <template>
-  <div class="vux-popup-header" :class="showBottomBorder ? 'vux-1px-b' : ''">
+  <div class="vux-popup-header" :class="showBottomBorder ? 'border-bottom' : ''">
     <div class="vux-popup-header-left" @click="$emit('on-click-left')">
       <slot name="left-text">{{ leftText }}</slot>
     </div>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/vux/1px.less';
+@import '../../styles/base/utilities/border.less';
 @import '../../styles/variable.less';
 
 .vux-popup-header {
@@ -51,7 +51,7 @@ export default {
   padding-right: @popup-header-right-text-padding;
   color: @popup-header-right-text-color;
 }
-.vux-popup-header.vux-1px-b:after {
+.vux-popup-header.border-bottom:after {
   border-color: #D9D9D9;
 }
 </style>

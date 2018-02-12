@@ -137,7 +137,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '~vux/src/styles/vux/1px.less';
+@import '~vux/src/styles/base/utilities/border.less';
 
 .flex-demo {
   text-align: center;
