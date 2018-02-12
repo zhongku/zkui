@@ -1,6 +1,6 @@
 <template>
   <div class="inline-calendar" :class="{'is-weekend-highlight': highlightWeekend}">
-    
+
     <div class="calendar-header" v-show="!hideHeader">
       <div class="calendar-year">
         <span @click="go(year - 1, month)">
@@ -26,7 +26,7 @@
     <table>
       <thead v-show="!hideWeekList">
         <tr>
-          <th v-for="(week, index) in _weeksList" class="week" :class="`is-week-list-${index}`">{{ week || $t('week_day_' + index /* en: week, zh-CN: week */) }}</th>
+          <th v-for="(week, index) in _weeksList" class="week" :class="`is-week-list-${index}`">{{ week  }}</th>
         </tr>
       </thead>
       <tbody>

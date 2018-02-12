@@ -11,10 +11,10 @@
         </div>
         <label :for="`search_input_${uuid}`" class="weui-search-bar__label" v-show="!isFocus && !value">
           <i class="weui-icon-search"></i>
-          <span>{{ placeholder || $t('placeholder') }}</span>
+          <span>{{ placeholder }}</span>
         </label>
       </form>
-      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel">{{ cancelText || $t('cancel_text') }}
+      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel">{{ cancelText  }}
       </a>
       <slot name="right"></slot>
     </div>

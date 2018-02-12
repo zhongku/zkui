@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="weui-actionsheet__action" @click="emitEvent('on-click-menu', 'cancel')" v-if="showCancel">
-        <div class="weui-actionsheet__cell">{{cancelText || $t('cancel')}}</div>
+        <div class="weui-actionsheet__cell">{{cancelText }}</div>
       </div>
     </div>
   </div>

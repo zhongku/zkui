@@ -29,8 +29,8 @@
       :popup-style="popupStyle">
         <div class="vux-popup-picker-container">
           <popup-header
-          :left-text="cancelText || $t('cancel_text')"
-          :right-text="confirmText || $t('confirm_text')"
+          :left-text="cancelText "
+          :right-text="confirmText "
           @on-click-left="onHide(false)"
           @on-click-right="onHide(true)"
           :title="popupTitle"></popup-header>
