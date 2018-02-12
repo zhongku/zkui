@@ -1,12 +1,10 @@
 <template>
-  <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :width="width"
-       :height="height" :viewBox="box" :style="style">
-    <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d"/>
+  <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :width="width" :height="height" :viewBox="box" :style="style">
+    <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d" />
   </svg>
 </template>
 
 <style>
-
   .svg-icon {
     display: inline-block;
     fill: currentColor;
@@ -35,9 +33,9 @@
 </style>
 
 <script>
-import parse from './parse'
+  import parse from './parse'
   export default {
-    name:"m-icon",
+    name: "m-icon",
     props: {
       name: {
         type: String,
@@ -55,7 +53,7 @@ import parse from './parse'
       currentIndex: String
     },
     computed: {
-      normalizedScale() {
+      normalizedScale () {
         let scale = this.scale
         scale = typeof scale === 'undefined' ? 1 : Number(scale)
         if (isNaN(scale) || scale <= 0) {
@@ -64,7 +62,7 @@ import parse from './parse'
         }
         return scale
       },
-      clazz() {
+      clazz () {
         return {
           'svg-icon': true,
           spin: this.spin,
@@ -73,7 +71,7 @@ import parse from './parse'
           active: this.index === this.currentIndex
         }
       },
-      icon() {
+      icon () {
         let xml = require(`!xml-loader!src/assets/svg/${this.name}.svg`)
         //console.dir(xml)
         const t = xml.svg.$.viewBox.split(' ')
@@ -84,16 +82,16 @@ import parse from './parse'
           paths: parse.SVGtoArray(xml.svg)
         }
       },
-      box() {
+      box () {
         return `0 0 ${this.icon.width} ${this.icon.height}`
       },
-      width() {
+      width () {
         return this.icon.width / 112 * this.normalizedScale
       },
-      height() {
+      height () {
         return this.icon.height / 112 * this.normalizedScale
       },
-      style() {
+      style () {
         if (this.normalizedScale === 1) {
           return false
         }
@@ -105,6 +103,6 @@ import parse from './parse'
     register: function () {
       console.warn("inject deprecated since v1.2.0, SVG files can be loaded directly, so just delete the inject line.")
     }
-  
+
   }
 </script>

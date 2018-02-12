@@ -1,7 +1,7 @@
 <template>
   <div>
     <box gap="10px 10px">
-      <!-- <icon type="success"></icon>
+      <icon type="success"></icon>
       <icon type="info"></icon>
       <icon type="info-circle"></icon>
       <icon type="warn"></icon>
@@ -22,7 +22,7 @@
       <icon type="warn" is-msg></icon>
       <icon type="waiting" is-msg></icon>
       <icon type="safe_success" is-msg></icon>
-      <icon type="safe_warn" is-msg></icon> -->
+      <icon type="safe_warn" is-msg></icon>
       <div class="alert alert-primary" role="alert">
         This is a primary alert—check it out!
       </div>
@@ -33,12 +33,13 @@
 </template>
 
 <script>
-import { Box, MIcon } from 'vux'
+  import { Box, MIcon, Icon } from 'vux'
 
-export default {
-  components: {
-    Box,
-    MIcon
+  export default {
+    components: {
+      Box,
+      Icon,
+      MIcon
+    }
   }
-}
 </script>
