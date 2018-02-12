@@ -141,6 +141,7 @@
   "XAddress": "src/components/x-address/index.vue",
   "XButton": "src/components/x-button/index.vue",
   "XCircle": "src/components/x-circle/index.vue",
+  "XCode": "src/components/x-code/index.vue",
   "XDialog": "src/components/x-dialog/index.vue",
   "XHeader": "src/components/x-header/index.vue",
   "XHr": "src/components/x-hr/index.vue",
@@ -152,6 +153,5 @@
   "XSwitch": "src/components/x-switch/index.vue",
   "XTable": "src/components/x-table/index.vue",
   "XTextarea": "src/components/x-textarea/index.vue",
-  "XUpload": "src/components/x-upload/index.vue",
-  "Code": "src/components/code/index.vue"
+  "XUpload": "src/components/x-upload/index.vue"
 }
