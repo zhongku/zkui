@@ -1,14 +1,12 @@
 <template>
   <svg version="1.1" :class="clazz"
-  :width="fontSize" :height="fontSize" :viewBox="box">
+  :width="fontSize" :height="fontSize" :viewBox="box" @click="onClick">
     <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d" />
   </svg>
 </template>
-
-
-
 <script>
   import parse from './parse'
+  import { go } from '../../libs/router'
   export default {
     name: "m-icon",
     props: {
@@ -16,6 +14,7 @@
         type: String,
         required: true
       },
+      link: [String, Object],
       spin: Boolean,
       size :{
         type: String,
@@ -27,6 +26,12 @@
         fontSize: this.size
       }
     },
+    methods: {
+    onClick () {
+      /* istanbul ignore next */
+      !this.disabled && go(this.link, this.$router)
+    }
+  },
     computed: {
 
       clazz () {

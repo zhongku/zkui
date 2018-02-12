@@ -2,16 +2,16 @@
   <div>
     <divider>m-icon 使用svg图标</divider>
     <box gap="10px">
-       <m-icon name="zk-grid" spin class="icon-brand"></m-icon>
-       <m-icon name="zk-grid"  class="icon-metal" size="1.5rem"></m-icon>
-       <m-icon name="zk-grid"  class="icon-light" size="2rem"></m-icon>
+       <m-icon name="zk-grid" spin class="icon-brand" ></m-icon>
+       <m-icon name="zk-grid"  class="icon-metal" link="/component/icon" size="1.5rem"></m-icon>
+       <m-icon name="zk-grid"  class="icon-light" link="/component/checklist" size="2rem"></m-icon>
        <m-icon name="zk-grid"  class="icon-accent" size="2.5rem"></m-icon>
        <m-icon name="zk-grid"  class="icon-focus" size="3rem"></m-icon>
        <m-icon name="zk-grid"  class="icon-primary" size="3rem"></m-icon>
-       <m-icon name="zk-grid" spin class="icon-success" size="3rem"></m-icon>
-       <m-icon name="zk-grid"  class="icon-danger" size="3rem"></m-icon>
-       <m-icon name="zk-grid"  class="icon-warning" size="3rem"></m-icon>
-       <m-icon name="zk-fenrun"  class="icon-info" size="3rem"></m-icon>
+       <m-icon name="zk-grid" spin class="icon-success" size="3rem" link="/component/grid"></m-icon>
+       <m-icon name="zk-grid"  class="icon-danger" size="3rem" link="/component/grid"></m-icon>
+       <m-icon name="zk-grid"  class="icon-warning" size="3rem" link="/component/grid"></m-icon>
+       <m-icon name="zk-fenrun"  class="icon-info" size="3rem" link="/component/cell"></m-icon>
     </box>
 
     <group-title>weui 字体图标列子</group-title>
