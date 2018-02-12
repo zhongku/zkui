@@ -6,8 +6,8 @@
 /**
 * actionsheet
 */
-@actionsheet-label-primary-color: #1AAD19;
-@actionsheet-label-warn-color: #E64340;
+@actionsheet-label-primary-color: #1aad19;
+@actionsheet-label-warn-color: #e64340;
 @actionsheet-label-default-color: #000;
 @actionsheet-label-disabled-color: #ccc;
 
@@ -21,7 +21,7 @@
 /**
 * tabbar
 */
-@tabbar-text-active-color: #09BB07;
+@tabbar-text-active-color: @theme-color;
 
 /**
 * tab
@@ -34,9 +34,9 @@
 /**
 * dialog
 */
-@dialog-button-text-primary-color: #0BB20C;
+@dialog-button-text-primary-color: #0bb20c;
 @dialog-button-text-default-color: #353535;
-@dialog-button-text-warn-color: #E64340;
+@dialog-button-text-warn-color: #e64340;
 
 /**
 * x-number
@@ -52,7 +52,7 @@
 /**
 * checkbox
 */
-@checkbox-icon-color-checked: #09BB07;
+@checkbox-icon-color-checked: @theme-color;
 
 /**
 * check-icon
@@ -65,7 +65,7 @@
 @cell-label-color: #000;
 @cell-font-size: 17px;
 @cell-tips-font-size: 14px;
-@cell-default-arrow-color: #C8C8CD;
+@cell-default-arrow-color: #c8c8cd;
 @cell-disabled-arrow-color: #e2e2e2;
 @cell-default-arrow-border-width: 2px;
 @cell-default-arrow-width: 6px;
@@ -75,7 +75,7 @@
 /**
 * Mask
 */
-@dialog-mask-background: rgba(0, 0, 0, .6);
+@dialog-mask-background: rgba(0, 0, 0, 0.6);
 
 /**
 * Range
@@ -113,27 +113,27 @@
 * Button
 */
 @button-global-border-radius: 5px;
-@button-global-font-color: #FFFFFF;
+@button-global-font-color: #ffffff;
 @button-global-margin-top: 15px;
 @button-global-height: 42px;
-@button-global-disabled-font-color: rgba(255,255,255,.6);
-@button-global-active-font-color: rgba(255,255,255,.6);
+@button-global-disabled-font-color: rgba(255, 255, 255, 0.6);
+@button-global-active-font-color: rgba(255, 255, 255, 0.6);
 @button-global-font-size: 18px;
 
-@button-warn-bg-color: #E64340;
-@button-warn-active-color: #CE3C39;
-@button-warn-disabled-bg-color: #EC8B89;
+@button-warn-bg-color: #e64340;
+@button-warn-active-color: #ce3c39;
+@button-warn-disabled-bg-color: #ec8b89;
 
-@button-default-bg-color: #F8F8F8;
+@button-default-bg-color: #f8f8f8;
 @button-default-font-color: #000000;
-@button-default-active-bg-color: #DEDEDE;
-@button-default-disabled-font-color: rgba(0,0,0,.3);
-@button-default-disabled-bg-color: #F7F7F7;
-@button-default-active-font-color: rgba(0,0,0,.6);
+@button-default-active-bg-color: #dedede;
+@button-default-disabled-font-color: rgba(0, 0, 0, 0.3);
+@button-default-disabled-bg-color: #f7f7f7;
+@button-default-active-font-color: rgba(0, 0, 0, 0.6);
 
-@button-primary-bg-color: #1AAD19;
-@button-primary-active-bg-color: #179B16;
-@button-primary-disabled-bg-color: #9ED99D;
+@button-primary-bg-color: #1aad19;
+@button-primary-active-bg-color: #179b16;
+@button-primary-disabled-bg-color: #9ed99d;
 
 /**
 * swipeout
@@ -142,8 +142,8 @@
 @swipeout-button-warn-bg-color: @button-warn-bg-color;
 @swipeout-button-default-bg-color: #c8c7cd;
 
-@swipeout-content-bg-color: #FFF;
-@swipeout-button-font-color: #FFF;
+@swipeout-content-bg-color: #fff;
+@swipeout-button-font-color: #fff;
 
 /**
 * Cell
@@ -176,7 +176,7 @@
 @button-tab-default-background-color: #fdfdfd;
 @button-tab-active-background-color: @theme-color;
 
-@button-tab-active-font-color: #FFF; /* alias */
+@button-tab-active-font-color: #fff; /* alias */
 @button-tab-active-text-color: @button-tab-active-font-color;
 @button-tab-default-text-color: #999;
 
@@ -191,7 +191,7 @@
 /**
 * checklist
 */
-@checklist-icon-active-color: #09BB07;
+@checklist-icon-active-color: @theme-color;
 
 /**
 * popup-picker
@@ -221,7 +221,7 @@
 /**
 * form-preview
 */
-@form-preview-button-primary-color: #0BB20C;
+@form-preview-button-primary-color: #0bb20c;
 
 /**
 * sticky
@@ -231,8 +231,8 @@
 /**
 * group
 */
-@group-title-margin-top: .77em;
-@group-title-margin-bottom: .3em;
+@group-title-margin-top: 0.77em;
+@group-title-margin-bottom: 0.3em;
 
 /**
 * toast
@@ -246,13 +246,13 @@
 /**
 * icon
 */
-@icon-success-color: #09BB07;
+@icon-success-color: @theme-color;
 
 /**
 * calendar
 */
 @calendar-arrow-color: @theme-color;
-@calendar-highlight-color: #E59313;
+@calendar-highlight-color: #e59313;
 @calendar-selected-bg-color: @theme-color;
 @calendar-disabled-font-color: #c0c0c0;
 @calendar-today-font-color: @theme-color;
@@ -277,17 +277,16 @@
 /**
 * search
 */
-@search-cancel-font-color: #09BB07;
-@search-bg-color: #EFEFF4;
-@search-placeholder-font-color: #9B9B9B;
+@search-cancel-font-color: @theme-color;
+@search-bg-color: #efeff4;
+@search-placeholder-font-color: #9b9b9b;
 
 /**
 * radio
 */
-@radio-checked-icon-color: #09BB07;
+@radio-checked-icon-color: @theme-color;
 
 /**
 * loadmore
 */
-@load-more-line-color: #E5E5E5;
-
+@load-more-line-color: #e5e5e5;
