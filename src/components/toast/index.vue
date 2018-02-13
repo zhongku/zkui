@@ -4,7 +4,7 @@
     <transition :name="currentTransition">
       <div class="weui-toast" :style="{width: width}" :class="toastClass" v-show="show">
         <i class="weui-icon-success-no-circle weui-icon_toast" v-show="type !== 'text'"></i>
-        <p class="weui-toast__content" v-if="text" :style="style" v-html="$t(text)"></p>
+        <p class="weui-toast__content" v-if="text" :style="style" v-html="text"></p>
         <p class="weui-toast__content" v-else :style="style">
           <slot></slot>
         </p>

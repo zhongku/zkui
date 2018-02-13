@@ -4,7 +4,7 @@
       <x-button @click.native="showPosition('top')" type="primary">Top</x-button>
       <x-button @click.native="showPosition('middle')" type="primary">Middle</x-button>
       <x-button @click.native="showPosition('bottom')" type="primary">Bottom</x-button>
-      <x-button @click.native="showPosition('')" type="primary">Default</x-button>  
+      <x-button @click.native="showPosition('')" type="primary">Default</x-button>
     </div>
 
     <toast v-model="showPositionValue" type="text" :time="800" is-show-mask text="Hello World" :position="position">{{ $t('Basic Usage') }}</toast>
@@ -36,7 +36,7 @@
       <x-switch :title="$t('default')" v-model="show9" @on-change="onChange"></x-switch>
     </group>
     <div style="padding:15px;">
-      <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'top')">use text function</x-button> 
+      <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'top')">use text function</x-button>
     </div>
   </div>
 </template>
