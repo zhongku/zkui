@@ -94,11 +94,12 @@
         }
         this.mescroll && this.mescroll.endSuccess(page,totalSize)
         let message = params.pageIndex + "/" + totalSize
-        this.$vux.toast.text(message, 'bottom')
-        // weui.toast(message, {
-        //   duration: 450,
-        //   className: 'toast-bottom'
-        // })
+        this.$vux.toast.show({
+          text: message,
+          position: 'min',
+          type:'text',
+          time : 800
+        })
       },
 
 

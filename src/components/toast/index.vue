@@ -16,6 +16,7 @@
 <script>
 import SafariFixIssue from '../../mixins/safari-fix'
 
+
 export default {
   name: 'toast',
   mixins: [SafariFixIssue],
@@ -59,7 +60,7 @@ export default {
       if (this.position === 'top') {
         return 'vux-slide-from-top'
       }
-      if (this.position === 'bottom') {
+      if (this.position === 'bottom' || this.position === 'min') {
         return 'vux-slide-from-bottom'
       }
       return 'vux-fade'
@@ -72,12 +73,20 @@ export default {
         'weui-toast_text': this.type === 'text',
         'vux-toast-top': this.position === 'top',
         'vux-toast-bottom': this.position === 'bottom',
+        'vux-toast-bottom vux-toast-min': this.position === 'min',
         'vux-toast-middle': this.position === 'middle'
       }
     },
     style () {
       if (this.type === 'text' && this.width === 'auto') {
         return { padding: '10px' }
+      }
+      if(this.position === 'min'){
+        this.width= 'auto'
+        return {
+          padding: '2px 5px',
+          width: 'auto'
+        }
       }
     }
   },
@@ -170,5 +179,8 @@ export default {
 .weui-toast_forbidden .weui-icon_toast.weui-icon-success-no-circle:before {
   content: "\EA0B";
   color: #F76260;
+}
+.vux-toast-min .weui-toast__content{
+  font-size:0.5rem;
 }
 </style>

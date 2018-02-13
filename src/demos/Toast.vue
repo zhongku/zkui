@@ -38,6 +38,9 @@
     <div style="padding:15px;">
       <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'top')">use text function</x-button>
     </div>
+    <div style="padding:15px;">
+      <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'min')">use min</x-button>
+    </div>
   </div>
 </template>
 
@@ -90,6 +93,9 @@ export default {
       if (val) {
         this.$vux.toast.show({
           text: 'Hello World',
+          time: 100000,
+          position: 'min',
+          type: 'text',
           onShow () {
             console.log('Plugin: I\'m showing')
           },
