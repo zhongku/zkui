@@ -127,10 +127,8 @@ export default {
   word-break: break-all;
 }
 .weui-cell .weui-cell__hd svg{
-  width: 0.65rem;
-  height: 0.65rem;
   display:block;
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
 }
 .weui-cell__ft .weui-loading {
   display: block;
