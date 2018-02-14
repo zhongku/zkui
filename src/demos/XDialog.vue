@@ -11,7 +11,7 @@
 
     <div v-transfer-dom>
       <x-dialog v-model="showToast" class="dialog-demo">
-        <div style="padding:15*@rem;">
+        <div style="padding:15px;">
           <x-button @click.native="doShowToast" type="primary">show toast</x-button>
         </div>
         <div @click="showToast=false">
@@ -56,7 +56,7 @@
     <div v-transfer-dom>
       <x-dialog v-model="showDialogStyle" hide-on-blur :dialog-style="{'max-width': '100%', width: '100%', height: '50%', 'background-color': 'transparent'}">
         <p style="color:#fff;text-align:center;" @click="showDialogStyle = false">
-          <span style="font-size:30*@rem;">HELLO WORLD</span>
+          <span style="font-size:30px;">HELLO WORLD</span>
           <br>
           <br>
           <x-icon type="ios-close-outline" style="fill:#fff;"></x-icon>

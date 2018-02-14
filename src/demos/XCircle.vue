@@ -19,7 +19,7 @@
       </x-circle>
     </div>
     <br>
-    <div style="width:180*@rem;">
+    <div style="width:180px;">
       <range v-model="percent1" :min="0" :max="100"></range>
     </div>
     <br>

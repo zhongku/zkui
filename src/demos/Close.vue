@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="vux-close" style="width:14*@rem;height:14*@rem;"></span>
+    <span class="vux-close" style="width:14*@rem;height:14px;"></span>
     <span class="vux-close"></span>
     <span class="vux-close" style="width:30*@rem;height:30*@rem;color:#ccc;"></span>
     <span class="vux-close vux-close-2px" style="width:40*@rem;height:40*@rem;color:#ccc;"></span>

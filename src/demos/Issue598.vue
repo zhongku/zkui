@@ -3,7 +3,7 @@
     <group>
       <popup-picker title="Select" :inline-desc="value" :data="list" v-model="value" show-name ref="picker"></popup-picker>
     </group>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button @click.native="getValue" type="primary">Get names</x-button>
     </div>
   </div>

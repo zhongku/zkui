@@ -4,7 +4,7 @@
     <br/>
     <div class="space-btn" @click="spaceChange">显示间隔</div>
     <div class="space" v-if="showSpace">间隔</div>
-    <div style="height:44*@rem;">
+    <div style="height:44px;">
       <sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
         <tab :line-width="1">
           <tab-item selected>正在正映</tab-item>

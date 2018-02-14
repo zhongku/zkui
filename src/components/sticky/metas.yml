@@ -32,7 +32,7 @@ extra: |
 
   ``` html
   // 禁用原生检测时，可以在外围加
-  <div style="height:44*@rem;">
+  <div style="height:44px;">
     <sticky scroll-box="vux_view_box_body" :offset="46" :check-sticky-support="false">
       <div>Blabla</div>
     </sticky>
@@ -42,7 +42,7 @@ extra: |
   <sticky scroll-box="vux_view_box_body" :offset="46">
     <div>Blabla</div>
   </sticky>
-  <div class="vux-sticky-fill" style="height:44*@rem;"><div>
+  <div class="vux-sticky-fill" style="height:44px;"><div>
   ```
 
   <p class="warning">

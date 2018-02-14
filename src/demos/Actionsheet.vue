@@ -71,8 +71,8 @@ Take Photo:
 Choose from photos:
   zh-CN: 从相册选择
 Actionsheet header:
-  en: 'Are you sure?<br/><span style="color:#666;font-size:12*@rem;">Once deleted, you will never find it.</span>'
-  zh-CN: '确定咩?<br/><span style="color:#666;font-size:12*@rem;">删除后就无法撤消了哦</span>'
+  en: 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>'
+  zh-CN: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
 '<span style="color:red">Delete</span>':
   zh-CN: '<span style="color:red">删除</span>'
 Array menu:

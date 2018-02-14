@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="padding: 15*@rem;">
+    <div style="padding: 15px;">
       <color-picker :colors="colors1" v-model="color1"></color-picker>
       <br>
       <color-picker :colors="colors1" v-model="color1" size="middle"></color-picker>

@@ -130,7 +130,7 @@
     </group>
     <div v-transfer-dom>
       <popup v-model="showPopup" class="checker-popup">
-        <div style="padding:10px 10px 40px 10*@rem;">
+        <div style="padding:10px 10px 40px 10px;">
           <p style="padding: 5px 5px 5px 2*@rem;color:#888;">Colors</p>
           <checker
           v-model="demo4"

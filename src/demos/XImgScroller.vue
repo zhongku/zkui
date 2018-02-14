@@ -3,8 +3,8 @@
     <scroller lock-x scrollbar-y height="600px" ref="scroller" style="border-bottom:1px solid green">
       <div>
         <div v-for="src in list" style="background-color:yellow;text-align:center;">
-          <span style="font-size:20*@rem;">Loading</span>
-          <x-img style="min-height:100*@rem;" :src="src" v-if="render" :scroller="$refs.scroller" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="300"></x-img>
+          <span style="font-size:20px;">Loading</span>
+          <x-img style="min-height:100px;" :src="src" v-if="render" :scroller="$refs.scroller" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="300"></x-img>
         </div>
       </div>
     </scroller>

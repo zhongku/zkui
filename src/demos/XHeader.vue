@@ -19,7 +19,7 @@
     <br>
     <x-header>
       <span>overwrite-left</span>
-      <x-icon slot="overwrite-left" type="navicon" size="35" style="fill:#fff;position:relative;top:-8*@rem;left:-3*@rem;"></x-icon>
+      <x-icon slot="overwrite-left" type="navicon" size="35" style="fill:#fff;position:relative;top:-8*@rem;left:-3px;"></x-icon>
     </x-header>
     <br>
     <x-header style="background-color:#000;">custom background color</x-header>

@@ -1,10 +1,10 @@
 <template>
   <div class="vux-demo">
-    <div style="padding: 10*@rem;">
+    <div style="padding: 10px;">
       <br>
-      <div style="height:10*@rem;" class="border-top"></div>
+      <div style="height:10px;" class="border-top"></div>
       <br>
-      <div style="height:10*@rem;" class="border"></div>
+      <div style="height:10px;" class="border"></div>
       <br>
       <p>{{ $t('对比不做处理的1px边框') }}</p>
       <br/>

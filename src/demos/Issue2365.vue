@@ -11,7 +11,7 @@
         <tab-item>即将上映</tab-item>
       </tab>
     </sticky>
-    <div class="vux-sticky-fill" style="height: 44*@rem;"></div>
+    <div class="vux-sticky-fill" style="height: 44px;"></div>
 
     <!-- 新的用法，全部fixed定位 -->
     <!-- <sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
@@ -20,10 +20,10 @@
         <tab-item>即将上映</tab-item>
       </tab>
     </sticky>
-    <div class="vux-sticky-fill" style="height: 44*@rem;"></div> -->
+    <div class="vux-sticky-fill" style="height: 44px;"></div> -->
 
     <!-- 旧的用法 -->
-    <!-- <div style="height: 44*@rem;">
+    <!-- <div style="height: 44px;">
       <sticky scroll-box="vux_view_box_body" ref="sticky" :offset="46" :check-sticky-support="false">
         <tab :line-width="1">
           <tab-item selected>正在正映</tab-item>

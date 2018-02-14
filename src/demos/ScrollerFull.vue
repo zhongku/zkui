@@ -32,7 +32,7 @@
       <scroller lock-x scrollbar-y>
         <div>
           <div style="margin: 10*@rem;overflow: hidden;" v-for="item in list">
-            <masker style="border-radius: 2*@rem;">
+            <masker style="border-radius: 2px;">
               <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
               <div slot="content" class="m-title">
                 {{item.title}}

@@ -1,5 +1,5 @@
 <template>
-  <div style="padding:15*@rem;">
+  <div style="padding:15px;">
     <br>
     <div class="reddot-demo vux-reddot">{{ $t('Hi, you got a new message') }} </div>
     <br>

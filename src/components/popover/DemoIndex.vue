@@ -1,27 +1,27 @@
 <template>
   <div>
-    <popover placement="top" style="margin: 20*@rem;" @on-show="onShow" @on-hide="onHide">
+    <popover placement="top" style="margin: 20px;" @on-show="onShow" @on-hide="onHide">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
       <button class="btn btn-default">Popover on top</button>
     </popover>
 
-    <popover placement="bottom" style="margin: 20*@rem;">
+    <popover placement="bottom" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
       <button class="btn btn-default">Popover on bottom</button>
     </popover>
 
-    <popover placement="left" style="margin: 20*@rem;">
+    <popover placement="left" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>
       <button class="btn btn-default">Popover on left</button>
     </popover>
 
-    <popover placement="right" style="margin: 20*@rem;">
+    <popover placement="right" style="margin: 20px;">
       <div slot="content" class="popover-demo-content">
         hello world
       </div>

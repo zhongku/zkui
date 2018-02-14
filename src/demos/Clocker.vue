@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p style="padding:15*@rem;">
+    <p style="padding:15px;">
       <span> {{ $t('Basic Usage') }}: </span>
       <clocker :time="time1"></clocker>
     </p>

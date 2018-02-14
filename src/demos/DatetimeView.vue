@@ -2,7 +2,7 @@
   <div>
     <datetime-view v-model="value1" ref="datetime" :format="format"></datetime-view>
     <p class="info">{{ $t('Current value') }}: {{ value1 }}</p>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button @click.native="changeValue('2017-11-11')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2017-11-11') }} </x-button>
       <x-button @click.native="changeValue('2016-08-08')" :disabled="format !== 'YYYY-MM-DD'" type="primary"> {{ $t('Set 2016-08-08') }} </x-button>
       <x-button @click.native="toggleFormat" type="primary"> {{ $t('Toggle format') }} </x-button>

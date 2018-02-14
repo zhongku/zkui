@@ -7,11 +7,11 @@
       <actionsheet :menus="menus" v-model="showMenu" @on-click-menu="changeLocale"></actionsheet>
     </div>
 
-    <drawer width="200*@rem;" :show.sync="drawerVisibility" :show-mode="showModeValue" :placement="showPlacementValue" :drawer-style="{'background-color':'#e60044', width: '200px'}">
+    <drawer width="14.2857rem;" :show.sync="drawerVisibility" :show-mode="showModeValue" :placement="showPlacementValue" :drawer-style="{'background-color':'#e60044', width: '14.2857rem'}">
 
       <!-- drawer content -->
       <div slot="drawer">
-        <group title="Drawer demo(beta)" style="margin-top:20*@rem;">
+        <group title="Drawer demo(beta)" style="margin-top:20px;">
           <cell title="Demo" link="/demo" value="演示" @click.native="drawerVisibility = false">
           </cell>
           <cell title="Buy me a coffee" link="project/donate" @click.native="drawerVisibility = false">
@@ -29,11 +29,11 @@
       </div>
 
       <!-- main content -->
-      <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
+      <view-box ref="viewBox" body-padding-top="3.2857rem" body-padding-bottom="3.9286rem">
 
         <x-header slot="header" style="width:100%;position:absolute;left:0;top:0;z-index:100;" :left-options="leftOptions" :right-options="rightOptions" :title="title" :transition="headerTransition" @on-click-more="onClickMore">
           <span v-if="route.path === '/' || route.path === '/component/drawer'" slot="overwrite-left" @click="drawerVisibility = !drawerVisibility">
-            <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8*@rem;left:-3*@rem;"></x-icon>
+            <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-0.5714rem;left:-0.2143rem;"></x-icon>
           </span>
         </x-header>
 
@@ -44,7 +44,7 @@
 
         <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="!isTabbarDemo" slot="bottom">
           <tabbar-item :link="{path:'/'}" :selected="route.path === '/'">
-            <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2*@rem;">&#xe637;</span>
+            <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -0.1429rem;">&#xe637;</span>
             <span slot="label">Home</span>
           </tabbar-item>
           <tabbar-item :link="{path:'/demo'}" :selected="isDemo" badge="9">
@@ -230,11 +230,7 @@
     font-size: 22*@rem;
     color: #888;
   }
-  .weui-tabbar.vux-demo-tabbar {
-    /** backdrop-filter: blur(10px);
-    background-color: none;
-    background: rgba(247, 247, 250, 0.5);**/
-  }
+
   .vux-demo-tabbar .weui-bar__item_on .demo-icon-22 {
     color: #f70968;
   }

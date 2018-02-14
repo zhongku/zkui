@@ -1,5 +1,5 @@
 <template>
-  <div class="vux-range-input-box" style="position:relative;margin-right:30*@rem;margin-left:50*@rem;">
+  <div class="vux-range-input-box" style="position:relative;margin-right:30*@rem;margin-left:50px;">
     <input class="vux-range-input" v-model.number="currentValue">
   </div>
 </template>

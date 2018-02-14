@@ -27,7 +27,7 @@
       <cell title="current value" :value="dynamiValue + ''"></cell>
     </group>
     <br>
-    <div style="margin:0 10*@rem;">
+    <div style="margin:0 10px;">
       <x-button type="primary" @click.native="update">update min = {{min}}, max = {{max}} and step = {{step}}</x-button>
     </div>
 

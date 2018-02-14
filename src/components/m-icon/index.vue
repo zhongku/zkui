@@ -18,7 +18,7 @@
       spin: Boolean,
       size :{
         type: String,
-        default:'1rem'
+        default:'2rem'
       }
     },
     data () {

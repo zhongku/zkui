@@ -1,7 +1,7 @@
 <template>
   <div>
     <checklist :title="$t('Basic Usage')" :label-position="labelPosition" required :options="commonList" v-model="checklist001" @on-change="change"></checklist>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button @click.native="labelPosition = labelPosition === 'left' ? '' : 'left'" type="primary"> {{ $t('Switch the position of labels') }} </x-button>
       <x-button @click.native="selectFirst" type="primary"> {{ $t('Select first option') }} </x-button>
       <x-button @click.native="selectFirstTwo" type="primary"> {{ $t('Select first two') }} </x-button>
@@ -20,7 +20,7 @@
     <group>
       <cell-box>{{ fullValues }}</cell-box>
     </group>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button type="primary" @click.native="fullValues = $refs.demoObject.getFullValue()">getFullValue()</x-button>
     </div>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <check-icon :value.sync="demo1"> {{ $t('Do you agree?') }} ({{ demo1 }})</check-icon>
       <br>
       <br>

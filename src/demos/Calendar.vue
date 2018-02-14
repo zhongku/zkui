@@ -4,7 +4,7 @@
       <calendar :readonly="readonly" v-model="demo1" :title="$t('Basic Usage')" disable-past placeholder="placeholder" @on-show="log('show')" @on-hide="log('hide')"></calendar>
     </group>
 
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button type="primary" @click.native="readonly = !readonly">{{ $t('Toggle readonly') }}</x-button>
     </div>
 
@@ -29,11 +29,11 @@
       <cell-box align-items="flex-start">
         <span class="selected-days">value:</span>
         <div>
-          <badge v-for="day in demo6" :text="day" :key="day" style="margin-right:10*@rem;"></badge>
+          <badge v-for="day in demo6" :text="day" :key="day" style="margin-right:10px;"></badge>
         </div>
       </cell-box>
     </group>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button type="primary" @click.native="demo6 = []">{{ $t('Empty value') }}</x-button>
     </div>
   </div>

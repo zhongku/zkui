@@ -2,7 +2,7 @@
   <div>
     <scroller lock-x scrollbar-y use-pulldown @on-pulldown-loading="load" enable-horizontal-swiping ref="scroller" height="400px">
        <div class="box2">
-          <div style="height:180*@rem;">
+          <div style="height:180px;">
             <swiper :list="list" direction="horizontal" auto height="180px"></swiper>
           </div>
           <p v-for="i in 80">placeholder {{i}}</p>

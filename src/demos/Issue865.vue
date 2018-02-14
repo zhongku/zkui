@@ -6,7 +6,7 @@
         <span slot="right" @click="passwordType=passwordType === 'password' ? 'text' : 'password'">显示{{passwordType === 'password' ? '明文' : '密文'}}</span>
       </x-input>
     </group>
-    <div style="padding:15*@rem;">
+    <div style="padding:15px;">
       <x-button @click.native="getValid" type="primary">GET valid</x-button>
     </div>
   </div>

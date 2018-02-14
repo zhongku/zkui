@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin: 10*@rem;overflow: hidden;" v-for="item in list">
-      <masker style="border-radius: 2*@rem;">
+      <masker style="border-radius: 2px;">
         <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
         <div slot="content" class="m-title">
           {{item.title}}
@@ -11,7 +11,7 @@
       </masker>
     </div>
     <div style="margin: 10*@rem;overflow: hidden;">
-      <masker style="border-radius: 2*@rem;" color="F9C90C" :opacity="0.8">
+      <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
         <div class="m-img" style="background-image:url(https://cdn.xiaotaojiang.com/uploads/56/4b3601364b86fdfd234ef11d8712ad/_.jpg)"></div>
         <div slot="content" class="m-title">
           VUX

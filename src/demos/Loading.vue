@@ -6,10 +6,10 @@
     <div v-transfer-dom>
       <loading :show="show1" :text="text1"></loading>
     </div>
-    <div style="padding: 15*@rem;">
+    <div style="padding: 15px;">
       <x-button @click.native="showLoading" type="primary">{{ $t('Show loading') }}</x-button>
     </div>
-    <div style="padding: 15*@rem;">
+    <div style="padding: 15px;">
       <x-button @click.native="showDelayLoading" type="primary">{{ $t('Show delay loading') }}</x-button>
     </div>
   </div>

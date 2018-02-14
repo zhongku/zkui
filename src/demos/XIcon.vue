@@ -5,7 +5,7 @@
         <x-icon type="ios-plus" class="cell-x-icon" @click="console"></x-icon>
       </cell>
     </group>
-    <div style="padding: 15*@rem;">
+    <div style="padding: 15px;">
 
       <!-- <x-icon type="ios-heart" size="30"></x-icon>
       <x-icon type="ios-heart-outline" size="30"></x-icon> -->
