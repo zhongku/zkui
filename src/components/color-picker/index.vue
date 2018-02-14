@@ -95,12 +95,6 @@ export default {
 .vux-color-white {
   border: 1px solid #ccc;
 }
-.vux-color-white .vux-color-checked:before {
-  color: #ccc;
-}
-.vux-color-picker-small .vux-color-checked:before{
-
-}
 .vux-color-picker-middle .vux-color-checked:before{
   font-size: @h3-font-size;;
 }
