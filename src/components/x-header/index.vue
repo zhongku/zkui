@@ -87,12 +87,12 @@ back_text:
 
   .vux-header {
     position: relative;
-    padding: 3px 0;
+    padding: 0.1875rem 0;
     box-sizing: border-box;
     background-color: @header-background-color;
   }
   .vux-header .vux-header-title {
-    line-height: 40px;
+    line-height: 2.5rem;
     text-align: center;
     font-size: @h3-font-size;
     font-weight: 400;
@@ -100,8 +100,8 @@ back_text:
   }
   .vux-header-title-area,
   .vux-header .vux-header-title {
-    margin: 0 88px;
-    height: 40px;
+    margin: 0 5.5rem;
+    height: 2.5rem;
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,10 +113,10 @@ back_text:
   .vux-header .vux-header-left,
   .vux-header .vux-header-right {
     position: absolute;
-    top: 14px;
+    top: 0.875rem;
     display: block;
 
-    line-height: 21px;
+    line-height: 1.3125rem;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a,
@@ -124,7 +124,7 @@ back_text:
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
     float: left;
-    margin-right: 8px;
+    margin-right: 0.5rem;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a:active,
@@ -134,28 +134,28 @@ back_text:
     opacity: 0.5;
   }
   .vux-header .vux-header-left {
-    left: 18px;
+    left: 1.125rem;
   }
   .vux-header .vux-header-left .vux-header-back {
-    padding-left: 16px;
+    padding-left: 1rem;
   }
   .vux-header .vux-header-left .left-arrow {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -2px;
-    left: -5px;
+    width: 1.875rem;
+    height: 1.875rem;
+    top: -0.125rem;
+    left: -0.3125rem;
 
     &:before {
       content: '';
       position: absolute;
-      width: 9px;
-      height: 9px;
+      width: 0.5625rem;
+      height: 0.5625rem;
       border: 1px solid @header-arrow-color;
       border-width: 1px 0 0 1px;
       transform: rotate(315deg);
-      top: 8px;
-      left: 7px;
+      top: 0.5rem;
+      left: 0.4375rem;
     }
   }
   .vux-header .vux-header-right {
@@ -163,7 +163,7 @@ back_text:
   }
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
-    margin-left: 8px;
+    margin-left: 0.5rem;
     margin-right: 0;
   }
   .vux-header .vux-header-right .vux-header-more:after {

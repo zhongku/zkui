@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src="../assets/demo/filter_bg.jpg" style="width: 100%">
-    <search @result-click="resultClick" @on-change="getResult" :results="results" v-model="value" cancelText="取消" position="absolute" auto-scroll-to-top top="46px" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search"></search>
+    <search @result-click="resultClick" @on-change="getResult" :results="results" v-model="value" cancelText="取消" position="absolute" auto-scroll-to-top top="2.875rem" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search"></search>
     <group>
       <cell title="keyword">{{value}}</cell>
     </group>
