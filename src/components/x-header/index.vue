@@ -87,7 +87,7 @@ back_text:
 
   .vux-header {
     position: relative;
-    padding: 0.1875rem 0;
+    padding: 3px 0;
     box-sizing: border-box;
     background-color: @header-background-color;
   }
@@ -100,8 +100,8 @@ back_text:
   }
   .vux-header-title-area,
   .vux-header .vux-header-title {
-    margin: 0 5.5rem;
-    height: 2.5rem;
+    margin: 0 88*@rem;
+    height: 40*@rem;
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,10 +113,10 @@ back_text:
   .vux-header .vux-header-left,
   .vux-header .vux-header-right {
     position: absolute;
-    top: 0.875rem;
+    top: 14px;
     display: block;
 
-    line-height: 1.3125rem;
+    line-height: 21px;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a,
@@ -124,7 +124,7 @@ back_text:
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
     float: left;
-    margin-right: 0.5rem;
+    margin-right: 8px;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a:active,
@@ -134,28 +134,28 @@ back_text:
     opacity: 0.5;
   }
   .vux-header .vux-header-left {
-    left: 1.125rem;
+    left: 18px;
   }
   .vux-header .vux-header-left .vux-header-back {
-    padding-left: 1rem;
+    padding-left: 16px;
   }
   .vux-header .vux-header-left .left-arrow {
     position: absolute;
-    width: 1.875rem;
-    height: 1.875rem;
-    top: -0.125rem;
-    left: -0.3125rem;
+    width: 30*@rem;
+    height: 30*@rem;
+    top: -2px;
+    left: -5px;
 
     &:before {
       content: '';
       position: absolute;
-      width: 0.5625rem;
-      height: 0.5625rem;
+      width: 9px;
+      height: 9px;
       border: 1px solid @header-arrow-color;
       border-width: 1px 0 0 1px;
       transform: rotate(315deg);
-      top: 0.5rem;
-      left: 0.4375rem;
+      top: 8px;
+      left: 7px;
     }
   }
   .vux-header .vux-header-right {
@@ -163,7 +163,7 @@ back_text:
   }
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
-    margin-left: 0.5rem;
+    margin-left: 8px;
     margin-right: 0;
   }
   .vux-header .vux-header-right .vux-header-more:after {

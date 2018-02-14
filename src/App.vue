@@ -29,7 +29,7 @@
       </div>
 
       <!-- main content -->
-      <view-box ref="viewBox" body-padding-top="2.875rem" body-padding-bottom="3.4375rem">
+      <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
 
         <x-header slot="header" style="width:100%;position:absolute;left:0;top:0;z-index:100;" :left-options="leftOptions" :right-options="rightOptions" :title="title" :transition="headerTransition" @on-click-more="onClickMore">
           <span v-if="route.path === '/' || route.path === '/component/drawer'" slot="overwrite-left" @click="drawerVisibility = !drawerVisibility">
@@ -227,13 +227,13 @@
 
   .demo-icon-22 {
     font-family: 'vux-demo';
-    font-size: 1.375rem;
+    font-size: 22px;
     color: #888;
   }
   .weui-tabbar.vux-demo-tabbar {
     /** backdrop-filter: blur(10px);
-      background-color: none;
-      background: rgba(247, 247, 250, 0.5);**/
+    background-color: none;
+    background: rgba(247, 247, 250, 0.5);**/
   }
   .vux-demo-tabbar .weui-bar__item_on .demo-icon-22 {
     color: #f70968;
@@ -249,9 +249,9 @@
   .vux-demo-tabbar-component {
     background-color: #f70968;
     color: #fff;
-    border-radius: 0.4375rem;
+    border-radius: 7px;
     padding: 0 4px;
-    line-height: 0.875rem;
+    line-height: 14px;
   }
   .weui-tabbar__icon + .weui-tabbar__label {
     margin-top: 0 !important;
@@ -277,12 +277,12 @@
 
   .demo-icon {
     font-family: 'vux-demo';
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #04be02;
   }
 
   .demo-icon-big {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   .demo-icon:before {
@@ -291,7 +291,7 @@
 
   .router-view {
     width: 100%;
-    top: 2.875rem;
+    top: 46px;
   }
   .vux-pop-out-enter-active,
   .vux-pop-out-leave-active,
@@ -300,7 +300,7 @@
     will-change: transform;
     transition: all 500ms;
     height: 100%;
-    top: 2.875rem;
+    top: 46px;
     position: absolute;
     backface-visibility: hidden;
     perspective: 1000;

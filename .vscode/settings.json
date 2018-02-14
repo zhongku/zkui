@@ -20,5 +20,6 @@
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "standard.enable": true,
   "vetur.format.styleInitialIndent": true,
-  "vetur.format.scriptInitialIndent": true
+  "vetur.format.scriptInitialIndent": true,
+  "px-to-rem.px-per-rem": 14
 }
