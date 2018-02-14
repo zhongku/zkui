@@ -51,7 +51,7 @@ export default {
   line-height: 50px;
 }
 .vux-tabbar-simple .weui-tabbar__label {
-  font-size: @font-size-base;
+  
   line-height: 50px;
 }
 </style>

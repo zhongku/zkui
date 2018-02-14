@@ -248,7 +248,7 @@ export default {
 .meta_praise .praise_num {
   display: inline-block;
   vertical-align: middle;
-  font-size: @font-size-base;
+  
   color: #666;
 }
 

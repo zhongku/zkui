@@ -130,6 +130,6 @@ export default {
   padding-left: 15px;
   line-height: 28px;
   color: #888;
-  font-size: @font-size-base;
+  
 }
 </style>

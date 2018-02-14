@@ -120,7 +120,7 @@ export default {
     width: 100%;
     height: @button-tab-height;
     padding: 0;
-    font-size: @font-size-base;
+    
     line-height: @button-tab-line-height;
     text-align: center;
     color: @button-tab-default-text-color;

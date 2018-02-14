@@ -141,7 +141,7 @@ export default {
   box-sizing: border-box;
   background: linear-gradient(180deg, #e5e5e5, #e5e5e5, rgba(229, 229, 229, 0)) bottom left no-repeat;
   background-size: 100% 1px;
-  font-size: @font-size-base;
+  
   text-align: center;
   line-height: 44px;
   color: @tab-text-default-color;
@@ -181,7 +181,7 @@ export default {
   border-radius: 30px;
   margin: auto 0 auto 4px;
   line-height: 18px;
-  font-size: @font-size-base;
+  
   background-clip: padding-box;
   vertical-align: middle;
 }

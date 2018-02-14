@@ -115,7 +115,7 @@ back_text:
     position: absolute;
     top: 14px;
     display: block;
-    font-size: @font-size-base;
+
     line-height: 21px;
     color: @header-text-color;
   }

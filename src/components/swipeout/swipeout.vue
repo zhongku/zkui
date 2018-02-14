@@ -38,7 +38,7 @@ export default {
 .vux-swipeout-button {
   height: 100%;
   text-align: center;
-  font-size: @font-size-base;
+  
   color: @swipeout-button-font-color;
   border: none;
 }

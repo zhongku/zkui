@@ -99,7 +99,7 @@ export default {
   color: #ccc;
 }
 .vux-color-picker-small .vux-color-checked:before{
-  font-size: @font-size-base;
+
 }
 .vux-color-picker-middle .vux-color-checked:before{
   font-size: @h3-font-size;;

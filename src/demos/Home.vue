@@ -47,7 +47,7 @@ export default {
 <style scoped>
 .vue-version {
   text-align: center;
-  font-size: @font-size-base;
+
   color: #ccc;
 }
 .center {
@@ -78,7 +78,7 @@ body {
 .demo-tip {
   background-color: #fefcec;
   color: #f76a24;
-  font-size: @font-size-base;
+
   padding: 5px 10px;
   margin-top: 15px;
 }

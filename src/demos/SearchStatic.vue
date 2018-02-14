@@ -59,7 +59,7 @@
 <style scoped>
   p {
     padding: 10px 15px;
-    font-size: @font-size-base;
+
     color: #888;
   }
 </style>

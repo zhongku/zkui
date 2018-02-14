@@ -95,7 +95,7 @@ export default {
 .card-demo-flex > div {
   flex: 1;
   text-align: center;
-  font-size: @font-size-base;
+  
 }
 .card-demo-flex span {
   color: #f74c31;

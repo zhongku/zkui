@@ -102,7 +102,7 @@
       top: 0;
       width: 14px;
       height: 14px;
-      font-size: @font-size-base;
+
       line-height: 14px;
       text-align: center;
       color: #fff;
@@ -120,7 +120,7 @@
   [class*=' weui-wepay-flow__title-'] {
     position: absolute;
     color: #999999;
-    font-size: @font-size-base;
+
     font-weight: normal;
     white-space: nowrap;
     text-align: center;
@@ -247,12 +247,12 @@
   }
   .weui-wepay-flow__title {
     color: #999999;
-    font-size: @font-size-base;
+
     font-weight: normal;
   }
   .weui-wepay-flow__info {
     color: #999999;
-    font-size: @font-size-base;
+
   }
   .weui-wepay-flow__process {
     display: none;
@@ -345,7 +345,7 @@
     top: 4px;
     width: 14px;
     height: 14px;
-    font-size: @font-size-base;
+
     line-height: 14px;
     text-align: center;
     color: #fff;
@@ -376,11 +376,11 @@
   }
   .weui-wepay-flow-auto__title {
     color: #999999;
-    font-size: @font-size-base;
+
     font-weight: normal;
   }
   .weui-wepay-flow-auto__info {
     color: #999999;
-    font-size: @font-size-base;
+
   }
 </style>
