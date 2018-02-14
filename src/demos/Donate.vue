@@ -30,6 +30,6 @@ export default {
 }
 .desc {
   color: #999;
-  font-size: 12px;
+  font-size: @font-size-base;
 }
 </style>

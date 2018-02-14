@@ -99,9 +99,9 @@ export default {
   color: #ccc;
 }
 .vux-color-picker-small .vux-color-checked:before{
-  font-size: 10px;
+  font-size: @font-size-base;
 }
 .vux-color-picker-middle .vux-color-checked:before{
-  font-size: 18px;
+  font-size: @h3-font-size;;
 }
 </style>

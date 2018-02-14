@@ -89,7 +89,7 @@ export default {
     height: 20px;
 
     &.weui-icon-success-no-circle::before {
-      font-size: 14px;
+      font-size: @font-size-base;
       position: absolute;
       left: 3px;
       top: 3px;

@@ -36,7 +36,7 @@ export default {
   text-align: center;
   padding-top: 20px;
   color: #fff;
-  font-size: 18px;
+  font-size: @h3-font-size;;
 }
 .center img {
   width: 100px;

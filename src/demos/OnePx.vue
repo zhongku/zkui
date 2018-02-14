@@ -155,7 +155,7 @@ export default {
 .item {
   display: block;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: @font-size-base;
   color: #303030;
   position: relative;
   margin-bottom: 10px;
@@ -172,7 +172,7 @@ export default {
 }
 
 .text {
-  font-size: 13px;
+  font-size: @font-size-base;
   text-align: center;
   line-height: 1em;
 }

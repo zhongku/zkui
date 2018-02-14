@@ -198,7 +198,7 @@ export default {
 
 <style scoped>
 .copyright {
-  font-size: 12px;
+  font-size: @font-size-base;
   color: #ccc;
   text-align: center;
 }
@@ -208,7 +208,7 @@ export default {
   border-right: none;
 }
 .text-scroll p{
-  font-size: 12px;
+  font-size: @font-size-base;
   text-align: center;
   line-height: 30px;
 }

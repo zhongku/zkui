@@ -19,7 +19,7 @@ export default {
   text-align: center;
   background: @badge-bg-color;
   color: #fff;
-  font-size: 12px;
+  font-size: @font-size-base;
   height: 16px;
   line-height: 16px;
   border-radius: 8px;

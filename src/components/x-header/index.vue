@@ -94,7 +94,7 @@ back_text:
   .vux-header .vux-header-title {
     line-height: 40px;
     text-align: center;
-    font-size: 18px;
+    font-size: @h3-font-size;
     font-weight: 400;
     color: @header-title-color;
   }
@@ -115,7 +115,7 @@ back_text:
     position: absolute;
     top: 14px;
     display: block;
-    font-size: 14px;
+    font-size: @font-size-base;
     line-height: 21px;
     color: @header-text-color;
   }

@@ -42,44 +42,40 @@
 @body-bg: @white;
 @body-color: @gray-900;
 
-
-
 // stylelint-enable value-keyword-case
 
-@font-size-base:              1rem ; // Assumes the browser default, typically `16px`
-@font-size-lg:                (@font-size-base * 1.25) ;
-@font-size-sm:                (@font-size-base * .875) ;
+@font-size-base: 1rem; // 默认字体大小 14px
+@font-size-lg: (@font-size-base * 1.25); // 17.5px
+@font-size-sm: (@font-size-base * 0.875); // 12.5px
 
-@font-weight-light:           300 ;
-@font-weight-normal:          400 ;
-@font-weight-bold:            700 ;
+@font-weight-light: 300;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
 
-@font-weight-base:            @font-weight-normal ;
-@line-height-base:            1.5 ;
+@font-weight-base: @font-weight-normal;
+@line-height-base: 1.5;
 
-@h1-font-size:                @font-size-base * 2.5 ;
-@h2-font-size:                @font-size-base * 2 ;
-@h3-font-size:                @font-size-base * 1.75 ;
-@h4-font-size:                @font-size-base * 1.5 ;
-@h5-font-size:                @font-size-base * 1.25 ;
-@h6-font-size:                @font-size-base ;
+@h1-font-size: @font-size-base * 2; // 28px
+@h2-font-size: @font-size-base * 1.8; // 25.2
+@h3-font-size: @font-size-base * 1.4; // 19.6
+@h4-font-size: @font-size-base * 1.25; // 17.5px
+@h5-font-size: @font-size-base * 1; // 14px
+@h6-font-size: @font-size-base * 0.875; // 12.5px
 
+@display1-size: 6rem;
+@display2-size: 5.5rem;
+@display3-size: 4.5rem;
+@display4-size: 3.5rem;
 
-@display1-size:               6rem ;
-@display2-size:               5.5rem ;
-@display3-size:               4.5rem ;
-@display4-size:               3.5rem ;
+@display1-weight: 300;
+@display2-weight: 300;
+@display3-weight: 300;
+@display4-weight: 300;
 
-@display1-weight:             300 ;
-@display2-weight:             300 ;
-@display3-weight:             300 ;
-@display4-weight:             300 ;
+@lead-font-size: (@font-size-base * 1.25);
+@lead-font-weight: 300;
 
-@lead-font-size:              (@font-size-base * 1.25) ;
-@lead-font-weight:            300 ;
-
-@small-font-size:             80% ;
-
+@small-font-size: 80%;
 
 // Links
 //
@@ -151,7 +147,7 @@
 */
 @cell-label-color: #000;
 @cell-font-size: 17px;
-@cell-tips-font-size: 14px;
+@cell-tips-font-size: @font-size-base;
 @cell-default-arrow-color: #c8c8cd;
 @cell-disabled-arrow-color: #e2e2e2;
 @cell-default-arrow-border-width: 2px;
@@ -205,7 +201,7 @@
 @button-global-height: 42px;
 @button-global-disabled-font-color: rgba(255, 255, 255, 0.6);
 @button-global-active-font-color: rgba(255, 255, 255, 0.6);
-@button-global-font-size: 18px;
+@button-global-font-size: @h3-font-size;;
 
 @button-warn-bg-color: #e64340;
 @button-warn-active-color: #ce3c39;

@@ -312,7 +312,7 @@ export default {
 .demo4-item {
   background-color: #ddd;
   color: #222;
-  font-size: 14px;
+  font-size: @font-size-base;
   padding: 5px 10px;
   margin-right: 10px;
   line-height: 18px;

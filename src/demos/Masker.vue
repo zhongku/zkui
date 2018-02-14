@@ -75,7 +75,7 @@ export default {
 }
 
 .m-time {
-  font-size: 12px;
+  font-size: @font-size-base;
   padding-top: 4px;
   border-top: 1px solid #f0f0f0;
   display: inline-block;

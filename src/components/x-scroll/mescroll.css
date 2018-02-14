@@ -60,7 +60,7 @@ body {
 
 .mescroll-downwarp .downwarp-tip,.mescroll-upwarp .upwarp-tip,.mescroll-upwarp .upwarp-nodata {
 	display: inline-block;
-	font-size: 12px;
+	font-size: @font-size-base;
 	color: gray;
 	vertical-align: middle
 }
@@ -113,7 +113,7 @@ body {
 
 .mescroll-empty .empty-tip {
 	margin-top: 6px;
-	font-size: 14px;
+	font-size: @font-size-base;
 	color: gray
 }
 

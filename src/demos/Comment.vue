@@ -149,7 +149,7 @@ export default {
 
 .discuss_item .discuss_extra_info {
   color: #8c8c8c;
-  font-size: 12px
+  font-size: @font-size-base
 }
 
 .discuss_item .discuss_extra_info a {
@@ -248,7 +248,7 @@ export default {
 .meta_praise .praise_num {
   display: inline-block;
   vertical-align: middle;
-  font-size: 13px;
+  font-size: @font-size-base;
   color: #666;
 }
 

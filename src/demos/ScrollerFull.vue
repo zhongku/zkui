@@ -95,7 +95,7 @@ export default {
 .box1 li{
   text-align: center;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: @font-size-base;
   line-height: 40px;
 }
 .content {

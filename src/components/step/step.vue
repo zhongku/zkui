@@ -100,7 +100,7 @@
   }
 
   .vux-step-item-checked::before {
-    font-size: 15px !important;
+    font-size: @font-size-base !important;
     line-height: 22px;
     margin: 0 !important;
     transform: translateY(-4px);
@@ -121,7 +121,7 @@
       line-height: 22px;
       border-radius: 99px;
       text-align: center;
-      font-size: 14px;
+      font-size: @font-size-base;
       transition: all 0.4s ease 0s;
       background: #fff none repeat scroll 0 0;
     }

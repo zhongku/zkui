@@ -76,7 +76,7 @@ export default {
   box-sizing: border-box;
 }
 .weui-wepay-pay__title {
-  font-size: 12px;
+  font-size: @font-size-base;
   color: #333333;
   font-weight: normal;
 }
@@ -131,12 +131,12 @@ export default {
   color: #EEEEEE;
 }
 .weui-wepay-pay__intro {
-  font-size: 12px;
+  font-size: @font-size-base;
   color: #9e9e9e;
   margin-top: 14px;
 }
 .weui-wepay-pay__info {
-  font-size: 12px;
+  font-size: @font-size-base;
   color: #9e9e9e;
   margin-top: 16px;
   text-align: center;
