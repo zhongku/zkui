@@ -23,12 +23,79 @@
 @theme-color: @brand;
 @opacity-disabled: 0.5;
 
+@white: #fff;
+@gray-100: #f8f9fa;
+@gray-200: #e9ecef;
+@gray-300: #dee2e6;
+@gray-400: #ced4da;
+@gray-500: #adb5bd;
+@gray-600: #6c757d;
+@gray-700: #495057;
+@gray-800: #343a40;
+@gray-900: #212529;
+@black: #000000;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+@body-bg: @white;
+@body-color: @gray-900;
+
+
+
+// stylelint-enable value-keyword-case
+
+@font-size-base:              1rem ; // Assumes the browser default, typically `16px`
+@font-size-lg:                (@font-size-base * 1.25) ;
+@font-size-sm:                (@font-size-base * .875) ;
+
+@font-weight-light:           300 ;
+@font-weight-normal:          400 ;
+@font-weight-bold:            700 ;
+
+@font-weight-base:            @font-weight-normal ;
+@line-height-base:            1.5 ;
+
+@h1-font-size:                @font-size-base * 2.5 ;
+@h2-font-size:                @font-size-base * 2 ;
+@h3-font-size:                @font-size-base * 1.75 ;
+@h4-font-size:                @font-size-base * 1.5 ;
+@h5-font-size:                @font-size-base * 1.25 ;
+@h6-font-size:                @font-size-base ;
+
+
+@display1-size:               6rem ;
+@display2-size:               5.5rem ;
+@display3-size:               4.5rem ;
+@display4-size:               3.5rem ;
+
+@display1-weight:             300 ;
+@display2-weight:             300 ;
+@display3-weight:             300 ;
+@display4-weight:             300 ;
+
+@lead-font-size:              (@font-size-base * 1.25) ;
+@lead-font-weight:            300 ;
+
+@small-font-size:             80% ;
+
+
+// Links
+//
+// Style anchor elements.
+
+@link-color: #586c94;
+@link-decoration: none;
+@link-hover-color: darken(@link-color, 15%);
+@link-hover-decoration: underline;
+
 /**
 * actionsheet
 */
 @actionsheet-label-primary-color: #1aad19;
 @actionsheet-label-warn-color: #e64340;
-@actionsheet-label-default-color: #000;
+@actionsheet-label-default-color: #000000;
 @actionsheet-label-disabled-color: #ccc;
 
 /**
@@ -241,7 +308,7 @@
 /**
 * form-preview
 */
-@form-preview-button-primary-color:fade(@brand, 80%); ;
+@form-preview-button-primary-color: fade(@brand, 80%);
 
 /**
 * sticky
@@ -306,7 +373,4 @@
 */
 @radio-checked-icon-color: @theme-color;
 
-/**
-* loadmore
-*/
 @load-more-line-color: #e5e5e5;

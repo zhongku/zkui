@@ -3,7 +3,7 @@ import objectAssign from 'object-assign'
 import Vue from 'vue'
 
 import App from './App'
-
+import './tools/rem'
 import Vuex from 'vuex'
 import vuexI18n from 'vuex-i18n'
 import VueRouter from 'vue-router'
@@ -27,7 +27,7 @@ const vuxLocales = require('json-loader!yaml-loader!./locales/all.yml')
 const componentsLocales = require('json-loader!yaml-loader!./locales/components.yml')
 
 const finalLocales = {
-  'en': objectAssign(vuxLocales['en'], componentsLocales['en']),
+  en: objectAssign(vuxLocales['en'], componentsLocales['en']),
   'zh-CN': objectAssign(vuxLocales['zh-CN'], componentsLocales['zh-CN'])
 }
 
@@ -35,7 +35,21 @@ for (let i in finalLocales) {
   Vue.i18n.add(i, finalLocales[i])
 }
 
-import { DatetimePlugin, CloseDialogsPlugin, ConfigPlugin, BusPlugin, LocalePlugin, DevicePlugin, ToastPlugin, AlertPlugin, ConfirmPlugin, LoadingPlugin, WechatPlugin, AjaxPlugin, AppPlugin } from 'vux'
+import {
+  DatetimePlugin,
+  CloseDialogsPlugin,
+  ConfigPlugin,
+  BusPlugin,
+  LocalePlugin,
+  DevicePlugin,
+  ToastPlugin,
+  AlertPlugin,
+  ConfirmPlugin,
+  LoadingPlugin,
+  WechatPlugin,
+  AjaxPlugin,
+  AppPlugin
+} from 'vux'
 
 Vue.use(LocalePlugin)
 const nowLocale = Vue.locale.get()
@@ -52,19 +66,19 @@ store.registerModule('vux', {
     direction: 'forward'
   },
   mutations: {
-    updateDemoPosition (state, payload) {
+    updateDemoPosition(state, payload) {
       state.demoScrollTop = payload.top
     },
-    updateLoadingStatus (state, payload) {
+    updateLoadingStatus(state, payload) {
       state.isLoading = payload.isLoading
     },
-    updateDirection (state, payload) {
+    updateDirection(state, payload) {
       state.direction = payload.direction
     }
   },
   actions: {
-    updateDemoPosition ({commit}, top) {
-      commit({type: 'updateDemoPosition', top: top})
+    updateDemoPosition({ commit }, top) {
+      commit({ type: 'updateDemoPosition', top: top })
     }
   }
 })
@@ -94,9 +108,9 @@ const wx = Vue.wechat
 const http = Vue.http
 
 /**
-* -------------------------- 微信分享 ----------------------
-* 请不要直接复制下面代码
-*/
+ * -------------------------- 微信分享 ----------------------
+ * 请不要直接复制下面代码
+ */
 
 if (process.env.NODE_ENV === 'production') {
   wx.ready(() => {
@@ -116,11 +130,21 @@ if (process.env.NODE_ENV === 'production') {
     })
   })
 
-  const permissions = JSON.stringify(['onMenuShareTimeline', 'onMenuShareAppMessage'])
+  const permissions = JSON.stringify([
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
+  ])
   const url = document.location.href
-  http.post('https://vux.li/jssdk?url=' + encodeURIComponent(url.split('#')[0]) + '&jsApiList=' + permissions).then(res => {
-    wx.config(res.data.data)
-  })
+  http
+    .post(
+      'https://vux.li/jssdk?url=' +
+        encodeURIComponent(url.split('#')[0]) +
+        '&jsApiList=' +
+        permissions
+    )
+    .then(res => {
+      wx.config(res.data.data)
+    })
 }
 
 const FastClick = require('fastclick')
@@ -151,25 +175,29 @@ document.addEventListener('touchend', () => {
 })
 methods.forEach(key => {
   let method = router[key].bind(router)
-  router[key] = function (...args) {
+  router[key] = function(...args) {
     isPush = true
     method.apply(null, args)
   }
 })
 
-router.beforeEach(function (to, from, next) {
-  store.commit('updateLoadingStatus', {isLoading: true})
+router.beforeEach(function(to, from, next) {
+  store.commit('updateLoadingStatus', { isLoading: true })
 
   const toIndex = history.getItem(to.path)
   const fromIndex = history.getItem(from.path)
 
   if (toIndex) {
-    if (!fromIndex || parseInt(toIndex, 10) > parseInt(fromIndex, 10) || (toIndex === '0' && fromIndex === '0')) {
-      store.commit('updateDirection', {direction: 'forward'})
+    if (
+      !fromIndex ||
+      parseInt(toIndex, 10) > parseInt(fromIndex, 10) ||
+      (toIndex === '0' && fromIndex === '0')
+    ) {
+      store.commit('updateDirection', { direction: 'forward' })
     } else {
       // 判断是否是ios左滑返回
-      if (!isPush && (Date.now() - endTime) < 377) {
-        store.commit('updateDirection', {direction: ''})
+      if (!isPush && Date.now() - endTime < 377) {
+        store.commit('updateDirection', { direction: '' })
       } else {
         store.commit('updateDirection', { direction: 'reverse' })
       }
@@ -178,7 +206,7 @@ router.beforeEach(function (to, from, next) {
     ++historyCount
     history.setItem('count', historyCount)
     to.path !== '/' && history.setItem(to.path, historyCount)
-    store.commit('updateDirection', {direction: 'forward'})
+    store.commit('updateDirection', { direction: 'forward' })
   }
 
   if (/\/http/.test(to.path)) {
@@ -189,9 +217,9 @@ router.beforeEach(function (to, from, next) {
   }
 })
 
-router.afterEach(function (to) {
+router.afterEach(function(to) {
   isPush = false
-  store.commit('updateLoadingStatus', {isLoading: false})
+  store.commit('updateLoadingStatus', { isLoading: false })
   if (process.env.NODE_ENV === 'production') {
     ga && ga('set', 'page', to.fullPath)
     ga && ga('send', 'pageview')
