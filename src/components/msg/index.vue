@@ -20,17 +20,17 @@
 </template>
 
 <script>
-import { go } from '../../libs/router'
+  import { go } from '../../libs/router'
 
-export default {
-  name: 'msg',
-  props: ['icon', 'title', 'description', 'buttons'],
-  methods: {
-    onClick(handler, link) {
-      typeof handler === 'function' && handler()
-      link && go(link, this.$router)
+  export default {
+    name: 'msg',
+    props: ['icon', 'title', 'description', 'buttons'],
+    methods: {
+      onClick (handler, link) {
+        typeof handler === 'function' && handler()
+        link && go(link, this.$router)
+      }
     }
   }
-}
 </script>
 

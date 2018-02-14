@@ -66,18 +66,18 @@ store.registerModule('vux', {
     direction: 'forward'
   },
   mutations: {
-    updateDemoPosition(state, payload) {
+    updateDemoPosition (state, payload) {
       state.demoScrollTop = payload.top
     },
-    updateLoadingStatus(state, payload) {
+    updateLoadingStatus (state, payload) {
       state.isLoading = payload.isLoading
     },
-    updateDirection(state, payload) {
+    updateDirection (state, payload) {
       state.direction = payload.direction
     }
   },
   actions: {
-    updateDemoPosition({ commit }, top) {
+    updateDemoPosition ({ commit }, top) {
       commit({ type: 'updateDemoPosition', top: top })
     }
   }
@@ -175,13 +175,13 @@ document.addEventListener('touchend', () => {
 })
 methods.forEach(key => {
   let method = router[key].bind(router)
-  router[key] = function(...args) {
+  router[key] = function (...args) {
     isPush = true
     method.apply(null, args)
   }
 })
 
-router.beforeEach(function(to, from, next) {
+router.beforeEach(function (to, from, next) {
   store.commit('updateLoadingStatus', { isLoading: true })
 
   const toIndex = history.getItem(to.path)
@@ -217,7 +217,7 @@ router.beforeEach(function(to, from, next) {
   }
 })
 
-router.afterEach(function(to) {
+router.afterEach(function (to) {
   isPush = false
   store.commit('updateLoadingStatus', { isLoading: false })
   if (process.env.NODE_ENV === 'production') {

@@ -8,17 +8,17 @@
 </template>
 
 <script>
-export default {
-  name: 'flow-state',
-  props: {
-    state: [String, Number],
-    title: String,
-    isDone: Boolean
-  },
-  computed: {
-    titlePosition () {
-      return this.$parent.orientation === 'vertical' ? 'right' : 'bottom'
+  export default {
+    name: 'flow-state',
+    props: {
+      state: [String, Number],
+      title: String,
+      isDone: Boolean
+    },
+    computed: {
+      titlePosition () {
+        return this.$parent.orientation === 'vertical' ? 'right' : 'bottom'
+      }
     }
   }
-}
 </script>

@@ -28,21 +28,37 @@ const plugin = {
         // destroy watcher
         watcher && watcher()
         if (typeof options === 'string') {
-          mergeOptions($vm, objectAssign({}, pluginOptions, {text: options}))
+          mergeOptions($vm, objectAssign({}, pluginOptions, { text: options }))
         } else if (typeof options === 'object') {
           mergeOptions($vm, objectAssign({}, pluginOptions, options))
         }
-        if (typeof options === 'object' && options.onShow || options.onHide) {
-          watcher = $vm.$watch('show', (val) => {
+        if ((typeof options === 'object' && options.onShow) || options.onHide) {
+          watcher = $vm.$watch('show', val => {
             val && options.onShow && options.onShow($vm)
             val === false && options.onHide && options.onHide($vm)
           })
         }
         $vm.show = true
       },
-      text (text, position = 'default') {
+      success (text, position = 'default') {
         this.show({
-          type: 'text',
+          type: 'success',
+          width: 'auto',
+          position,
+          text
+        })
+      },
+      warn (text, position = 'default') {
+        this.show({
+          type: 'warn',
+          width: 'auto',
+          position,
+          text
+        })
+      },
+      cancel (text, position = 'default') {
+        this.show({
+          type: 'cancel',
           width: 'auto',
           position,
           text

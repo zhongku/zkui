@@ -19,154 +19,154 @@
 </template>
 
 <script>
-import Base from '../../libs/base'
-import InlineDesc from '../inline-desc'
-import Autosize from 'autosize' // prop.autosize
+  import Base from '../../libs/base'
+  import InlineDesc from '../inline-desc'
+  import Autosize from 'autosize' // prop.autosize
 
-export default {
-  name: 'x-textarea',
-  minxins: [Base],
-  mounted() {
-    if (this.$slots && this.$slots['restricted-label']) {
-      this.hasRestrictedLabel = true
-    }
-    // prop.autosize
-    this.$nextTick(() => {
-      if (this.autosize) {
-        this.bindAutosize()
+  export default {
+    name: 'x-textarea',
+    minxins: [Base],
+    mounted () {
+      if (this.$slots && this.$slots['restricted-label']) {
+        this.hasRestrictedLabel = true
       }
-    })
-    // prop.autosize
-  },
-  components: {
-    InlineDesc
-  },
-  props: {
-    title: String,
-    inlineDesc: String,
-    showCounter: {
-      type: Boolean,
-      default: true
+      // prop.autosize
+      this.$nextTick(() => {
+        if (this.autosize) {
+          this.bindAutosize()
+        }
+      })
+      // prop.autosize
     },
-    max: Number,
-    value: String,
-    name: String,
-    placeholder: String,
-    readonly: Boolean,
-    rows: {
-      type: Number,
-      default: 3
+    components: {
+      InlineDesc
     },
-    cols: {
-      type: Number,
-      default: 30
+    props: {
+      title: String,
+      inlineDesc: String,
+      showCounter: {
+        type: Boolean,
+        default: true
+      },
+      max: Number,
+      value: String,
+      name: String,
+      placeholder: String,
+      readonly: Boolean,
+      rows: {
+        type: Number,
+        default: 3
+      },
+      cols: {
+        type: Number,
+        default: 30
+      },
+      height: Number,
+      // https://github.com/yisibl/blog/issues/3
+      autocomplete: {
+        type: String,
+        default: 'off'
+      },
+      autocapitalize: {
+        type: String,
+        default: 'off'
+      },
+      autocorrect: {
+        type: String,
+        default: 'off'
+      },
+      spellcheck: {
+        type: String,
+        default: 'false'
+      },
+      autosize: Boolean // prop.autosize
     },
-    height: Number,
-    // https://github.com/yisibl/blog/issues/3
-    autocomplete: {
-      type: String,
-      default: 'off'
+    created () {
+      this.currentValue = this.value
     },
-    autocapitalize: {
-      type: String,
-      default: 'off'
-    },
-    autocorrect: {
-      type: String,
-      default: 'off'
-    },
-    spellcheck: {
-      type: String,
-      default: 'false'
-    },
-    autosize: Boolean // prop.autosize
-  },
-  created() {
-    this.currentValue = this.value
-  },
-  watch: {
-    // prop.autosize
-    autosize(val) {
-      this.unbindAutosize()
-      if (val) {
-        this.bindAutosize()
+    watch: {
+      // prop.autosize
+      autosize (val) {
+        this.unbindAutosize()
+        if (val) {
+          this.bindAutosize()
+        }
+      },
+      // prop.autosize
+      value (val) {
+        this.currentValue = val
+      },
+      currentValue (newVal) {
+        if (this.max && newVal && newVal.length > this.max) {
+          this.currentValue = newVal.slice(0, this.max)
+        }
+        this.$emit('input', this.currentValue)
+        this.$emit('on-change', this.currentValue)
       }
     },
-    // prop.autosize
-    value(val) {
-      this.currentValue = val
-    },
-    currentValue(newVal) {
-      if (this.max && newVal && newVal.length > this.max) {
-        this.currentValue = newVal.slice(0, this.max)
+    data () {
+      return {
+        hasRestrictedLabel: false,
+        currentValue: ''
       }
-      this.$emit('input', this.currentValue)
-      this.$emit('on-change', this.currentValue)
-    }
-  },
-  data() {
-    return {
-      hasRestrictedLabel: false,
-      currentValue: ''
-    }
-  },
-  computed: {
-    count() {
-      let len = 0
-      if (this.currentValue) {
-        len = this.currentValue.replace(/\n/g, 'aa').length
-      }
-      return len > this.max ? this.max : len
     },
-    textareaStyle() {
-      if (this.height) {
+    computed: {
+      count () {
+        let len = 0
+        if (this.currentValue) {
+          len = this.currentValue.replace(/\n/g, 'aa').length
+        }
+        return len > this.max ? this.max : len
+      },
+      textareaStyle () {
+        if (this.height) {
+          return {
+            height: `${this.height}px`
+          }
+        }
+      },
+      labelStyles () {
         return {
-          height: `${this.height}px`
+          width: this.$parent.labelWidth || (this.labelWidth + 'em'),
+          textAlign: this.$parent.labelAlign,
+          marginRight: this.$parent.labelMarginRight
+        }
+      },
+      labelWidth () {
+        return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
+      },
+      labelClass () {
+        return {
+          'vux-cell-justify': this.$parent.labelAlign === 'justify' || this.$parent.$parent.labelAlign === 'justify'
         }
       }
     },
-    labelStyles() {
-      return {
-        width: this.$parent.labelWidth || (this.labelWidth + 'em'),
-        textAlign: this.$parent.labelAlign,
-        marginRight: this.$parent.labelMarginRight
+    methods: {
+      updateAutosize () {
+        Autosize.update(this.$refs.textarea)
+      },
+      // prop.autosize
+      bindAutosize () {
+        Autosize(this.$refs.textarea)
+      },
+      unbindAutosize () {
+        Autosize.destroy(this.$refs.textarea)
+      },
+      // prop.autosize
+      focus () {
+        this.$refs.textarea.focus()
       }
     },
-    labelWidth() {
-      return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
-    },
-    labelClass() {
-      return {
-        'vux-cell-justify': this.$parent.labelAlign === 'justify' || this.$parent.$parent.labelAlign === 'justify'
-      }
-    }
-  },
-  methods: {
-    updateAutosize() {
-      Autosize.update(this.$refs.textarea)
-    },
     // prop.autosize
-    bindAutosize() {
-      Autosize(this.$refs.textarea)
-    },
-    unbindAutosize() {
-      Autosize.destroy(this.$refs.textarea)
-    },
-    // prop.autosize
-    focus() {
-      this.$refs.textarea.focus()
+    beforeDestroy () {
+      this.unbindAutosize()
     }
-  },
-  // prop.autosize
-  beforeDestroy() {
-    this.unbindAutosize()
+    // prop.autosize
   }
-  // prop.autosize
-}
 </script>
 
 <style lang="less">
-.vux-x-textarea .weui-cell {
-  align-items: flex-start;
-}
+  .vux-x-textarea .weui-cell {
+    align-items: flex-start;
+  }
 </style>

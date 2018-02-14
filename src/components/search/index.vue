@@ -14,7 +14,7 @@
           <span>{{ placeholder }}</span>
         </label>
       </form>
-      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel">{{ cancelText  }}
+      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel">{{ cancelText }}
       </a>
       <slot name="right"></slot>
     </div>
@@ -39,192 +39,192 @@ placeholder:
 </i18n>
 
 <script>
-import uuidMixin from '../../mixins/uuid'
+  import uuidMixin from '../../mixins/uuid'
 
-export default {
-  name: 'search',
-  mixins: [uuidMixin],
-  props: {
-    required: {
-      type: Boolean,
-      default: false
+  export default {
+    name: 'search',
+    mixins: [uuidMixin],
+    props: {
+      required: {
+        type: Boolean,
+        default: false
+      },
+      placeholder: String,
+      cancelText: String,
+      value: {
+        type: String,
+        default: ''
+      },
+      results: {
+        type: Array,
+        default () {
+          return []
+        }
+      },
+      autoFixed: {
+        type: Boolean,
+        default: true
+      },
+      top: {
+        type: String,
+        default: '0px'
+      },
+      position: {
+        type: String,
+        default: 'fixed'
+      },
+      autoScrollToTop: Boolean
     },
-    placeholder: String,
-    cancelText: String,
-    value: {
-      type: String,
-      default: ''
-    },
-    results: {
-      type: Array,
-      default() {
-        return []
+    created () {
+      if (this.value) {
+        this.currentValue = this.value
       }
     },
-    autoFixed: {
-      type: Boolean,
-      default: true
-    },
-    top: {
-      type: String,
-      default: '0px'
-    },
-    position: {
-      type: String,
-      default: 'fixed'
-    },
-    autoScrollToTop: Boolean
-  },
-  created() {
-    if (this.value) {
-      this.currentValue = this.value
-    }
-  },
-  computed: {
-    fixPosition() {
-      if (this.isFixed) {
-        return this.position === 'absolute' ? 'absolute' : 'fixed'
+    computed: {
+      fixPosition () {
+        if (this.isFixed) {
+          return this.position === 'absolute' ? 'absolute' : 'fixed'
+        }
+        return 'static'
       }
-      return 'static'
-    }
-  },
-  methods: {
-    emitEvent() {
-      this.$nextTick(() => {
-        this.$emit('input', this.currentValue)
-        this.$emit('on-change', this.currentValue)
-      })
     },
-    onComposition($event, type) {
-      if (type === 'start') {
-        this.onInput = true
-      }
-      if (type === 'end') {
-        this.onInput = false
-        this.emitEvent()
-      }
-      if (type === 'input') {
-        if (!this.onInput) {
+    methods: {
+      emitEvent () {
+        this.$nextTick(() => {
+          this.$emit('input', this.currentValue)
+          this.$emit('on-change', this.currentValue)
+        })
+      },
+      onComposition ($event, type) {
+        if (type === 'start') {
+          this.onInput = true
+        }
+        if (type === 'end') {
+          this.onInput = false
           this.emitEvent()
         }
-      }
-    },
-    clear() {
-      this.currentValue = ''
-      this.emitEvent()
-      this.isFocus = true
-      this.setFocus()
-      if (this.autoFixed && !this.isFixed) {
-        this.isFixed = true
-      }
-    },
-    cancel() {
-      this.isCancel = true
-      this.currentValue = ''
-      this.emitEvent()
-      this.isFixed = false
-      this.$emit('on-cancel')
-    },
-    handleResultClick(item) {
-      this.$emit('result-click', item) // just for compatibility
-      this.$emit('on-result-click', item)
-      this.isCancel = true
-      this.isFixed = false
-    },
-    touch() {
-      this.isCancel = false
-      if (this.autoFixed) {
-        this.isFixed = true
-      }
-      this.$emit('on-touch')
-    },
-    setFocus() {
-      this.$refs.input.focus()
-    },
-    setBlur() {
-      this.$refs.input.blur()
-    },
-    onFocus() {
-      this.isFocus = true
-      this.$emit('on-focus')
-      this.touch()
-    },
-    onBlur() {
-      this.isFocus = false
-      this.$emit('on-blur')
-    }
-  },
-  data() {
-    return {
-      onInput: false,
-      currentValue: '',
-      isCancel: true,
-      isFocus: false,
-      isFixed: false
-    }
-  },
-  watch: {
-    isFixed(val) {
-      if (val === true) {
-        this.setFocus()
-        this.isFocus = true
-
-        if (this.autoScrollToTop) {
-          setTimeout(() => {
-            window.scrollTo(0, 0)
-          }, 150)
+        if (type === 'input') {
+          if (!this.onInput) {
+            this.emitEvent()
+          }
         }
-      } else { }
+      },
+      clear () {
+        this.currentValue = ''
+        this.emitEvent()
+        this.isFocus = true
+        this.setFocus()
+        if (this.autoFixed && !this.isFixed) {
+          this.isFixed = true
+        }
+      },
+      cancel () {
+        this.isCancel = true
+        this.currentValue = ''
+        this.emitEvent()
+        this.isFixed = false
+        this.$emit('on-cancel')
+      },
+      handleResultClick (item) {
+        this.$emit('result-click', item) // just for compatibility
+        this.$emit('on-result-click', item)
+        this.isCancel = true
+        this.isFixed = false
+      },
+      touch () {
+        this.isCancel = false
+        if (this.autoFixed) {
+          this.isFixed = true
+        }
+        this.$emit('on-touch')
+      },
+      setFocus () {
+        this.$refs.input.focus()
+      },
+      setBlur () {
+        this.$refs.input.blur()
+      },
+      onFocus () {
+        this.isFocus = true
+        this.$emit('on-focus')
+        this.touch()
+      },
+      onBlur () {
+        this.isFocus = false
+        this.$emit('on-blur')
+      }
     },
-    value(val) {
-      this.currentValue = val
+    data () {
+      return {
+        onInput: false,
+        currentValue: '',
+        isCancel: true,
+        isFocus: false,
+        isFixed: false
+      }
+    },
+    watch: {
+      isFixed (val) {
+        if (val === true) {
+          this.setFocus()
+          this.isFocus = true
+
+          if (this.autoScrollToTop) {
+            setTimeout(() => {
+              window.scrollTo(0, 0)
+            }, 150)
+          }
+        } else { }
+      },
+      value (val) {
+        this.currentValue = val
+      }
     }
   }
-}
 </script>
 
 <style lang="less">
-@import "../../styles/widget/weui-icon/weui_icon_font";
-@import "../../styles/widget/weui_searchbar/weui_searchbar";
-@import "../../styles/widget/weui_cell/weui_cell_global";
-@import "../../styles/widget/weui_cell/weui_access";
+  @import '../../styles/widget/weui-icon/weui_icon_font';
+  @import '../../styles/widget/weui_searchbar/weui_searchbar';
+  @import '../../styles/widget/weui_cell/weui_cell_global';
+  @import '../../styles/widget/weui_cell/weui_access';
 
-.vux-search-fixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  background: rgba(255, 255, 255, 1);
-  backdrop-filter: blur(5px);
-}
-.vux-search-box {
-  width: 100%;
-}
-.weui-cells.vux-search_show {
-  margin-top: 0 !important;
-  overflow-y: auto;
-  position: fixed;
-  width: 100%;
-  max-height: 100%;
-
-  .weui-cell:last-child {
-    margin-bottom: 150*@rem;
+  .vux-search-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(5px);
   }
-
-  &::-webkit-scrollbar {
-    display: none;
+  .vux-search-box {
+    width: 100%;
   }
+  .weui-cells.vux-search_show {
+    margin-top: 0 !important;
+    overflow-y: auto;
+    position: fixed;
+    width: 100%;
+    max-height: 100%;
 
-  &::after {
-    display: none;
+    .weui-cell:last-child {
+      margin-bottom: 150*@rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
-}
-.vux-search-mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 90%;
-  height: 100%;
-  z-index: 5;
-}
+  .vux-search-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    z-index: 5;
+  }
 </style>
