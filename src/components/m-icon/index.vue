@@ -1,6 +1,5 @@
 <template>
-  <svg version="1.1" :class="clazz"
-  :width="fontSize" :height="fontSize" :viewBox="box" @click="onClick">
+  <svg version="1.1" :class="clazz" :width="fontSize" :height="fontSize" :viewBox="box" @click="onClick">
     <path :d="path.d" :fill="path.fill" :stroke="path.stroke" v-for="path in icon.paths" :key="path.d" />
   </svg>
 </template>
@@ -16,9 +15,9 @@
       },
       link: [String, Object],
       spin: Boolean,
-      size :{
+      size: {
         type: String,
-        default:'2rem'
+        default: '1.5rem'
       }
     },
     data () {
@@ -27,17 +26,17 @@
       }
     },
     methods: {
-    onClick () {
-      /* istanbul ignore next */
-      !this.disabled && go(this.link, this.$router)
-    }
-  },
+      onClick () {
+        /* istanbul ignore next */
+        !this.disabled && go(this.link, this.$router)
+      }
+    },
     computed: {
 
       clazz () {
         return {
           'svg-icon': true,
-           spin: this.spin
+          spin: this.spin
         }
       },
       icon () {

@@ -43,9 +43,12 @@
 </script>
 <style lang="less">
   .grid-icon-middle {
-
     .weui-grid {
-      padding: 10px 10*@rem;
+      padding: 8*@rem 8*@rem;
+    }
+    .weui-grid__icon {
+      width: 2.6rem;
+      height: 2.6rem;
     }
   }
 </style>
