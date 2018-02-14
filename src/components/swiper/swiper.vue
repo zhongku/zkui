@@ -3,14 +3,14 @@
     <div class="vux-swiper" :style="{height: xheight}">
       <slot></slot>
 
-      <div class="vux-swiper-item" v-for="(item, index) in list" :key="item" @click="clickListItem(item)" :data-index="index">
+      <div class="vux-swiper-item" v-for="(item, index) in list" :key="index" @click="clickListItem(item)" :data-index="index">
         <a href="javascript:">
           <div class="vux-img" :style="{backgroundImage: buildBackgroundUrl(item)}"></div>
           <p class="vux-swiper-desc" v-if="showDescMask">{{ item.title }}</p>
         </a>
       </div>
 
-      <div v-if="listTwoLoopItem.length > 0" class="vux-swiper-item vux-swiper-item-clone" v-for="(item, index) in listTwoLoopItem" :key="item" @click="clickListItem(item)" :data-index="index">
+      <div v-if="listTwoLoopItem.length > 0" class="vux-swiper-item vux-swiper-item-clone" v-for="(item, index) in listTwoLoopItem" :key="item.title" @click="clickListItem(item)" :data-index="index">
         <a href="javascript:">
           <div class="vux-img" :style="{backgroundImage: buildBackgroundUrl(item)}"></div>
           <p class="vux-swiper-desc" v-if="showDescMask">{{ item.title }}</p>
@@ -19,7 +19,7 @@
 
     </div>
     <div :class="[dotsClass, 'vux-indicator', `vux-indicator-${dotsPosition}`]" v-show="showDots">
-      <a href="javascript:" v-for="key in length" :key="key">
+      <a href="javascript:" v-for="(key,index) in length" :key="index">
         <i class="vux-icon-dot" :class="{'active': key - 1 === current}"></i>
       </a>
     </div>

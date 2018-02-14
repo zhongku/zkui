@@ -87,21 +87,21 @@ back_text:
 
   .vux-header {
     position: relative;
-    padding: 3px 0;
+    // padding: 3*@rem 0;
     box-sizing: border-box;
     background-color: @header-background-color;
   }
   .vux-header .vux-header-title {
-    line-height: 2.5rem;
+    line-height: 3rem;
     text-align: center;
-    font-size: @h3-font-size;
+    font-size: @h4-font-size;
     font-weight: 400;
     color: @header-title-color;
   }
   .vux-header-title-area,
   .vux-header .vux-header-title {
     margin: 0 88*@rem;
-    height: 40*@rem;
+    height: 35*@rem;
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,9 +113,8 @@ back_text:
   .vux-header .vux-header-left,
   .vux-header .vux-header-right {
     position: absolute;
-    top: 14*@rem;
+    top: 7*@rem;
     display: block;
-
     line-height: 21*@rem;
     color: @header-text-color;
   }
@@ -134,7 +133,7 @@ back_text:
     opacity: 0.5;
   }
   .vux-header .vux-header-left {
-    left: 18*@rem;
+    left: 10*@rem;
   }
   .vux-header .vux-header-left .vux-header-back {
     padding-left: 16*@rem;
@@ -152,7 +151,7 @@ back_text:
       width: 9*@rem;
       height: 9*@rem;
       border: 1px solid @header-arrow-color;
-      border-width: 1px 0 0 1*@rem;
+      border-width: 1px 0 0 1px;
       transform: rotate(315deg);
       top: 8*@rem;
       left: 7*@rem;

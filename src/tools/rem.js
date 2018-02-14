@@ -1,7 +1,7 @@
-;(function(doc, win) {
+;(function (doc, win) {
   var docEl = doc.documentElement
   var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
-  var recalc = function() {
+  var recalc = function () {
     var clientWidth = docEl.clientWidth
     if (!clientWidth) return
     docEl.style.fontSize = 12 * (clientWidth / 320) + 'px'
