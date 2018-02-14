@@ -1,28 +1,44 @@
-"use strict"
+'use strict'
 /* eslint-disable no-new */
 /* eslint-disable  */
 
 export default {
-
-  SVGtoArray: function (svgObj) {
-    var convertShapeToPath = require("./convertShapeToPath")
+  SVGtoArray: function(svgObj) {
+    var convertShapeToPath = require('./convertShapeToPath')
     var SVGArray = []
+    var SVGName = []
     var node = void 0
     var subNode = void 0
     var groupNode = void 0
     var subsubNode = void 0
 
     for (node in svgObj) {
-      if (node === 'rect' || node === 'circle' || node === 'ellipse' || node === 'polygon' || node === 'line' || node === 'path') {
+      if (
+        node === 'rect' ||
+        node === 'circle' ||
+        node === 'ellipse' ||
+        node === 'polygon' ||
+        node === 'line' ||
+        node === 'path'
+      ) {
         var _iteratorNormalCompletion = true
         var _didIteratorError = false
         var _iteratorError = undefined
 
         try {
-          for (var _iterator = svgObj[node][Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          for (
+            var _iterator = svgObj[node][Symbol.iterator](), _step;
+            !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
+            _iteratorNormalCompletion = true
+          ) {
             subNode = _step.value
-
-            SVGArray.push(convertShapeToPath(subNode.$, node))
+            var result = SVGName.indexOf(subNode.$.d) > -1
+            // console.dir(result)
+            if (result === false) {
+              SVGName.push(subNode.$.d)
+              SVGArray.push(convertShapeToPath(subNode.$, node))
+              // console.dir(SVGName)
+            }
           }
         } catch (err) {
           _didIteratorError = true
@@ -44,17 +60,34 @@ export default {
         var _iteratorError2 = undefined
 
         try {
-          for (var _iterator2 = svgObj[node][Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          for (
+            var _iterator2 = svgObj[node][Symbol.iterator](), _step2;
+            !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done);
+            _iteratorNormalCompletion2 = true
+          ) {
             groupNode = _step2.value
 
             for (subNode in groupNode) {
-              if (node === 'rect' || node === 'circle' || node === 'ellipse' || node === 'polygon' || node === 'line' || node === 'path') {
+              if (
+                node === 'rect' ||
+                node === 'circle' ||
+                node === 'ellipse' ||
+                node === 'polygon' ||
+                node === 'line' ||
+                node === 'path'
+              ) {
                 var _iteratorNormalCompletion3 = true
                 var _didIteratorError3 = false
                 var _iteratorError3 = undefined
 
                 try {
-                  for (var _iterator3 = groupNode[subNode][Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                  for (
+                    var _iterator3 = groupNode[subNode][Symbol.iterator](),
+                      _step3;
+                    !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next())
+                      .done);
+                    _iteratorNormalCompletion3 = true
+                  ) {
                     subsubNode = _step3.value
 
                     SVGArray.push(convertShapeToPath(subsubNode.$, subNode))
@@ -92,6 +125,7 @@ export default {
         }
       }
     }
+    // console.dir(SVGArray)
     return SVGArray
   }
 }

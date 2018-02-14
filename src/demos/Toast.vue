@@ -72,7 +72,7 @@ position:
 </i18n>
 
 <script>
-import { Toast, Group, XSwitch, XButton } from 'vux'
+import { Group, XSwitch, XButton,Toast } from 'vux'
 export default {
   components: {
     Toast,

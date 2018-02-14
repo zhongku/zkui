@@ -13,6 +13,10 @@
        <m-icon name="zk-grid"  class="icon-warning" size="3rem" link="/component/grid"></m-icon>
        <m-icon name="zk-fenrun"  class="icon-info" size="3rem" link="/component/cell"></m-icon>
     </box>
+    <box gap="10px">
+       <m-icon name="zk-fenrun"  class="icon-info" size="3rem" link="/component/cell"></m-icon>
+       <m-icon name="zk-info-user"  class="icon-info" size="3rem" link="/component/cell"></m-icon>
+      </box>
 
     <group-title>weui 字体图标列子</group-title>
     <box gap="10px 10px">

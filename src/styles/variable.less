@@ -20,7 +20,7 @@
 
 @danger: #f4516c;
 
-@theme-color: #e60044;
+@theme-color: @brand;
 @opacity-disabled: 0.5;
 
 /**
@@ -112,7 +112,7 @@
 /**
 * Header
 */
-@header-background-color: #e60044;
+@header-background-color: @brand;
 @header-title-color: #fff;
 @header-text-color: #fff;
 @header-arrow-color: #fff;
@@ -151,9 +151,9 @@
 @button-default-disabled-bg-color: #f7f7f7;
 @button-default-active-font-color: rgba(0, 0, 0, 0.6);
 
-@button-primary-bg-color: #1aad19;
-@button-primary-active-bg-color: #179b16;
-@button-primary-disabled-bg-color: #9ed99d;
+@button-primary-bg-color: @brand;
+@button-primary-active-bg-color: fade(@brand, 90%); // fase 颜色透明度
+@button-primary-disabled-bg-color: fade(@brand, 60%);
 
 /**
 * swipeout
@@ -178,7 +178,7 @@
 /**
 * Popover
 */
-@popover-bg-color: #e60044;
+@popover-bg-color: @brand;
 @popover-font-color: #fff;
 @popover-border-radius: 3px;
 @popover-border-width: 5px;
@@ -241,7 +241,7 @@
 /**
 * form-preview
 */
-@form-preview-button-primary-color: #0bb20c;
+@form-preview-button-primary-color:fade(@brand, 80%); ;
 
 /**
 * sticky

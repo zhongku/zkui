@@ -126,6 +126,7 @@
   "TimelineItem": "src/components/timeline/timeline-item.vue",
   "Tip": "src/components/tip/index.vue",
   "Toast": "src/components/toast/index.vue",
+  "XToast": "src/components/toast/index.js",
   "ToastPlugin": "src/plugins/toast/index.js",
   "TransferDom": "src/directives/transfer-dom/index.js",
   "TransferDomDirective": "src/directives/transfer-dom/index.js",
