@@ -29,7 +29,7 @@
     font-size: @fontSize;
     color: @color;
     white-space: nowrap;
-    padding: 0 6px;
+    padding: 0 6*@rem;
     position: relative;
     border-radius: @borderRadius;
     &:after {
@@ -46,45 +46,45 @@
     &:after {
       border-color: @backgroundColor transparent transparent transparent;
       border-style: solid;
-      border-width: 5px 3px;
+      border-width: 5px 3*@rem;
       left: 50%;
       transform: translate(-50%, 0);
-      bottom: -10px;
+      bottom: -10*@rem;
     }
   }
   .setBubblePrivate(@direction, @backgroundColor) when (@direction = bottom) {
     &:after {
       border-color: transparent transparent @backgroundColor transparent;
       border-style: dashed dashed solid dashed;
-      border-width: 5px 3px;
+      border-width: 5px 3*@rem;
       left: 50%;
       transform: translate(-50%, 0);
-      top: -10px;
+      top: -10*@rem;
     }
   }
   .setBubblePrivate(@direction, @backgroundColor) when (@direction = left) {
     &:after {
       border-color: transparent transparent transparent @backgroundColor;
       border-style: solid;
-      border-width: 3px 5px;
+      border-width: 3px 5*@rem;
       top: 50%;
       transform: translate(0, -50%);
-      right: -10px;
+      right: -10*@rem;
     }
   }
   .setBubblePrivate(@direction, @backgroundColor) when (@direction = right) {
     &:after {
       border-color: transparent @backgroundColor transparent transparent;
       border-style: solid;
-      border-width: 3px 5px;
+      border-width: 3px 5*@rem;
       top: 50%;
       transform: translate(0, -50%);
-      left: -10px;
+      left: -10*@rem;
     }
   }
   .weui-wepay-flow,
   .weui-wepay-flow-auto {
-    padding: 40px;
+    padding: 40*@rem;
   }
   .weui-wepay-flow__bd {
     display: flex;
@@ -92,21 +92,21 @@
     align-items: center;
   }
   .weui-wepay-flow__li {
-    width: 14px;
-    height: 14px;
+    width: 14*@rem;
+    height: 14*@rem;
     position: relative;
     z-index: 1;
     .weui-wepay-flow__state {
       position: absolute;
       left: 0;
       top: 0;
-      width: 14px;
-      height: 14px;
+      width: 14*@rem;
+      height: 14*@rem;
 
-      line-height: 14px;
+      line-height: 14*@rem;
       text-align: center;
       color: #fff;
-      border-radius: 7px;
+      border-radius: 7*@rem;
       box-sizing: border-box;
     }
   }
@@ -126,7 +126,7 @@
     text-align: center;
   }
   .weui-wepay-flow__title-top {
-    bottom: 20px;
+    bottom: 20*@rem;
     left: 50%;
     transform: translate(-50%, 0);
     .weui-wepay-flow__li_done & {
@@ -134,7 +134,7 @@
     }
   }
   .weui-wepay-flow__title-bottom {
-    top: 20px;
+    top: 20*@rem;
     left: 50%;
     transform: translate(-50%, 0);
     .weui-wepay-flow__li_done & {
@@ -142,7 +142,7 @@
     }
   }
   .weui-wepay-flow__title-left {
-    right: 30px;
+    right: 30*@rem;
     top: 50%;
     transform: translate(0, -50%);
     .weui-wepay-flow__li_done & {
@@ -151,7 +151,7 @@
     text-align: right;
   }
   .weui-wepay-flow__title-right {
-    left: 30px;
+    left: 30*@rem;
     top: 50%;
     transform: translate(0, -50%);
     text-align: left;
@@ -164,28 +164,28 @@
     .setBubbleCommon(20px,@bubbleCorlor,10px,#FFF,4px);
   }
   .weui-wepay-flow__intro-top {
-    bottom: 25px;
+    bottom: 25*@rem;
     left: 50%;
     transform: translate(-50%, 0);
     .setBubblePrivate(top,@bubbleCorlor);
     position: absolute;
   }
   .weui-wepay-flow__intro-bottom {
-    top: 25px;
+    top: 25*@rem;
     left: 50%;
     transform: translate(-50%, 0);
     .setBubblePrivate(bottom,@bubbleCorlor);
     position: absolute;
   }
   .weui-wepay-flow__intro-right {
-    left: 36px;
+    left: 36*@rem;
     top: 50%;
     transform: translate(0, -50%);
     .setBubblePrivate(right,@bubbleCorlor);
     position: absolute;
   }
   .weui-wepay-flow__intro-left {
-    right: 36px;
+    right: 36*@rem;
     top: 50%;
     transform: translate(0, -50%);
     .setBubblePrivate(left,@bubbleCorlor);
@@ -203,7 +203,7 @@
     display: none;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 11px;
+    bottom: 11*@rem;
     .weui-wepay-flow__line_ing & {
       display: block;
     }
@@ -213,7 +213,7 @@
     display: none;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 11px;
+    top: 11*@rem;
     .weui-wepay-flow__line_ing & {
       display: block;
     }
@@ -223,7 +223,7 @@
     display: none;
     top: 50%;
     transform: translate(0, -50%);
-    right: 12px;
+    right: 12*@rem;
     .weui-wepay-flow__line_ing & {
       display: block;
     }
@@ -233,7 +233,7 @@
     display: none;
     top: 50%;
     transform: translate(0, -50%);
-    left: 12px;
+    left: 12*@rem;
     .weui-wepay-flow__line_ing & {
       display: block;
     }
@@ -242,7 +242,7 @@
   .weui-wepay-flow__line {
     flex: 1;
     background-color: #e2e2e2;
-    height: 3px;
+    height: 3*@rem;
     position: relative;
   }
   .weui-wepay-flow__title {
@@ -257,7 +257,7 @@
   .weui-wepay-flow__process {
     display: none;
     background-color: @brand;
-    height: 3px;
+    height: 3*@rem;
     position: relative;
     .weui-wepay-flow__line_ing & {
       display: block;
@@ -273,7 +273,7 @@
     }
     .weui-wepay-flow__line {
       flex: none;
-      width: 100px;
+      width: 100*@rem;
     }
   }
   .weui-wepay-flow_vertical {
@@ -284,7 +284,7 @@
     }
     .weui-wepay-flow__line {
       height: auto;
-      width: 3px;
+      width: 3*@rem;
     }
     .weui-wepay-flow__line_ing {
       .weui-wepay-flow__process {
@@ -296,7 +296,7 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 3px;
+      width: 3*@rem;
     }
     .weui-wepay-flow__line_done {
       .weui-wepay-flow__process {
@@ -312,7 +312,7 @@
       box-sizing: border-box;
     }
     .weui-wepay-flow__line {
-      width: 3px;
+      width: 3*@rem;
       flex: none;
     }
     .weui-wepay-flow__line_ing {
@@ -325,7 +325,7 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 3px;
+      width: 3*@rem;
     }
     .weui-wepay-flow__line_done {
       .weui-wepay-flow__process {
@@ -342,14 +342,14 @@
   .weui-wepay-flow-auto__state {
     position: absolute;
     left: 0;
-    top: 4px;
-    width: 14px;
-    height: 14px;
+    top: 4*@rem;
+    width: 14*@rem;
+    height: 14*@rem;
 
-    line-height: 14px;
+    line-height: 14*@rem;
     text-align: center;
     color: #fff;
-    border-radius: 7px;
+    border-radius: 7*@rem;
     background-color: #e2e2e2;
     z-index: 2;
   }
@@ -359,11 +359,11 @@
   .weui-wepay-flow-auto__line {
     position: absolute;
     z-index: 1;
-    width: 2px;
+    width: 2*@rem;
     background-color: #dddddd;
-    top: 10px;
-    bottom: -4px;
-    left: 6px;
+    top: 10*@rem;
+    bottom: -4*@rem;
+    left: 6*@rem;
     z-index: 1;
   }
   .weui-wepay-flow-auto__line_on {
@@ -371,8 +371,8 @@
   }
   .weui-wepay-flow-auto__li {
     position: relative;
-    padding-bottom: 20px;
-    padding-left: 30px;
+    padding-bottom: 20*@rem;
+    padding-left: 30*@rem;
   }
   .weui-wepay-flow-auto__title {
     color: #999999;

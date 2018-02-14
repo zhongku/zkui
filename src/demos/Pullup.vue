@@ -32,7 +32,7 @@
       </div>
 
       <!--pullup slot-->
-      <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40px; bottom: -40px; text-align: center;">
+      <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40*@rem; bottom: -40*@rem; text-align: center;">
         <span v-show="demo4Value.pullupStatus === 'default'"></span>
         <span class="pullup-arrow" v-show="demo4Value.pullupStatus === 'default' || demo4Value.pullupStatus === 'up' || demo4Value.pullupStatus === 'down'" :class="{'rotate': demo4Value.pullupStatus === 'down'}">↑</span>
         <span v-show="demo4Value.pullupStatus === 'loading'"><spinner type="ios-small"></spinner></span>
@@ -130,25 +130,25 @@ export default {
 
 <style lang="less" scoped>
 .box1 {
-  height: 100px;
+  height: 100*@rem;
   position: relative;
-  width: 1490px;
+  width: 1490*@rem;
 }
 .box1-item {
-  width: 200px;
-  height: 100px;
+  width: 200*@rem;
+  height: 100*@rem;
   background-color: #ccc;
   display:inline-block;
-  margin-left: 15px;
+  margin-left: 15*@rem;
   float: left;
   text-align: center;
-  line-height: 100px;
+  line-height: 100*@rem;
 }
 .box1-item:first-child {
   margin-left: 0;
 }
 .box2-wrap {
-  height: 300px;
+  height: 300*@rem;
   overflow: hidden;
 }
 .rotate {
@@ -160,6 +160,6 @@ export default {
   transition: all linear 0.2s;
   -webkit-transition: all linear 0.2s;
   color: #666;
-  font-size: 25px;
+  font-size: 25*@rem;
 }
 </style>

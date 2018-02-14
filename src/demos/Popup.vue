@@ -86,12 +86,12 @@
     
     <div v-transfer-dom>
       <popup v-model="show7" height="270px" is-transparent>
-        <div style="width: 95%;background-color:#fff;height:250px;margin:0 auto;border-radius:5px;padding-top:10px;">
+        <div style="width: 95%;background-color:#fff;height:250*@rem;margin:0 auto;border-radius:5*@rem;padding-top:10*@rem;">
          <group>
           <cell title="Product" value="Donate"></cell>
           <cell title="Total" value="$10.24"></cell>
          </group>
-         <div style="padding:20px 15px;">
+         <div style="padding:20px 15*@rem;">
           <x-button type="primary">Pay</x-button>
           <x-button @click.native="show7 = false">Cancel</x-button>
          </div>
@@ -116,7 +116,7 @@
     
     <div v-transfer-dom>
       <popup v-model="show9" position="right">
-        <div style="width:200px;">
+        <div style="width:200*@rem;">
         </div>
       </popup>
     </div>
@@ -142,7 +142,7 @@
         <group>
           <cell v-for="i in 20" :key="i" :title="i"></cell>
         </group>
-        <div style="padding: 15px;">
+        <div style="padding: 15*@rem;">
           <x-button @click.native="show12 = false" plain type="primary"> Close Me </x-button>
         </div>
       </popup>
@@ -153,7 +153,7 @@
         <group>
           <cell v-for="i in 20" :key="i" :title="i"></cell>
         </group>
-        <div style="padding: 15px;">
+        <div style="padding: 15*@rem;">
           <x-button @click.native="show13 = false" plain type="primary"> Close Me </x-button>
         </div>
       </popup>
@@ -220,22 +220,22 @@ export default {
 @import '~vux/src/styles/vux/close.less';
 
 .popup0 {
-  padding-bottom:15px;
-  height:200px;
+  padding-bottom:15*@rem;
+  height:200*@rem;
 }
 .popup1 {
   width:100%;
   height:100%;
 }
 .popup2 {
-  padding-bottom:15px;
-  height:400px;
+  padding-bottom:15*@rem;
+  height:400*@rem;
 }
 .position-vertical-demo {
   background-color: #ffe26d;
   color: #000;
   text-align: center;
-  padding: 15px;
+  padding: 15*@rem;
 }
 .position-horizontal-demo {
   position: relative;

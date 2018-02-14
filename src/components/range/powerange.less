@@ -13,9 +13,9 @@
 
 .range-bar {
   background-color: @range-bar-default-color;
-  border-radius: 15px;
+  border-radius: 15*@rem;
   display: block;
-  height: 1px;
+  height: 1*@rem;
   position: relative;
   width: 100%;
 }
@@ -26,7 +26,7 @@
 
 .range-quantity {
   background-color: @range-bar-active-color;
-  border-radius: 15px;
+  border-radius: 15*@rem;
   display: block;
   height: 100%;
   width: 0;
@@ -36,11 +36,11 @@
   background-color: #fff;
   border-radius: 100%;
   cursor: move;
-  height: 30px;
+  height: 30*@rem;
   left: 0;
-  top: -13px;
+  top: -13*@rem;
   position: absolute;
-  width: 30px;
+  width: 30*@rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -52,15 +52,15 @@
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
+  width: 24*@rem;
 }
 
 .range-min {
-  left: -30px;
+  left: -30*@rem;
 }
 
 .range-max {
-  right: -30px;
+  right: -30*@rem;
 }
 
 /**

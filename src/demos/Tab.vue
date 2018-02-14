@@ -34,7 +34,7 @@
     <br/>
     <divider>{{ $t('set bar-active-color')}}</divider>
     <div style="width: 100%;overflow:scroll;-webkit-overflow-scrolling:touch;">
-      <tab style="width:500px;" bar-active-color="#668599" :line-width="1">
+      <tab style="width:500*@rem;" bar-active-color="#668599" :line-width="1">
         <tab-item>已发货</tab-item>
         <tab-item selected>未发货</tab-item>
         <tab-item>全部订单</tab-item>
@@ -202,7 +202,7 @@ export default {
 @import '~vux/src/styles/vux/center.less';
 
 .box {
-  padding: 15px;
+  padding: 15*@rem;
 }
 .active-6-1 {
   color: rgb(252, 55, 140) !important;
@@ -218,6 +218,6 @@ export default {
 }
 .tab-swiper {
   background-color: #fff;
-  height: 100px;
+  height: 100*@rem;
 }
 </style>

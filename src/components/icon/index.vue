@@ -24,6 +24,6 @@ export default {
 following styles will be removed after v3.0.0
 */
 .icon-big:before {
-  font-size: 93px;
+  font-size: 93*@rem;
 }
 </style>

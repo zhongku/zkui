@@ -5,7 +5,7 @@
       <cell title="上面value值" :value="value"></cell>
     </group>
 
-    <div style="padding: 15px;">
+    <div style="padding: 15*@rem;">
       <x-address style="display:none;" :popup-title="$t('selecte address')" :title="title" v-model="value" :list="addressData" placeholder="请选择地址" :show.sync="showAddress"></x-address>
       <x-button type="primary" @click.native="doShowAddress">单独控制显示(2s后关闭)</x-button>
     </div>
@@ -13,8 +13,8 @@
     <group>
     <x-address :title="title" @on-hide="logHide" v-model="value_0_1" :list="addressData" placeholder="请选择地址">
       <template slot="title" slot-scope="props"><!-- use scope="props" when vue < 2.5.0 -->
-        <span :class="props.labelClass" :style="props.labelStyle" style="height:24px;">
-          <span class="demo-icon demo-icon-big" style="font-size:20px;vertical-align:middle;"></span>
+        <span :class="props.labelClass" :style="props.labelStyle" style="height:24*@rem;">
+          <span class="demo-icon demo-icon-big" style="font-size:20*@rem;vertical-align:middle;"></span>
           <span style="vertical-align:middle;">地址</span>
         </span>
       </template>
@@ -26,7 +26,7 @@
       <x-address :title="title2" v-model="value2" raw-value :list="addressData" value-text-align="left"></x-address>
     </group>
     <br/>
-    <div style="padding: 0 15px;">
+    <div style="padding: 0 15*@rem;">
       <x-button type="primary" @click.native="changeData">改变数据（通过 id）</x-button>
       <x-button type="primary" @click.native="changeDataByLabels">改变数据（通过文字值）</x-button>
       <x-button type="primary" @click.native="changeDataByLabels2">改变数据（两级，通过文字值）</x-button>

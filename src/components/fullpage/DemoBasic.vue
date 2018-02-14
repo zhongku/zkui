@@ -40,8 +40,8 @@ export default {
 <style scoped>
 .fullpage-demo {
   background-color:yellow;
-  font-size: 72px;
-  line-height: 320px;
+  font-size: 72*@rem;
+  line-height: 320*@rem;
   text-align: center;
 }
 </style>

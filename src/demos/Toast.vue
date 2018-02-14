@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="showPosition('top')" type="primary">Top</x-button>
       <x-button @click.native="showPosition('middle')" type="primary">Middle</x-button>
       <x-button @click.native="showPosition('bottom')" type="primary">Bottom</x-button>
@@ -35,10 +35,10 @@
     <group :title="$t('As a plugin(>=v0.1.3)')">
       <x-switch :title="$t('default')" v-model="show9" @on-change="onChange"></x-switch>
     </group>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'top')">use text function</x-button>
     </div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="$vux.toast.text('How are you~', 'min')">use min</x-button>
     </div>
   </div>

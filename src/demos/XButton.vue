@@ -40,7 +40,7 @@
       <x-button plain type="primary">primary</x-button>
 
       <divider>you can custom styles</divider>
-      <x-button plain type="primary" style="border-radius:99px;">primary</x-button>
+      <x-button plain type="primary" style="border-radius:99*@rem;">primary</x-button>
       <x-button plain type="primary" class="custom-primary-red">primary</x-button>
 
       <divider>disabled</divider>

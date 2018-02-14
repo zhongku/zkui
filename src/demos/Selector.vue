@@ -5,7 +5,7 @@
       <selector ref="defaultValueRef" title="省份" :options="list" v-model="defaultValue"></selector>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="getValue('defaultValueRef')">get full value</x-button>
     </div>
 
@@ -29,7 +29,7 @@
       <selector ref="plainValueRef" value="C" title="Selector" :options="list1" @on-change="onChange"></selector>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="getValue('plainValueRef')">get full value</x-button>
     </div>
 
@@ -43,7 +43,7 @@
       <cell title="value" :value="valueMapValue"></cell>
     </group>
     
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="getValue('valueMapRef')">get full value</x-button>
     </div>
 

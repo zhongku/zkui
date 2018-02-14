@@ -1,35 +1,35 @@
 <template>
   <div class="vux-circle-demo">
     <br>
-    <div style='width:150px;height:150px;'>
+    <div style='width:150*@rem;height:150*@rem;'>
       <x-circle :percent="percent1" :stroke-width="10" stroke-color="#04BE02">
         <span>{{percent1}}</span>
       </x-circle>
     </div>
     <br>
-    <div style='width:100px;height:100px;'>
+    <div style='width:100*@rem;height:100*@rem;'>
       <x-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
         <span>{{percent1}}</span>
       </x-circle>
     </div>
     <br>
-    <div style='width:50px;height:50px;'>
+    <div style='width:50*@rem;height:50*@rem;'>
       <x-circle :percent="percent1" :stroke-width="5" stroke-color="#04BE02">
         <span>{{percent1}}</span>
       </x-circle>
     </div>
     <br>
-    <div style="width:180px;">
+    <div style="width:180*@rem;">
       <range v-model="percent1" :min="0" :max="100"></range>
     </div>
     <br>
-    <div style='width:100px;height:100px;'>
+    <div style='width:100*@rem;height:100*@rem;'>
       <x-circle :percent="100" :stroke-width="3" stroke-color="#04BE02">
         <!-- <icon name="test"></icon> -->
       </x-circle>
     </div>
     <br>
-    <div style='width:100px;height:100px;'>
+    <div style='width:100*@rem;height:100*@rem;'>
       <x-circle :percent="percent2" :stroke-width="6" :trail-width="6" :stroke-color="strokeColor2" trail-color="#ececec">
         <span :style="{color: strokeColor2}">{{percent2}}%</span>
       </x-circle>

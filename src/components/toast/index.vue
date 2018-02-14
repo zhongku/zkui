@@ -153,16 +153,16 @@ export default {
   color: #F76260;
 }
 .weui-toast.weui-toast_forbidden .weui-toast__content {
-  margin-top: 10px;
+  margin-top: 10*@rem;
 }
 .weui-toast.weui-toast_text{
   min-height: 0;
 }
 .weui-toast_text .weui-toast__content {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px;
+  padding-top: 10*@rem;
+  padding-bottom: 10*@rem;
+  border-radius: 15*@rem;
 }
 .weui-toast__content {
   font-size: @toast-content-font-size;

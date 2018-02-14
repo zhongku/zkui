@@ -1,6 +1,6 @@
 <template>
   <div class="vux-scroller-header-box">
-    <div style="height:46px;">
+    <div style="height:46*@rem;">
      <x-header class="vux-scroller-header">I'm header</x-header>
     </div>
     <scroller lock-x ref="scroller" :height="-108+'px'">

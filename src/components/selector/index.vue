@@ -180,7 +180,7 @@ export default {
   padding: 0;
 }
 .vux-selector.weui-cell_select-after {
-  padding-left: 15px;
+  padding-left: 15*@rem;
 }
 .vux-selector-readonly {
   width: 100%;

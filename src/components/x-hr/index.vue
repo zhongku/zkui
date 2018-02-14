@@ -12,8 +12,8 @@ export default {
 @import '../../styles/base/mixin/setOnepx.less';
 
 .vux-x-hr {
-  padding-top: 15px;
-  margin-bottom: 15px;
+  padding-top: 15*@rem;
+  margin-bottom: 15*@rem;
   position: relative;
   &:before {
     .setBottomLine()

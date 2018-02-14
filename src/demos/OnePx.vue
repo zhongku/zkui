@@ -1,14 +1,14 @@
 <template>
   <div class="vux-demo">
-    <div style="padding: 10px;">
+    <div style="padding: 10*@rem;">
       <br>
-      <div style="height:10px;" class="border-top"></div>
+      <div style="height:10*@rem;" class="border-top"></div>
       <br>
-      <div style="height:10px;" class="border"></div>
+      <div style="height:10*@rem;" class="border"></div>
       <br>
       <p>{{ $t('对比不做处理的1px边框') }}</p>
       <br/>
-      <div style="height:10px;border:1px solid #e0e0e0"></div>
+      <div style="height:10*@rem;border:1px solid #e0e0e0"></div>
       <br>
     </div>
     <flexbox class="border-top" :gutter="0">
@@ -143,9 +143,9 @@ export default {
 @import '~vux/src/styles/base/utilities/border.less';
 
 .vux-demo .test{
-  height:50px;
+  height:50*@rem;
   text-align:center;
-  line-height: 50px;
+  line-height: 50*@rem;
 }
 
 .vux-demo .vux-flexbox {
@@ -158,14 +158,14 @@ export default {
   
   color: #303030;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 10*@rem;
 }
 
 
 .img {
-  width: 40px;
-  height: 40px;
-  margin: 8px auto 5px;
+  width: 40*@rem;
+  height: 40*@rem;
+  margin: 8px auto 5*@rem;
   background-repeat: no-repeat;
   background-size: 40px auto!important;
   background-position: center;

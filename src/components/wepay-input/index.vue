@@ -55,11 +55,11 @@ export default {
 .weui-wepay-pay {
   position: relative;
   z-index: 1;
-  padding: 15px;
+  padding: 15*@rem;
 }
 .weui-wepay-pay__inner {
   background-color: #FFFFFF;
-  padding: 16px;
+  padding: 16*@rem;
   position: relative;
   z-index: 0;
 }
@@ -81,8 +81,8 @@ export default {
   font-weight: normal;
 }
 .weui-wepay-pay__inputs {
-  margin-top: 12px;
-  padding-bottom: 18px;
+  margin-top: 12*@rem;
+  padding-bottom: 18*@rem;
   position: relative;
   z-index: 2;
   color: #333333;
@@ -93,7 +93,7 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 1px;
+  height: 1*@rem;
   border-bottom: 1px solid #DDDDDD;
   color: #DDDDDD;
   transform-origin: 0 100%;
@@ -102,21 +102,21 @@ export default {
 .weui-wepay-pay__strong {
   position: absolute;
   color: #000000;
-  font-size: 28px;
+  font-size: 28*@rem;
   line-height: 1;
-  left: -6px;
-  top: -3px;
+  left: -6*@rem;
+  top: -3*@rem;
   font-weight: normal;
 }
 .weui-wepay-pay__input {
-  padding-left: 28px;
+  padding-left: 28*@rem;
   width: 100%;
   box-sizing: border-box;
   border: none;
   outline: 0;
-  height: 40px;
-  line-height: 40px;
-  font-size: 40px;
+  height: 40*@rem;
+  line-height: 40*@rem;
+  font-size: 40*@rem;
 }
 .weui-wepay-pay__input::-webkit-textfield-decoration-container {
   background-color: transparent;
@@ -133,18 +133,18 @@ export default {
 .weui-wepay-pay__intro {
   
   color: #9e9e9e;
-  margin-top: 14px;
+  margin-top: 14*@rem;
 }
 .weui-wepay-pay__info {
   
   color: #9e9e9e;
-  margin-top: 16px;
+  margin-top: 16*@rem;
   text-align: center;
 }
 .weui-wepay-pay__btn {
-  margin-top: 12px;
+  margin-top: 12*@rem;
 }
 .weui-wepay-logo-default{
-  font-size: 16px;
+  font-size: 16*@rem;
 }
 </style>

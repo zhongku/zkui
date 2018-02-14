@@ -299,7 +299,7 @@ export default {
   background-color: transparent;
   border: 1px solid transparent;
   display: inline-block;
-  font-size: 16px;
+  font-size: 16*@rem;
   color: @week-calendar-each-date-item-color;
   width: @week-calendar-each-date-item-size;
   height: @week-calendar-each-date-item-size;
@@ -315,20 +315,20 @@ export default {
 .vux-calendar-dot {
   display: block;
   text-align: center;
-  width: 5px;
-  height: 5px;
+  width: 5*@rem;
+  height: 5*@rem;
   position: absolute;
   left: 50%;
-  bottom: 0px;
-  margin-left: -2.5px;
+  bottom: 0*@rem;
+  margin-left: -2.5*@rem;
   background-color: @week-calendar-dot-color;
   border-radius: 50%;
 }
 .vux-week-calendar-top-tip {
   position: absolute;
-  left: -10px;
+  left: -10*@rem;
   top: 0;
-  font-size: 20px;
+  font-size: 20*@rem;
   transform: scale(0.5);
   transform-origin: top left;
 }

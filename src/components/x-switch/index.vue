@@ -105,13 +105,13 @@ input.weui-switch[disabled] {
 }
 
 .vux-x-switch.weui-cell_switch {
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 6*@rem;
+  padding-bottom: 6*@rem;
 }
 
 .vux-x-switch-overlay {
-  width: 60px;
-  height: 50px;
+  width: 60*@rem;
+  height: 50*@rem;
   position: absolute;
   right: 0;
   top: 0;

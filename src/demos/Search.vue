@@ -6,7 +6,7 @@
       <cell title="keyword">{{value}}</cell>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="setFocus" type="primary">set focus</x-button>
     </div>
     <group>

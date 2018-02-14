@@ -29,7 +29,7 @@
       <flow-state :title="$t('Done')"></flow-state>
     </flow>
 
-    <flow orientation="vertical" style="height:250px;">
+    <flow orientation="vertical" style="height:250*@rem;">
       <flow-state state="1" :title="$t('Paid')" is-done></flow-state>
       <flow-line is-done></flow-line>
 
@@ -42,7 +42,7 @@
       <flow-state state="4" :title="$t('Done')"></flow-state>
     </flow>
 
-    <flow orientation="vertical" style="height:200px;">
+    <flow orientation="vertical" style="height:200*@rem;">
       <flow-state state="1" :title="$t('Paid')" is-done></flow-state>
       <flow-line is-done :line-span="15"></flow-line>
 

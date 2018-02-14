@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 15px; background-color: #fff;">
+  <div style="padding: 15*@rem; background-color: #fff;">
     <ul class="discuss_list">
       <li class="discuss_item" v-for="comment in list">
 
@@ -83,8 +83,8 @@ export default {
 <style>
 .discuss_btn_wrp {
   display: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20*@rem;
+  margin-bottom: 20*@rem;
   text-align: right
 }
 
@@ -94,15 +94,15 @@ export default {
 }
 
 .discuss_list {
-  margin-top: -5px;
-  padding-bottom: 20px;
+  margin-top: -5*@rem;
+  padding-bottom: 20*@rem;
   font-size: 16px
 }
 
 .discuss_item {
   position: relative;
-  padding-left: 45px;
-  margin-top: 15px;
+  padding-left: 45*@rem;
+  margin-top: 15*@rem;
 }
 
 .discuss_item:after {
@@ -113,7 +113,7 @@ export default {
 }
 
 .discuss_item .user_info {
-  min-height: 20px;
+  min-height: 20*@rem;
   overflow: hidden
 }
 
@@ -133,13 +133,13 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  top: 3px;
-  width: 35px;
-  height: 35px;
+  top: 3*@rem;
+  width: 35*@rem;
+  height: 35*@rem;
   background-color: #ccc;
   vertical-align: top;
   margin-top: 0;
-  border-radius: 2px;
+  border-radius: 2*@rem;
 }
 
 .discuss_item .discuss_message {
@@ -173,7 +173,7 @@ export default {
 .discuss_item .discuss_opr .meta_praise {
   display: inline-block;
   text-align: right;
-  padding-top: 5px;
+  padding-top: 5*@rem;
   margin-top: -5px
 }
 
@@ -187,7 +187,7 @@ export default {
 
 .discuss_icon_tips img {
   vertical-align: middle;
-  margin-left: 3px;
+  margin-left: 3*@rem;
   margin-top: -4px
 }
 
@@ -212,7 +212,7 @@ export default {
   left: 0;
   top: 0;
   width: 100%;
-  height: 1px;
+  height: 1*@rem;
   border-top: 1px solid #dadada;
   transform-origin: 0 0;
   transform: scaleY(0.5)
@@ -228,9 +228,9 @@ export default {
   position: absolute;
   left: -0.4em;
   top: 50%;
-  margin-top: -7px;
-  width: 3px;
-  height: 14px;
+  margin-top: -7*@rem;
+  width: 3*@rem;
+  height: 14*@rem;
   background-color: #02bb00
 }
 
@@ -253,8 +253,8 @@ export default {
 }
 
 .icon_praise_gray {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA+CAYAAAA1dwvuAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACd0lEQVRYhe2XMWhUMRjHfycdpDg4iJN26CQih4NUlFIc3iTasaAO+iZBnorIId2CDg6PLqWDXSy0p28TJ6ejILgoKiLFSeRcnASLnDf2HPKll8b3ah5NQPB+cHzJl0v+73J5Sf6NwWCAD6kqxoEV4BywCTwA2j59V9QlxrxUNJeBOSkfBtaAHvDcp/O+GkJHJd4H7kr5nm/nOkJHJH4FHkv5WAyhUxLfAgelvBlUKFXFBNCU6oYl+j6oEHohADwFtoDTUn8dTChVxX7gjlSfSJyS+CaYEDCPXs4d4IXkzDR+8BWqfI9SVUyil/ENST20ml8BF4Afu4z9HT3V80B/TAY9CxTABNAHxp1Oj4B1q34dWAamGa5Al0PALfSs3TS/aE1EcERWgQXgozPIN+Ai6O2ljFQVM8BLZJqN0KTEhgj9kvrViqf1wYz5BcoXQ38Pg9uckfiuSigU0xLXowmlqpgCjgNd4FM0IeCKxGcmEUtoRqLZScILpaqYA06iN9/tTTfGLzKvxLKdDCqUquIEcB59xK9GE2J4xLeBn3ZD1abaq/sQqSpmgWvo82rBbTdCPeAA4N69/noXS1XhphaBz27SPPVtapz/FXSBFsNDcgcN3wvkiBEjRoSndAtqLXXKvuvtYfMs+SP3T3tYm6ge1iaqh7UJ62HRTqNZko/mYV3CeVjA9rAuUTxsGd4edrcX1vWwddn2sHmWaA/bWuq4HnYLff3aC7U8bAiaMPyPJp3GhnxCUOlhQxPdwxrieViLbp4lUT2sIbqHNcTzsBYbeZZE9bCGeB7WIrqHNbTzLNnhYWMIlXpYI9Rz8gM8/GsFi3mW/Ace9jf8QZwIX5o4uQAAAABJRU5ErkJggg==) no-repeat 0 0;width: 13px;
-  height: 13px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA+CAYAAAA1dwvuAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACd0lEQVRYhe2XMWhUMRjHfycdpDg4iJN26CQih4NUlFIc3iTasaAO+iZBnorIId2CDg6PLqWDXSy0p28TJ6ejILgoKiLFSeRcnASLnDf2HPKll8b3ah5NQPB+cHzJl0v+73J5Sf6NwWCAD6kqxoEV4BywCTwA2j59V9QlxrxUNJeBOSkfBtaAHvDcp/O+GkJHJd4H7kr5nm/nOkJHJH4FHkv5WAyhUxLfAgelvBlUKFXFBNCU6oYl+j6oEHohADwFtoDTUn8dTChVxX7gjlSfSJyS+CaYEDCPXs4d4IXkzDR+8BWqfI9SVUyil/ENST20ml8BF4Afu4z9HT3V80B/TAY9CxTABNAHxp1Oj4B1q34dWAamGa5Al0PALfSs3TS/aE1EcERWgQXgozPIN+Ai6O2ljFQVM8BLZJqN0KTEhgj9kvrViqf1wYz5BcoXQ38Pg9uckfiuSigU0xLXowmlqpgCjgNd4FM0IeCKxGcmEUtoRqLZScILpaqYA06iN9/tTTfGLzKvxLKdDCqUquIEcB59xK9GE2J4xLeBn3ZD1abaq/sQqSpmgWvo82rBbTdCPeAA4N69/noXS1XhphaBz27SPPVtapz/FXSBFsNDcgcN3wvkiBEjRoSndAtqLXXKvuvtYfMs+SP3T3tYm6ge1iaqh7UJ62HRTqNZko/mYV3CeVjA9rAuUTxsGd4edrcX1vWwddn2sHmWaA/bWuq4HnYLff3aC7U8bAiaMPyPJp3GhnxCUOlhQxPdwxrieViLbp4lUT2sIbqHNcTzsBYbeZZE9bCGeB7WIrqHNbTzLNnhYWMIlXpYI9Rz8gM8/GsFi3mW/Ace9jf8QZwIX5o4uQAAAABJRU5ErkJggg==) no-repeat 0 0;width: 13*@rem;
+  height: 13*@rem;
   vertical-align: middle;
   display: inline-block;
   background-size: 100% auto

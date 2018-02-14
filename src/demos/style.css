@@ -9,8 +9,8 @@
 
 .demo-icon {
   font-family: 'vux-demo';
-  font-size:20px;
-  padding-right: 10px;
+  font-size:20*@rem;
+  padding-right: 10*@rem;
   color: #04BE02;
 }
 

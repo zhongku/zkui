@@ -102,7 +102,7 @@ export default {
 
   &-ink-bar {
     position: absolute;
-    height: 2px;
+    height: 2*@rem;
     bottom: 0;
     left: 0;
     background-color: @tab-bar-active-color;
@@ -123,7 +123,7 @@ export default {
 .vux-tab {
   display: flex;
   background-color: #fff;
-  height: 44px;
+  height: 44*@rem;
   position: relative;
 }
 .vux-tab button {
@@ -140,10 +140,10 @@ export default {
   height: 100%;
   box-sizing: border-box;
   background: linear-gradient(180deg, #e5e5e5, #e5e5e5, rgba(229, 229, 229, 0)) bottom left no-repeat;
-  background-size: 100% 1px;
+  background-size: 100% 1*@rem;
   
   text-align: center;
-  line-height: 44px;
+  line-height: 44*@rem;
   color: @tab-text-default-color;
 }
 
@@ -175,12 +175,12 @@ export default {
   bottom:0;
   box-sizing: border-box;
   display: inline-block;
-  height: 18px;
-  min-width: 18px;
-  padding: 0 4px;
-  border-radius: 30px;
-  margin: auto 0 auto 4px;
-  line-height: 18px;
+  height: 18*@rem;
+  min-width: 18*@rem;
+  padding: 0 4*@rem;
+  border-radius: 30*@rem;
+  margin: auto 0 auto 4*@rem;
+  line-height: 18*@rem;
   
   background-clip: padding-box;
   vertical-align: middle;

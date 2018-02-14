@@ -38,8 +38,8 @@
 
 .weui-uploader__input-box .file-uploads{
     display: block;
-    width: 79px;
-    height: 79px;
+    width: 79*@rem;
+    height: 79*@rem;
 }
 
 </style>

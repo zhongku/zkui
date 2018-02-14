@@ -9,7 +9,7 @@
       <cell title="value" :value="value3 | json"></cell>
     </group>
     <br>
-    <div style="margin: 0 10px;">
+    <div style="margin: 0 10*@rem;">
       <x-button @click="update" type="primary">list 2</x-button>
       <x-button @click="update2" type="primary">list 1</x-button>
     </div>

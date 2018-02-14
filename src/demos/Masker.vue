@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div style="margin: 10px;overflow: hidden;" v-for="item in list">
-      <masker style="border-radius: 2px;">
+    <div style="margin: 10*@rem;overflow: hidden;" v-for="item in list">
+      <masker style="border-radius: 2*@rem;">
         <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
         <div slot="content" class="m-title">
           {{item.title}}
@@ -10,8 +10,8 @@
         </div>
       </masker>
     </div>
-    <div style="margin: 10px;overflow: hidden;">
-      <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
+    <div style="margin: 10*@rem;overflow: hidden;">
+      <masker style="border-radius: 2*@rem;" color="F9C90C" :opacity="0.8">
         <div class="m-img" style="background-image:url(https://cdn.xiaotaojiang.com/uploads/56/4b3601364b86fdfd234ef11d8712ad/_.jpg)"></div>
         <div slot="content" class="m-title">
           VUX
@@ -56,7 +56,7 @@ export default {
   background-size: cover;
   background-position: center center;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 2*@rem;
 }
 
 .m-title {
@@ -64,7 +64,7 @@ export default {
   text-align: center;
   text-shadow: 0 0 2px rgba(0, 0, 0, .5);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16*@rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -76,9 +76,9 @@ export default {
 
 .m-time {
   
-  padding-top: 4px;
+  padding-top: 4*@rem;
   border-top: 1px solid #f0f0f0;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 5*@rem;
 }
 </style>

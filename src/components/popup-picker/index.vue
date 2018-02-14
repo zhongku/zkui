@@ -253,15 +253,15 @@ export default {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 1px;
+  height: 1*@rem;
   border-top: 1px solid #D9D9D9;
   color: #D9D9D9;
   transform-origin: 0 0;
   transform: scaleY(0.5);
-  left: 15px;
+  left: 15*@rem;
 }
 .vux-popup-picker-header {
-  height: 44px;
+  height: 44*@rem;
   color: @popup-picker-header-text-color;
   background-color: @popup-picker-header-bg-color;
   font-size: @popup-picker-header-font-size;
@@ -275,12 +275,12 @@ export default {
 }
 .vux-popup-picker-header-menu {
   text-align: left;
-  padding-left: 15px;
-  line-height: 44px;
+  padding-left: 15*@rem;
+  line-height: 44*@rem;
 }
 .vux-popup-picker-header-menu-right {
   text-align: right;
-  padding-right: 15px;
+  padding-right: 15*@rem;
 }
 .vux-popup-picker-select {
   width: 100%;
@@ -290,17 +290,17 @@ export default {
   content: " ";
   display: inline-block;
   transform: rotate(45deg);
-  height: 6px;
-  width: 6px;
+  height: 6*@rem;
+  width: 6*@rem;
   border-width: 2px 2px 0 0;
   border-color: #C8C8CD;
   border-style: solid;
   position: relative;
-  top: -2px;
+  top: -2*@rem;
   position: absolute;
   top: 50%;
-  right: 15px;
-  margin-top: -3px;
+  right: 15*@rem;
+  margin-top: -3*@rem;
 }
 .vux-popup-picker-cancel {
   color: @popup-picker-header-cancel-text-color;

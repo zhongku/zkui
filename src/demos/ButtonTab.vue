@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="padding: 15px;">
+    <div style="padding: 15*@rem;">
       <button-tab>
         <button-tab-item>{{ $t('Today') }}</button-tab-item>
         <button-tab-item selected>{{ $t('This Week') }}</button-tab-item>

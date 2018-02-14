@@ -428,9 +428,9 @@ export default {
   top: 0;
   left: 0;
   display: inline-block;
-  padding: 8px;
-  width: 24px;
-  height: 24px;
+  padding: 8*@rem;
+  width: 24*@rem;
+  height: 24*@rem;
 }
 
 .calendar-year > span.calendar-header-right-arrow, .calendar-month > span.calendar-header-right-arrow {
@@ -440,23 +440,23 @@ export default {
 .vux-prev-icon, .vux-next-icon {
   position: absolute;
   left: 0;
-  top: 15px;
+  top: 15*@rem;
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 12*@rem;
+  height: 12*@rem;
   border: 1px solid @calendar-arrow-color;
   border-radius: 0;
   border-top: none;
   border-right: none;
   transform: rotate(45deg);
-  margin-left: 15px;
-  line-height: 40px;
+  margin-left: 15*@rem;
+  line-height: 40*@rem;
 }
 .vux-next-icon {
   transform: rotate(-135deg);
   left: auto;
-  top: 14px;
-  right: 15px;
+  top: 14*@rem;
+  right: 15*@rem;
 }
 .is-weekend-highlight td.is-week-list-0,
 .is-weekend-highlight td.is-week-list-6,
@@ -472,7 +472,7 @@ export default {
   position: relative;
 }
 .calendar-header {
-  line-height: 40px;
+  line-height: 40*@rem;
   font-size: 1.2em;
   overflow: hidden;
 }
@@ -488,12 +488,12 @@ export default {
 }
 .switch-btn, .calendar-title {
   display: inline-block;
-  border-radius: 4px;
-  line-height: 30px;
+  border-radius: 4*@rem;
+  line-height: 30*@rem;
 }
 .switch-btn {
-  width: 30px;
-  margin: 5px;
+  width: 30*@rem;
+  margin: 5*@rem;
   color: #39b5b8;
   font-family: "SimSun";
 }
@@ -512,13 +512,13 @@ export default {
   float: left;
   width: 14.28%;
   font-size: 1.6em;
-  line-height: 34px;
+  line-height: 34*@rem;
   text-align: center;
 }
 .inline-calendar {
   width: 100%;
   background-color: @calendar-bg-color;
-  border-radius: 2px;
+  border-radius: 2*@rem;
   transition: all .5s ease;
 }
 .inline-calendar td.is-today, .inline-calendar td.is-today.is-disabled {
@@ -530,16 +530,16 @@ export default {
 }
 .calendar:before {
   position: absolute;
-  left:30px;
-  top: -10px;
+  left:30*@rem;
+  top: -10*@rem;
   content: "";
   border:5px solid rgba(0, 0, 0, 0);
   border-bottom-color: #DEDEDE;
 }
 .calendar:after {
   position: absolute;
-  left:30px;
-  top: -9px;
+  left:30*@rem;
+  top: -9*@rem;
   content: "";
   border:5px solid rgba(0, 0, 0, 0);
   border-bottom-color: #fff;
@@ -587,21 +587,21 @@ export default {
 /** same as week-calendar style**/
 .vux-calendar-top-tip {
   position: absolute;
-  left: -10px;
+  left: -10*@rem;
   top: 0;
-  font-size: 20px;
+  font-size: 20*@rem;
   transform: scale(0.5);
   transform-origin: top left;
 }
 .vux-calendar-dot {
   display: block;
   text-align: center;
-  width: 5px;
-  height: 5px;
+  width: 5*@rem;
+  height: 5*@rem;
   position: absolute;
   left: 50%;
-  bottom: 0px;
-  margin-left: -2.5px;
+  bottom: 0*@rem;
+  margin-left: -2.5*@rem;
   background-color: #f74c31;
   border-radius: 50%;
 }

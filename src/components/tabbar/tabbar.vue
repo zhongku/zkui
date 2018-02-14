@@ -40,18 +40,18 @@ export default {
 }
 .weui-tabbar__icon > sup {
   position: absolute;
-  top: -8px;
+  top: -8*@rem;
   left: 100%;
   transform: translateX(-50%);
   z-index: 101;
 }
 .weui-tabbar__item.vux-tabbar-simple {
   padding: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 50*@rem;
+  line-height: 50*@rem;
 }
 .vux-tabbar-simple .weui-tabbar__label {
   
-  line-height: 50px;
+  line-height: 50*@rem;
 }
 </style>

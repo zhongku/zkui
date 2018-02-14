@@ -6,7 +6,7 @@
         <p v-for="i in n">placeholder {{i}}</p>
       </div>
       <!--pullup slot-->
-      <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40px; bottom: -40px; text-align: center;">
+      <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40*@rem; bottom: -40*@rem; text-align: center;">
         <span v-show="status.pullupStatus === 'default'"></span>
         <span class="pullup-arrow" v-show="status.pullupStatus === 'down' || status.pullupStatus === 'up'" :class="{'rotate': status.pullupStatus === 'up'}">↑</span>
         <span v-show="status.pullupStatus === 'loading'"><spinner type="ios-small"></spinner></span>
@@ -93,7 +93,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .box2-wrap {
-  height: 300px;
+  height: 300*@rem;
   overflow: hidden;
 }
 .rotate {
@@ -103,6 +103,6 @@ export default {
 .pullup-arrow {
   transition: all linear 0.2s;
   color: #666;
-  font-size: 25px;
+  font-size: 25*@rem;
 }
 </style>

@@ -58,7 +58,7 @@
 
 <style scoped>
   p {
-    padding: 10px 15px;
+    padding: 10px 15*@rem;
 
     color: #888;
   }

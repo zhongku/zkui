@@ -145,25 +145,25 @@ export default {
 
 <style scoped>
 .box1 {
-  height: 100px;
+  height: 100*@rem;
   position: relative;
-  width: 1490px;
+  width: 1490*@rem;
 }
 .box1-item {
-  width: 200px;
-  height: 100px;
+  width: 200*@rem;
+  height: 100*@rem;
   background-color: #ccc;
   display:inline-block;
-  margin-left: 15px;
+  margin-left: 15*@rem;
   float: left;
   text-align: center;
-  line-height: 100px;
+  line-height: 100*@rem;
 }
 .box1-item:first-child {
   margin-left: 0;
 }
 .box2-wrap {
-  height: 300px;
+  height: 300*@rem;
   overflow: hidden;
 }
 </style>

@@ -27,8 +27,8 @@
 .file-uploads.file-uploads-html5 input[type="file"] {
   overflow: hidden;
   position: fixed;
-  width: 1px;
-  height: 1px;
+  width: 1*@rem;
+  height: 1*@rem;
   z-index: -1;
   opacity: 0;
 }
@@ -1045,7 +1045,7 @@ export default {
       iframe.id = 'upload-iframe-' + file.id
       iframe.name = 'upload-iframe-' + file.id
       iframe.src = 'about:blank'
-      iframe.setAttribute('style', 'width:1px;height:1px;top:-999em;position:absolute; margin-top:-999em;')
+      iframe.setAttribute('style', 'width:1*@rem;height:1*@rem;top:-999em;position:absolute; margin-top:-999em;')
 
 
       let form = document.createElement('form')

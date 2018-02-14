@@ -31,14 +31,14 @@
     <cell :title="$t('End date')" value="2018-05-30"></cell>
   </group>
 
-  <div style="margin: 15px;">
+  <div style="margin: 15*@rem;">
     <x-button type="primary" @click.native="$refs.calendar.switchViewToToday()">switchViewToToday</x-button>
     <x-button type="primary" @click.native="$refs.calendar.switchViewToMonth(2017, 12)">switchViewToMonth(2017, 12)</x-button>
     <x-button type="primary" @click.native="$refs.calendar.switchViewToMonth(2018, 10)">switchViewToMonth(2018, 10)</x-button>
     <x-button type="primary" @click.native="$refs.calendar.switchViewToCurrentValue()">switchViewToCurrentValue</x-button>
   </div>
 
-  <group :title="$t('Control days')" style="margin-top: 30px;">
+  <group :title="$t('Control days')" style="margin-top: 30*@rem;">
     <x-switch v-model="disablePast" :title="$t('Disable past')"></x-switch>
     <x-switch v-model="disableFuture" :title="$t('Disable future')"></x-switch>
     <x-switch v-model="disableWeekend" :title="$t('Disable weekend')"></x-switch>
@@ -57,7 +57,7 @@
     <x-switch v-model="replace" :title="$t('Replace date text')"></x-switch>
   </group>
   <br>
-  <div style="margin: 15px;">
+  <div style="margin: 15*@rem;">
     <x-button type="primary" @click.native="value='2020-11-11'"> {{ $t('Set time to') }} 2020-11-11</x-button>
     <x-button type="primary" @click.native="value='2020-11-22'"> {{ $t('Set time to') }} 2020-11-22</x-button>
     <x-button type="primary" @click.native="value='2016-08-09'"> {{ $t('Set time to') }} 2016-08-09</x-button>
@@ -174,7 +174,7 @@ export default {
     },
     useCustomFn (val) {
       this.buildSlotFn = val ? (line, index, data) => {
-        return /8/.test(data.date) ? '<div style="font-size:12px;text-align:center;"><span style="display:inline-block;width:5px;height:5px;background-color:red;border-radius:50%;"></span></div>' : '<div style="height:19px;"></div>'
+        return /8/.test(data.date) ? '<div style="font-size:12*@rem;text-align:center;"><span style="display:inline-block;width:5*@rem;height:5*@rem;background-color:red;border-radius:50%;"></span></div>' : '<div style="height:19*@rem;"></div>'
       } : () => ''
     },
     changeWeeksList (val) {

@@ -18,14 +18,14 @@ export default {
 
 <style>
 .vux-group-tip, .vux-group-tip p {
-  font-size:14px;
+  font-size:14*@rem;
   color:#888;
   text-align:center;
   padding-top:0.3em;
-  padding-left:10px;
-  padding-right:5px;
+  padding-left:10*@rem;
+  padding-right:5*@rem;
 }
 .vux-group-tip .weui-icon {
-  padding-right: 3px;
+  padding-right: 3*@rem;
 }
 </style>

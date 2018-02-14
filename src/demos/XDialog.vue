@@ -11,7 +11,7 @@
 
     <div v-transfer-dom>
       <x-dialog v-model="showToast" class="dialog-demo">
-        <div style="padding:15px;">
+        <div style="padding:15*@rem;">
           <x-button @click.native="doShowToast" type="primary">show toast</x-button>
         </div>
         <div @click="showToast=false">
@@ -56,7 +56,7 @@
     <div v-transfer-dom>
       <x-dialog v-model="showDialogStyle" hide-on-blur :dialog-style="{'max-width': '100%', width: '100%', height: '50%', 'background-color': 'transparent'}">
         <p style="color:#fff;text-align:center;" @click="showDialogStyle = false">
-          <span style="font-size:30px;">HELLO WORLD</span>
+          <span style="font-size:30*@rem;">HELLO WORLD</span>
           <br>
           <br>
           <x-icon type="ios-close-outline" style="fill:#fff;"></x-icon>
@@ -71,7 +71,7 @@
     <div v-transfer-dom>
       <x-dialog v-model="showScrollBox" class="dialog-demo">
         <p class="dialog-title">Long content</p>
-        <div class="img-box" style="height:100px;padding:15px 0;overflow:scroll;-webkit-overflow-scrolling:touch;">
+        <div class="img-box" style="height:100*@rem;padding:15px 0;overflow:scroll;-webkit-overflow-scrolling:touch;">
           <p v-for="i in 20">{{i}}</p>
         </div>
         <div @click="showScrollBox=false">
@@ -138,20 +138,20 @@ export default {
 
 .dialog-demo {
   .weui-dialog{
-    border-radius: 8px;
-    padding-bottom: 8px;
+    border-radius: 8*@rem;
+    padding-bottom: 8*@rem;
   }
   .dialog-title {
-    line-height: 30px;
+    line-height: 30*@rem;
     color: #666;
   }
   .img-box {
-    height: 350px;
+    height: 350*@rem;
     overflow: hidden;
   }
   .vux-close {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 8*@rem;
+    margin-bottom: 8*@rem;
   }
 }
 </style>

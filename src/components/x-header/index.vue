@@ -113,10 +113,10 @@ back_text:
   .vux-header .vux-header-left,
   .vux-header .vux-header-right {
     position: absolute;
-    top: 14px;
+    top: 14*@rem;
     display: block;
 
-    line-height: 21px;
+    line-height: 21*@rem;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a,
@@ -124,7 +124,7 @@ back_text:
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
     float: left;
-    margin-right: 8px;
+    margin-right: 8*@rem;
     color: @header-text-color;
   }
   .vux-header .vux-header-left a:active,
@@ -134,41 +134,41 @@ back_text:
     opacity: 0.5;
   }
   .vux-header .vux-header-left {
-    left: 18px;
+    left: 18*@rem;
   }
   .vux-header .vux-header-left .vux-header-back {
-    padding-left: 16px;
+    padding-left: 16*@rem;
   }
   .vux-header .vux-header-left .left-arrow {
     position: absolute;
     width: 30*@rem;
     height: 30*@rem;
-    top: -2px;
-    left: -5px;
+    top: -2*@rem;
+    left: -5*@rem;
 
     &:before {
       content: '';
       position: absolute;
-      width: 9px;
-      height: 9px;
+      width: 9*@rem;
+      height: 9*@rem;
       border: 1px solid @header-arrow-color;
-      border-width: 1px 0 0 1px;
+      border-width: 1px 0 0 1*@rem;
       transform: rotate(315deg);
-      top: 8px;
-      left: 7px;
+      top: 8*@rem;
+      left: 7*@rem;
     }
   }
   .vux-header .vux-header-right {
-    right: 15px;
+    right: 15*@rem;
   }
   .vux-header .vux-header-right a,
   .vux-header .vux-header-right button {
-    margin-left: 8px;
+    margin-left: 8*@rem;
     margin-right: 0;
   }
   .vux-header .vux-header-right .vux-header-more:after {
     content: '\2022\0020\2022\0020\2022\0020';
-    font-size: 16px;
+    font-size: 16*@rem;
   }
   .vux-header-fade-in-right-enter-active {
     animation: fadeinR 0.5s;

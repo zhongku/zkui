@@ -130,8 +130,8 @@
     </group>
     <div v-transfer-dom>
       <popup v-model="showPopup" class="checker-popup">
-        <div style="padding:10px 10px 40px 10px;">
-          <p style="padding: 5px 5px 5px 2px;color:#888;">Colors</p>
+        <div style="padding:10px 10px 40px 10*@rem;">
+          <p style="padding: 5px 5px 5px 2*@rem;color:#888;">Colors</p>
           <checker
           v-model="demo4"
           default-item-class="demo4-item"
@@ -281,29 +281,29 @@ export default {
 
 <style scoped>
 .box {
-  padding: 0 15px;
+  padding: 0 15*@rem;
 }
 .demo1-item {
   border: 1px solid #ececec;
-  padding: 5px 15px;
+  padding: 5px 15*@rem;
 }
 .demo1-item-selected {
   border: 1px solid green;
 }
 .demo2-item {
-  width: 40px;
-  height: 40px;
+  width: 40*@rem;
+  height: 40*@rem;
   border: 1px solid #ccc;
   display: inline-block;
   border-radius: 50%;
-  line-height: 40px;
+  line-height: 40*@rem;
   text-align: center;
 }
 .demo2-item-selected {
   border-color: green;
 }
 .demo3-item {
-  padding: 5px 5px;
+  padding: 5px 5*@rem;
   font-size: 0;
 }
 .demo3-item-selected {
@@ -313,10 +313,10 @@ export default {
   background-color: #ddd;
   color: #222;
   
-  padding: 5px 10px;
-  margin-right: 10px;
-  line-height: 18px;
-  border-radius: 15px;
+  padding: 5px 10*@rem;
+  margin-right: 10*@rem;
+  line-height: 18*@rem;
+  border-radius: 15*@rem;
 }
 .demo4-item-selected {
   background-color: #FF3B3B;
@@ -326,14 +326,14 @@ export default {
   color: #999;
 }
 .demo5-item {
-  width: 100px;
-  height: 26px;
-  line-height: 26px;
+  width: 100*@rem;
+  height: 26*@rem;
+  line-height: 26*@rem;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 3*@rem;
   border: 1px solid #ccc;
   background-color: #fff;
-  margin-right: 6px;
+  margin-right: 6*@rem;
 }
 .demo5-item-selected {
   background: #ffffff url(../assets/demo/checker/active.png) no-repeat right bottom;

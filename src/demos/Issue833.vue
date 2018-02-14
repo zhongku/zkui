@@ -1,7 +1,7 @@
 <template>
   <div>
     <scroller height="-98" style="border:1px solid red;" @on-pullup-loading="pullupHandle" @on-pulldown-loading="pulldownHandle" :value="scrollStatus" lock-x scrollbar-y  ref="scroller" use-pulldown use-pullup :pulldown-config="pulldownConfig" :pullup-config="pullupConfig">
-      <group title="cell demo" style="padding-bottom:15px;">
+      <group title="cell demo" style="padding-bottom:15*@rem;">
         <cell v-for="i in datas" :key="item" title="item" :value="i"></cell>
       </group>
     </scroller>

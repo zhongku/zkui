@@ -1,7 +1,7 @@
 <template>
   <div>
     <load-more tip="default" :show-loading="false" background-color="#fbf9fe"></load-more>
-    <div style="padding:0 15px;">
+    <div style="padding:0 15*@rem;">
       <x-table>
         <thead>
           <tr>
@@ -69,7 +69,7 @@
         </tbody>
       </x-table>
       </div>
-      <div style="padding:15px;">
+      <div style="padding:15*@rem;">
         <load-more tip="full-bordered" :show-loading="false" background-color="#fbf9fe"></load-more>
         <x-table full-bordered style="background-color:#fff;">
           <thead>

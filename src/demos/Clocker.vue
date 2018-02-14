@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p style="padding:15px;">
+    <p style="padding:15*@rem;">
       <span> {{ $t('Basic Usage') }}: </span>
       <clocker :time="time1"></clocker>
     </p>
@@ -74,7 +74,7 @@ export default {
   color:#fff;
   text-align:center;
   display:inline-block;
-  padding:0 3px;
-  border-radius:3px;
+  padding:0 3*@rem;
+  border-radius:3*@rem;
 }
 </style>

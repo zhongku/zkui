@@ -20,16 +20,16 @@ export default {
   background: @badge-bg-color;
   color: #fff;
   
-  height: 16px;
-  line-height: 16px;
-  border-radius: 8px;
-  padding: 0 6px;
+  height: 16*@rem;
+  line-height: 16*@rem;
+  border-radius: 8*@rem;
+  padding: 0 6*@rem;
   background-clip: padding-box;
   vertical-align: middle;
 }
 .vux-badge-single {
   padding: 0;
-  width: 16px;
+  width: 16*@rem;
 }
 .vux-badge-dot {
   height: auto;

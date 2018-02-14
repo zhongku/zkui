@@ -27,7 +27,7 @@ export default {
   left: 0;
   top: 0;
   width: 200%;
-  height: 1px;
+  height: 1*@rem;
   border-left: 1px solid @c;
   border-top: 1px solid @c;
   border-bottom: 1px solid @c;
@@ -44,7 +44,7 @@ export default {
   left: 0;
   top: 0;
   width: 200%;
-  height: 1px;
+  height: 1*@rem;
   border-right: 1px solid @c;
   border-top: 1px solid @c;
   border-bottom: 1px solid @c;
@@ -63,7 +63,7 @@ export default {
   left: 0;
   top: 0;
   width: 200%;
-  height: 1px;
+  height: 1*@rem;
   border-right: 1px solid @c;
   border-top: 1px solid @c;
   border-bottom: 1px solid @c;

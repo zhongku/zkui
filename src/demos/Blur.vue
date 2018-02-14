@@ -34,13 +34,13 @@ export default {
 <style scoped>
 .center {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20*@rem;
   color: #fff;
   font-size: @h3-font-size;;
 }
 .center img {
-  width: 100px;
-  height: 100px;
+  width: 100*@rem;
+  height: 100*@rem;
   border-radius: 50%;
   border: 4px solid #ececec;
 }

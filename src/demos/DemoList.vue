@@ -90,7 +90,7 @@ export default {
   height: 100%;
 }
 .demo-list-box {
-  margin-bottom: 10px;
+  margin-bottom: 10*@rem;
   background-color: #fff;
   width: 100%;
   overflow: scroll;

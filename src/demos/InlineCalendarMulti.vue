@@ -3,7 +3,7 @@
     <inline-calendar v-model="value" @on-change="onChange"></inline-calendar>
     <br>
     {{ value }}
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="updateValue">update value</x-button>
     </div>
   </div>

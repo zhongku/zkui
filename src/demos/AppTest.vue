@@ -4,7 +4,7 @@
       <cell title="device id" :value="deviceId"></cell>
       <cell title="device model" :value="deviceModel"></cell>
     </group>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="alert" type="primary">Native Alert</x-button>
       <x-button @click.native="toast" type="primary">Native Toast</x-button>
     </div>

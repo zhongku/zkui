@@ -55,7 +55,7 @@ export default {
   .vux-flexbox-item {
     flex: 1;
     -webkit-flex: 1;
-    min-width: 20px;
+    min-width: 20*@rem;
     width: 0%;
     &:first-child {
       margin-left: 0!important;

@@ -558,13 +558,13 @@ export default {
   text-align: center;
 }
 .vux-x-input .vux-input-icon {
-  font-size: 21px;
+  font-size: 21*@rem;
 }
 .vux-input-icon.weui-icon-warn:before, .vux-input-icon.weui-icon-success:before {
-  font-size: 21px;
+  font-size: 21*@rem;
 }
 .vux-x-input .weui-icon {
-  padding-left: 5px;
+  padding-left: 5*@rem;
 }
 .vux-x-input.weui-cell_vcode {
   padding-top: 0;

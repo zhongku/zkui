@@ -130,29 +130,29 @@ export default {
 }
 .vux-number-input {
   float:left;
-  height:20px;
-  font-size:20px;
+  height:20*@rem;
+  font-size:20*@rem;
   color: @number-input-font-color;
   appearance: none;
   border:1px solid #ececec;
   padding:3px 0;
   text-align:center;
-  border-radius: 1px;
+  border-radius: 1*@rem;
 }
 .vux-number-round .vux-number-input {
   border: none;
 }
 .vux-number-selector {
   float:left;
-  height:20px;
-  font-size:25px;
-  line-height:18px;
+  height:20*@rem;
+  font-size:25*@rem;
+  line-height:18*@rem;
   color:@number-button-font-color;
   border:1px solid @number-square-button-enabled-border-color;
 }
 .vux-number-round .vux-number-selector {
-  width: 20px;
-  border-radius: 13px;
+  width: 20*@rem;
+  border-radius: 13*@rem;
 }
 .vux-number-selector svg {
   fill: @number-button-font-color;
@@ -168,21 +168,21 @@ export default {
 }
 .vux-number-selector-sub {
   border-right:none;
-  padding:4px 8px 2px 8px;
-  border-radius:2px 0 0 2px;
+  padding:4px 8px 2px 8*@rem;
+  border-radius:2px 0 0 2*@rem;
 }
 .vux-number-selector-plus {
   border-left:none;
-  margin-right: 5px;
-  padding:3px 8px;
+  margin-right: 5*@rem;
+  padding:3px 8*@rem;
   border-radius:0 2px 2px 0;
 }
 .vux-number-round .vux-number-selector-sub svg {
   position: relative;
-  top: 1px;
+  top: 1*@rem;
 }
 .vux-number-round .vux-number-selector-sub, .vux-number-round .vux-number-selector-plus {
-  padding: 2px;
+  padding: 2*@rem;
   border: 1px solid @number-round-button-enabled-border-color;
   text-align: center;
 }

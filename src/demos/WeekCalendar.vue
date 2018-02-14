@@ -99,9 +99,9 @@ export default {
 .demo-week-calendar-btn {
   color: green;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 3*@rem;
   border: 1px solid green;
-  padding: 3px 3px;
-  margin: 3px;
+  padding: 3px 3*@rem;
+  margin: 3*@rem;
 }
 </style>

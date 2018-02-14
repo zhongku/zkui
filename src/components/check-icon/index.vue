@@ -40,7 +40,7 @@ export default {
   display: inline-block;
 }
 .vux-check-icon > span {
-  line-height: 23px;
+  line-height: 23*@rem;
   color: #222;
   vertical-align: middle;
 }

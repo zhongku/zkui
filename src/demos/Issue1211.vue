@@ -129,14 +129,14 @@
   }
   .detail{
     text-align: center;
-    height: 50px;
+    height: 50*@rem;
     position: absolute;
-    line-height: 50px;
+    line-height: 50*@rem;
     bottom: 0;
     border: 1px solid #F1F0F3;
   }
   .sumBtn{
     width: 80%;
-    margin-top: 20px;
+    margin-top: 20*@rem;
   }
 </style>

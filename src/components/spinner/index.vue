@@ -46,13 +46,13 @@ export default {
   fill: #444;
   vertical-align: middle;
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 28*@rem;
+  height: 28*@rem;
 }
 
 .vux-spinner svg {
-  width: 28px;
-  height: 28px;
+  width: 28*@rem;
+  height: 28*@rem;
 }
 
 .vux-spinner.vux-spinner-inverse {

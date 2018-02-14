@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="show=true" plain type="primary">show popup</x-button>
     </div>
 
     <div v-transfer-dom>
       <popup v-model="show" @on-first-show="onFirstShow">
-        <div id="js_ximg_popup" style="max-height:500px;overflow-y:scroll;">
-          <div style="padding:15px;">
+        <div id="js_ximg_popup" style="max-height:500*@rem;overflow-y:scroll;">
+          <div style="padding:15*@rem;">
             <x-button @click.native="show=false" plain type="primary">close popup</x-button>
           </div>
           <div v-for="src in list" class="x-img-popup">
@@ -57,6 +57,6 @@ export default {
 <style scoped>
 .x-img-popup {
   text-align:center;
-  min-height:200px;
+  min-height:200*@rem;
 }
 </style>

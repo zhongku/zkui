@@ -97,11 +97,11 @@ function contains (a, obj) {
   pointer-events: none;
 }
 .vux-radio-icon {
-  width: 24px;
-  height:24px;
+  width: 24*@rem;
+  height:24*@rem;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 5*@rem;
 }
 .vux-radio-label {
   vertical-align: middle;

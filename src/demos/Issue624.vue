@@ -1,13 +1,13 @@
 <template>
   <div>
-    <textarea v-model="code" style="display:block;width:100%;height:80px;font-size:14px;padding:10px;">
+    <textarea v-model="code" style="display:block;width:100%;height:80*@rem;font-size:14*@rem;padding:10*@rem;">
     </textarea>
     <div v-transfer-dom="dom">
       <x-dialog v-model="show1" v-if="insert">
         <span @click="show1=false">Close me</span>
       </x-dialog>
     </div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="show1=true">show1 = true</x-button>
       <x-button type="primary" @click.native="dom=true">transfer dom</x-button>
       <x-button type="primary" @click.native="dom=false">transfer back</x-button>

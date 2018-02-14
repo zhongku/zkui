@@ -30,8 +30,8 @@ export default {
   padding: 10px 0 0;
 }
 .value-range {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20*@rem;
+  margin-bottom: 20*@rem;
   margin-right: 40px !important;
   margin-left: 40px !important;
 }

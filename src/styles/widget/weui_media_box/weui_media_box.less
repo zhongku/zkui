@@ -1,11 +1,11 @@
 @import "../../base/fn";
 
 .weui-media-box {
-    padding: 15px;
+    padding: 15*@rem;
     position: relative;
     &:before {
         .setTopLine(@weuiLineColorLight);
-        left: 15px;
+        left: 15*@rem;
     }
     &:first-child {
         &:before {
@@ -35,8 +35,8 @@
     .ellipsisLn(2);
 }
 .weui-media-box__info {
-    margin-top: 15px;
-    padding-bottom: 5px;
+    margin-top: 15*@rem;
+    padding-bottom: 5*@rem;
 
     color: #CECECE;
     line-height: 1em;
@@ -53,7 +53,7 @@
 }
 .weui-media-box_text {
     .weui-media-box__title {
-        margin-bottom: 8px;
+        margin-bottom: 8*@rem;
     }
 }
 .weui-media-box_appmsg {
@@ -61,9 +61,9 @@
     align-items: center;
     .weui-media-box__hd {
         margin-right: .8em;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+        width: 60*@rem;
+        height: 60*@rem;
+        line-height: 60*@rem;
         text-align: center;
     }
     .weui-media-box__thumb {

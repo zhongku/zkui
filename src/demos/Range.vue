@@ -27,7 +27,7 @@
       <cell title="current value" :value="dynamiValue + ''"></cell>
     </group>
     <br>
-    <div style="margin:0 10px;">
+    <div style="margin:0 10*@rem;">
       <x-button type="primary" @click.native="update">update min = {{min}}, max = {{max}} and step = {{step}}</x-button>
     </div>
 
@@ -54,10 +54,10 @@
 
     <group title="custom min and max html">
       <cell title="文字大小" :inline-desc="'font size: ' + data10" primary="content">
-        <range v-model="data10" :min="12" :max="22" min-HTML="<span style='font-size:12px;'>小</span>" max-HTML="<span style='font-size:22px;'>大</span>"></range>
+        <range v-model="data10" :min="12" :max="22" min-HTML="<span style='font-size:12*@rem;'>小</span>" max-HTML="<span style='font-size:22*@rem;'>大</span>"></range>
       </cell>
       <cell title="bcontentness" :inline-desc="'value is: ' + data11 + '%'" primary="content">
-        <range v-model="data11" min-HTML="<span style='font-size:16px;color:#F90;'>☼</span>" max-HTML="<span style='font-size:30px;color:#F90;'>☼</span>"></range>
+        <range v-model="data11" min-HTML="<span style='font-size:16*@rem;color:#F90;'>☼</span>" max-HTML="<span style='font-size:30*@rem;color:#F90;'>☼</span>"></range>
       </cell>
     </group>
 

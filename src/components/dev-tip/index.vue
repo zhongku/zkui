@@ -12,10 +12,10 @@ export default {
 
 <style>
 .vux-dev-tip {
-  padding:5px 10px;
+  padding:5px 10*@rem;
   background-color: #FFCC00;
   color:#000;
   margin-bottom:0.3em;
-  font-size:12px;
+  font-size:12*@rem;
 }
 </style>

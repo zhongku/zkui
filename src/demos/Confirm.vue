@@ -72,13 +72,13 @@
       </confirm>
     </div>
     <br>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="showPlugin" type="primary">{{ $t('Show') }}</x-button>
     </div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="showPlugin2" type="primary">{{ $t('Plugin usage') }}</x-button>
     </div>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="showPlugin3" type="primary"> {{ $t('Call prompt by using plugin') }} </x-button>
     </div>
   </div>

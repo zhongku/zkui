@@ -55,28 +55,28 @@ export default {
     position:absolute;
     content:'';
     z-index:99;
-    border-radius:99px;
+    border-radius:99*@rem;
   }
 
   &-item-head {
-    width:10px;
-    height:10px;
-    left:1px;top:4px;
+    width:10*@rem;
+    height:10*@rem;
+    left:1*@rem;top:4*@rem;
   }
 
   &-item-head-first {
-    width:20px;
-    height:20px;
-    left:-4px;top:5px;
+    width:20*@rem;
+    height:20*@rem;
+    left:-4*@rem;top:5*@rem;
   }
 
   &-item-tail {
     position:absolute;
     content:'';
     height:100%;
-    width:2px;
-    left:5px;
-    top:5px;
+    width:2*@rem;
+    left:5*@rem;
+    top:5*@rem;
     background-color: @timeline-item-bg-color;
   }
 
@@ -85,14 +85,14 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 20px;
-    height: 20px;
+    width: 20*@rem;
+    height: 20*@rem;
 
     &.weui-icon-success-no-circle::before {
       
       position: absolute;
-      left: 3px;
-      top: 3px;
+      left: 3*@rem;
+      top: 3*@rem;
       margin: 0!important;
       color: #FFF;
     }

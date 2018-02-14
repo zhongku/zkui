@@ -45,7 +45,7 @@
   </div>
     
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="disabled = false" type="primary" :disabled="!disabled">{{ $t('set Enabled') }}</x-button>
       <x-button @click.native="disabled = true" type="warn" :disabled="disabled">{{ $t('set Disabled') }}</x-button>
       <x-button @click.native="$refs.swipeoutItem.open('left')" type="primary">{{ $t('open left menu') }}</x-button>
@@ -60,7 +60,7 @@
           <swipeout-button type="primary">{{$t('Yes')}}</swipeout-button>
           <swipeout-button type="warn">{{$t('Right')}}</swipeout-button>
         </div>
-        <div slot="content" :class="{'border-bottom': i !== 3, 'border-top': i === 1}" style="padding:12px;">{{ $t('JavaScript is the best language') }}</div>
+        <div slot="content" :class="{'border-bottom': i !== 3, 'border-top': i === 1}" style="padding:12*@rem;">{{ $t('JavaScript is the best language') }}</div>
       </swipeout-item>
     </swipeout>
     <br>
@@ -128,6 +128,6 @@ export default {
 
 <style lang="less">
 .demo-content {
-  padding: 10px 10px;
+  padding: 10px 10*@rem;
 }
 </style>

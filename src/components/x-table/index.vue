@@ -25,7 +25,7 @@ export default {
 @import '../../styles/base/utilities/border.less';
 
 .vux-table {
-  line-height: 40px;
+  line-height: 40*@rem;
   position: relative;
   width: 100%;
   border-collapse: collapse;
@@ -70,7 +70,7 @@ export default {
 
 .vux-table.vux-table-no-content-bordered tr:last-child td {
   &:before {
-    border-bottom-width: 1px;
+    border-bottom-width: 1*@rem;
   }
 }
 
@@ -94,7 +94,7 @@ export default {
 
 .vux-table.vux-table-bordered tr td:last-child, .vux-table.vux-table-bordered tr th:last-child {
   &:after {
-    border-right-width: 1px;
+    border-right-width: 1*@rem;
   }
 }
 </style>

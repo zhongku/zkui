@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" plain @click.native="showPlugin">{{ $t('Used as a plugin') }}</x-button>
     </div>
 
@@ -34,7 +34,7 @@
       <datetime v-model="formatValue" :display-format="formatValueFunction" @on-change="change" :title="$t('Birthday')"></datetime>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="formatValue = '2017-11-11'">{{ $t('Set value: 2017-11-11') }}</x-button>
     </div>
 
@@ -54,7 +54,7 @@
       <datetime v-model="value2" :format="format" @on-change="change" :title="$t('Start time')"></datetime>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" @click.native="toggleFormat">{{ $t('Toggle format') }}</x-button>
     </div>
 
@@ -104,7 +104,7 @@
       <datetime v-model="value9" @on-change="change" :title="$t('Birthday')" :show.sync="visibility"></datetime>
     </group>
 
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button type="primary" plain @click.native="visibility = true">显示</x-button>
     </div>
 
@@ -272,8 +272,8 @@ export default {
 
 <style scoped lang="less">
 .center {
-  padding-top: 10px;
-  padding-left: 15px;
+  padding-top: 10*@rem;
+  padding-left: 15*@rem;
   color: green;
 }
 </style>

@@ -31,8 +31,8 @@
     <div class="content">
       <scroller lock-x scrollbar-y>
         <div>
-          <div style="margin: 10px;overflow: hidden;" v-for="item in list">
-            <masker style="border-radius: 2px;">
+          <div style="margin: 10*@rem;overflow: hidden;" v-for="item in list">
+            <masker style="border-radius: 2*@rem;">
               <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
               <div slot="content" class="m-title">
                 {{item.title}}
@@ -83,35 +83,35 @@ export default {
 
 <style scoped lange="less">
 .menu {
-  width: 75px;
+  width: 75*@rem;
   float: left;
   background-color: #fff;
 }
 .box1 {
 }
 .box1 ul {
-  width: 74px;
+  width: 74*@rem;
 }
 .box1 li{
   text-align: center;
-  padding: 0 5px;
+  padding: 0 5*@rem;
   
-  line-height: 40px;
+  line-height: 40*@rem;
 }
 .content {
-  padding-left: 20px;
+  padding-left: 20*@rem;
 }
 .box1-item {
-  width: 200px;
-  height: 100px;
+  width: 200*@rem;
+  height: 100*@rem;
   background-color: #ccc;
   text-align: center;
-  line-height: 100px;
+  line-height: 100*@rem;
 }
 .box1-item:first-child {
   margin-left: 0;
 }
 .shop-item {
-  padding: 5px;
+  padding: 5*@rem;
 }
 </style>

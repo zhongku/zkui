@@ -42,8 +42,8 @@ export default {
   display: inline-block;
 }
 .vux-static-emotion {
-  width: 24px;
-  height: 24px;
+  width: 24*@rem;
+  height: 24*@rem;
   display: inline-block;
 }
 </style>

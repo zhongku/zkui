@@ -158,8 +158,8 @@
 
 <style lang="less" rel="stylesheet/less">
 .xscroll-toast{
-  padding: 0px;
-  padding-top:-20px;
+  padding: 0*@rem;
+  padding-top:-20*@rem;
 }
   @import './mescroll.css';
 </style>

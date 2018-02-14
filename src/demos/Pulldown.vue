@@ -22,7 +22,7 @@
       </div>
 
       <!--pulldown slot-->
-      <div slot="pulldown" class="xs-plugin-pulldown-container xs-plugin-pulldown-down" style="position: absolute; width: 100%; height: 60px; line-height: 60px; top: -60px; text-align: center;">
+      <div slot="pulldown" class="xs-plugin-pulldown-container xs-plugin-pulldown-down" style="position: absolute; width: 100%; height: 60*@rem; line-height: 60*@rem; top: -60*@rem; text-align: center;">
         <span v-show="status2.pulldownStatus === 'default'"></span>
         <span class="pulldown-arrow" v-show="status2.pulldownStatus === 'down' || status2.pulldownStatus === 'up'" :class="{'rotate': status2.pulldownStatus === 'up'}">↓</span>
         <span v-show="status2.pulldownStatus === 'loading'"><spinner type="ios-small"></spinner></span>
@@ -81,25 +81,25 @@ export default {
 
 <style lang="less" scoped>
 .box1 {
-  height: 100px;
+  height: 100*@rem;
   position: relative;
-  width: 1490px;
+  width: 1490*@rem;
 }
 .box1-item {
-  width: 200px;
-  height: 100px;
+  width: 200*@rem;
+  height: 100*@rem;
   background-color: #ccc;
   display:inline-block;
-  margin-left: 15px;
+  margin-left: 15*@rem;
   float: left;
   text-align: center;
-  line-height: 100px;
+  line-height: 100*@rem;
 }
 .box1-item:first-child {
   margin-left: 0;
 }
 .box2-wrap {
-  height: 300px;
+  height: 300*@rem;
   overflow: hidden;
 }
 .rotate {
@@ -109,6 +109,6 @@ export default {
   display: inline-block;
   transition: all linear 0.2s;
   color: #666;
-  font-size: 25px;
+  font-size: 25*@rem;
 }
 </style>

@@ -47,12 +47,12 @@ body {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	min-height: 30px;
+	min-height: 30*@rem;
 	padding: 10px 0
 }
 
 .mescroll-upwarp {
-	min-height: 30px;
+	min-height: 30*@rem;
 	padding: 15px 0;
 	text-align: center;
 	visibility: hidden
@@ -67,11 +67,11 @@ body {
 
 .mescroll-downwarp .downwarp-progress,.mescroll-upwarp .upwarp-progress {
 	display: inline-block;
-	width: 16px;
-	height: 16px;
+	width: 16*@rem;
+	height: 16*@rem;
 	border-radius: 50%;
 	border: 1px solid gray;
-	margin-right: 8px;
+	margin-right: 8*@rem;
 	border-bottom-color: transparent;
 	vertical-align: middle
 }
@@ -103,7 +103,7 @@ body {
 
 .mescroll-empty {
 	width: 100%;
-	padding-top: 20px;
+	padding-top: 20*@rem;
 	text-align: center
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .mescroll-empty .empty-tip {
-	margin-top: 6px;
+	margin-top: 6*@rem;
 	
 	color: gray
 }
@@ -120,9 +120,9 @@ body {
 .mescroll-empty .empty-btn {
 	max-width: 50%;
 	margin: 20px auto;
-	padding: 10px;
+	padding: 10*@rem;
 	border: 1px solid #fe2a43;
-	border-radius: 6px;
+	border-radius: 6*@rem;
 	background-color: white;
 	color: #fe2a43
 }
@@ -134,10 +134,10 @@ body {
 .mescroll-totop {
 	z-index: 9999;
 	position: fixed;
-	right: 12px;
-	bottom: 30px;
-	width: 36px;
-	height: 36px;
+	right: 12*@rem;
+	bottom: 30*@rem;
+	width: 36*@rem;
+	height: 36*@rem;
 	border-radius: 50%;
 	opacity: 0
 }
@@ -145,10 +145,10 @@ body {
 .home-mescroll-totop {
   z-index: 9999;
   position: fixed;
-  right: 12px;
-  bottom: 82px;
-  width: 36px;
-  height: 36px;
+  right: 12*@rem;
+  bottom: 82*@rem;
+  width: 36*@rem;
+  height: 36*@rem;
   border-radius: 50%;
   opacity: 0
 }
@@ -213,7 +213,7 @@ body {
 }
 
 .mescroll-bar::-webkit-scrollbar-thumb {
-	border-radius: 6px;
+	border-radius: 6*@rem;
 	background-color: #ccc
 }
 

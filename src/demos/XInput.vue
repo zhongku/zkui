@@ -4,7 +4,7 @@
     <group title="禁用内置验证及显示成功或者错误样式">
       <x-input title="禁用验证" placeholder="I'm placeholder" novalidate :icon-type="iconType" :show-clear="false" @on-blur="onBlur" placeholder-align="right"></x-input>
     </group>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="iconType = 'success'" type="primary"> set success</x-button>
       <x-button @click.native="iconType = 'error'" type="primary"> set error</x-button>
       <x-button @click.native="iconType = ''" type="primary"> set empty</x-button>
@@ -22,7 +22,7 @@
 
     <group title="使用icon代替title">
       <x-input title="必须输入2333" :is-type="be2333" placeholder="I'm placeholder">
-        <img slot="label" style="padding-right:10px;display:block;" src="http://dn-placeholder.qbox.me/110x110/FF2D55/000" width="24" height="24">
+        <img slot="label" style="padding-right:10*@rem;display:block;" src="http://dn-placeholder.qbox.me/110x110/FF2D55/000" width="24" height="24">
       </x-input>
     </group>
 
@@ -46,7 +46,7 @@
     <group title="html title">
       <x-input label-width="4em" :title='`<span style="${style}">hello</span>`' placeholder="I'm placeholder"></x-input>
     </group>
-    <div style="padding:15px;">
+    <div style="padding:15*@rem;">
       <x-button @click.native="style = 'color:red;'" type="primary">set red</x-button>
       <x-button @click.native="style = 'color:green'" type="primary">set green</x-button>
       <x-button @click.native="style = 'color:#000'" type="primary">set default</x-button>

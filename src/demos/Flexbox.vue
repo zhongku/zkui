@@ -143,7 +143,7 @@ export default {
   text-align: center;
   color: #fff;
   background-color: #20b907;
-  border-radius: 4px;
+  border-radius: 4*@rem;
   background-clip: padding-box;
 }
 </style>

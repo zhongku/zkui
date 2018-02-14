@@ -75,10 +75,10 @@
   }
 
   .vux-step-item-tail {
-    height: 1px;
+    height: 1*@rem;
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 12*@rem;
     padding: 0 0;
     transition: all 0.4s ease 0s;
   }
@@ -93,15 +93,15 @@
   }
 
   .vux-step-item-icon {
-    width: 22px;
-    height: 22px;
+    width: 22*@rem;
+    height: 22*@rem;
     display: inline-block;
     text-align: center;
   }
 
   .vux-step-item-checked::before {
     font-size: @font-size-base !important;
-    line-height: 22px;
+    line-height: 22*@rem;
     margin: 0 !important;
     transform: translateY(-4px);
   }
@@ -113,13 +113,13 @@
   .vux-step-item-head {
     position: relative;
     display: inline-block;
-    margin-right: -4px;
+    margin-right: -4*@rem;
 
     .vux-step-item-head-inner {
-      width: 22px;
-      height: 22px;
-      line-height: 22px;
-      border-radius: 99px;
+      width: 22*@rem;
+      height: 22*@rem;
+      line-height: 22*@rem;
+      border-radius: 99*@rem;
       text-align: center;
 
       transition: all 0.4s ease 0s;
@@ -148,7 +148,7 @@
     position: relative;
     vertical-align: top;
     color: #888;
-    padding-left: 5px;
+    padding-left: 5*@rem;
   }
 
   .vux-step-item-main-process {

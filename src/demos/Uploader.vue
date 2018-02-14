@@ -1,7 +1,7 @@
 <template>
   <div>
     <divider>没有封装组件，引入样式使用</divider>
-    <div class="weui-uploader" style="padding:15px;">
+    <div class="weui-uploader" style="padding:15*@rem;">
       <div class="weui-uploader__hd">
           <p class="weui-uploader__title">图片上传</p>
           <div class="weui-uploader__info">0/2</div>

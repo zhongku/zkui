@@ -30,7 +30,7 @@ export default {
 
     &:before, &:after{
       position: relative;
-      top: -1px;
+      top: -1*@rem;
       flex: 1;
       content: '';
       border-top: 1px solid @weuiLineColorLight;

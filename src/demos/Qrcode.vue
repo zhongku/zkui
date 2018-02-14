@@ -1,5 +1,5 @@
 <template>
-  <div style="text-align:center;margin-top:15px;">
+  <div style="text-align:center;margin-top:15*@rem;">
     <divider>{{ $t('default type = img') }}</divider>
     <qrcode value="https://vux.li?x-page=demo_qrcode" type="img"></qrcode>
     <br>

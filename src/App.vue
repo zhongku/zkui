@@ -7,11 +7,11 @@
       <actionsheet :menus="menus" v-model="showMenu" @on-click-menu="changeLocale"></actionsheet>
     </div>
 
-    <drawer width="200px;" :show.sync="drawerVisibility" :show-mode="showModeValue" :placement="showPlacementValue" :drawer-style="{'background-color':'#e60044', width: '200px'}">
+    <drawer width="200*@rem;" :show.sync="drawerVisibility" :show-mode="showModeValue" :placement="showPlacementValue" :drawer-style="{'background-color':'#e60044', width: '200px'}">
 
       <!-- drawer content -->
       <div slot="drawer">
-        <group title="Drawer demo(beta)" style="margin-top:20px;">
+        <group title="Drawer demo(beta)" style="margin-top:20*@rem;">
           <cell title="Demo" link="/demo" value="演示" @click.native="drawerVisibility = false">
           </cell>
           <cell title="Buy me a coffee" link="project/donate" @click.native="drawerVisibility = false">
@@ -33,7 +33,7 @@
 
         <x-header slot="header" style="width:100%;position:absolute;left:0;top:0;z-index:100;" :left-options="leftOptions" :right-options="rightOptions" :title="title" :transition="headerTransition" @on-click-more="onClickMore">
           <span v-if="route.path === '/' || route.path === '/component/drawer'" slot="overwrite-left" @click="drawerVisibility = !drawerVisibility">
-            <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
+            <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8*@rem;left:-3*@rem;"></x-icon>
           </span>
         </x-header>
 
@@ -44,7 +44,7 @@
 
         <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="!isTabbarDemo" slot="bottom">
           <tabbar-item :link="{path:'/'}" :selected="route.path === '/'">
-            <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2px;">&#xe637;</span>
+            <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2*@rem;">&#xe637;</span>
             <span slot="label">Home</span>
           </tabbar-item>
           <tabbar-item :link="{path:'/demo'}" :selected="isDemo" badge="9">
@@ -227,7 +227,7 @@
 
   .demo-icon-22 {
     font-family: 'vux-demo';
-    font-size: 22px;
+    font-size: 22*@rem;
     color: #888;
   }
   .weui-tabbar.vux-demo-tabbar {
@@ -249,9 +249,9 @@
   .vux-demo-tabbar-component {
     background-color: #f70968;
     color: #fff;
-    border-radius: 7px;
-    padding: 0 4px;
-    line-height: 14px;
+    border-radius: 7*@rem;
+    padding: 0 4*@rem;
+    line-height: 14*@rem;
   }
   .weui-tabbar__icon + .weui-tabbar__label {
     margin-top: 0 !important;
@@ -277,12 +277,12 @@
 
   .demo-icon {
     font-family: 'vux-demo';
-    font-size: 20px;
+    font-size: 20*@rem;
     color: #04be02;
   }
 
   .demo-icon-big {
-    font-size: 28px;
+    font-size: 28*@rem;
   }
 
   .demo-icon:before {
@@ -291,7 +291,7 @@
 
   .router-view {
     width: 100%;
-    top: 46px;
+    top: 46*@rem;
   }
   .vux-pop-out-enter-active,
   .vux-pop-out-leave-active,
@@ -300,7 +300,7 @@
     will-change: transform;
     transition: all 500ms;
     height: 100%;
-    top: 46px;
+    top: 46*@rem;
     position: absolute;
     backface-visibility: hidden;
     perspective: 1000;

@@ -52,8 +52,8 @@ loading:
   }
   .weui-icon_toast.weui-loading {
     margin: 30px 0 0;
-    width: 38px;
-    height: 38px;
+    width: 38*@rem;
+    height: 38*@rem;
     vertical-align: baseline;
     display: inline-block;
   }

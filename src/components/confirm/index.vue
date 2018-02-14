@@ -161,10 +161,10 @@ export default {
 .vux-prompt-msgbox {
   width: 80%;
   border: 1px solid #dedede;
-  border-radius: 5px;
-  padding: 4px 5px;
+  border-radius: 5*@rem;
+  padding: 4px 5*@rem;
   appearance: none;
   outline: none;
-  font-size: 16px;
+  font-size: 16*@rem;
 }
 </style>

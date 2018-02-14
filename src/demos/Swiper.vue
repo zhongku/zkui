@@ -210,13 +210,13 @@ export default {
 .text-scroll p{
   
   text-align: center;
-  line-height: 30px;
+  line-height: 30*@rem;
 }
 .black {
   background-color: #000;
 }
 .title{
-  line-height: 100px;
+  line-height: 100*@rem;
   text-align: center;
   color: #fff;
 }
@@ -225,7 +225,7 @@ export default {
   animation-fill-mode: both;
 }
 .vux-indicator.custom-bottom {
-  bottom: 30px;
+  bottom: 30*@rem;
 }
 @-webkit-keyframes fadeInUp {
   from {
