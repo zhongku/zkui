@@ -47,8 +47,8 @@
       padding: 8*@rem 8*@rem;
     }
     .weui-grid__icon {
-      width: 2.6rem;
-      height: 2.6rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 </style>

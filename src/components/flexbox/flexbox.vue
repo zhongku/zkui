@@ -55,7 +55,7 @@ export default {
   .vux-flexbox-item {
     flex: 1;
     -webkit-flex: 1;
-    min-width: 20*@rem;
+    min-width: 20px;
     width: 0%;
     &:first-child {
       margin-left: 0!important;
@@ -63,7 +63,7 @@ export default {
     }
   }
 }
-.vux-flex-col 
+.vux-flex-col
 .vux-flex-row {
   box-direction: row;
   box-orient: horizontal;
