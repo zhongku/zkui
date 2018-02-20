@@ -16,7 +16,6 @@
     <br>
     <divider>华丽的分割线</divider>
 
-
     <group-title>设置aspect-ratio, 将自动根据宽度计算高度</group-title>
     <swiper :list="demo02_list" style="width:85%;margin:0 auto;" :aspect-ratio="300/800" dots-position="center"></swiper>
 
@@ -44,13 +43,11 @@
         <img :src="item">
       </swiper-item>
     </swiper>
-    <br>
-    {{ swiperItemIndex }}
+    <br> {{ swiperItemIndex }}
     <br>
     <x-button @click.native="swiperItemIndex = 0">go to 0</x-button>
     <x-button @click.native="swiperItemIndex = 1">go to 1</x-button>
     <x-button @click.native="swiperItemIndex = 2">go to 2</x-button>
-
 
     <br/>
     <br/>
@@ -68,12 +65,24 @@
 
     <group-title>引入swiper-item自定义item内容，用height定义高度</group-title>
     <swiper auto height="100px">
-      <swiper-item class="black"><h2 class="title fadeInUp animated">它无孔不入</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">你无处可藏</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">不是它可恶</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">而是它不懂你</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">我们试图</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">做些改变</h2></swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">它无孔不入</h2>
+      </swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">你无处可藏</h2>
+      </swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">不是它可恶</h2>
+      </swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">而是它不懂你</h2>
+      </swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">我们试图</h2>
+      </swiper-item>
+      <swiper-item class="black">
+        <h2 class="title fadeInUp animated">做些改变</h2>
+      </swiper-item>
     </swiper>
 
     <br/>
@@ -82,12 +91,24 @@
 
     <group-title>垂直方向文字滚动</group-title>
     <swiper auto height="30px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
-      <swiper-item><p>义务爱了 完成传奇世界H5-王者归来任务 获得20金币</p></swiper-item>
-      <swiper-item><p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p></swiper-item>
-      <swiper-item><p>零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</p></swiper-item>
-      <swiper-item><p>做迎而為 兑换【饿了么】畅享美食红包 消耗20金币</p></swiper-item>
-      <swiper-item><p>只知道不知道 兑换【饿了么】畅享美食红包 消耗20金币</p></swiper-item>
-      <swiper-item><p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p></swiper-item>
+      <swiper-item>
+        <p>义务爱了 完成传奇世界H5-王者归来任务 获得20金币</p>
+      </swiper-item>
+      <swiper-item>
+        <p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p>
+      </swiper-item>
+      <swiper-item>
+        <p>零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</p>
+      </swiper-item>
+      <swiper-item>
+        <p>做迎而為 兑换【饿了么】畅享美食红包 消耗20金币</p>
+      </swiper-item>
+      <swiper-item>
+        <p>只知道不知道 兑换【饿了么】畅享美食红包 消耗20金币</p>
+      </swiper-item>
+      <swiper-item>
+        <p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p>
+      </swiper-item>
     </swiper>
 
     <br/>
@@ -105,152 +126,150 @@
 </template>
 
 <script>
-import { Swiper, GroupTitle, SwiperItem, XButton, Divider } from 'vux'
+  import { Swiper, GroupTitle, SwiperItem, XButton, Divider } from 'vux'
 
-const baseList = [{
-  url: 'javascript:',
-  img: 'https://static.vux.li/demo/1.jpg',
-  title: '送你一朵fua'
-}, {
-  url: 'javascript:',
-  img: 'https://static.vux.li/demo/2.jpg',
-  title: '送你一辆车'
-}, {
-  url: 'javascript:',
-  img: 'https://static.vux.li/demo/5.jpg',
-  title: '送你一次旅行',
-  fallbackImg: 'https://static.vux.li/demo/3.jpg'
-}]
+  const baseList = [{
+    url: 'javascript:',
+    imageUrl: 'https://static.vux.li/demo/1.jpg',
+    name: '送你一朵fua'
+  }, {
+    url: 'javascript:',
+    imageUrl: 'https://static.vux.li/demo/2.jpg',
+    name: '送你一辆车'
+  }, {
+    url: 'javascript:',
+    imageUrl: 'https://static.vux.li/demo/5.jpg',
+    name: '送你一次旅行',
+    fallbackImg: 'https://static.vux.li/demo/3.jpg'
+  }]
 
-const imgList = [
-  'http://placeholder.qiniudn.com/800x300/FF3B3B/ffffff',
-  'http://placeholder.qiniudn.com/800x300/FFEF7D/ffffff',
-  'http://placeholder.qiniudn.com/800x300/8AEEB1/ffffff'
-]
+  const imgList = [
+    'http://placeholder.qiniudn.com/800x300/FF3B3B/ffffff',
+    'http://placeholder.qiniudn.com/800x300/FFEF7D/ffffff',
+    'http://placeholder.qiniudn.com/800x300/8AEEB1/ffffff'
+  ]
 
-const urlList = baseList.map((item, index) => ({
-  url: 'http://m.baidu.com',
-  img: item.img,
-  fallbackImg: item.fallbackImg,
-  title: `(可点击)${item.title}`
-}))
+  const urlList = baseList.map((item, index) => ({
+    url: 'http://m.baidu.com',
+    imageUrl: item.img,
+    fallbackImg: item.fallbackImg,
+    name: `(可点击)${item.title}`
+  }))
 
-const demoList = imgList.map((one, index) => ({
-  url: 'javascript:',
-  img: one
-}))
+  const demoList = imgList.map((one, index) => ({
+    url: 'javascript:',
+    imageUrl: one
+  }))
 
-const only2ClickList = baseList.slice(0, 2).map(item => {
-  item.url = 'http://m.baidu.com'
-  return item
-})
+  const only2ClickList = baseList.slice(0, 2).map(item => {
+    item.url = 'http://m.baidu.com'
+    return item
+  })
 
-export default {
-  components: {
-    Swiper,
-    SwiperItem,
-    GroupTitle,
-    XButton,
-    Divider
-  },
-  ready () {
-
-  },
-  methods: {
-    onSwiperItemIndexChange (index) {
-      console.log('demo item change', index)
+  export default {
+    components: {
+      Swiper,
+      SwiperItem,
+      GroupTitle,
+      XButton,
+      Divider
     },
-    demo01_onIndexChange (index) {
-      this.demo01_index = index
+    ready () {
+
     },
-    demo05_onIndexChange (index) {
-      this.demo05_index = index
+    methods: {
+      onSwiperItemIndexChange (index) {
+        console.log('demo item change', index)
+      },
+      demo01_onIndexChange (index) {
+        this.demo01_index = index
+      },
+      demo05_onIndexChange (index) {
+        this.demo05_index = index
+      },
+      demo05_onLoad (id) {
+        this.demo05_list = id === 1 ? baseList : demoList
+      },
+      demo06_onIndexChange (index) {
+        this.demo06_index = index
+      },
+      demo07_onIndexChange (index) {
+        this.demo07_index = index
+      }
     },
-    demo05_onLoad (id) {
-      this.demo05_list = id === 1 ? baseList : demoList
-    },
-    demo06_onIndexChange (index) {
-      this.demo06_index = index
-    },
-    demo07_onIndexChange (index) {
-      this.demo07_index = index
-    }
-  },
-  data () {
-    return {
-      demo01_list: baseList,
-      demo02_list: demoList,
-      demo03_list: demoList,
-      demo04_list: imgList,
-      demo05_list: [],
-      demo06_list: urlList,
-      demo07_list: only2ClickList,
-      demo01_index: 0,
-      demo02_index: 1,
-      demo05_index: 0,
-      demo06_index: 0,
-      demo07_index: 0,
-      swiperItemIndex: 1
+    data () {
+      return {
+        demo01_list: baseList,
+        demo02_list: demoList,
+        demo03_list: demoList,
+        demo04_list: imgList,
+        demo05_list: [],
+        demo06_list: urlList,
+        demo07_list: only2ClickList,
+        demo01_index: 0,
+        demo02_index: 1,
+        demo05_index: 0,
+        demo06_index: 0,
+        demo07_index: 0,
+        swiperItemIndex: 1
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.copyright {
-  
-  color: #ccc;
-  text-align: center;
-}
-.text-scroll {
-  border: 1px solid #ddd;
-  border-left: none;
-  border-right: none;
-}
-.text-scroll p{
-  
-  text-align: center;
-  line-height: 30*@rem;
-}
-.black {
-  background-color: #000;
-}
-.title{
-  line-height: 100*@rem;
-  text-align: center;
-  color: #fff;
-}
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-.vux-indicator.custom-bottom {
-  bottom: 30*@rem;
-}
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
+  .copyright {
+    color: #ccc;
+    text-align: center;
   }
-  100% {
-    opacity: 1;
-    transform: none;
+  .text-scroll {
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
   }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
+  .text-scroll p {
+    text-align: center;
+    line-height: 30*@rem;
   }
-  100% {
-    opacity: 1;
-    transform: none;
+  .black {
+    background-color: #000;
   }
-}
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-.swiper-demo-img img {
-  width: 100%;
-}
+  .title {
+    line-height: 100*@rem;
+    text-align: center;
+    color: #fff;
+  }
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .vux-indicator.custom-bottom {
+    bottom: 30*@rem;
+  }
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+  .swiper-demo-img img {
+    width: 100%;
+  }
 </style>

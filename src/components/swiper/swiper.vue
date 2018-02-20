@@ -6,14 +6,14 @@
       <div class="vux-swiper-item" v-for="(item, index) in list" :key="index" @click="clickListItem(item)" :data-index="index">
         <a href="javascript:">
           <div class="vux-img" :style="{backgroundImage: buildBackgroundUrl(item)}"></div>
-          <p class="vux-swiper-desc" v-if="showDescMask">{{ item.title }}</p>
+          <p class="vux-swiper-desc" v-if="showDescMask">{{ item.name }}</p>
         </a>
       </div>
 
-      <div v-if="listTwoLoopItem.length > 0" class="vux-swiper-item vux-swiper-item-clone" v-for="(item, index) in listTwoLoopItem" :key="item.title" @click="clickListItem(item)" :data-index="index">
+      <div v-if="listTwoLoopItem.length > 0" class="vux-swiper-item vux-swiper-item-clone" v-for="(item, index) in listTwoLoopItem" :key="item.name" @click="clickListItem(item)" :data-index="index">
         <a href="javascript:">
           <div class="vux-img" :style="{backgroundImage: buildBackgroundUrl(item)}"></div>
-          <p class="vux-swiper-desc" v-if="showDescMask">{{ item.title }}</p>
+          <p class="vux-swiper-desc" v-if="showDescMask">{{ item.name }}</p>
         </a>
       </div>
 
@@ -61,7 +61,7 @@
         this.$emit('on-click-list-item', JSON.parse(JSON.stringify(item)))
       },
       buildBackgroundUrl (item) {
-        return item.fallbackImg ? `url(${item.img}), url(${item.fallbackImg})` : `url(${item.img})`
+        return item.fallbackImg ? `url(${item.imageUrl}), url(${item.fallbackImg})` : `url(${item.imageUrl})`
       },
       render (index = 0) {
         this.swiper && this.swiper.destroy()
