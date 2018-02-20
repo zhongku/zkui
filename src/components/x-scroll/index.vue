@@ -9,9 +9,13 @@
   import MeScroll from './mescroll.m.js'
   import totop from './mescroll-totop.png'
   import empty from './mescroll-empty.png'
+  import MIcon from '../m-icon/index.vue'
   // 创建vue对象
   export default {
     name: "x-scroll",
+    components: {
+      MIcon
+    },
     props: {
       upCallback: {
         type: Function,
@@ -78,7 +82,7 @@
             btnClick: self.emptyDataBtnClick || self.btnClick
           },
           warpId: self.warpId,
-          htmlNodata: '<p class="upwarp-nodata">暂无更多数据哦~</p>',
+          htmlNodata: '<p class="upwarp-nodata"><i class="weui-icon weui_icon_waiting weui-icon-waiting weui-icon_msg"></i><br/><span>暂无数据</span></p>',
           scrollbar: { use: true, barClass: "mescroll-bar" },
           htmlLoading: '<p class="upwarp-progress mescroll-rotate"></p><p class="upwarp-tip">加载中..</p>'
         }
@@ -162,4 +166,12 @@
     padding-top: -20*@rem;
   }
   @import './mescroll.css';
+  .upwarp-nodata {
+    min-height: 8rem;
+    padding-top: 0.1rem;
+    .weui-icon-waiting {
+      color: #b2b2b2;
+      font-size: 3.5rem;
+    }
+  }
 </style>
