@@ -6,7 +6,7 @@ let $vm
 let watcher
 
 const plugin = {
-  install (vue, pluginOptions = {}) {
+  install(vue, pluginOptions = {}) {
     const Toast = vue.extend(ToastComponent)
 
     if (!$vm) {
@@ -24,7 +24,7 @@ const plugin = {
     }
 
     const toast = {
-      show (options = {}) {
+      show(options = {}) {
         // destroy watcher
         watcher && watcher()
         if (typeof options === 'string') {
@@ -43,6 +43,14 @@ const plugin = {
       success (text, position = 'default') {
         this.show({
           type: 'success',
+          width: 'auto',
+          position,
+          text
+        })
+      },
+      text (text, position = 'default') {
+        this.show({
+          type: 'text',
           width: 'auto',
           position,
           text
@@ -79,7 +87,7 @@ const plugin = {
     }
 
     vue.mixin({
-      created: function () {
+      created: function() {
         this.$vux = vue.$vux
       }
     })
