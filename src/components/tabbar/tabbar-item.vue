@@ -1,5 +1,6 @@
 <template>
   <a href="javascript:;" class="weui-tabbar__item" :class="{'weui-bar__item_on': isActive, 'vux-tabbar-simple': simple}" @click="onItemClick(true)">
+    <slot name="customer"></slot>
     <div class="weui-tabbar__icon" :class="[iconClass || $parent.iconClass, {'vux-reddot': showDot}]" v-if="!simple">
       <slot name="icon" v-if="!simple && !(hasActiveIcon && isActive)"></slot>
       <slot name="icon-active" v-if="!simple && hasActiveIcon && isActive"></slot>
