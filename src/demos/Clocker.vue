@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .day {
   background-color:#000;
   color:#fff;

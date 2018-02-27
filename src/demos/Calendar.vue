@@ -101,7 +101,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .selected-days {
   color: #999;
   width: 90*@rem;

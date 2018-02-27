@@ -166,7 +166,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang='less'>
 .red {
   color: red;
 }

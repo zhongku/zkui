@@ -125,7 +125,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .error {
   padding-left: 15*@rem;
   line-height: 28*@rem;

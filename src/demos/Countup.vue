@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .demo1 {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 6em;

@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .x-img-popup {
   text-align:center;
   min-height:200*@rem;

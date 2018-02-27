@@ -56,7 +56,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
   p {
     padding: 10px 15*@rem;
 

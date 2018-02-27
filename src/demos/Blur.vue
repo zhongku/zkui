@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .center {
   text-align: center;
   padding-top: 20*@rem;

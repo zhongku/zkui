@@ -114,7 +114,7 @@ Custom col:
   }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
   .grid-center {
     display: block;
     text-align: center;

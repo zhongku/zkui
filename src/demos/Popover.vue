@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .popover-demo-content {
   padding: 5px 10*@rem;
 }

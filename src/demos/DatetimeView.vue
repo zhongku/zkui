@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .info {
   padding-top: 15*@rem;
   text-align: center;

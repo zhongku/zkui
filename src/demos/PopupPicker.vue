@@ -185,7 +185,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .picker-buttons {
   margin: 0 15*@rem;
 }

@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .demo-week-calendar-btn {
   color: green;
   background-color: #fff;

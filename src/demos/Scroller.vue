@@ -143,7 +143,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .box1 {
   height: 100*@rem;
   position: relative;

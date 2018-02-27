@@ -217,7 +217,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
   .copyright {
     color: #ccc;
     text-align: center;

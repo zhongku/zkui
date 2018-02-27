@@ -66,7 +66,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
   .demo3-slot {
     text-align: center;
     padding: 8px 0;

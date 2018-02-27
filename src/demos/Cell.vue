@@ -166,7 +166,8 @@ Messages:
   }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
+  @import '../styles/variable';
   .sub-item {
     color: #888;
   }

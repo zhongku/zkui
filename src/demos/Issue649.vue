@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 .record-component {
   padding: 10px 0 0;
 }

@@ -40,7 +40,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang='less'>
   .space-btn {
     padding: 5px 0;
     margin: 10*@rem;

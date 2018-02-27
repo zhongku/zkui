@@ -14,7 +14,7 @@ small dot:
   zh-CN: 小点
 </i18n>
 
-<style scoped>
+<style scoped lang='less'>
 .reddot-demo {
   display: inline-block
 }
