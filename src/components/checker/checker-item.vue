@@ -35,7 +35,7 @@
         if (this.$parent.selectedItemClass) {
           let selected = false
           if (this.$parent.type === 'radio') {
-            console.info(this.$parent.currentValue, this.value)
+            // console.info(this.$parent.currentValue, this.value)
             if (isSimpleValue && this.$parent.currentValue === this.value) {
               selected = true
             } else if (typeof this.value === 'object' && isEqual(this.$parent.currentValue, this.value)) {
