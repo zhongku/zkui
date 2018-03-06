@@ -13,7 +13,7 @@
     </group>
 
     <group title="fill mode with custom placeholder and label">
-      <radio fill-mode fill-label="Other" fill-placeholder="填写其他的哦" :options="radio001" @on-change="change"></radio>
+      <radio fill-mode fill-label="Other" fill-placeholder="填写其他的哦"  :options="radio001" @on-change="change"></radio>
     </group>
 
     <group title="object options">

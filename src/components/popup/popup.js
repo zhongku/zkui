@@ -6,17 +6,19 @@ if (isBrowser) {
   window.__$vuxPopups = window.__$vuxPopups || {}
 }
 
-const popupDialog = function (option) {
+const popupDialog = function(option) {
   if (!isBrowser) {
     return
   }
-  this.uuid = Math.random().toString(36).substring(3, 8)
+  this.uuid = Math.random()
+    .toString(36)
+    .substring(3, 8)
   this.params = {}
   if (Object.prototype.toString.call(option) === '[object Object]') {
     this.params = {
       hideOnBlur: option.hideOnBlur,
-      onOpen: option.onOpen || function () {},
-      onClose: option.onClose || function () {},
+      onOpen: option.onOpen || function() {},
+      onClose: option.onClose || function() {},
       showMask: option.showMask
     }
   }
@@ -50,27 +52,38 @@ const popupDialog = function (option) {
   this._bindEvents()
   option = null
   this.containerHandler = () => {
-    this.mask && !/show/.test(this.mask.className) && setTimeout(() => {
-      !/show/.test(this.mask.className) && (this.mask.style['zIndex'] = -1)
-    }, 200)
+    this.mask &&
+      !/show/.test(this.mask.className) &&
+      setTimeout(() => {
+        !/show/.test(this.mask.className) && (this.mask.style['zIndex'] = -1)
+      }, 200)
   }
 
-  this.container && this.container.addEventListener('webkitTransitionEnd', this.containerHandler)
-  this.container && this.container.addEventListener('transitionend', this.containerHandler)
+  this.container &&
+    this.container.addEventListener(
+      'webkitTransitionEnd',
+      this.containerHandler
+    )
+  this.container &&
+    this.container.addEventListener('transitionend', this.containerHandler)
 }
 
-popupDialog.prototype.onClickMask = function () {
+popupDialog.prototype.onClickMask = function() {
   this.params.hideOnBlur && this.params.onClose()
 }
 
-popupDialog.prototype._bindEvents = function () {
+popupDialog.prototype._bindEvents = function() {
   if (this.params.hideOnBlur) {
     this.mask.addEventListener('click', this.onClickMask.bind(this), false)
-    this.mask.addEventListener('touchmove', e => e.preventDefault(), passiveSupported ? {passive: false} : false)
+    this.mask.addEventListener(
+      'touchmove',
+      e => e.preventDefault(),
+      passiveSupported ? { passive: false } : false
+    )
   }
 }
 
-popupDialog.prototype.show = function () {
+popupDialog.prototype.show = function() {
   if (this.params.showMask) {
     this.mask.classList.add('vux-popup-show')
     this.mask.style['zIndex'] = 500
@@ -82,30 +95,43 @@ popupDialog.prototype.show = function () {
   }
 }
 
-popupDialog.prototype.hide = function (shouldCallback = true) {
+popupDialog.prototype.hide = function(shouldCallback = true) {
   this.container.classList.remove('vux-popup-show')
   if (!document.querySelector('.vux-popup-dialog.vux-popup-show')) {
     this.mask.classList.remove('vux-popup-show')
     setTimeout(() => {
-      this.mask && !/show/.test(this.mask.className) && (this.mask.style['zIndex'] = -1)
+      this.mask &&
+        !/show/.test(this.mask.className) &&
+        (this.mask.style['zIndex'] = -1)
     }, 400)
   }
-  shouldCallback === false && this.params.onClose && this.params.hideOnBlur && this.params.onClose(this)
+  shouldCallback === false &&
+    this.params.onClose &&
+    this.params.hideOnBlur &&
+    this.params.onClose(this)
   this.isShow = false
   if (isBrowser) {
     delete window.__$vuxPopups[this.uuid]
   }
 }
 
-popupDialog.prototype.destroy = function () {
-  this.mask.dataset.uuid = this.mask.dataset.uuid.replace(new RegExp(`,${this.uuid}`, 'g'), '')
+popupDialog.prototype.destroy = function() {
+  this.mask.dataset.uuid = this.mask.dataset.uuid.replace(
+    new RegExp(`,${this.uuid}`, 'g'),
+    ''
+  )
   if (!this.mask.dataset.uuid) {
     this.mask.removeEventListener('click', this.onClickMask.bind(this), false)
-    this.mask && this.mask.parentNode && this.mask.parentNode.removeChild(this.mask)
+    this.mask &&
+      this.mask.parentNode &&
+      this.mask.parentNode.removeChild(this.mask)
   } else {
     this.hide()
   }
-  this.container.removeEventListener('webkitTransitionEnd', this.containerHandler)
+  this.container.removeEventListener(
+    'webkitTransitionEnd',
+    this.containerHandler
+  )
   this.container.removeEventListener('transitionend', this.containerHandler)
   if (isBrowser) {
     delete window.__$vuxPopups[this.uuid]
